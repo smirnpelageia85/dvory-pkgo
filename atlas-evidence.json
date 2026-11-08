@@ -1,0 +1,1665 @@
+{
+  "date": "2026-11-08",
+  "purpose": "Проверка исходников; цены не являются актуальным коммерческим предложением, точки не являются границами проекта.",
+  "yards": [
+    {
+      "id": 1,
+      "finance": {
+        "documents": [
+          {
+            "publicPath": "sources/013.xlsx",
+            "title": "02.11.2026. Камчатка —Ботаническая.xlsx",
+            "date": null,
+            "dateBasis": "Дата документа не заполнена; 02.11.2026 есть только в имени файла",
+            "fileDate": "2026-11-02",
+            "issuer": "ООО «АВЕН СПб»",
+            "totalCell": "F26",
+            "vatCell": "F27"
+          }
+        ],
+        "reconciliation": {
+          "declaredTotal": 10785107,
+          "itemsTotal": 10785107,
+          "difference": 0,
+          "unitPriceCalculationTotal": 10785107,
+          "unitPriceCalculationDifference": 0,
+          "vatAmount": 1944855.36,
+          "vatIncluded": true,
+          "vatRate": null,
+          "vatNote": "В E18/F18 указано «с НДС»; отдельно в F27 приведено 1,944,855.36 ₽ НДС. Ставка не указана текстом. НДС уже включён, добавлять повторно нельзя.",
+          "deliveryAmount": null,
+          "deliveryNote": "Доставка упомянута как условие, влияющее на конечную стоимость; отдельной цены и подтверждения включения нет.",
+          "worksAmount": null,
+          "worksNote": "Итог равен сумме оборудования. Монтаж упомянут как условие изменения цены, но отдельная стоимость работ не приведена.",
+          "scope": "Оборудование коммерческого предложения; полный бюджет благоустройства не подтверждён.",
+          "groundingNote": "Расчёт стандартного оборудования предполагает возможность заглубления до 1000 мм в грунт; это условие поставщика, а не проверенный проект фундаментов.",
+          "colourNote": "Небазовая цветовая гамма может увеличить цену.",
+          "totalFormula": "=SUM(F19:F25)",
+          "summary": "Оборудование коммерческого предложения; полный бюджет благоустройства не подтверждён."
+        },
+        "issues": [
+          {
+            "severity": "warning",
+            "title": "Дата КП не заполнена",
+            "detail": "В B7 оставлены пустые дата и исходящий номер. Дату 02.11.2026 можно показывать только как дату имени файла.",
+            "source": "sources/013.xlsx",
+            "cell": "B7"
+          },
+          {
+            "severity": "info",
+            "title": "Два варианта К-33",
+            "detail": "Строки B22/B23 имеют один код К-33, но разные подвесы и цены. Их нельзя объединять только по артикулу.",
+            "source": "sources/013.xlsx",
+            "cell": "B22:F23"
+          }
+        ],
+        "verifiedItems": [
+          {
+            "code": "Г-4050",
+            "name": "Игровой комплексс\"Пчела\"",
+            "qty": 1,
+            "unit": "шт.",
+            "unitPrice": 2619540,
+            "lineTotal": 2619540,
+            "computedLineTotal": 2619540,
+            "source": "sources/013.xlsx",
+            "sheet": "Лист1",
+            "cells": {
+              "name": "B19",
+              "qty": "C19",
+              "unitPrice": "E19",
+              "lineTotal": "F19"
+            },
+            "conflict": false,
+            "safeScenarioUnitPrice": 2619540,
+            "vatIncluded": true
+          },
+          {
+            "code": "ВР-39",
+            "name": "Спортивный комплекс",
+            "qty": 1,
+            "unit": "шт.",
+            "unitPrice": 192100,
+            "lineTotal": 192100,
+            "computedLineTotal": 192100,
+            "source": "sources/013.xlsx",
+            "sheet": "Лист1",
+            "cells": {
+              "name": "B20",
+              "qty": "C20",
+              "unitPrice": "E20",
+              "lineTotal": "F20"
+            },
+            "conflict": false,
+            "safeScenarioUnitPrice": 192100,
+            "vatIncluded": true
+          },
+          {
+            "code": "ГН-1200/7",
+            "name": "Игрвой комплекс",
+            "qty": 1,
+            "unit": "шт.",
+            "unitPrice": 7289334,
+            "lineTotal": 7289334,
+            "computedLineTotal": 7289334,
+            "source": "sources/013.xlsx",
+            "sheet": "Лист1",
+            "cells": {
+              "name": "B21",
+              "qty": "C21",
+              "unitPrice": "E21",
+              "lineTotal": "F21"
+            },
+            "conflict": false,
+            "safeScenarioUnitPrice": 7289334,
+            "vatIncluded": true
+          },
+          {
+            "code": "К-33",
+            "name": "Качели  маятниковые на цепях   \"Гнездо\"",
+            "qty": 1,
+            "unit": "шт.",
+            "unitPrice": 179992,
+            "lineTotal": 179992,
+            "computedLineTotal": 179992,
+            "source": "sources/013.xlsx",
+            "sheet": "Лист1",
+            "cells": {
+              "name": "B22",
+              "qty": "C22",
+              "unitPrice": "E22",
+              "lineTotal": "F22"
+            },
+            "conflict": false,
+            "safeScenarioUnitPrice": 179992,
+            "vatIncluded": true
+          },
+          {
+            "code": "К-33",
+            "name": "с под тип 2 и тип 5",
+            "qty": 1,
+            "unit": "шт.",
+            "unitPrice": 136707,
+            "lineTotal": 136707,
+            "computedLineTotal": 136707,
+            "source": "sources/013.xlsx",
+            "sheet": "Лист1",
+            "cells": {
+              "name": "B23",
+              "qty": "C23",
+              "unitPrice": "E23",
+              "lineTotal": "F23"
+            },
+            "conflict": false,
+            "safeScenarioUnitPrice": 136707,
+            "vatIncluded": true
+          },
+          {
+            "code": "С-190",
+            "name": "Скамья",
+            "qty": 3,
+            "unit": "шт.",
+            "unitPrice": 99193,
+            "lineTotal": 297579,
+            "computedLineTotal": 297579,
+            "source": "sources/013.xlsx",
+            "sheet": "Лист1",
+            "cells": {
+              "name": "B24",
+              "qty": "C24",
+              "unitPrice": "E24",
+              "lineTotal": "F24"
+            },
+            "conflict": false,
+            "safeScenarioUnitPrice": 99193,
+            "vatIncluded": true
+          },
+          {
+            "code": "У-206",
+            "name": "Урна с ведром",
+            "qty": 3,
+            "unit": "шт.",
+            "unitPrice": 23285,
+            "lineTotal": 69855,
+            "computedLineTotal": 69855,
+            "source": "sources/013.xlsx",
+            "sheet": "Лист1",
+            "cells": {
+              "name": "B25",
+              "qty": "C25",
+              "unitPrice": "E25",
+              "lineTotal": "F25"
+            },
+            "conflict": false,
+            "safeScenarioUnitPrice": 23285,
+            "vatIncluded": true
+          }
+        ],
+        "missing": [
+          "Стоимость подготовки основания и земляных работ",
+          "Стоимость покрытий и водоотведения",
+          "Стоимость доставки до площадки и разгрузки",
+          "Стоимость монтажа, фундаментов и подключения",
+          "Срок действия цен и условия оплаты",
+          "Стоимость озеленения и содержания"
+        ]
+      },
+      "location": {
+        "addressReview": {
+          "status": "Адрес проекта не подтверждён",
+          "address": "Ботанический переулок — предварительный ориентир",
+          "evidence": "Исходный план назван «Ботанический сад», исходная смета и панель используют «Ботаническая». Связь с Ботаническим переулком и номером дома не установлена.",
+          "source": "sources/016.jpg",
+          "secondaryEvidence": "В муниципальном проекте программы встречаются дома по Ботаническому переулку; это не подтверждает расположение данной площадки.",
+          "secondarySource": "https://www.pkgo.ru/upload/iblock/a46/wxsms99j9hmp8vxs2fgpjix7ieb1f5dc.pdf#page=43"
+        },
+        "dimensions": {
+          "width": 24,
+          "length": 15,
+          "area": 360,
+          "scope": "Размерный прямоугольник площадки на исходной схеме",
+          "shape": "rectangle",
+          "calculation": "24 × 15 = 360",
+          "source": "sources/016.jpg"
+        },
+        "documents": [
+          {
+            "publicPath": "sources/016.jpg",
+            "title": "Исходная схема площадки «Ботанический сад» · 24 × 15 м",
+            "kind": "dimensioned-schematic-plan",
+            "evidence": "Подписаны размеры 24,0 и 15,0. На листе нет географических координат, привязки к зданиям или кадастрового номера."
+          }
+        ],
+        "issues": [
+          {
+            "title": "Расхождение даты",
+            "detail": "В имени файла указано 2.11.26, в штампе листа визуально читается 2.10.26. Не исправлять дату автоматически.",
+            "source": "sources/016.jpg"
+          }
+        ],
+        "missing": [
+          "Установить, относится ли проект к Ботаническому переулку; подтвердить номер дома или земельный участок.",
+          "Подтверждённая схема расположения именно проектируемой площадки с адресом и подписью заказчика.",
+          "Геопривязанный контур (GeoJSON/KML либо координаты поворотных точек и система координат), топосъёмка с рельефом и сетями.",
+          "Паспорта выбранных МАФов с зонами безопасности для проверки посадки."
+        ],
+        "geo": {
+          "lat": 53.0493121,
+          "lon": 158.65474,
+          "kind": "street",
+          "source": "https://www.openstreetmap.org/way/100516323",
+          "changed": false,
+          "confirmedBoundary": false,
+          "evidence": "Существующая карточка atlas-data.json; сохранён результат OpenStreetMap/Nominatim от 2026-11-08 (объект улицы), сверенный с сохранёнными геокодирующими данными.",
+          "reason": "Новые документы не дают проверяемой координаты проектной площадки; маркер сохраняется как ориентир.",
+          "verification": "Адресный геокод, не геодезическая точка и не центр подтверждённого проектного контура."
+        }
+      }
+    },
+    {
+      "id": 2,
+      "finance": {
+        "documents": [
+          {
+            "publicPath": "sources/019.xlsx",
+            "title": "02.11.2026. Горького д 6.xlsx",
+            "date": "2026-11-02",
+            "dateBasis": "Дата и исходящий номер в B7",
+            "fileDate": "2026-11-02",
+            "issuer": "ООО «АВЕН СПб»",
+            "totalCell": "F27",
+            "vatCell": "F28"
+          }
+        ],
+        "reconciliation": {
+          "declaredTotal": 12013963,
+          "itemsTotal": 12013963,
+          "difference": 0,
+          "unitPriceCalculationTotal": 12143566,
+          "unitPriceCalculationDifference": 129603,
+          "vatAmount": 2166452.36,
+          "vatIncluded": true,
+          "vatRate": null,
+          "vatNote": "В E18/F18 указано «с НДС»; отдельно в F28 приведено 2,166,452.36 ₽ НДС. Ставка не указана текстом. НДС уже включён, добавлять повторно нельзя.",
+          "deliveryAmount": null,
+          "deliveryNote": "Доставка упомянута как условие, влияющее на конечную стоимость; отдельной цены и подтверждения включения нет.",
+          "worksAmount": null,
+          "worksNote": "Итог равен сумме оборудования. Монтаж упомянут как условие изменения цены, но отдельная стоимость работ не приведена.",
+          "scope": "Оборудование коммерческого предложения; полный бюджет благоустройства не подтверждён.",
+          "groundingNote": "Расчёт стандартного оборудования предполагает возможность заглубления до 1000 мм в грунт; это условие поставщика, а не проверенный проект фундаментов.",
+          "colourNote": "Небазовая цветовая гамма может увеличить цену.",
+          "totalFormula": "=SUM(F19:F26)",
+          "summary": "Оборудование коммерческого предложения; полный бюджет благоустройства не подтверждён."
+        },
+        "issues": [
+          {
+            "severity": "error",
+            "title": "Цена и сумма К-33/2 расходятся",
+            "detail": "E24=423017 ₽, C24=1, F24=293414 ₽. Итог 12013963 ₽ складывается по F19:F26. Пересчёт по E×C даёт 12143566 ₽, на129603 ₽ больше. Ни одну цену не выбирать автоматически.",
+            "source": "sources/019.xlsx",
+            "cell": "C24;E24;F24;F27"
+          }
+        ],
+        "verifiedItems": [
+          {
+            "code": "Г-2326",
+            "name": "Игровой комплекс \"Белаз",
+            "qty": 1,
+            "unit": "шт.",
+            "unitPrice": 8343720,
+            "lineTotal": 8343720,
+            "computedLineTotal": 8343720,
+            "source": "sources/019.xlsx",
+            "sheet": "Лист1",
+            "cells": {
+              "name": "B19",
+              "qty": "C19",
+              "unitPrice": "E19",
+              "lineTotal": "F19"
+            },
+            "conflict": false,
+            "safeScenarioUnitPrice": 8343720,
+            "vatIncluded": true
+          },
+          {
+            "code": "Г-2327",
+            "name": "Игровой комплекс \"Бульдозер с горкой",
+            "qty": 1,
+            "unit": "шт.",
+            "unitPrice": 1058400,
+            "lineTotal": 1058400,
+            "computedLineTotal": 1058400,
+            "source": "sources/019.xlsx",
+            "sheet": "Лист1",
+            "cells": {
+              "name": "B20",
+              "qty": "C20",
+              "unitPrice": "E20",
+              "lineTotal": "F20"
+            },
+            "conflict": false,
+            "safeScenarioUnitPrice": 1058400,
+            "vatIncluded": true
+          },
+          {
+            "code": "К-56",
+            "name": "Качалка-балансир",
+            "qty": 1,
+            "unit": "шт.",
+            "unitPrice": 79169,
+            "lineTotal": 79169,
+            "computedLineTotal": 79169,
+            "source": "sources/019.xlsx",
+            "sheet": "Лист1",
+            "cells": {
+              "name": "B21",
+              "qty": "C21",
+              "unitPrice": "E21",
+              "lineTotal": "F21"
+            },
+            "conflict": false,
+            "safeScenarioUnitPrice": 79169,
+            "vatIncluded": true
+          },
+          {
+            "code": "К-29",
+            "name": "Игровой  элемент",
+            "qty": 1,
+            "unit": "шт.",
+            "unitPrice": 164934,
+            "lineTotal": 164934,
+            "computedLineTotal": 164934,
+            "source": "sources/019.xlsx",
+            "sheet": "Лист1",
+            "cells": {
+              "name": "B22",
+              "qty": "C22",
+              "unitPrice": "E22",
+              "lineTotal": "F22"
+            },
+            "conflict": false,
+            "safeScenarioUnitPrice": 164934,
+            "vatIncluded": true
+          },
+          {
+            "code": "ПЕ-71",
+            "name": "Песочный дворик",
+            "qty": 1,
+            "unit": "шт.",
+            "unitPrice": 1746360,
+            "lineTotal": 1746360,
+            "computedLineTotal": 1746360,
+            "source": "sources/019.xlsx",
+            "sheet": "Лист1",
+            "cells": {
+              "name": "B23",
+              "qty": "C23",
+              "unitPrice": "E23",
+              "lineTotal": "F23"
+            },
+            "conflict": false,
+            "safeScenarioUnitPrice": 1746360,
+            "vatIncluded": true
+          },
+          {
+            "code": "К-33/2",
+            "name": "Качели  (подвес Гнездо,тип-2 и тип-5)",
+            "qty": 1,
+            "unit": "шт.",
+            "unitPrice": 423017,
+            "lineTotal": 293414,
+            "computedLineTotal": 423017,
+            "source": "sources/019.xlsx",
+            "sheet": "Лист1",
+            "cells": {
+              "name": "B24",
+              "qty": "C24",
+              "unitPrice": "E24",
+              "lineTotal": "F24"
+            },
+            "conflict": true,
+            "safeScenarioUnitPrice": null,
+            "vatIncluded": true,
+            "conflictDetail": "Цена 423017 × 1 не равна сумме строки 293414; расхождение 129603. До ответа поставщика цену новой концепции считать неизвестной."
+          },
+          {
+            "code": "С-235",
+            "name": "Скамья",
+            "qty": 6,
+            "unit": "шт.",
+            "unitPrice": 37799,
+            "lineTotal": 226794,
+            "computedLineTotal": 226794,
+            "source": "sources/019.xlsx",
+            "sheet": "Лист1",
+            "cells": {
+              "name": "B25",
+              "qty": "C25",
+              "unitPrice": "E25",
+              "lineTotal": "F25"
+            },
+            "conflict": false,
+            "safeScenarioUnitPrice": 37799,
+            "vatIncluded": true
+          },
+          {
+            "code": "У-15д",
+            "name": "Урна с ведром",
+            "qty": 6,
+            "unit": "шт.",
+            "unitPrice": 16862,
+            "lineTotal": 101172,
+            "computedLineTotal": 101172,
+            "source": "sources/019.xlsx",
+            "sheet": "Лист1",
+            "cells": {
+              "name": "B26",
+              "qty": "C26",
+              "unitPrice": "E26",
+              "lineTotal": "F26"
+            },
+            "conflict": false,
+            "safeScenarioUnitPrice": 16862,
+            "vatIncluded": true
+          }
+        ],
+        "missing": [
+          "Стоимость подготовки основания и земляных работ",
+          "Стоимость покрытий и водоотведения",
+          "Стоимость доставки до площадки и разгрузки",
+          "Стоимость монтажа, фундаментов и подключения",
+          "Срок действия цен и условия оплаты",
+          "Стоимость озеленения и содержания"
+        ]
+      },
+      "location": {
+        "addressReview": {
+          "status": "Адрес подтверждён исходным файлом и муниципальным реестром",
+          "address": "улица Горького, 6",
+          "evidence": "Номер 6 указан в имени сметы. Муниципальный реестр земли на 01.01.2025, PDF стр. 104, содержит участок детских площадок по ул. Горького, 6: 41:01:0010118:182, 901 м².",
+          "source": "https://pkgo.ru/upload/medialibrary/3dc/9hyk6cxq9rtuqkp8wx9yisqvmvwxcx33.pdf#page=104",
+          "localSource": "sources/019.xlsx",
+          "limitation": "Совпадение адреса не доказывает границы проектируемого прямоугольника или его посадку внутри кадастрового участка."
+        },
+        "dimensions": {
+          "width": 21,
+          "length": 18,
+          "area": 378,
+          "scope": "Размерный прямоугольник площадки, без внешней зелёной полосы",
+          "shape": "rectangle",
+          "calculation": "21 × 18 = 378",
+          "source": "sources/023.jpg"
+        },
+        "documents": [
+          {
+            "publicPath": "sources/023.jpg",
+            "title": "Исходная схема площадки на Горького · 21 × 18 м",
+            "kind": "dimensioned-schematic-plan",
+            "evidence": "Размеры 21,0 и 18,0. На самом листе нет адреса; связь обеспечивается папкой исходников и сметой."
+          },
+          {
+            "publicPath": "sources/019.xlsx",
+            "title": "Смета «Горького д. 6», 02.11.2026",
+            "kind": "address-evidence",
+            "evidence": "Номер дома 6 содержится в имени исходного файла."
+          }
+        ],
+        "issues": [
+          {
+            "title": "Точка обозначает улицу",
+            "detail": "Имеющаяся координата получена для улицы, хотя адрес проекта уточнён до дома. Кадастровый реестр не содержит координат, поэтому смещать маркер по нему нельзя.",
+            "source": "https://www.openstreetmap.org/way/102585183"
+          }
+        ],
+        "missing": [
+          "Выписка ЕГРН или геоданные участка 41:01:0010118:182; точка/схема посадки площадки внутри него.",
+          "Подтверждённая схема расположения именно проектируемой площадки с адресом и подписью заказчика.",
+          "Геопривязанный контур (GeoJSON/KML либо координаты поворотных точек и система координат), топосъёмка с рельефом и сетями.",
+          "Паспорта выбранных МАФов с зонами безопасности для проверки посадки."
+        ],
+        "geo": {
+          "lat": 53.0559486,
+          "lon": 158.6312255,
+          "kind": "street",
+          "source": "https://www.openstreetmap.org/way/102585183",
+          "changed": false,
+          "confirmedBoundary": false,
+          "evidence": "Существующая карточка atlas-data.json; сохранён результат OpenStreetMap/Nominatim от 2026-11-08 (объект улицы), сверенный с сохранёнными геокодирующими данными.",
+          "reason": "Новые документы не дают проверяемой координаты проектной площадки; маркер сохраняется как ориентир.",
+          "verification": "Адресный геокод, не геодезическая точка и не центр подтверждённого проектного контура."
+        }
+      }
+    },
+    {
+      "id": 3,
+      "finance": {
+        "documents": [
+          {
+            "publicPath": "sources/025.xlsx",
+            "title": "02.11.2026. Камчатка.xlsx",
+            "date": null,
+            "dateBasis": "Дата документа не заполнена; 02.11.2026 есть только в имени файла",
+            "fileDate": "2026-11-02",
+            "issuer": "ООО «АВЕН СПб»",
+            "totalCell": "F28",
+            "vatCell": "F29"
+          }
+        ],
+        "reconciliation": {
+          "declaredTotal": 11262737,
+          "itemsTotal": 11262737,
+          "difference": 0,
+          "unitPriceCalculationTotal": 11262737,
+          "unitPriceCalculationDifference": 0,
+          "vatAmount": 2030985.35,
+          "vatIncluded": true,
+          "vatRate": null,
+          "vatNote": "В E18/F18 указано «с НДС»; отдельно в F29 приведено 2,030,985.35 ₽ НДС. Ставка не указана текстом. НДС уже включён, добавлять повторно нельзя.",
+          "deliveryAmount": null,
+          "deliveryNote": "Доставка упомянута как условие, влияющее на конечную стоимость; отдельной цены и подтверждения включения нет.",
+          "worksAmount": null,
+          "worksNote": "Итог равен сумме оборудования. Монтаж упомянут как условие изменения цены, но отдельная стоимость работ не приведена.",
+          "scope": "Оборудование коммерческого предложения; полный бюджет благоустройства не подтверждён.",
+          "groundingNote": "Расчёт стандартного оборудования предполагает возможность заглубления до 1000 мм в грунт; это условие поставщика, а не проверенный проект фундаментов.",
+          "colourNote": "Небазовая цветовая гамма может увеличить цену.",
+          "totalFormula": "=SUM(F19:F27)",
+          "summary": "Оборудование коммерческого предложения; полный бюджет благоустройства не подтверждён."
+        },
+        "issues": [
+          {
+            "severity": "warning",
+            "title": "Дата КП не заполнена",
+            "detail": "В B7 оставлены пустые дата и исходящий номер. Дату 02.11.2026 можно показывать только как дату имени файла.",
+            "source": "sources/025.xlsx",
+            "cell": "B7"
+          },
+          {
+            "severity": "warning",
+            "title": "Смета относится к раннему варианту",
+            "detail": "Имя XLSX содержит02.11.2026; план sources/010.jpg от05.11.2026 имеет другую комплектацию. Итог11262737 ₽ не подтверждает стоимость актуального плана и новых концепций.",
+            "source": "sources/025.xlsx",
+            "cell": "B19:F27"
+          },
+          {
+            "severity": "info",
+            "title": "Разное написание объекта",
+            "detail": "В B15 написано «Океаническая», в папке и планах — «Океанская». Адрес нужно подтвердить у владельца проекта.",
+            "source": "sources/025.xlsx",
+            "cell": "B15"
+          }
+        ],
+        "verifiedItems": [
+          {
+            "code": "Г-2313/1",
+            "name": "Игровой городок \"Подводная лодка\"",
+            "qty": 1,
+            "unit": "шт.",
+            "unitPrice": 4507937,
+            "lineTotal": 4507937,
+            "computedLineTotal": 4507937,
+            "source": "sources/025.xlsx",
+            "sheet": "Лист1",
+            "cells": {
+              "name": "B19",
+              "qty": "C19",
+              "unitPrice": "E19",
+              "lineTotal": "F19"
+            },
+            "conflict": false,
+            "safeScenarioUnitPrice": 4507937,
+            "vatIncluded": true
+          },
+          {
+            "code": "КД-13",
+            "name": "Каеатная конструкция \"Марс\"",
+            "qty": 1,
+            "unit": "шт.",
+            "unitPrice": 2772000,
+            "lineTotal": 2772000,
+            "computedLineTotal": 2772000,
+            "source": "sources/025.xlsx",
+            "sheet": "Лист1",
+            "cells": {
+              "name": "B20",
+              "qty": "C20",
+              "unitPrice": "E20",
+              "lineTotal": "F20"
+            },
+            "conflict": false,
+            "safeScenarioUnitPrice": 2772000,
+            "vatIncluded": true
+          },
+          {
+            "code": "Г-4065",
+            "name": "Игровой комп \"Нерпа\"",
+            "qty": 1,
+            "unit": "шт.",
+            "unitPrice": 2259600,
+            "lineTotal": 2259600,
+            "computedLineTotal": 2259600,
+            "source": "sources/025.xlsx",
+            "sheet": "Лист1",
+            "cells": {
+              "name": "B21",
+              "qty": "C21",
+              "unitPrice": "E21",
+              "lineTotal": "F21"
+            },
+            "conflict": false,
+            "safeScenarioUnitPrice": 2259600,
+            "vatIncluded": true
+          },
+          {
+            "code": "ТК-1",
+            "name": "Тренажерный комплекс",
+            "qty": 1,
+            "unit": "шт.",
+            "unitPrice": 417497,
+            "lineTotal": 417497,
+            "computedLineTotal": 417497,
+            "source": "sources/025.xlsx",
+            "sheet": "Лист1",
+            "cells": {
+              "name": "B22",
+              "qty": "C22",
+              "unitPrice": "E22",
+              "lineTotal": "F22"
+            },
+            "conflict": false,
+            "safeScenarioUnitPrice": 417497,
+            "vatIncluded": true
+          },
+          {
+            "code": "ВР-44",
+            "name": "Воркаут с баскетбольным кольцом",
+            "qty": 1,
+            "unit": "шт.",
+            "unitPrice": 383040,
+            "lineTotal": 383040,
+            "computedLineTotal": 383040,
+            "source": "sources/025.xlsx",
+            "sheet": "Лист1",
+            "cells": {
+              "name": "B23",
+              "qty": "C23",
+              "unitPrice": "E23",
+              "lineTotal": "F23"
+            },
+            "conflict": false,
+            "safeScenarioUnitPrice": 383040,
+            "vatIncluded": true
+          },
+          {
+            "code": "МК-7/1п",
+            "name": "Карусель",
+            "qty": 1,
+            "unit": "шт.",
+            "unitPrice": 139337,
+            "lineTotal": 139337,
+            "computedLineTotal": 139337,
+            "source": "sources/025.xlsx",
+            "sheet": "Лист1",
+            "cells": {
+              "name": "B24",
+              "qty": "C24",
+              "unitPrice": "E24",
+              "lineTotal": "F24"
+            },
+            "conflict": false,
+            "safeScenarioUnitPrice": 139337,
+            "vatIncluded": true
+          },
+          {
+            "code": "К-33/2",
+            "name": "Качели  (подвес Гнездо,тип-2 и тип-5)",
+            "qty": 1,
+            "unit": "шт.",
+            "unitPrice": 293414,
+            "lineTotal": 293414,
+            "computedLineTotal": 293414,
+            "source": "sources/025.xlsx",
+            "sheet": "Лист1",
+            "cells": {
+              "name": "B25",
+              "qty": "C25",
+              "unitPrice": "E25",
+              "lineTotal": "F25"
+            },
+            "conflict": false,
+            "safeScenarioUnitPrice": 293414,
+            "vatIncluded": true
+          },
+          {
+            "code": "С-190",
+            "name": "Скамья",
+            "qty": 4,
+            "unit": "шт.",
+            "unitPrice": 99193,
+            "lineTotal": 396772,
+            "computedLineTotal": 396772,
+            "source": "sources/025.xlsx",
+            "sheet": "Лист1",
+            "cells": {
+              "name": "B26",
+              "qty": "C26",
+              "unitPrice": "E26",
+              "lineTotal": "F26"
+            },
+            "conflict": false,
+            "safeScenarioUnitPrice": 99193,
+            "vatIncluded": true
+          },
+          {
+            "code": "У-206",
+            "name": "Урна с ведром",
+            "qty": 4,
+            "unit": "шт.",
+            "unitPrice": 23285,
+            "lineTotal": 93140,
+            "computedLineTotal": 93140,
+            "source": "sources/025.xlsx",
+            "sheet": "Лист1",
+            "cells": {
+              "name": "B27",
+              "qty": "C27",
+              "unitPrice": "E27",
+              "lineTotal": "F27"
+            },
+            "conflict": false,
+            "safeScenarioUnitPrice": 23285,
+            "vatIncluded": true
+          }
+        ],
+        "missing": [
+          "Стоимость подготовки основания и земляных работ",
+          "Стоимость покрытий и водоотведения",
+          "Стоимость доставки до площадки и разгрузки",
+          "Стоимость монтажа, фундаментов и подключения",
+          "Срок действия цен и условия оплаты",
+          "Стоимость озеленения и содержания",
+          "КП, согласованное с комплектацией плана05.11.2026"
+        ]
+      },
+      "location": {
+        "addressReview": {
+          "status": "Подтверждена только улица",
+          "address": "улица Океанская — номер дома уточняется",
+          "evidence": "Название Океанская есть на исходных планах. Номер дома в предоставленном комплекте не найден. На улице несколько площадок; выбирать одну по совпадению улицы нельзя.",
+          "source": "sources/010.jpg"
+        },
+        "dimensions": {
+          "width": 40,
+          "length": 20,
+          "area": 800,
+          "scope": "Размерный прямоугольник последней исходной схемы",
+          "shape": "rectangle",
+          "calculation": "40 × 20 = 800",
+          "source": "sources/010.jpg",
+          "version": "Правки 2, 05.11.2026"
+        },
+        "documents": [
+          {
+            "publicPath": "sources/010.jpg",
+            "title": "Последняя исходная схема «Океанская» · 05.11.2026 · 40 × 20 м",
+            "kind": "dimensioned-schematic-plan",
+            "evidence": "На листе размеры 40,0 × 20,0 и дата 5.11.26."
+          },
+          {
+            "publicPath": "sources/026.jpg",
+            "title": "Исходная схема «Океанская» · вариант 1 · 02.11.2026",
+            "kind": "superseded-schematic-plan",
+            "evidence": "Более ранний вариант; не подменяет лист 05.11.2026."
+          },
+          {
+            "publicPath": "sources/028.jpg",
+            "title": "Исходная схема «Океанская» · вариант 2 · 02.11.2026",
+            "kind": "superseded-schematic-plan",
+            "evidence": "Более ранний вариант; не подменяет лист 05.11.2026."
+          }
+        ],
+        "issues": [
+          {
+            "title": "Несколько возможных площадок",
+            "detail": "Публикации о площадках на Океанской не устанавливают связь с данным комплектом 2026 года. Нужна адресная привязка заказчика.",
+            "source": "sources/010.jpg"
+          }
+        ],
+        "missing": [
+          "Номер дома или кадастровый номер; схема на городской подоснове, связывающая конкретный прямоугольник 40 × 20 м с проектом.",
+          "Подтверждённая схема расположения именно проектируемой площадки с адресом и подписью заказчика.",
+          "Геопривязанный контур (GeoJSON/KML либо координаты поворотных точек и система координат), топосъёмка с рельефом и сетями.",
+          "Паспорта выбранных МАФов с зонами безопасности для проверки посадки."
+        ],
+        "geo": {
+          "lat": 52.9882959,
+          "lon": 158.6719006,
+          "kind": "street",
+          "source": "https://www.openstreetmap.org/way/129088238",
+          "changed": false,
+          "confirmedBoundary": false,
+          "evidence": "Существующая карточка atlas-data.json; сохранён результат OpenStreetMap/Nominatim от 2026-11-08 (объект улицы), сверенный с сохранёнными геокодирующими данными.",
+          "reason": "Новые документы не дают проверяемой координаты проектной площадки; маркер сохраняется как ориентир.",
+          "verification": "Адресный геокод, не геодезическая точка и не центр подтверждённого проектного контура."
+        }
+      }
+    },
+    {
+      "id": 4,
+      "finance": {
+        "documents": [],
+        "reconciliation": {
+          "declaredTotal": null,
+          "itemsTotal": null,
+          "difference": null,
+          "vatNote": "НДС не подтверждён документом.",
+          "deliveryNote": "Стоимость доставки не указана.",
+          "worksNote": "Стоимость работ не указана.",
+          "scope": "В предоставленной папке нет финансового документа; суммы старой панели помечены как оценочные.",
+          "summary": "В предоставленной папке нет финансового документа; суммы старой панели помечены как оценочные."
+        },
+        "issues": [
+          {
+            "severity": "warning",
+            "title": "Подтверждённой сметы нет",
+            "detail": "Планы и визуализации не подтверждают стоимость оборудования и работ.",
+            "source": "sources.html",
+            "cell": null
+          }
+        ],
+        "verifiedItems": [],
+        "missing": [
+          "Коммерческое предложение и ведомость оборудования с ценами",
+          "Стоимость подготовки основания и земляных работ",
+          "Стоимость покрытий и водоотведения",
+          "Стоимость доставки до площадки и разгрузки",
+          "Стоимость монтажа, фундаментов и подключения",
+          "Срок действия цен и условия оплаты",
+          "Стоимость озеленения и содержания"
+        ]
+      },
+      "location": {
+        "addressReview": {
+          "status": "Установлен адресный ориентир существующей площадки",
+          "address": "улица Тушканова, 29 — улица Бохняка, 2",
+          "evidence": "Адресная строка детской площадки присутствует на стр. 36 проекта муниципальной программы на официальном сайте. Связь именно с новой схемой «АЗС Корабль» ещё требует подтверждения заказчика.",
+          "source": "https://www.pkgo.ru/upload/iblock/a46/wxsms99j9hmp8vxs2fgpjix7ieb1f5dc.pdf#page=36",
+          "sourceStatus": "Проект муниципального документа: дата и номер постановления не заполнены."
+        },
+        "dimensions": {
+          "width": 26,
+          "length": 18.3,
+          "area": null,
+          "boundingRectangleArea": 475.8,
+          "scope": "Габариты главной фигурной зоны; отдельно показаны другие зоны и дорожки",
+          "shape": "irregular-multi-zone",
+          "source": "sources/034.jpg",
+          "partialDimensions": [
+            {
+              "value": 24.4,
+              "unit": "м",
+              "description": "Размер вдоль диагонального участка; не общая длина площадки"
+            }
+          ]
+        },
+        "documents": [
+          {
+            "publicPath": "sources/034.jpg",
+            "title": "Исходная схема «АЗС Корабль» · составной контур",
+            "kind": "partially-dimensioned-schematic-plan",
+            "evidence": "Фигурная главная зона и две отдельные зоны слева, соединённые дорожкой. Габариты главной зоны 26,0 и 18,3 не задают площадь контура."
+          }
+        ],
+        "issues": [
+          {
+            "title": "475,8 м² ошибочно выдаётся за площадь",
+            "detail": "26 × 18,3 описывает прямоугольный габарит фигурной зоны. Для площади нужно оцифровать согласованный контур с масштабом или получить ведомость площадей.",
+            "source": "sources/034.jpg"
+          }
+        ],
+        "missing": [
+          "Площадь и замкнутый контур каждой из зон и дорожек; подтверждение связи схемы с площадкой Тушканова, 29 — Бохняка, 2.",
+          "Подтверждённая схема расположения именно проектируемой площадки с адресом и подписью заказчика.",
+          "Геопривязанный контур (GeoJSON/KML либо координаты поворотных точек и система координат), топосъёмка с рельефом и сетями.",
+          "Паспорта выбранных МАФов с зонами безопасности для проверки посадки."
+        ],
+        "geo": {
+          "lat": 53.0629827,
+          "lon": 158.6257117,
+          "kind": "house",
+          "source": "https://www.openstreetmap.org/way/102609584",
+          "changed": false,
+          "confirmedBoundary": false,
+          "evidence": "Существующая карточка atlas-data.json; сохранён результат OpenStreetMap/Nominatim от 2026-11-08 (объект здания), сверенный с сохранёнными геокодирующими данными.",
+          "reason": "Новые документы не дают проверяемой координаты проектной площадки; маркер сохраняется как ориентир.",
+          "verification": "Адресный геокод, не геодезическая точка и не центр подтверждённого проектного контура."
+        }
+      }
+    },
+    {
+      "id": 5,
+      "finance": {
+        "documents": [],
+        "reconciliation": {
+          "declaredTotal": null,
+          "itemsTotal": null,
+          "difference": null,
+          "vatNote": "НДС не подтверждён документом.",
+          "deliveryNote": "Стоимость доставки не указана.",
+          "worksNote": "Стоимость работ не указана.",
+          "scope": "В предоставленной папке нет финансового документа; суммы старой панели помечены как оценочные.",
+          "summary": "В предоставленной папке нет финансового документа; суммы старой панели помечены как оценочные."
+        },
+        "issues": [
+          {
+            "severity": "warning",
+            "title": "Подтверждённой сметы нет",
+            "detail": "Планы и визуализации не подтверждают стоимость оборудования и работ.",
+            "source": "sources.html",
+            "cell": null
+          }
+        ],
+        "verifiedItems": [],
+        "missing": [
+          "Коммерческое предложение и ведомость оборудования с ценами",
+          "Стоимость подготовки основания и земляных работ",
+          "Стоимость покрытий и водоотведения",
+          "Стоимость доставки до площадки и разгрузки",
+          "Стоимость монтажа, фундаментов и подключения",
+          "Срок действия цен и условия оплаты",
+          "Стоимость озеленения и содержания"
+        ]
+      },
+      "location": {
+        "addressReview": {
+          "status": "Дом используется как предварительный ориентир",
+          "address": "улица Солнечная, 7 — дом-ориентир",
+          "evidence": "Исходный лист подтверждает улицу Солнечную, но не дом 7. Текущая привязка к дому взята из предыдущего поиска публичных сообщений; разные сообщения перечисляют соседние дома по-разному.",
+          "source": "sources/041.jpg",
+          "previousLocationSource": "https://nia-kamchatka.ru/news/authority/7528.html"
+        },
+        "dimensions": {
+          "width": 33.5,
+          "length": 19.5,
+          "area": 653.25,
+          "scope": "Размерный прямоугольник исходной схемы",
+          "shape": "rectangle",
+          "calculation": "33,5 × 19,5 = 653,25",
+          "source": "sources/041.jpg",
+          "version": "03.11.2026"
+        },
+        "documents": [
+          {
+            "publicPath": "sources/041.jpg",
+            "title": "Исходная схема «Солнечная» · 33,5 × 19,5 м",
+            "kind": "dimensioned-schematic-plan",
+            "evidence": "На листе размеры 33,5 и 19,5, дата 03.11.26; номер дома и координаты отсутствуют."
+          }
+        ],
+        "issues": [
+          {
+            "title": "Дом 7 не подтверждён планом",
+            "detail": "Маркер здания пригоден как ориентир, но не устанавливает местоположение прямоугольника на схеме.",
+            "source": "sources/041.jpg"
+          }
+        ],
+        "missing": [
+          "Подтвердить дом/группу домов и положение прямоугольника площадки относительно существующих зданий.",
+          "Подтверждённая схема расположения именно проектируемой площадки с адресом и подписью заказчика.",
+          "Геопривязанный контур (GeoJSON/KML либо координаты поворотных точек и система координат), топосъёмка с рельефом и сетями.",
+          "Паспорта выбранных МАФов с зонами безопасности для проверки посадки."
+        ],
+        "geo": {
+          "lat": 53.0244429,
+          "lon": 158.7014779,
+          "kind": "house",
+          "source": "https://www.openstreetmap.org/way/129381190",
+          "changed": false,
+          "confirmedBoundary": false,
+          "evidence": "Существующая карточка atlas-data.json; сохранён результат OpenStreetMap/Nominatim от 2026-11-08 (объект здания), сверенный с сохранёнными геокодирующими данными.",
+          "reason": "Новые документы не дают проверяемой координаты проектной площадки; маркер сохраняется как ориентир.",
+          "verification": "Адресный геокод, не геодезическая точка и не центр подтверждённого проектного контура."
+        }
+      }
+    },
+    {
+      "id": 6,
+      "finance": {
+        "documents": [],
+        "reconciliation": {
+          "declaredTotal": null,
+          "itemsTotal": null,
+          "difference": null,
+          "vatNote": "НДС не подтверждён документом.",
+          "deliveryNote": "Стоимость доставки не указана.",
+          "worksNote": "Стоимость работ не указана.",
+          "scope": "В предоставленной папке нет финансового документа; суммы старой панели помечены как оценочные.",
+          "summary": "В предоставленной папке нет финансового документа; суммы старой панели помечены как оценочные."
+        },
+        "issues": [
+          {
+            "severity": "warning",
+            "title": "Подтверждённой сметы нет",
+            "detail": "Планы и визуализации не подтверждают стоимость оборудования и работ.",
+            "source": "sources.html",
+            "cell": null
+          }
+        ],
+        "verifiedItems": [],
+        "missing": [
+          "Коммерческое предложение и ведомость оборудования с ценами",
+          "Стоимость подготовки основания и земляных работ",
+          "Стоимость покрытий и водоотведения",
+          "Стоимость доставки до площадки и разгрузки",
+          "Стоимость монтажа, фундаментов и подключения",
+          "Срок действия цен и условия оплаты",
+          "Стоимость озеленения и содержания"
+        ]
+      },
+      "location": {
+        "addressReview": {
+          "status": "Исторический адресный ориентир; связь с новым проектом не подтверждена",
+          "address": "улица Молчанова, 3 — дом-ориентир",
+          "evidence": "В прежней проверке адрес был связан с публикацией 2013 года о площадке. Предоставленных исходных планов или адресного задания нового проекта не найдено; современную концепцию к исторической площадке автоматически не привязывать.",
+          "source": "https://kamchatka.er.ru/activity/news/bolshoj-trehmachtovyj-korabl-poyavilsya-na-detskoj-ploshadke-v-mikrorajone-azs",
+          "sourceStatus": "Ссылка из существующей карточки; в данном аудите не подтверждает проект 2026 года."
+        },
+        "dimensions": {
+          "width": null,
+          "length": null,
+          "area": null,
+          "scope": "Исходный размерный план отсутствует",
+          "shape": null,
+          "source": null,
+          "legacyUnverifiedArea": 450
+        },
+        "documents": [],
+        "issues": [
+          {
+            "title": "Нет исходного плана",
+            "detail": "В предоставленном комплекте и карточке отсутствуют размерная схема и отдельный исходный альбом для Молчанова. Неподписанные общие изображения не устанавливают адрес или размеры.",
+            "source": "atlas-data.json"
+          }
+        ],
+        "missing": [
+          "Исходный план и адресное задание для Молчанова; обмеры/топосъёмка; подтверждение, что проект относится к дому 3.",
+          "Подтверждённая схема расположения именно проектируемой площадки с адресом и подписью заказчика.",
+          "Геопривязанный контур (GeoJSON/KML либо координаты поворотных точек и система координат), топосъёмка с рельефом и сетями.",
+          "Паспорта выбранных МАФов с зонами безопасности для проверки посадки."
+        ],
+        "geo": {
+          "lat": 53.067482,
+          "lon": 158.6110327,
+          "kind": "house",
+          "source": "https://www.openstreetmap.org/way/102718114",
+          "changed": false,
+          "confirmedBoundary": false,
+          "evidence": "Существующая карточка atlas-data.json; сохранён результат OpenStreetMap/Nominatim от 2026-11-08 (объект здания), сверенный с сохранёнными геокодирующими данными.",
+          "reason": "Новые документы не дают проверяемой координаты проектной площадки; маркер сохраняется как ориентир.",
+          "verification": "Адресный геокод, не геодезическая точка и не центр подтверждённого проектного контура."
+        }
+      }
+    },
+    {
+      "id": 7,
+      "finance": {
+        "documents": [],
+        "reconciliation": {
+          "declaredTotal": null,
+          "itemsTotal": null,
+          "difference": null,
+          "vatNote": "НДС не подтверждён документом.",
+          "deliveryNote": "Стоимость доставки не указана.",
+          "worksNote": "Стоимость работ не указана.",
+          "scope": "В предоставленной папке нет финансового документа; суммы старой панели помечены как оценочные.",
+          "summary": "В предоставленной папке нет финансового документа; суммы старой панели помечены как оценочные."
+        },
+        "issues": [
+          {
+            "severity": "warning",
+            "title": "Подтверждённой сметы нет",
+            "detail": "Планы и визуализации не подтверждают стоимость оборудования и работ.",
+            "source": "sources.html",
+            "cell": null
+          }
+        ],
+        "verifiedItems": [],
+        "missing": [
+          "Коммерческое предложение и ведомость оборудования с ценами",
+          "Стоимость подготовки основания и земляных работ",
+          "Стоимость покрытий и водоотведения",
+          "Стоимость доставки до площадки и разгрузки",
+          "Стоимость монтажа, фундаментов и подключения",
+          "Срок действия цен и условия оплаты",
+          "Стоимость озеленения и содержания"
+        ]
+      },
+      "location": {
+        "addressReview": {
+          "status": "Адрес существующей площадки подтверждён официальной исторической публикацией",
+          "address": "улица Академика Королёва, 49 — улица Академика Курчатова, 35 и 39",
+          "evidence": "Газета ПКГО № 18 (591) от 05.05.2017, стр. 45: отчёт об установке оборудования на площадке «Байконур» у домов Академика Королёва, 49 и Академика Курчатова, 35, 39. Это подтверждает адрес существующего объекта, но не посадку новой схемы 2026 года.",
+          "source": "https://pkgo.ru/upload/iblock/fde/fde08fd4b16f80cf9fbf50ff8ab6402c.pdf#page=45",
+          "localSource": "sources/048.jpg",
+          "limitation": "Сведения 2017 года не устанавливают текущие границы и положение оборудования 2026 года."
+        },
+        "dimensions": {
+          "width": null,
+          "length": null,
+          "area": null,
+          "scope": "Частичные размеры составного контура",
+          "shape": "irregular-multi-zone",
+          "source": "sources/048.jpg",
+          "partialDimensions": [
+            {
+              "value": 22.97,
+              "unit": "м",
+              "description": "Верхний поперечный размер"
+            },
+            {
+              "value": 20.3,
+              "unit": "м",
+              "description": "Вертикальный размер главной части"
+            },
+            {
+              "value": 19.02,
+              "unit": "м",
+              "description": "Размер правой фигурной части"
+            },
+            {
+              "value": 15.14,
+              "unit": "м",
+              "description": "Ширина нижней части"
+            }
+          ],
+          "legacyUnverifiedArea": 680
+        },
+        "documents": [
+          {
+            "publicPath": "sources/048.jpg",
+            "title": "Исходная схема «Байконур» · составной контур",
+            "kind": "partially-dimensioned-schematic-plan",
+            "evidence": "Даны частичные размеры отдельных участков. Формы закруглений и полный геопривязанный контур для определения площади отсутствуют."
+          }
+        ],
+        "issues": [
+          {
+            "title": "680 м² не подтверждены исходной схемой",
+            "detail": "Частичные линейные размеры не позволяют однозначно получить суммарную площадь составного контура.",
+            "source": "sources/048.jpg"
+          }
+        ],
+        "missing": [
+          "Обмерный контур и ведомость площадей; привязка к домам Академика Королёва/Академика Курчатова.",
+          "Подтверждённая схема расположения именно проектируемой площадки с адресом и подписью заказчика.",
+          "Геопривязанный контур (GeoJSON/KML либо координаты поворотных точек и система координат), топосъёмка с рельефом и сетями.",
+          "Паспорта выбранных МАФов с зонами безопасности для проверки посадки."
+        ],
+        "geo": {
+          "lat": 53.0615176,
+          "lon": 158.6539405,
+          "kind": "house",
+          "source": "https://www.openstreetmap.org/way/106146810",
+          "changed": false,
+          "confirmedBoundary": false,
+          "evidence": "Существующая карточка atlas-data.json; сохранён результат OpenStreetMap/Nominatim от 2026-11-08 (объект здания), сверенный с сохранёнными геокодирующими данными.",
+          "reason": "Новые документы не дают проверяемой координаты проектной площадки; маркер сохраняется как ориентир.",
+          "verification": "Адресный геокод, не геодезическая точка и не центр подтверждённого проектного контура."
+        }
+      }
+    },
+    {
+      "id": 8,
+      "finance": {
+        "documents": [],
+        "reconciliation": {
+          "declaredTotal": null,
+          "itemsTotal": null,
+          "difference": null,
+          "vatNote": "НДС не подтверждён документом.",
+          "deliveryNote": "Стоимость доставки не указана.",
+          "worksNote": "Стоимость работ не указана.",
+          "scope": "В предоставленной папке нет финансового документа; суммы старой панели помечены как оценочные.",
+          "summary": "В предоставленной папке нет финансового документа; суммы старой панели помечены как оценочные."
+        },
+        "issues": [
+          {
+            "severity": "warning",
+            "title": "Подтверждённой сметы нет",
+            "detail": "Планы и визуализации не подтверждают стоимость оборудования и работ.",
+            "source": "sources.html",
+            "cell": null
+          }
+        ],
+        "verifiedItems": [],
+        "missing": [
+          "Коммерческое предложение и ведомость оборудования с ценами",
+          "Стоимость подготовки основания и земляных работ",
+          "Стоимость покрытий и водоотведения",
+          "Стоимость доставки до площадки и разгрузки",
+          "Стоимость монтажа, фундаментов и подключения",
+          "Срок действия цен и условия оплаты",
+          "Стоимость озеленения и содержания"
+        ]
+      },
+      "location": {
+        "addressReview": {
+          "status": "Адрес существующей спортивной площадки найден; связь с новой схемой уточняется",
+          "address": "проспект Таранца, 9 — дом-ориентир",
+          "evidence": "На стр. 36 проекта муниципальной программы указана «Спортивная площадка по пр. Таранца, 9». Исходная схема «Карандаши» содержит название Таранца без номера дома.",
+          "source": "https://www.pkgo.ru/upload/iblock/a46/wxsms99j9hmp8vxs2fgpjix7ieb1f5dc.pdf#page=36",
+          "localSource": "sources/054.jpg",
+          "sourceStatus": "Проект муниципального документа: дата и номер постановления не заполнены."
+        },
+        "dimensions": {
+          "width": null,
+          "length": 27,
+          "area": 985.5,
+          "bases": [
+            27,
+            46
+          ],
+          "height": 27,
+          "scope": "Размерная трапеция на исходной схеме, без прилегающей территории",
+          "shape": "trapezoid",
+          "calculation": "(27 + 46) × 27 / 2 = 985,5",
+          "source": "sources/054.jpg",
+          "version": "03.11.2026"
+        },
+        "documents": [
+          {
+            "publicPath": "sources/054.jpg",
+            "title": "Исходная схема «Таранца» · трапеция 27/46 × 27 м",
+            "kind": "dimensioned-schematic-plan",
+            "evidence": "Верхнее основание 27,0 м, нижнее 46,0 м, вертикальная высота 27,0 м. Лист датирован 03.11.26."
+          }
+        ],
+        "issues": [
+          {
+            "title": "Размеры в старом заголовке неполны",
+            "detail": "Заголовок «46 × 27 м» может ошибочно читаться как прямоугольник. Нужно показать оба основания трапеции и высоту.",
+            "source": "sources/054.jpg"
+          }
+        ],
+        "missing": [
+          "Подтверждение связи схемы «Карандаши» с площадкой по пр. Таранца, 9; посадка трапеции на топооснову.",
+          "Подтверждённая схема расположения именно проектируемой площадки с адресом и подписью заказчика.",
+          "Геопривязанный контур (GeoJSON/KML либо координаты поворотных точек и система координат), топосъёмка с рельефом и сетями.",
+          "Паспорта выбранных МАФов с зонами безопасности для проверки посадки."
+        ],
+        "geo": {
+          "lat": 53.0745158,
+          "lon": 158.6466626,
+          "kind": "house",
+          "source": "https://www.openstreetmap.org/way/106795527",
+          "changed": false,
+          "confirmedBoundary": false,
+          "evidence": "Существующая карточка atlas-data.json; сохранён результат OpenStreetMap/Nominatim от 2026-11-08 (объект здания), сверенный с сохранёнными геокодирующими данными.",
+          "reason": "Новые документы не дают проверяемой координаты проектной площадки; маркер сохраняется как ориентир.",
+          "verification": "Адресный геокод, не геодезическая точка и не центр подтверждённого проектного контура."
+        }
+      }
+    },
+    {
+      "id": 9,
+      "finance": {
+        "documents": [
+          {
+            "publicPath": "sources/056.pdf",
+            "title": "АЭРОПОРТ.pdf",
+            "date": null,
+            "dateBasis": "Дата предложения в альбоме не указана; метаданные PDF не содержат дату",
+            "issuer": "NEW AVEN (обозначение в альбоме)"
+          }
+        ],
+        "reconciliation": {
+          "declaredTotal": 32080000,
+          "itemsTotal": 32080000,
+          "difference": 0,
+          "vatIncluded": null,
+          "vatAmount": null,
+          "vatRate": null,
+          "vatNote": "В промо-альбоме не указано, включён ли НДС.",
+          "deliveryAmount": null,
+          "deliveryNote": "Стоимость и условия доставки в альбоме не выделены.",
+          "worksAmount": null,
+          "worksNote": "Разделены оборудование и LED. Подготовка территории, покрытия, сети и монтаж отдельно не оценены; нельзя считать их включёнными в32,08млн ₽.",
+          "scope": "Финансовый ориентир промо-очереди, не договорная смета.",
+          "components": [
+            {
+              "label": "Основное оборудование",
+              "amount": 26980000
+            },
+            {
+              "label": "Скамьи8шт и урны11шт",
+              "amount": 1400000
+            },
+            {
+              "label": "LED основных МАФов",
+              "amount": 2900000
+            },
+            {
+              "label": "Подсветка8скамей",
+              "amount": 800000
+            }
+          ],
+          "summary": "Финансовый ориентир промо-очереди, не договорная смета."
+        },
+        "issues": [
+          {
+            "severity": "warning",
+            "title": "Артикул двух качелей совпадает",
+            "detail": "На странице9 обе разные модели подписаны К-32/33, но стоят740000 и890000 ₽. Проверить артикулы у поставщика; не объединять строки.",
+            "source": "sources/056.pdf",
+            "cell": "страница9"
+          },
+          {
+            "severity": "warning",
+            "title": "Внутренние обозначения не являются артикулами",
+            "detail": "LED-01, LED-02 и СКАМ-08 встречаются в данных сайта, но отсутствуют в PDF. Для этих бюджетных блоков использовать «Артикул не указан».",
+            "source": "sources/056.pdf",
+            "cell": "страница7"
+          },
+          {
+            "severity": "info",
+            "title": "Удельная цена подсветки не дана",
+            "detail": "800000 ₽ за подсветку8скамей — общий блок.100000 ₽/скамья является расчётным делением, не заявленной ценой поставщика.",
+            "source": "sources/056.pdf",
+            "cell": "страница7"
+          }
+        ],
+        "verifiedItems": [
+          {
+            "code": "Г-2316",
+            "internalKey": "promo9-1",
+            "name": "Игровой комплекс «Вертолёт»",
+            "qty": 1,
+            "unit": "шт.",
+            "unitPrice": 4200000,
+            "lineTotal": 4200000,
+            "source": "sources/056.pdf",
+            "page": 8,
+            "cells": {},
+            "conflict": false,
+            "safeScenarioUnitPrice": 4200000,
+            "quantityBasis": "По1экземпляру выведено из согласования суммы5цен с общим блоком26980000 ₽; отдельная ведомость количества не дана",
+            "priceStatus": "Промо-цена, условия и срок действия не указаны",
+            "vatIncluded": null
+          },
+          {
+            "code": "ГН-2310/1",
+            "internalKey": "promo9-2",
+            "name": "Industrial Самолёт",
+            "qty": 1,
+            "unit": "шт.",
+            "unitPrice": 18650000,
+            "lineTotal": 18650000,
+            "source": "sources/056.pdf",
+            "page": 8,
+            "cells": {},
+            "conflict": false,
+            "safeScenarioUnitPrice": 18650000,
+            "quantityBasis": "По1экземпляру выведено из согласования суммы5цен с общим блоком26980000 ₽; отдельная ведомость количества не дана",
+            "priceStatus": "Промо-цена, условия и срок действия не указаны",
+            "vatIncluded": null
+          },
+          {
+            "code": "Г-2414",
+            "internalKey": "promo9-3",
+            "name": "Домик «Зал ожидания»",
+            "qty": 1,
+            "unit": "шт.",
+            "unitPrice": 2500000,
+            "lineTotal": 2500000,
+            "source": "sources/056.pdf",
+            "page": 9,
+            "cells": {},
+            "conflict": false,
+            "safeScenarioUnitPrice": 2500000,
+            "quantityBasis": "По1экземпляру выведено из согласования суммы5цен с общим блоком26980000 ₽; отдельная ведомость количества не дана",
+            "priceStatus": "Промо-цена, условия и срок действия не указаны",
+            "vatIncluded": null
+          },
+          {
+            "code": "К-32/33",
+            "internalKey": "promo9-4",
+            "name": "Качель круглая",
+            "qty": 1,
+            "unit": "шт.",
+            "unitPrice": 740000,
+            "lineTotal": 740000,
+            "source": "sources/056.pdf",
+            "page": 9,
+            "cells": {},
+            "conflict": false,
+            "safeScenarioUnitPrice": 740000,
+            "quantityBasis": "По1экземпляру выведено из согласования суммы5цен с общим блоком26980000 ₽; отдельная ведомость количества не дана",
+            "priceStatus": "Промо-цена, условия и срок действия не указаны",
+            "vatIncluded": null
+          },
+          {
+            "code": "К-32/33",
+            "internalKey": "promo9-5",
+            "name": "Средневековье с подвесами «Гнездо» и Тип-2",
+            "qty": 1,
+            "unit": "шт.",
+            "unitPrice": 890000,
+            "lineTotal": 890000,
+            "source": "sources/056.pdf",
+            "page": 9,
+            "cells": {},
+            "conflict": false,
+            "safeScenarioUnitPrice": 890000,
+            "quantityBasis": "По1экземпляру выведено из согласования суммы5цен с общим блоком26980000 ₽; отдельная ведомость количества не дана",
+            "priceStatus": "Промо-цена, условия и срок действия не указаны",
+            "vatIncluded": null
+          },
+          {
+            "code": null,
+            "internalKey": "promo9-6",
+            "name": "LED-подсветка домика, самолёта и качелей",
+            "qty": 1,
+            "unit": "комплект",
+            "unitPrice": null,
+            "lineTotal": 2900000,
+            "source": "sources/056.pdf",
+            "page": 7,
+            "cells": {},
+            "conflict": false,
+            "safeScenarioUnitPrice": null,
+            "quantityBasis": "Один бюджетный блок, количество отдельных элементов не означает одинаковую цену",
+            "priceStatus": "Промо-цена, условия и срок действия не указаны",
+            "vatIncluded": null
+          },
+          {
+            "code": null,
+            "internalKey": "promo9-7",
+            "name": "Скамьи8шт и урны11шт — комплект",
+            "qty": 1,
+            "unit": "комплект",
+            "unitPrice": null,
+            "lineTotal": 1400000,
+            "source": "sources/056.pdf",
+            "page": 7,
+            "cells": {},
+            "conflict": false,
+            "safeScenarioUnitPrice": null,
+            "quantityBasis": "Один бюджетный блок, количество отдельных элементов не означает одинаковую цену",
+            "priceStatus": "Промо-цена, условия и срок действия не указаны",
+            "vatIncluded": null
+          },
+          {
+            "code": null,
+            "internalKey": "promo9-8",
+            "name": "Подсветка скамей —8шт",
+            "qty": 8,
+            "unit": "шт.",
+            "unitPrice": null,
+            "lineTotal": 800000,
+            "source": "sources/056.pdf",
+            "page": 7,
+            "cells": {},
+            "conflict": false,
+            "safeScenarioUnitPrice": null,
+            "quantityBasis": "Количество подписано в бюджетном блоке",
+            "priceStatus": "Промо-цена, условия и срок действия не указаны",
+            "vatIncluded": null
+          }
+        ],
+        "missing": [
+          "Стоимость подготовки основания и земляных работ",
+          "Стоимость покрытий и водоотведения",
+          "Стоимость доставки до площадки и разгрузки",
+          "Стоимость монтажа, фундаментов и подключения",
+          "Срок действия цен и условия оплаты",
+          "Стоимость озеленения и содержания",
+          "Дата и срок действия промо-расчёта",
+          "Договорная ведомость с подтверждёнными артикулами и количествами",
+          "НДС и условия поставки",
+          "Раздельные цены скамей и урн"
+        ]
+      },
+      "location": {
+        "addressReview": {
+          "status": "Сквер подтверждён альбомом; дом 4 — адресный ориентир",
+          "address": "улица Кирдищева, 4 — дом-ориентир сквера",
+          "evidence": "Исходный альбом называет сквер по ул. Кирдищева. На стр. 2 показаны три сценарные зоны на обзорной подоснове. Номер дома 4 и связь со школой № 28 взяты из прежнего публичного сообщения, а не из размерного плана.",
+          "source": "sources/056.pdf#page=2",
+          "previousLocationSource": "https://kam24.ru/news/main/20210407/80752.html"
+        },
+        "dimensions": {
+          "width": null,
+          "length": null,
+          "area": null,
+          "scope": "Три сценарные зоны; размерный обмерный план отсутствует",
+          "shape": null,
+          "source": "sources/056.pdf#page=2",
+          "legacyUnverifiedArea": 1200
+        },
+        "documents": [
+          {
+            "publicPath": "sources/056.pdf",
+            "title": "Исходный концептуальный альбом «Аэропорт» · 9 страниц",
+            "kind": "concept-album",
+            "evidence": "Стр. 1: сквер по ул. Кирдищева. Стр. 2: схема сценарных зон. Размеры МАФов на последующих страницах не являются размерами двора."
+          },
+          {
+            "publicPath": "assets/orig/yard_9_page_2.jpg",
+            "title": "Схема трёх сценарных зон · исходный альбом, стр. 2",
+            "kind": "scenario-zoning-map",
+            "evidence": "Игровая, спортивная и спокойная зоны на обзорном изображении. Нет координат, масштаба и замкнутого проектного контура."
+          }
+        ],
+        "issues": [
+          {
+            "title": "Схема в альбоме отсутствует в разделе планов",
+            "detail": "Можно добавить существующее превью страницы 2 в планы как «Схема сценарных зон», сохранив отличие от размерного плана или геопривязанной границы.",
+            "source": "sources/056.pdf#page=2"
+          }
+        ],
+        "missing": [
+          "Размерный план всех трёх зон; границы проекта и ведомость площадей; подтверждение посадки нового оборудования.",
+          "Подтверждённая схема расположения именно проектируемой площадки с адресом и подписью заказчика.",
+          "Геопривязанный контур (GeoJSON/KML либо координаты поворотных точек и система координат), топосъёмка с рельефом и сетями.",
+          "Паспорта выбранных МАФов с зонами безопасности для проверки посадки."
+        ],
+        "geo": {
+          "lat": 53.0557454,
+          "lon": 158.6734943,
+          "kind": "house",
+          "source": "https://www.openstreetmap.org/way/105645351",
+          "changed": false,
+          "confirmedBoundary": false,
+          "evidence": "Существующая карточка atlas-data.json; сохранён результат OpenStreetMap/Nominatim от 2026-11-08 (объект здания), сверенный с сохранёнными геокодирующими данными.",
+          "reason": "Новые документы не дают проверяемой координаты проектной площадки; маркер сохраняется как ориентир.",
+          "verification": "Адресный геокод, не геодезическая точка и не центр подтверждённого проектного контура."
+        }
+      }
+    },
+    {
+      "id": 10,
+      "finance": {
+        "documents": [],
+        "reconciliation": {
+          "declaredTotal": null,
+          "itemsTotal": null,
+          "difference": null,
+          "vatNote": "НДС не подтверждён документом.",
+          "deliveryNote": "Стоимость доставки не указана.",
+          "worksNote": "Стоимость работ не указана.",
+          "scope": "В предоставленной папке нет финансового документа; суммы старой панели помечены как оценочные.",
+          "summary": "В предоставленной папке нет финансового документа; суммы старой панели помечены как оценочные."
+        },
+        "issues": [
+          {
+            "severity": "warning",
+            "title": "Подтверждённой сметы нет",
+            "detail": "Планы и визуализации не подтверждают стоимость оборудования и работ.",
+            "source": "sources.html",
+            "cell": null
+          }
+        ],
+        "verifiedItems": [],
+        "missing": [
+          "Коммерческое предложение и ведомость оборудования с ценами",
+          "Стоимость подготовки основания и земляных работ",
+          "Стоимость покрытий и водоотведения",
+          "Стоимость доставки до площадки и разгрузки",
+          "Стоимость монтажа, фундаментов и подключения",
+          "Срок действия цен и условия оплаты",
+          "Стоимость озеленения и содержания"
+        ]
+      },
+      "location": {
+        "addressReview": {
+          "status": "Подтверждена улица; конкретная площадка уточняется",
+          "address": "улица Индустриальная — площадка уточняется",
+          "evidence": "Исходный план содержит Индустриальную. Муниципальный проект программы перечисляет парк отдыха по этой улице, но связь этого парка с конкретной схемой «Городской транспорт» не установлена.",
+          "source": "sources/003.jpg",
+          "secondarySource": "https://www.pkgo.ru/upload/iblock/a46/wxsms99j9hmp8vxs2fgpjix7ieb1f5dc.pdf#page=36"
+        },
+        "dimensions": {
+          "width": 25,
+          "length": 20,
+          "area": 500,
+          "scope": "Размерный прямоугольник исходной схемы",
+          "shape": "rectangle",
+          "calculation": "25 × 20 = 500",
+          "source": "sources/003.jpg",
+          "version": "03.11.2026"
+        },
+        "documents": [
+          {
+            "publicPath": "sources/003.jpg",
+            "title": "Исходная схема «Индустриальная» · 25 × 20 м",
+            "kind": "dimensioned-schematic-plan",
+            "evidence": "Размеры 25,0 и 20,0, дата 03.11.26. Нет номера дома, северного направления и географической привязки."
+          }
+        ],
+        "issues": [
+          {
+            "title": "Название парка не доказывает место проекта",
+            "detail": "Текущая подпись «Парк отдыха улица Индустриальная» выглядит определённее источников. Рекомендуется нейтральный адрес улицы с отметкой об уточнении площадки.",
+            "source": "https://www.pkgo.ru/upload/iblock/a46/wxsms99j9hmp8vxs2fgpjix7ieb1f5dc.pdf#page=36"
+          }
+        ],
+        "missing": [
+          "Номер дома/кадастровый участок и подтверждение, является ли место проекта парком отдыха по ул. Индустриальная.",
+          "Подтверждённая схема расположения именно проектируемой площадки с адресом и подписью заказчика.",
+          "Геопривязанный контур (GeoJSON/KML либо координаты поворотных точек и система координат), топосъёмка с рельефом и сетями.",
+          "Паспорта выбранных МАФов с зонами безопасности для проверки посадки."
+        ],
+        "geo": {
+          "lat": 52.9720835,
+          "lon": 158.6952687,
+          "kind": "street",
+          "source": "https://www.openstreetmap.org/way/1218322117",
+          "changed": false,
+          "confirmedBoundary": false,
+          "evidence": "Существующая карточка atlas-data.json; сохранён результат OpenStreetMap/Nominatim от 2026-11-08 (объект улицы), сверенный с сохранёнными геокодирующими данными.",
+          "reason": "Новые документы не дают проверяемой координаты проектной площадки; маркер сохраняется как ориентир.",
+          "verification": "Адресный геокод, не геодезическая точка и не центр подтверждённого проектного контура."
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,655 @@
+[
+  {
+    "yard": 1,
+    "variant": "Состав из папки «согл»",
+    "images": [
+      {
+        "src": "sources/017.jpg",
+        "caption": "Общий 3D-вид площадки «Ботанический сад»"
+      },
+      {
+        "src": "sources/014.jpg",
+        "caption": "Аксонометрическая проекция с высоты"
+      },
+      {
+        "src": "sources/015.jpg",
+        "caption": "Игровые комплексы «Пчела» и «Соты»"
+      }
+    ],
+    "basis": "Только исходные материалы и изображения производителей"
+  },
+  {
+    "yard": 2,
+    "variant": "Состав из папки «согл»",
+    "images": [
+      {
+        "src": "sources/020.jpg",
+        "caption": "Игровой комплекс «Белаз» и общая панорама"
+      },
+      {
+        "src": "sources/022.jpg",
+        "caption": "Игровой комплекс «Бульдозер» и Песочный дворик"
+      },
+      {
+        "src": "sources/021.jpg",
+        "caption": "Перспектива площадки"
+      }
+    ],
+    "basis": "Только исходные материалы и изображения производителей"
+  },
+  {
+    "yard": 3,
+    "variant": "Состав из папки «согл»",
+    "images": [
+      {
+        "src": "sources/011.jpg",
+        "caption": "АВЕН · Правки 2 · ракурс 1"
+      },
+      {
+        "src": "sources/005.jpg",
+        "caption": "АВЕН · Правки 2 · ракурс 2"
+      },
+      {
+        "src": "sources/006.jpg",
+        "caption": "АВЕН · Правки 2 · ракурс 3"
+      },
+      {
+        "src": "sources/007.jpg",
+        "caption": "АВЕН · Правки 2 · ракурс 4"
+      },
+      {
+        "src": "sources/008.jpg",
+        "caption": "АВЕН · Правки 2 · ракурс 5"
+      },
+      {
+        "src": "sources/009.jpg",
+        "caption": "АВЕН · Правки 2 · ракурс 6"
+      }
+    ],
+    "basis": "Только исходные материалы и изображения производителей"
+  },
+  {
+    "yard": 4,
+    "variant": "Состав из папки «согл»",
+    "images": [
+      {
+        "src": "sources/033.jpg",
+        "caption": "Фрегат «Корабль Первооткрывателей» и спортзона"
+      },
+      {
+        "src": "sources/031.jpg",
+        "caption": "Вид на палубный комплекс с мачтами"
+      },
+      {
+        "src": "sources/032.jpg",
+        "caption": "Панорама игрового пространства"
+      }
+    ],
+    "basis": "Только исходные материалы и изображения производителей"
+  },
+  {
+    "yard": 5,
+    "variant": "Солнечная экспедиция",
+    "images": [
+      {
+        "src": "assets/candidates/aven-Г-4018.jpg",
+        "caption": "Г-4018 · Игровой комплекс Г-4018 Гора",
+        "url": "https://aven-maf.ru/igrovye-ploshchadki/igrovye-kompleksy/g-4018-gora/"
+      },
+      {
+        "src": "assets/candidates/kg-2355-3.webp",
+        "caption": "2355.3 · Спортивный элемент «Палки» тип-3",
+        "url": "https://www.k-gorod.ru/catalog/products/23553-sportivnyii-element-palki-tip-3"
+      },
+      {
+        "src": "assets/candidates/adanat-19984.jpg",
+        "caption": "19984 · Игровой комплекс «Деревенька» Тип 1",
+        "url": "https://adanatgroup.ru/katalog/detskoe-igrovoe-oborudovanie/eko-stil/igrovoy-kompleks-derevenka-tip-1/"
+      },
+      {
+        "src": "assets/candidates/kg-1438.webp",
+        "caption": "1438 · Столик «Семицветик»",
+        "url": "https://www.k-gorod.ru/catalog/products/1438-stolik_semicvetik_"
+      },
+      {
+        "src": "assets/candidates/adanat-18263.jpg",
+        "caption": "18263 · Качели стальные тройные «Гнездо 3 места»",
+        "url": "https://adanatgroup.ru/katalog/detskoe-igrovoe-oborudovanie/detskoe-oborudovanie-iz-metalla-i-plastika/kacheli/kacheli-stalnye-troynye-gnezdo-3-mesta/"
+      }
+    ],
+    "basis": "Только исходные материалы и изображения производителей"
+  },
+  {
+    "yard": 5,
+    "variant": "Воздухоплаватели",
+    "images": [
+      {
+        "src": "assets/candidates/robinzon-1u8001-bezhevyy.jpg",
+        "caption": "1U8001 · Воздушный шар «Мечтатель» — бежевый",
+        "url": "https://robinzon-maf.ru/detskie-ploshchadki/igrovye-kompleksy/1u8001-bezhevyy"
+      },
+      {
+        "src": "assets/candidates/adanat-18917.jpg",
+        "caption": "18917 · Игровой комплекс «Облака» Модуль 1",
+        "url": "https://adanatgroup.ru/katalog/detskoe-igrovoe-oborudovanie/detskie-tematicheskie-kompleksy-metall-plastik/igrovoj-kompleks-oblaka-modul-1/"
+      },
+      {
+        "src": "assets/candidates/adanat-19128.jpg",
+        "caption": "19128 · Качалка на пружине Тип 1",
+        "url": "https://adanatgroup.ru/katalog/detskoe-igrovoe-oborudovanie/eko-stil/pruzhinnye-kachalki/kachalka-na-pruzhine-tip-1/"
+      },
+      {
+        "src": "assets/candidates/adanat-18263.jpg",
+        "caption": "18263 · Качели стальные тройные «Гнездо 3 места»",
+        "url": "https://adanatgroup.ru/katalog/detskoe-igrovoe-oborudovanie/detskoe-oborudovanie-iz-metalla-i-plastika/kacheli/kacheli-stalnye-troynye-gnezdo-3-mesta/"
+      }
+    ],
+    "basis": "Только исходные материалы и изображения производителей"
+  },
+  {
+    "yard": 5,
+    "variant": "Солнечная поляна",
+    "images": [
+      {
+        "src": "assets/candidates/adanat-19984.jpg",
+        "caption": "19984 · Игровой комплекс «Деревенька» Тип 1",
+        "url": "https://adanatgroup.ru/katalog/detskoe-igrovoe-oborudovanie/eko-stil/igrovoy-kompleks-derevenka-tip-1/"
+      },
+      {
+        "src": "assets/candidates/adanat-18464.jpg",
+        "caption": "18464 · Детская лазалка «Барни» Тип 4",
+        "url": "https://adanatgroup.ru/katalog/detskoe-igrovoe-oborudovanie/eko-stil/detskaya-lazalka-barni-tip-4/"
+      },
+      {
+        "src": "assets/candidates/adanat-19122.jpg",
+        "caption": "19122 · Качалка-балансир «Божьи коровки»",
+        "url": "https://adanatgroup.ru/katalog/detskoe-igrovoe-oborudovanie/eko-stil/kachalki-balansiry/kachalka-balansir-bozhi-korovki/"
+      },
+      {
+        "src": "assets/candidates/kg-1438.webp",
+        "caption": "1438 · Столик «Семицветик»",
+        "url": "https://www.k-gorod.ru/catalog/products/1438-stolik_semicvetik_"
+      },
+      {
+        "src": "assets/candidates/adanat-19840.jpg",
+        "caption": "19840 · Игровой элемент «Следы животных»",
+        "url": "https://adanatgroup.ru/katalog/detskoe-igrovoe-oborudovanie/nauka-i-poznanie/igrovoy-element-sledy-zhivotnyx/"
+      }
+    ],
+    "basis": "Только исходные материалы и изображения производителей"
+  },
+  {
+    "yard": 6,
+    "variant": "Лесная Камчатка",
+    "images": [
+      {
+        "src": "assets/candidates/aven-Г-4067.jpg",
+        "caption": "Г-4067 · Игровой комплекс Г-4067 Белка",
+        "url": "https://aven-maf.ru/igrovye-ploshchadki/igrovye-kompleksy/g-4067-belka/"
+      },
+      {
+        "src": "assets/candidates/kg-3230.1.1.webp",
+        "caption": "3230.1.1 · Игровой комплекс «Бурый медведь» тип-1",
+        "url": "https://www.k-gorod.ru/catalog/products/323011-igrovoi-kompleks-buryii-medved-tip-1"
+      },
+      {
+        "src": "assets/candidates/adanat-19840.jpg",
+        "caption": "19840 · Игровой элемент «Следы животных»",
+        "url": "https://adanatgroup.ru/katalog/detskoe-igrovoe-oborudovanie/nauka-i-poznanie/igrovoy-element-sledy-zhivotnyx/"
+      },
+      {
+        "src": "assets/candidates/adanat-19121.jpg",
+        "caption": "19121 · Качалка на пружине «Божья коровка»",
+        "url": "https://adanatgroup.ru/katalog/detskoe-igrovoe-oborudovanie/eko-stil/pruzhinnye-kachalki/kachalka-na-pruzhine-bozhya-korovka/"
+      },
+      {
+        "src": "assets/candidates/kg-1438.webp",
+        "caption": "1438 · Столик «Семицветик»",
+        "url": "https://www.k-gorod.ru/catalog/products/1438-stolik_semicvetik_"
+      }
+    ],
+    "basis": "Только исходные материалы и изображения производителей"
+  },
+  {
+    "yard": 6,
+    "variant": "Тихоокеанская экспедиция",
+    "images": [
+      {
+        "src": "assets/candidates/robinzon-1u8003-bezhevyy.jpg",
+        "caption": "1U8003 · Батискаф «Покоритель глубин» — бежевый",
+        "url": "https://robinzon-maf.ru/detskie-ploshchadki/igrovye-kompleksy/1u8003-bezhevyy"
+      },
+      {
+        "src": "assets/candidates/kg-1598-5.webp",
+        "caption": "1598.5 · Интерактивная стойка «Морской бой»",
+        "url": "https://www.k-gorod.ru/catalog/products/15985-interaktivnaya-stoika-morskoi-boi"
+      },
+      {
+        "src": "assets/candidates/robinzon-3w20061-siniy.jpg",
+        "caption": "3W2006.1 · Качалка  \"Акула мини\" (цвет Синий)",
+        "url": "https://robinzon-maf.ru/igrovye-elementy/kachalki-na-pruzhine/3w20061-siniy"
+      },
+      {
+        "src": "assets/candidates/robinzon-3w2007-siniy.jpg",
+        "caption": "3W2007 · Качалка  \"Плотик\" (цвет Синий)",
+        "url": "https://robinzon-maf.ru/igrovye-elementy/kachalki-na-pruzhine/3w2007-siniy"
+      },
+      {
+        "src": "assets/candidates/adanat-19715.jpg",
+        "caption": "19715 · Скамейка «Волны» (комплект)",
+        "url": "https://adanatgroup.ru/katalog/detskoe-igrovoe-oborudovanie/detskie-tematicheskie-kompleksy-metall-plastik/skamejka-volny-komplekt/"
+      }
+    ],
+    "basis": "Только исходные материалы и изображения производителей"
+  },
+  {
+    "yard": 6,
+    "variant": "Лесные домики",
+    "images": [
+      {
+        "src": "assets/candidates/adanat-19984.jpg",
+        "caption": "19984 · Игровой комплекс «Деревенька» Тип 1",
+        "url": "https://adanatgroup.ru/katalog/detskoe-igrovoe-oborudovanie/eko-stil/igrovoy-kompleks-derevenka-tip-1/"
+      },
+      {
+        "src": "assets/candidates/adanat-18893.jpg",
+        "caption": "18893 · Домики-беседки «Барни» Тип 6",
+        "url": "https://adanatgroup.ru/katalog/detskoe-igrovoe-oborudovanie/eko-stil/domiki-besedki-barni-tip-6/"
+      },
+      {
+        "src": "assets/candidates/robinzon-2k4-01-zelenyy.jpg",
+        "caption": "2K4-01 · Комплекс для лазания  \"Вигвам Елка\" (цвет Зеленый)",
+        "url": "https://robinzon-maf.ru/detskie-ploshchadki/igrovye-kompleksy/2k4-01-zelenyy"
+      },
+      {
+        "src": "assets/candidates/adanat-19122.jpg",
+        "caption": "19122 · Качалка-балансир «Божьи коровки»",
+        "url": "https://adanatgroup.ru/katalog/detskoe-igrovoe-oborudovanie/eko-stil/kachalki-balansiry/kachalka-balansir-bozhi-korovki/"
+      },
+      {
+        "src": "assets/candidates/kg-1438.webp",
+        "caption": "1438 · Столик «Семицветик»",
+        "url": "https://www.k-gorod.ru/catalog/products/1438-stolik_semicvetik_"
+      }
+    ],
+    "basis": "Только исходные материалы и изображения производителей"
+  },
+  {
+    "yard": 7,
+    "variant": "Космодром Камчатка",
+    "images": [
+      {
+        "src": "assets/candidates/aven-Г-2315.jpg",
+        "caption": "Г-2315 · Игровой комплекс Г-2315 Летающая тарелка",
+        "url": "https://aven-maf.ru/igrovye-ploshchadki/igrovye-kompleksy/g-2315-letayushchaya-tarelka/"
+      },
+      {
+        "src": "assets/candidates/kg-1598.6.webp",
+        "caption": "1598.6 · Интерактивная стойка «Союз»",
+        "url": "https://www.k-gorod.ru/catalog/products/15986-interaktivnaya-stoika-soyuz"
+      },
+      {
+        "src": "assets/candidates/adanat-18162.jpg",
+        "caption": "18162 · Ростомер «Ракета»",
+        "url": "https://adanatgroup.ru/katalog/detskoe-igrovoe-oborudovanie/detskoe-oborudovanie-iz-metalla-i-plastika/obuchenie-razvitie-igra/rostomer-raketa/"
+      },
+      {
+        "src": "assets/candidates/adanat-19839.jpg",
+        "caption": "19839 · Интерактивная панель «Солнечная система»",
+        "url": "https://adanatgroup.ru/katalog/detskoe-igrovoe-oborudovanie/nauka-i-poznanie/interaktivnaya-panel-solnechnaya-sistema/"
+      }
+    ],
+    "basis": "Только исходные материалы и изображения производителей"
+  },
+  {
+    "yard": 7,
+    "variant": "Орбитальная тропа",
+    "images": [
+      {
+        "src": "assets/candidates/kg-1598.6.webp",
+        "caption": "1598.6 · Интерактивная стойка «Союз»",
+        "url": "https://www.k-gorod.ru/catalog/products/15986-interaktivnaya-stoika-soyuz"
+      },
+      {
+        "src": "assets/candidates/adanat-18162.jpg",
+        "caption": "18162 · Ростомер «Ракета»",
+        "url": "https://adanatgroup.ru/katalog/detskoe-igrovoe-oborudovanie/detskoe-oborudovanie-iz-metalla-i-plastika/obuchenie-razvitie-igra/rostomer-raketa/"
+      },
+      {
+        "src": "assets/candidates/kg-2355-3.webp",
+        "caption": "2355.3 · Спортивный элемент «Палки» тип-3",
+        "url": "https://www.k-gorod.ru/catalog/products/23553-sportivnyii-element-palki-tip-3"
+      },
+      {
+        "src": "assets/candidates/adanat-18614.jpg",
+        "caption": "18614 · Кресло-карусель",
+        "url": "https://adanatgroup.ru/katalog/detskoe-igrovoe-oborudovanie/detskoe-oborudovanie-iz-metalla-i-plastika/detskie-karuseli-metall/kreslo-karusel/"
+      }
+    ],
+    "basis": "Только исходные материалы и изображения производителей"
+  },
+  {
+    "yard": 7,
+    "variant": "Большой космопорт",
+    "images": [
+      {
+        "src": "assets/candidates/robinzon-4u1001-fioletovo-biryuzovyy.jpg",
+        "caption": "4U1001 · Космопорт — фиолетово-бирюзовый",
+        "url": "https://robinzon-maf.ru/detskie-ploshchadki/igrovye-kompleksy/4u1001-fioletovo-biryuzovyy"
+      },
+      {
+        "src": "assets/candidates/kg-1598.6.webp",
+        "caption": "1598.6 · Интерактивная стойка «Союз»",
+        "url": "https://www.k-gorod.ru/catalog/products/15986-interaktivnaya-stoika-soyuz"
+      },
+      {
+        "src": "assets/candidates/adanat-18162.jpg",
+        "caption": "18162 · Ростомер «Ракета»",
+        "url": "https://adanatgroup.ru/katalog/detskoe-igrovoe-oborudovanie/detskoe-oborudovanie-iz-metalla-i-plastika/obuchenie-razvitie-igra/rostomer-raketa/"
+      }
+    ],
+    "basis": "Только исходные материалы и изображения производителей"
+  },
+  {
+    "yard": 8,
+    "variant": "Лес и сопки",
+    "images": [
+      {
+        "src": "assets/candidates/aven-Г-4015.jpg",
+        "caption": "Г-4015 · Игровой комплекс Г-4015 Лес",
+        "url": "https://aven-maf.ru/igrovye-ploshchadki/igrovye-kompleksy/g-4015-les/"
+      },
+      {
+        "src": "assets/candidates/adanat-19840.jpg",
+        "caption": "19840 · Игровой элемент «Следы животных»",
+        "url": "https://adanatgroup.ru/katalog/detskoe-igrovoe-oborudovanie/nauka-i-poznanie/igrovoy-element-sledy-zhivotnyx/"
+      },
+      {
+        "src": "assets/candidates/adanat-19122.jpg",
+        "caption": "19122 · Качалка-балансир «Божьи коровки»",
+        "url": "https://adanatgroup.ru/katalog/detskoe-igrovoe-oborudovanie/eko-stil/kachalki-balansiry/kachalka-balansir-bozhi-korovki/"
+      },
+      {
+        "src": "assets/candidates/kg-1438.webp",
+        "caption": "1438 · Столик «Семицветик»",
+        "url": "https://www.k-gorod.ru/catalog/products/1438-stolik_semicvetik_"
+      },
+      {
+        "src": "assets/candidates/adanat-18263.jpg",
+        "caption": "18263 · Качели стальные тройные «Гнездо 3 места»",
+        "url": "https://adanatgroup.ru/katalog/detskoe-igrovoe-oborudovanie/detskoe-oborudovanie-iz-metalla-i-plastika/kacheli/kacheli-stalnye-troynye-gnezdo-3-mesta/"
+      }
+    ],
+    "basis": "Только исходные материалы и изображения производителей"
+  },
+  {
+    "yard": 8,
+    "variant": "Лесные маршруты — альтернатива",
+    "images": [
+      {
+        "src": "assets/candidates/kg-3233.1.webp",
+        "caption": "3233.1 · Игровой комплекс «Ёлки-палки» тип-1",
+        "url": "https://www.k-gorod.ru/catalog/products/32331-igrovoi-kompleks-elki-palki-tip-1"
+      },
+      {
+        "src": "assets/candidates/robinzon-9u0017-seryy.jpg",
+        "caption": "9U0017 · ГеоХолм  \"Три вершины\" (цвет Серый)",
+        "url": "https://robinzon-maf.ru/geoplastika/9u0017-seryy"
+      },
+      {
+        "src": "assets/candidates/adanat-19840.jpg",
+        "caption": "19840 · Игровой элемент «Следы животных»",
+        "url": "https://adanatgroup.ru/katalog/detskoe-igrovoe-oborudovanie/nauka-i-poznanie/igrovoy-element-sledy-zhivotnyx/"
+      },
+      {
+        "src": "assets/candidates/adanat-19121.jpg",
+        "caption": "19121 · Качалка на пружине «Божья коровка»",
+        "url": "https://adanatgroup.ru/katalog/detskoe-igrovoe-oborudovanie/eko-stil/pruzhinnye-kachalki/kachalka-na-pruzhine-bozhya-korovka/"
+      },
+      {
+        "src": "assets/candidates/kg-1438.webp",
+        "caption": "1438 · Столик «Семицветик»",
+        "url": "https://www.k-gorod.ru/catalog/products/1438-stolik_semicvetik_"
+      }
+    ],
+    "basis": "Только исходные материалы и изображения производителей"
+  },
+  {
+    "yard": 8,
+    "variant": "Двор исследователей",
+    "images": [
+      {
+        "src": "assets/candidates/robinzon-1s1018-bezhevo-korichnevyy.jpg",
+        "caption": "1S1018 · Вулкан — бежево-коричневый",
+        "url": "https://robinzon-maf.ru/detskie-ploshchadki/igrovye-kompleksy/1s1018-bezhevo-korichnevyy"
+      },
+      {
+        "src": "assets/candidates/adanat-19223.02.jpg",
+        "caption": "19223.02 · Монорельс с платформой",
+        "url": "https://adanatgroup.ru/katalog/detskoe-igrovoe-oborudovanie/tarzanki-monorelsy/monorels-s-platformoy/"
+      },
+      {
+        "src": "assets/candidates/adanat-19984.jpg",
+        "caption": "19984 · Игровой комплекс «Деревенька» Тип 1",
+        "url": "https://adanatgroup.ru/katalog/detskoe-igrovoe-oborudovanie/eko-stil/igrovoy-kompleks-derevenka-tip-1/"
+      },
+      {
+        "src": "assets/candidates/adanat-18263.jpg",
+        "caption": "18263 · Качели стальные тройные «Гнездо 3 места»",
+        "url": "https://adanatgroup.ru/katalog/detskoe-igrovoe-oborudovanie/detskoe-oborudovanie-iz-metalla-i-plastika/kacheli/kacheli-stalnye-troynye-gnezdo-3-mesta/"
+      }
+    ],
+    "basis": "Только исходные материалы и изображения производителей"
+  },
+  {
+    "yard": 9,
+    "variant": "Аэропорт · исходная промо-концепция",
+    "images": [
+      {
+        "src": "assets/orig/yard_9_page_3.jpg",
+        "caption": "Исходный альбом АЭРОПОРТ.pdf · страница 3"
+      },
+      {
+        "src": "assets/orig/yard_9_page_4.jpg",
+        "caption": "Исходный альбом АЭРОПОРТ.pdf · страница 4"
+      },
+      {
+        "src": "assets/orig/yard_9_page_5.jpg",
+        "caption": "Исходный альбом АЭРОПОРТ.pdf · страница 5"
+      },
+      {
+        "src": "assets/orig/yard_9_page_6.jpg",
+        "caption": "Исходный альбом АЭРОПОРТ.pdf · страница 6"
+      },
+      {
+        "src": "assets/orig/yard_9_page_7.jpg",
+        "caption": "Исходный альбом АЭРОПОРТ.pdf · страница 7"
+      }
+    ],
+    "basis": "Только исходные материалы и изображения производителей"
+  },
+  {
+    "yard": 9,
+    "variant": "Малая авиация · Робинзон",
+    "images": [
+      {
+        "src": "assets/candidates/robinzon-1u8004-bezhevyy.jpg",
+        "caption": "1U8004 · Самолёт «Чудеса на виражах» — бежевый",
+        "url": "https://robinzon-maf.ru/detskie-ploshchadki/igrovye-kompleksy/1u8004-bezhevyy"
+      },
+      {
+        "src": "assets/candidates/adanat-19940.jpg",
+        "caption": "19940 · Игровой комплекс «Облака» Модуль 2",
+        "url": "https://adanatgroup.ru/katalog/detskoe-igrovoe-oborudovanie/detskie-tematicheskie-kompleksy-metall-plastik/igrovoy-kompleks-oblaka-modul-2/"
+      },
+      {
+        "src": "assets/candidates/adanat-19128.jpg",
+        "caption": "19128 · Качалка на пружине Тип 1",
+        "url": "https://adanatgroup.ru/katalog/detskoe-igrovoe-oborudovanie/eko-stil/pruzhinnye-kachalki/kachalka-na-pruzhine-tip-1/"
+      },
+      {
+        "src": "assets/candidates/kg-1438.webp",
+        "caption": "1438 · Столик «Семицветик»",
+        "url": "https://www.k-gorod.ru/catalog/products/1438-stolik_semicvetik_"
+      }
+    ],
+    "basis": "Только исходные материалы и изображения производителей"
+  },
+  {
+    "yard": 9,
+    "variant": "Аэроплан · Аданат",
+    "images": [
+      {
+        "src": "assets/candidates/adanat-18906.jpg",
+        "caption": "18906 · Игровой комплекс «Аэроплан»",
+        "url": "https://adanatgroup.ru/katalog/detskoe-igrovoe-oborudovanie/detskie-tematicheskie-kompleksy-metall-plastik/igrovoj-kompleks-aeroplan/"
+      },
+      {
+        "src": "assets/candidates/adanat-18917.jpg",
+        "caption": "18917 · Игровой комплекс «Облака» Модуль 1",
+        "url": "https://adanatgroup.ru/katalog/detskoe-igrovoe-oborudovanie/detskie-tematicheskie-kompleksy-metall-plastik/igrovoj-kompleks-oblaka-modul-1/"
+      },
+      {
+        "src": "assets/candidates/kg-1438.webp",
+        "caption": "1438 · Столик «Семицветик»",
+        "url": "https://www.k-gorod.ru/catalog/products/1438-stolik_semicvetik_"
+      },
+      {
+        "src": "assets/candidates/adanat-19128.jpg",
+        "caption": "19128 · Качалка на пружине Тип 1",
+        "url": "https://adanatgroup.ru/katalog/detskoe-igrovoe-oborudovanie/eko-stil/pruzhinnye-kachalki/kachalka-na-pruzhine-tip-1/"
+      }
+    ],
+    "basis": "Только исходные материалы и изображения производителей"
+  },
+  {
+    "yard": 9,
+    "variant": "Авиация · Су-35",
+    "images": [
+      {
+        "src": "assets/candidates/aven-g-2311-samolet-su-35.jpg",
+        "caption": "Г-2311 · Игровой комплекс Г-2311 \"Самолет СУ-35\"",
+        "url": "https://aven-maf.ru/igrovye-ploshchadki/igrovye-kompleksy/g-2311-samolet-su-35/"
+      },
+      {
+        "src": "assets/candidates/aven-Г-2411.jpg",
+        "caption": "Г-2411 · Игровой комплекс Г-2411",
+        "url": "https://aven-maf.ru/igrovye-ploshchadki/igrovye-kompleksy/g-2411/"
+      },
+      {
+        "src": "assets/candidates/aven-МК-1112.jpg",
+        "caption": "МК-1112 · Качалка на пружине ЭКО МК-1112 Тюлень",
+        "url": "https://aven-maf.ru/igrovye-ploshchadki/kachalki/mk-1112-eko-tyulen/"
+      }
+    ],
+    "basis": "Только исходные материалы и изображения производителей"
+  },
+  {
+    "yard": 9,
+    "variant": "Воздухоплавание · Дирижабль",
+    "images": [
+      {
+        "src": "assets/candidates/robinzon-1u8002-bezhevyy.jpg",
+        "caption": "1U8002 · Дирижабль «Вокруг света» — бежевый",
+        "url": "https://robinzon-maf.ru/detskie-ploshchadki/igrovye-kompleksy/1u8002-bezhevyy"
+      },
+      {
+        "src": "assets/candidates/adanat-19940.jpg",
+        "caption": "19940 · Игровой комплекс «Облака» Модуль 2",
+        "url": "https://adanatgroup.ru/katalog/detskoe-igrovoe-oborudovanie/detskie-tematicheskie-kompleksy-metall-plastik/igrovoy-kompleks-oblaka-modul-2/"
+      },
+      {
+        "src": "assets/candidates/kg-1438.webp",
+        "caption": "1438 · Столик «Семицветик»",
+        "url": "https://www.k-gorod.ru/catalog/products/1438-stolik_semicvetik_"
+      },
+      {
+        "src": "assets/candidates/aven-МК-1113.jpg",
+        "caption": "МК-1113 · Качалка на пружине ЭКО МК-1113 Морской котик",
+        "url": "https://aven-maf.ru/igrovye-ploshchadki/kachalki/mk-1113-eko-morskoy-kotik/"
+      }
+    ],
+    "basis": "Только исходные материалы и изображения производителей"
+  },
+  {
+    "yard": 10,
+    "variant": "Город у океана",
+    "images": [
+      {
+        "src": "assets/candidates/adanat-19940.jpg",
+        "caption": "19940 · Игровой комплекс «Облака» Модуль 2",
+        "url": "https://adanatgroup.ru/katalog/detskoe-igrovoe-oborudovanie/detskie-tematicheskie-kompleksy-metall-plastik/igrovoy-kompleks-oblaka-modul-2/"
+      },
+      {
+        "src": "assets/candidates/kg-1438.webp",
+        "caption": "1438 · Столик «Семицветик»",
+        "url": "https://www.k-gorod.ru/catalog/products/1438-stolik_semicvetik_"
+      },
+      {
+        "src": "assets/candidates/adanat-18614.jpg",
+        "caption": "18614 · Кресло-карусель",
+        "url": "https://adanatgroup.ru/katalog/detskoe-igrovoe-oborudovanie/detskoe-oborudovanie-iz-metalla-i-plastika/detskie-karuseli-metall/kreslo-karusel/"
+      },
+      {
+        "src": "assets/candidates/adanat-19128.jpg",
+        "caption": "19128 · Качалка на пружине Тип 1",
+        "url": "https://adanatgroup.ru/katalog/detskoe-igrovoe-oborudovanie/eko-stil/pruzhinnye-kachalki/kachalka-na-pruzhine-tip-1/"
+      }
+    ],
+    "basis": "Только исходные материалы и изображения производителей"
+  },
+  {
+    "yard": 10,
+    "variant": "Семейный квартал",
+    "images": [
+      {
+        "src": "assets/candidates/adanat-19984.jpg",
+        "caption": "19984 · Игровой комплекс «Деревенька» Тип 1",
+        "url": "https://adanatgroup.ru/katalog/detskoe-igrovoe-oborudovanie/eko-stil/igrovoy-kompleks-derevenka-tip-1/"
+      },
+      {
+        "src": "assets/candidates/adanat-18464.jpg",
+        "caption": "18464 · Детская лазалка «Барни» Тип 4",
+        "url": "https://adanatgroup.ru/katalog/detskoe-igrovoe-oborudovanie/eko-stil/detskaya-lazalka-barni-tip-4/"
+      },
+      {
+        "src": "assets/candidates/kg-1438.webp",
+        "caption": "1438 · Столик «Семицветик»",
+        "url": "https://www.k-gorod.ru/catalog/products/1438-stolik_semicvetik_"
+      },
+      {
+        "src": "assets/candidates/adanat-19122.jpg",
+        "caption": "19122 · Качалка-балансир «Божьи коровки»",
+        "url": "https://adanatgroup.ru/katalog/detskoe-igrovoe-oborudovanie/eko-stil/kachalki-balansiry/kachalka-balansir-bozhi-korovki/"
+      }
+    ],
+    "basis": "Только исходные материалы и изображения производителей"
+  },
+  {
+    "yard": 10,
+    "variant": "Мастерская движения",
+    "images": [
+      {
+        "src": "assets/candidates/adanat-18643-02.jpg",
+        "caption": "18643.02 · Игровая башня «Куб-9» ЭКО",
+        "url": "https://adanatgroup.ru/katalog/detskoe-igrovoe-oborudovanie/igrovye-bashni-ot-5-let/igrovaya-bashnya-kub-9-eko/"
+      },
+      {
+        "src": "assets/candidates/kg-2355-3.webp",
+        "caption": "2355.3 · Спортивный элемент «Палки» тип-3",
+        "url": "https://www.k-gorod.ru/catalog/products/23553-sportivnyii-element-palki-tip-3"
+      },
+      {
+        "src": "assets/candidates/adanat-19839.jpg",
+        "caption": "19839 · Интерактивная панель «Солнечная система»",
+        "url": "https://adanatgroup.ru/katalog/detskoe-igrovoe-oborudovanie/nauka-i-poznanie/interaktivnaya-panel-solnechnaya-sistema/"
+      },
+      {
+        "src": "assets/candidates/adanat-19128.jpg",
+        "caption": "19128 · Качалка на пружине Тип 1",
+        "url": "https://adanatgroup.ru/katalog/detskoe-igrovoe-oborudovanie/eko-stil/pruzhinnye-kachalki/kachalka-na-pruzhine-tip-1/"
+      }
+    ],
+    "basis": "Только исходные материалы и изображения производителей"
+  }
+]

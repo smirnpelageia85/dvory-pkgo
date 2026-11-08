@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Интерактивная панель: Дворы и пространства ПКГО 2026</title>
+<script src="./assets/tailwind.js"></script>
+<style>
+    ::-webkit-scrollbar { width: 8px; height: 8px; }
+    ::-webkit-scrollbar-track { background: rgba(0,0,0,0.05); }
+    ::-webkit-scrollbar-thumb { background: rgba(100,116,139,0.3); border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: rgba(100,116,139,0.5); }
+    .glass-nav { backdrop-filter: blur(12px); background: rgba(255, 255, 255, 0.9); }
+    
+    .badge-approved { background: rgba(16, 185, 129, 0.15); color: #059669; border: 1px solid rgba(16, 185, 129, 0.3); }
+    .badge-pending { background: rgba(245, 158, 11, 0.15); color: #d97706; border: 1px solid rgba(245, 158, 11, 0.3); }
+    .badge-refine { background: rgba(168, 85, 247, 0.15); color: #9333ea; border: 1px solid rgba(168, 85, 247, 0.3); }
+    .badge-dev { background: rgba(59, 130, 246, 0.15); color: #2563eb; border: 1px solid rgba(59, 130, 246, 0.3); }
+    
+    .tab-btn.active {
+      background-color: var(--primary, #0284c7);
+      color: #ffffff;
+      box-shadow: 0 4px 12px rgba(2, 132, 199, 0.25);
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased min-h-screen flex flex-col font-sans transition-colors duration-200">
+<!-- TOP HEADER & BRANDING -->
+<header class="sticky top-0 z-40 glass-nav border-b border-slate-200/80 shadow-xs">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex flex-wrap items-center justify-between gap-4">
+<div class="flex items-center gap-3.5">
+<div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-sky-600 via-teal-500 to-amber-400 flex items-center justify-center text-white shadow-md shadow-sky-500/20 font-bold text-lg">
+          🌋
+        </div>
+<div>
+<div class="flex items-center gap-2">
+<h1 class="text-base sm:text-lg font-bold tracking-tight text-slate-900">ПКГО • Дворы и Общественные Пространства</h1>
+<span class="text-xs font-semibold px-2 py-0.5 rounded-full bg-sky-100 text-sky-800 border border-sky-200">2026</span>
+</div>
+<p class="text-xs text-slate-500">Интерактивная панель мониторинга, сметного аудита и состава папок</p>
+</div>
+</div>
+<!-- Quick Metrics Pill Strip -->
+<div class="flex items-center gap-2 text-xs">
+<div class="hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-emerald-50 border border-emerald-200 text-emerald-800 font-medium">
+<span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+<span>Согласовано: <strong>4</strong></span>
+</div>
+<div class="hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-amber-50 border border-amber-200 text-amber-800 font-medium">
+<span class="w-2 h-2 rounded-full bg-amber-500"></span>
+<span>На согласовании: <strong>5</strong></span>
+</div>
+<div class="px-3.5 py-1.5 rounded-lg bg-slate-900 text-white font-semibold flex items-center gap-2 shadow-xs">
+<span>Сметы + промо:</span>
+<span class="text-amber-400 font-bold">66 141 807 ₽</span>
+</div>
+</div>
+</div>
+<!-- MAIN TABS NAVIGATION -->
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex overflow-x-auto gap-2 py-2 border-t border-slate-100 text-sm">
+<button class="tab-btn active px-3.5 py-1.5 rounded-lg font-medium text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition-all flex items-center gap-2 whitespace-nowrap text-xs sm:text-sm" id="tab-btn-dashboard" onclick="switchTab('dashboard')">
+        📊 Сводная панель
+      </button>
+<button class="tab-btn px-3.5 py-1.5 rounded-lg font-medium text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition-all flex items-center gap-2 whitespace-nowrap text-xs sm:text-sm" id="tab-btn-detail" onclick="switchTab('detail')">
+        🔍 Паспорт двора + Папка сбоку
+      </button>
+<button class="tab-btn px-3.5 py-1.5 rounded-lg font-medium text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition-all flex items-center gap-2 whitespace-nowrap text-xs sm:text-sm" id="tab-btn-catalog" onclick="switchTab('catalog')">
+        🗂️ Каталог 10 объектов
+      </button>
+<button class="tab-btn px-3.5 py-1.5 rounded-lg font-medium text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition-all flex items-center gap-2 whitespace-nowrap text-xs sm:text-sm" id="tab-btn-folders" onclick="switchTab('folders')">
+        📁 Реестр всех папок и файлов
+      </button>
+<button class="tab-btn px-3.5 py-1.5 rounded-lg font-medium text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition-all flex items-center gap-2 whitespace-nowrap text-xs sm:text-sm" id="tab-btn-compare" onclick="switchTab('compare')">
+        ⚖️ Правки (Океанская)
+      </button>
+<button class="tab-btn px-3.5 py-1.5 rounded-lg font-medium text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition-all flex items-center gap-2 whitespace-nowrap text-xs sm:text-sm" id="tab-btn-calculator" onclick="switchTab('calculator')">
+        🧮 Сметный калькулятор
+      </button>
+<button class="tab-btn px-3.5 py-1.5 rounded-lg font-medium text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition-all flex items-center gap-2 whitespace-nowrap text-xs sm:text-sm" id="tab-btn-gallery" onclick="switchTab('gallery')">
+        🖼️ Медиабанк (56)
+      </button>
+</div>
+</header>
+<a id="review-link" href="review.html" style="display:block;padding:22px;text-align:center;background:#cceade;color:#123e32;font:700 20px system-ui">Открыть редактор дворов: варианты, цены и карта →</a><nav aria-label="Разделы общего портала" id="portal-sections" style="max-width:1230px;margin:20px auto;padding:24px;background:#142b3d;color:white;border-radius:18px;display:flex;gap:20px;flex-wrap:wrap;align-items:center"><div style="flex:1;min-width:220px"><strong style="font-size:22px">Дворы ПКГО · общий портал</strong><p style="color:#c9e1e7;margin:6px 0">10 дворов · реальные МАФы · редактируемые варианты</p></div><a href="visualizations.html" style="color:#b4f2e5;font-weight:700">Визуализации и варианты →</a><a href="candidates.html" style="color:#b4f2e5;font-weight:700">Избранное оборудование →</a><a href="map.html" style="color:#b4f2e5">Карта →</a><a href="sources.html" style="color:#b4f2e5">Исходники →</a><a href="kamchatka.html" style="display:inline-block;padding:12px;background:#e3f3eb;color:#12554a;border-radius:8px;margin:8px">Камчатка: концепции и МАФы</a></nav>
+<section style="margin:16px auto;padding:18px 22px;max-width:1230px;background:#fff7ed;border:1px solid #fed7aa;border-radius:16px;font:14px/1.6 system-ui;color:#7c2d12"><strong>Сметный аудит · 06 ноября 2026</strong><br/>66 141 807 ₽ = 34 061 807 ₽ по трём Excel-сметам + 32 080 000 ₽ по промо-концепции Кирдищева. Оценки остальных объектов не включены. НДС из Excel — 6 142 293,07 ₽; модель 20/120 для всего портфеля — 11 023 634,50 ₽. Требуется сверка ставки с поставщиком. Площади площадок не равны объёму покрытия.<br/><a download="" href="yards_summary_report.md">Аналитический паспорт ↓</a> · <a download="" href="yards_manifest.json">Манифест данных ↓</a> · <a href="sources.html" target="_blank">Все исходные материалы</a> · <a href="map.html">Адреса и карта дворов →</a> · <a href="visualizations.html">Визуализации и варианты →</a></section>
+<!-- MAIN CONTAINER -->
+<main class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-5">
+<!-- ========================================== -->
+<!-- TAB 1: DASHBOARD -->
+<!-- ========================================== -->
+<div class="tab-view space-y-6" id="view-dashboard">
+<!-- HERO BANNER -->
+<div class="relative overflow-hidden rounded-2xl bg-gradient-to-r from-slate-900 via-sky-950 to-slate-900 text-white p-6 sm:p-7 shadow-xl border border-slate-800">
+<div class="relative z-10 max-w-3xl">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-500/20 border border-sky-400/30 text-sky-300 text-xs font-semibold mb-2.5">
+<span>Камчатский край</span> • <span>Петропавловск-Камчатский</span>
+</div>
+<h2 class="text-xl sm:text-2xl font-extrabold tracking-tight text-white mb-2">
+            Программа благоустройства 10 пространств ПКГО
+          </h2>
+<p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-4">
+            Консолидация всех материалов: коммерческие предложения <strong>ООО «АВЕН СПб»</strong>, концепция <strong>NEW AVEN</strong>, подрядчик <strong>«Новый город»</strong>. По каждому объекту доступна боковая панель с детальной описью содержимого оригинальной папки на диске.
+          </p>
+<div class="flex flex-wrap gap-2.5">
+<button class="px-3.5 py-1.5 rounded-xl bg-sky-500 hover:bg-sky-400 text-slate-950 font-bold text-xs shadow-md transition-all flex items-center gap-1.5" onclick="switchTab('detail')">
+<span>Открыть паспорт двора с файлами сбоку →</span>
+</button>
+<button class="px-3.5 py-1.5 rounded-xl bg-white/10 hover:bg-white/20 text-white font-medium text-xs border border-white/15 transition-all" onclick="switchTab('folders')">
+<span>Реестр файлов по папкам</span>
+</button>
+</div>
+</div>
+<div class="absolute right-0 top-0 bottom-0 w-1/3 opacity-25 pointer-events-none hidden lg:block">
+<img alt="Камчатка" class="w-full h-full object-cover mix-blend-screen" loading="lazy" src="./assets/orig/kamchatka_volcano.jpg"/>
+</div>
+</div>
+<!-- KPI METRIC CARDS -->
+<div class="grid grid-cols-2 lg:grid-cols-4 gap-3.5">
+<div class="bg-white p-4 rounded-xl border border-slate-200/80 shadow-xs">
+<div class="flex items-center justify-between mb-1">
+<span class="text-xs text-slate-500 font-medium">Согласовано</span>
+<span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+</div>
+<div class="text-2xl font-bold text-slate-900">4 / 10</div>
+<div class="text-[11px] text-emerald-600 font-medium mt-0.5">Ботаническая, Горького, Океанская, АЗС</div>
+</div>
+<div class="bg-white p-4 rounded-xl border border-slate-200/80 shadow-xs">
+<div class="flex items-center justify-between mb-1">
+<span class="text-xs text-slate-500 font-medium">На согласовании</span>
+<span class="w-2 h-2 rounded-full bg-amber-500"></span>
+</div>
+<div class="text-2xl font-bold text-slate-900">5 / 10</div>
+<div class="text-[11px] text-amber-600 font-medium mt-0.5">Кирдищева, Солнечная, Байконур...</div>
+</div>
+<div class="bg-white p-4 rounded-xl border border-slate-200/80 shadow-xs">
+<div class="flex items-center justify-between mb-1">
+<span class="text-xs text-slate-500 font-medium">Сумма смет</span>
+<span class="text-sky-600 font-bold">₽</span>
+</div>
+<div class="text-xl sm:text-2xl font-bold text-slate-900">66,14 млн ₽</div>
+<div class="text-[11px] text-slate-500 font-medium mt-0.5">НДС из Excel: 6 142 293 ₽; промо — отдельно</div>
+</div>
+<div class="bg-white p-4 rounded-xl border border-slate-200/80 shadow-xs">
+<div class="flex items-center justify-between mb-1">
+<span class="text-xs text-slate-500 font-medium">Всего файлов</span>
+<span class="text-slate-400">📁</span>
+</div>
+<div class="text-2xl font-bold text-slate-900">50 исходных файлов</div>
+<div class="text-[11px] text-slate-500 font-medium mt-0.5">3 сметы XLSX, 1 PDF-альбом, 46 изображений</div>
+</div>
+</div>
+<!-- SUMMARY TABLE -->
+<div class="bg-white rounded-xl border border-slate-200/80 shadow-xs overflow-hidden">
+<div class="p-4 border-b border-slate-100 flex items-center justify-between">
+<div>
+<h3 class="font-bold text-slate-900 text-sm sm:text-base">Сводный реестр 10 объектов и исходных папок</h3>
+<p class="text-xs text-slate-500">Кликните по любой строке, чтобы открыть паспорт двора с боковой панелью файлов</p>
+</div>
+<button class="text-xs font-semibold text-sky-600 hover:text-sky-700" onclick="switchTab('folders')">
+            Опись всех папок →
+          </button>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left text-xs text-slate-600">
+<thead class="bg-slate-50/75 border-b border-slate-200/60 text-slate-500 uppercase tracking-wider font-semibold text-[11px]">
+<tr>
+<th class="py-2.5 px-3">№</th>
+<th class="py-2.5 px-3">Объект / Адрес</th>
+<th class="py-2.5 px-3">Исходная папка на диске</th>
+<th class="py-2.5 px-3">Файлы в папке</th>
+<th class="py-2.5 px-3">Смета с НДС</th>
+<th class="py-2.5 px-3">Статус</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-100" id="summary-table-body">
+<!-- Rendered via JS -->
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<!-- ========================================== -->
+<!-- TAB 2: DETAIL PASSPORT WITH SIDEBAR (KEY FEATURE) -->
+<!-- ========================================== -->
+<div class="tab-view hidden space-y-4" id="view-detail">
+<!-- Top Selector Toolbar -->
+<div class="bg-white p-3 rounded-xl border border-slate-200/80 shadow-xs flex flex-wrap items-center justify-between gap-3">
+<div class="flex items-center gap-2">
+<span class="text-xs font-bold text-slate-500 uppercase">Двор:</span>
+<select class="text-xs font-bold text-slate-900 bg-slate-50 border border-slate-200 rounded-lg px-3 py-1.5 focus:outline-none focus:ring-2 focus:ring-sky-500" id="yard-select" onchange="openYardDetail(this.value)">
+<!-- Populated via JS -->
+</select>
+</div>
+<div class="flex items-center gap-2 text-xs">
+<button class="px-2.5 py-1.5 rounded-lg border border-slate-200 hover:bg-slate-100 text-slate-600 font-medium flex items-center gap-1" onclick="navigateYard(-1)">
+            ← Предыдущий
+          </button>
+<button class="px-2.5 py-1.5 rounded-lg border border-slate-200 hover:bg-slate-100 text-slate-600 font-medium flex items-center gap-1" onclick="navigateYard(1)">
+            Следующий →
+          </button>
+</div>
+</div>
+<!-- TWO-COLUMN LAYOUT: MAIN PASSPORT (LEFT) + FOLDER SIDEBAR (RIGHT) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-5 items-start">
+<!-- LEFT 8 COLS: MAIN PROJECT CONTENT -->
+<div class="lg:col-span-8 space-y-5" id="yard-main-content">
+<!-- Injected via JS -->
+</div>
+<!-- RIGHT 4 COLS: STICKY FOLDER SIDEBAR (Что есть в папке) -->
+<div class="lg:col-span-4 sticky top-20 space-y-4" id="yard-sidebar-content">
+<!-- Injected via JS -->
+</div>
+</div>
+</div>
+<!-- ========================================== -->
+<!-- TAB 3: CATALOG OF ALL 10 YARDS -->
+<!-- ========================================== -->
+<div class="tab-view hidden space-y-4" id="view-catalog">
+<div class="bg-white p-3.5 rounded-xl border border-slate-200/80 shadow-xs flex flex-wrap items-center justify-between gap-3">
+<div class="flex flex-wrap gap-1.5" id="status-filters">
+<button class="cat-filter-btn px-3 py-1 rounded-lg text-xs font-semibold bg-slate-900 text-white" data-status="all" onclick="filterCatalog('all')">Все (10)</button>
+<button class="cat-filter-btn px-3 py-1 rounded-lg text-xs font-medium text-slate-600 hover:bg-slate-100" data-status="approved" onclick="filterCatalog('approved')">Согласовано (4)</button>
+<button class="cat-filter-btn px-3 py-1 rounded-lg text-xs font-medium text-slate-600 hover:bg-slate-100" data-status="pending" onclick="filterCatalog('pending')">На согласовании (5)</button>
+<button class="cat-filter-btn px-3 py-1 rounded-lg text-xs font-medium text-slate-600 hover:bg-slate-100" data-status="dev" onclick="filterCatalog('dev')">В концепции (1)</button>
+</div>
+<div class="relative w-full sm:w-60">
+<input class="w-full text-xs pl-8 pr-3 py-1.5 rounded-lg border border-slate-200 focus:outline-none focus:ring-2 focus:ring-sky-500" id="catalog-search" oninput="searchCatalog(this.value)" placeholder="Поиск по названию, МАФ..." type="text"/>
+<span class="absolute left-2.5 top-1.5 text-slate-400 text-xs">🔍</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5" id="yards-grid">
+<!-- JS rendered -->
+</div>
+</div>
+<!-- ========================================== -->
+<!-- TAB 4: COMPLETE FOLDERS & FILES AUDIT VIEW -->
+<!-- ========================================== -->
+<div class="tab-view hidden space-y-5" id="view-folders">
+<div class="bg-white p-5 rounded-2xl border border-slate-200/80 shadow-xs">
+<div class="border-b border-slate-100 pb-3 mb-4">
+<h3 class="text-lg font-bold text-slate-900">Реестр исходных материалов</h3>
+<p class="text-xs text-slate-500">Планы, визуализации и сметы дворов собраны в <a class="underline" href="sources.html">реестре документов</a>.</p>
+</div>
+<div class="space-y-4" id="folders-full-list">
+<!-- Populated by JS -->
+</div>
+</div>
+</div>
+<!-- ========================================== -->
+<!-- TAB 5: COMPARE REVISIONS (OKEANSKAYA) -->
+<!-- ========================================== -->
+<div class="tab-view hidden space-y-5" id="view-compare">
+<div class="bg-white p-5 rounded-2xl border border-slate-200/80 shadow-xs">
+<div class="border-b border-slate-100 pb-3 mb-4">
+<span class="text-xs font-bold text-emerald-800 bg-emerald-100 px-2.5 py-0.5 rounded-full">Аудит изменений 05.11.2026</span>
+<h3 class="text-lg font-bold text-slate-900 mt-1">ул. Океанская: исходная версия (02.11) против правок (05.11 — «11_Океанская»)</h3>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+<div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
+<h4 class="font-bold text-slate-800 text-xs mb-2">Исходная версия (02.11.2026) • Смета 11 262 737 ₽</h4>
+<div class="aspect-4/3 rounded-lg overflow-hidden bg-slate-200 cursor-pointer" onclick="openLightbox('./sources/026.jpg', 'Океанская: План 02.11')">
+<img alt="План 02.11" class="w-full h-full object-contain" loading="lazy" src="./sources/026.jpg"/>
+</div>
+<p class="text-xs text-slate-600 mt-2">• Канатная конструкция «Марс» (КД-13), Воркаут ВР-44, Тренажеры ТК-1</p>
+</div>
+<div class="bg-sky-50 p-4 rounded-xl border border-sky-200">
+<h4 class="font-bold text-sky-950 text-xs mb-2">⭐ Свежая версия (05.11.2026) • Новая папка «11_Океанская»</h4>
+<div class="aspect-4/3 rounded-lg overflow-hidden bg-slate-200 cursor-pointer" onclick="openLightbox('./sources/010.jpg', 'Океанская: Актуальный план 05.11')">
+<img alt="План 05.11" class="w-full h-full object-contain" loading="lazy" src="./sources/010.jpg"/>
+</div>
+<p class="text-xs text-slate-600 mt-2">• Площадь 40×20 м (800 м²), добавлен Песочный дворик (ПЕ-70), 6 новых рендеров</p>
+</div>
+</div>
+</div>
+</div>
+<!-- ========================================== -->
+<!-- TAB 6: FINANCIAL CALCULATOR -->
+<!-- ========================================== -->
+<div class="tab-view hidden space-y-5" id="view-calculator">
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-5">
+<div class="lg:col-span-2 bg-white p-5 rounded-2xl border border-slate-200/80 shadow-xs space-y-3">
+<div class="flex items-center justify-between border-b border-slate-100 pb-3">
+<h3 class="font-bold text-slate-900 text-sm sm:text-base">Выбор объектов в сметную очередь</h3>
+<div class="flex gap-2 text-xs">
+<button class="font-semibold text-sky-600 hover:text-sky-700" onclick="selectAllCalc(true)">Выбрать все</button>
+<button class="font-semibold text-slate-400 hover:text-slate-600" onclick="selectAllCalc(false)">Снять</button>
+</div>
+</div>
+<div class="space-y-2" id="calc-yards-list"></div>
+</div>
+<div class="space-y-4">
+<div class="bg-slate-900 text-white p-5 rounded-2xl shadow-lg border border-slate-800 space-y-3">
+<h4 class="font-bold text-xs text-slate-300 uppercase tracking-wider">Итого расчетной очереди</h4>
+<div class="space-y-1.5 text-xs text-slate-300 border-b border-slate-700/60 pb-3">
+<div class="flex justify-between"><span>Объектов:</span><strong class="text-white" id="calc-count">0</strong></div>
+<div class="flex justify-between"><span>Площадь площадок:</span><strong class="text-white" id="calc-area">0 м²</strong></div>
+</div>
+<div>
+<div class="text-[11px] text-slate-400">Суммарный бюджет:</div>
+<div class="text-2xl font-black text-amber-400" id="calc-total-budget">0 ₽</div>
+</div>
+<div class="text-xs text-slate-300">
+              Сценарный НДС (20/120): <strong class="text-white" id="calc-total-vat">0 ₽</strong>
+</div>
+<button class="w-full mt-2 py-2 px-3 rounded-xl bg-sky-500 hover:bg-sky-400 text-slate-950 font-bold text-xs" onclick="exportPlanCSV()">
+              📥 Экспорт в CSV / Excel
+            </button>
+</div>
+</div>
+</div>
+</div>
+<!-- ========================================== -->
+<!-- TAB 7: GALLERY -->
+<!-- ========================================== -->
+<div class="tab-view hidden space-y-5" id="view-gallery">
+<div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4" id="full-gallery-grid"></div>
+</div>
+</main>
+<!-- LIGHTBOX / FULLSCREEN MODAL -->
+<div class="fixed inset-0 z-50 bg-black/90 hidden backdrop-blur-md flex flex-col" id="lightbox-modal">
+<div class="px-6 py-3 flex items-center justify-between text-white border-b border-white/10">
+<div>
+<h4 class="font-bold text-sm" id="lightbox-title">Просмотр изображения</h4>
+<p class="text-xs text-slate-400" id="lightbox-subtitle"></p>
+</div>
+<div class="flex items-center gap-3">
+<a class="px-2.5 py-1 rounded-lg bg-white/10 hover:bg-white/20 text-xs font-medium text-slate-200" download="" href="#" id="lightbox-orig-link" target="_blank">
+          💾 Скачать оригинал
+        </a>
+<button class="p-1 rounded-lg hover:bg-white/20 text-white" onclick="closeLightbox()">
+          ✕
+        </button>
+</div>
+</div>
+<div class="flex-1 relative flex items-center justify-center p-4 overflow-hidden select-none">
+<img alt="Preview" class="max-w-full max-h-full object-contain rounded-lg shadow-2xl" id="lightbox-img" loading="lazy" src=""/>
+<button class="absolute left-4 top-1/2 -translate-y-1/2 p-3 rounded-full bg-black/50 text-white border border-white/20" onclick="navigateLightbox(-1)">‹</button>
+<button class="absolute right-4 top-1/2 -translate-y-1/2 p-3 rounded-full bg-black/50 text-white border border-white/20" onclick="navigateLightbox(1)">›</button>
+</div>
+</div>
+<!-- SCRIPT LOGIC -->
+<script>
+    const MANIFEST = {"title": "Программа благоустройства общественных и дворовых пространств Петропавловск-Камчатского городского округа (ПКГО)", "date": "Ноябрь 2026", "stats": {"total_yards": 10, "approved_count": 4, "pending_count": 5, "dev_count": 1, "known_budget_total": 66141807, "objects_count": 45}, "yards": [{"id": "yard_1", "number": 1, "name": "Ботаническая (Ботанический сад)", "address": "ул. Ботаническая, г. Петропавловск-Камчатский", "vendor": "ООО «АВЕН СПб»", "status": "approved", "status_label": "Согласовано", "status_color": "green", "theme": "Природа Камчатки / «Пчела и соты»", "dimensions": "24,0 м × 15,0 м", "area_sqm": 360, "budget": 10785107, "vat": 1944855.36, "description": "Игровое пространство с акцентом на природную биосферу Камчатки. Центральный элемент — двухсекционный комплекс сот с тоннельной горкой и стилизованный игровой комплекс «Пчела». Пространство включает зоны активных игр, качели с подвесами «Гнездо» и воркаут. Финансовое основание: Excel-смета.", "items": [{"id": 1, "code": "Г-4050", "name": "Игровой комплекс «Пчела»", "qty": 1, "unit": "шт", "price": 2619540, "total": 2619540, "category": "play"}, {"id": 2, "code": "ВР-39", "name": "Спортивный комплекс (воркаут)", "qty": 1, "unit": "шт", "price": 192100, "total": 192100, "category": "sport"}, {"id": 3, "code": "ГН-1200/7", "name": "Игровой комплекс «Соты» с трубой", "qty": 1, "unit": "шт", "price": 7289334, "total": 7289334, "category": "play"}, {"id": 4, "code": "К-33", "name": "Качели маятниковые на цепях «Гнездо»", "qty": 1, "unit": "шт", "price": 179992, "total": 179992, "category": "swing"}, {"id": 5, "code": "К-33", "name": "Качели двухместные с подвесами тип 2 и тип 5", "qty": 1, "unit": "шт", "price": 136707, "total": 136707, "category": "swing"}, {"id": 8, "code": "С-190", "name": "Скамья парковая деревянная", "qty": 3, "unit": "шт", "price": 99193, "total": 297579, "category": "maf"}, {"id": 9, "code": "У-206", "name": "Урна парковая с ведром", "qty": 3, "unit": "шт", "price": 23285, "total": 69855, "category": "maf"}], "images": [{"filename": "yard_1_plan.jpg", "rel_orig": "./sources/016.jpg", "rel_web": "./sources/016.jpg", "type": "plan", "title": "Генеральный план площадки (24,0 × 15,0 м)"}, {"filename": "yard_1_render_1.jpg", "rel_orig": "./sources/017.jpg", "rel_web": "./sources/017.jpg", "type": "render", "title": "Общий 3D-вид площадки «Ботанический сад»"}, {"filename": "yard_1_render_2.jpg", "rel_orig": "./sources/014.jpg", "rel_web": "./sources/014.jpg", "type": "render", "title": "Аксонометрическая проекция с высоты"}, {"filename": "yard_1_render_3.jpg", "rel_orig": "./sources/015.jpg", "rel_web": "./sources/015.jpg", "type": "render", "title": "Игровые комплексы «Пчела» и «Соты»"}], "folder_info": {"folder_name": "1_Ботанический (Авен) согл", "files": [{"name": "02.11.2026. Камчатка —Ботаническая.xlsx", "type": "excel", "label": "Смета коммерческого предложения", "size": "56 КБ", "role": "estimate", "source_url": "sources/013.xlsx"}, {"name": "Ботанический сад  2.11.26 план.jpg", "type": "image", "label": "Генеральный план (24,0 × 15,0 м)", "size": "1.07 МБ", "role": "plan", "rel": "./sources/016.jpg", "source_url": "sources/016.jpg"}, {"name": "Ботанический сад  2.11.26.jpg", "type": "image", "label": "3D-Визуализация (общий вид)", "size": "5.41 МБ", "role": "render", "rel": "./sources/017.jpg", "source_url": "sources/017.jpg"}, {"name": "Ботанический сад  2.11.26 2.jpg", "type": "image", "label": "3D-Визуализация (аксонометрия)", "size": "4.42 МБ", "role": "render", "rel": "./sources/014.jpg", "source_url": "sources/014.jpg"}, {"name": "Ботанический сад  2.11.26 3.jpg", "type": "image", "label": "3D-Визуализация (комплекс Пчела и Соты)", "size": "4.69 МБ", "role": "render", "rel": "./sources/015.jpg", "source_url": "sources/015.jpg"}]}, "geo": {"lat": 53.049312, "lon": 158.65474, "address_full": "г. Петропавловск-Камчатский, ул. Ботаническая (Ботанический пер.)", "district": "Район 4-5 км / Ботанический сад", "dgis_url": "https://2gis.ru/petropavlovskkamchatskiy/search/53.049312%2C158.654740", "dgis_route": "https://2gis.ru/petropavlovskkamchatskiy/routeSearch/to/158.654740,53.049312"}, "budget_basis": "Excel-смета"}, {"id": "yard_2", "number": 2, "name": "Горького, д. 6", "address": "ул. Максима Горького, д. 6, г. Петропавловск-Камчатский", "vendor": "ООО «АВЕН СПб»", "status": "approved", "status_label": "Согласовано", "status_color": "green", "theme": "Тяжелая техника / «Белаз и Бульдозер»", "dimensions": "21,0 м × 18,0 м", "area_sqm": 378, "budget": 12013963, "vat": 2166452.36, "description": "Тематическая строительно-карьерная площадка. Доминанта площадки — грандиозный комплекс «Белаз» с винтовым спуском и кабина-мостик бульдозера с горкой. Оборудована большая развивающая песочница «Песочный дворик», балансиры и комплексные качели. Финансовое основание: Excel-смета.", "items": [{"id": 1, "code": "Г-2326", "name": "Игровой комплекс «Белаз»", "qty": 1, "unit": "шт", "price": 8343720, "total": 8343720, "category": "play"}, {"id": 2, "code": "Г-2327", "name": "Игровой комплекс «Бульдозер с горкой»", "qty": 1, "unit": "шт", "price": 1058400, "total": 1058400, "category": "play"}, {"id": 3, "code": "К-56", "name": "Качалка-балансир", "qty": 1, "unit": "шт", "price": 79169, "total": 79169, "category": "play"}, {"id": 4, "code": "К-29", "name": "Игровой развивающий элемент", "qty": 1, "unit": "шт", "price": 164934, "total": 164934, "category": "play"}, {"id": 5, "code": "ПЕ-71", "name": "Песочный дворик", "qty": 1, "unit": "шт", "price": 1746360, "total": 1746360, "category": "sand"}, {"id": 6, "code": "К-33/2", "name": "Качели комбинированные (подвес Гнездо, тип-2 и тип-5)", "qty": 1, "unit": "шт", "price": 293414, "total": 293414, "category": "swing"}, {"id": 7, "code": "С-235", "name": "Скамья парковая со спинкой", "qty": 6, "unit": "шт", "price": 37799, "total": 226794, "category": "maf"}, {"id": 8, "code": "У-15д", "name": "Урна парковая с ведром", "qty": 6, "unit": "шт", "price": 16862, "total": 101172, "category": "maf"}], "images": [{"filename": "yard_2_plan.jpg", "rel_orig": "./sources/023.jpg", "rel_web": "./sources/023.jpg", "type": "plan", "title": "Генеральный план ул. Горького, д. 6 (21,0 × 18,0 м)"}, {"filename": "yard_2_render_1.jpg", "rel_orig": "./sources/020.jpg", "rel_web": "./sources/020.jpg", "type": "render", "title": "Игровой комплекс «Белаз» и общая панорама"}, {"filename": "yard_2_render_2.jpg", "rel_orig": "./sources/022.jpg", "rel_web": "./sources/022.jpg", "type": "render", "title": "Игровой комплекс «Бульдозер» и Песочный дворик"}, {"filename": "yard_2_render_3.jpg", "rel_orig": "./sources/021.jpg", "rel_web": "./sources/021.jpg", "type": "render", "title": "Перспектива площадки"}], "folder_info": {"folder_name": "2_Горького (Авен) согл", "files": [{"name": "02.11.2026. Горького д 6.xlsx", "type": "excel", "label": "Смета коммерческого предложения", "size": "56 КБ", "role": "estimate", "source_url": "sources/019.xlsx"}, {"name": "план 30.10.26.jpg", "type": "image", "label": "Генеральный план (21,0 × 18,0 м)", "size": "766.8 КБ", "role": "plan", "rel": "./sources/023.jpg", "source_url": "sources/023.jpg"}, {"name": "11_Белаз.jpg", "type": "image", "label": "3D-Визуализация (комплекс «Белаз»)", "size": "918.2 КБ", "role": "render", "rel": "./sources/020.jpg", "source_url": "sources/020.jpg"}, {"name": "Белаз2.jpg", "type": "image", "label": "3D-Визуализация («Бульдозер» и песочница)", "size": "996.8 КБ", "role": "render", "rel": "./sources/022.jpg", "source_url": "sources/022.jpg"}, {"name": "Белаз 3.jpg", "type": "image", "label": "3D-Визуализация (общая перспектива)", "size": "1.05 МБ", "role": "render", "rel": "./sources/021.jpg", "source_url": "sources/021.jpg"}]}, "geo": {"lat": 53.0336, "lon": 158.6475, "address_full": "г. Петропавловск-Камчатский, ул. Максима Горького, д. 6", "district": "Центральный район / Култучное озеро", "dgis_url": "https://2gis.ru/petropavlovskkamchatskiy/search/53.033600%2C158.647500", "dgis_route": "https://2gis.ru/petropavlovskkamchatskiy/routeSearch/to/158.647500,53.033600"}, "budget_basis": "Excel-смета"}, {"id": "yard_3", "number": 3, "name": "Океанская (вар. 1 и актуальные Правки от 05.11)", "address": "ул. Океанская, г. Петропавловск-Камчатский", "vendor": "ООО «АВЕН СПб»", "status": "approved", "status_label": "Согласовано (внесены правки)", "status_color": "green", "theme": "Морская и океанская / «Подводная лодка и Нерпа»", "dimensions": "40,0 м × 20,0 м", "area_sqm": 800, "budget": 11262737, "vat": 2030985.35, "description": "Крупный морской комплекс, отражающий тихоокеанский характер Петропавловска-Камчатского. Оборудован игровым городком «Подводная лодка», комплексом «Нерпа», канатной пространственной сеткой «Марс», воркаутом с баскетбольным кольцом и тренажерами. 5 ноября 2026 года представлены расширенные визуализации с доработанной планировкой. Финансовое основание: Excel-смета.", "items": [{"id": 1, "code": "Г-2313/1", "name": "Игровой городок «Подводная лодка»", "qty": 1, "unit": "шт", "price": 4507937, "total": 4507937, "category": "play"}, {"id": 2, "code": "КД-13", "name": "Канатная конструкция «Марс»", "qty": 1, "unit": "шт", "price": 2772000, "total": 2772000, "category": "rope"}, {"id": 3, "code": "Г-4065", "name": "Игровой комплекс «Нерпа»", "qty": 1, "unit": "шт", "price": 2259600, "total": 2259600, "category": "play"}, {"id": 4, "code": "ТК-1", "name": "Тренажерный комплекс", "qty": 1, "unit": "шт", "price": 417497, "total": 417497, "category": "sport"}, {"id": 5, "code": "ВР-44", "name": "Воркаут с баскетбольным кольцом", "qty": 1, "unit": "шт", "price": 383040, "total": 383040, "category": "sport"}, {"id": 6, "code": "МК-7/1п", "name": "Карусель с поручнями", "qty": 1, "unit": "шт", "price": 139337, "total": 139337, "category": "carousel"}, {"id": 7, "code": "К-33/2", "name": "Качели (подвес Гнездо, тип-2 и тип-5)", "qty": 1, "unit": "шт", "price": 293414, "total": 293414, "category": "swing"}, {"id": 8, "code": "С-190 / С-225", "name": "Скамья парковая", "qty": 4, "unit": "шт", "price": 99193, "total": 396772, "category": "maf"}, {"id": 9, "code": "У-206 / У-6", "name": "Урна с ведром", "qty": 4, "unit": "шт", "price": 23285, "total": 93140, "category": "maf"}], "images": [{"filename": "yard_3_var1_plan.jpg", "rel_orig": "./sources/026.jpg", "rel_web": "./sources/026.jpg", "type": "plan", "title": "План Вариант 1 (исходный 02.11)"}, {"filename": "yard_3_var1_render.jpg", "rel_orig": "./sources/027.jpg", "rel_web": "./sources/027.jpg", "type": "render", "title": "Визуализация Вариант 1"}, {"filename": "yard_3_var2_plan.jpg", "rel_orig": "./sources/028.jpg", "rel_web": "./sources/028.jpg", "type": "plan", "title": "План Вариант 2 (исходный 02.11)"}, {"filename": "yard_3_var2_render.jpg", "rel_orig": "./sources/029.jpg", "rel_web": "./sources/029.jpg", "type": "render", "title": "Визуализация Вариант 2"}, {"filename": "yard_3_updated_plan.jpg", "rel_orig": "./sources/010.jpg", "rel_web": "./sources/010.jpg", "type": "plan", "title": "⭐ АКТУАЛЬНЫЙ ПЛАН (Правки 05.11.26, 40×20 м)"}, {"filename": "yard_3_upd_render_1.jpg", "rel_orig": "./sources/011.jpg", "rel_web": "./sources/011.jpg", "type": "render", "title": "Актуальный рендер: Подводная лодка и Нерпа"}, {"filename": "yard_3_upd_render_2.jpg", "rel_orig": "./sources/005.jpg", "rel_web": "./sources/005.jpg", "type": "render", "title": "Вид на подводную лодку с горкой-трубой"}, {"filename": "yard_3_upd_render_3.jpg", "rel_orig": "./sources/006.jpg", "rel_web": "./sources/006.jpg", "type": "render", "title": "Игровой комплекс «Нерпа» и карусели"}, {"filename": "yard_3_upd_render_4.jpg", "rel_orig": "./sources/007.jpg", "rel_web": "./sources/007.jpg", "type": "render", "title": "Перспектива площадки со стороны детского городка"}, {"filename": "yard_3_upd_render_5.jpg", "rel_orig": "./sources/008.jpg", "rel_web": "./sources/008.jpg", "type": "render", "title": "Общий вид с высоты"}, {"filename": "yard_3_upd_render_6.jpg", "rel_orig": "./sources/009.jpg", "rel_web": "./sources/009.jpg", "type": "render", "title": "Фрагмент игровых элементов"}], "folder_info": {"folder_name": "3_Океанская (Авен) согл + 11_Океанская", "files": [{"name": "02.11.2026. Камчатка.xlsx", "type": "excel", "label": "Смета исходная (02.11.26)", "size": "56.2 КБ", "role": "estimate", "source_url": "sources/025.xlsx"}, {"name": "Океанская 2.11.26 вар 1 план.jpg", "type": "image", "label": "План (Вариант 1)", "size": "1.20 МБ", "role": "plan", "rel": "./sources/026.jpg", "source_url": "sources/026.jpg"}, {"name": "Океанская 2.11.26 вар 1.jpg", "type": "image", "label": "Рендер (Вариант 1)", "size": "4.48 МБ", "role": "render", "rel": "./sources/027.jpg", "source_url": "sources/027.jpg"}, {"name": "Океанская 2.11.26 вар 2 план.jpg", "type": "image", "label": "План (Вариант 2)", "size": "1.40 МБ", "role": "plan", "rel": "./sources/028.jpg", "source_url": "sources/028.jpg"}, {"name": "Океанская 2.11.26 вар 2.jpg", "type": "image", "label": "Рендер (Вариант 2)", "size": "4.28 МБ", "role": "render", "rel": "./sources/029.jpg", "source_url": "sources/029.jpg"}, {"name": "Океанская 5.11.26 план.jpg [Правки 2]", "type": "image", "label": "⭐ Актуальный план 05.11 (40×20 м)", "size": "1.01 МБ", "role": "plan", "rel": "./sources/010.jpg"}, {"name": "Океанская 5.11.26.jpg [Правки 2]", "type": "image", "label": "Свежий рендер 05.11 (вид 1)", "size": "3.19 МБ", "role": "render", "rel": "./sources/011.jpg"}, {"name": "Океанская 5.11.26 2.jpg [Правки 2]", "type": "image", "label": "Свежий рендер 05.11 (вид 2)", "size": "3.50 МБ", "role": "render", "rel": "./sources/005.jpg"}, {"name": "Океанская 5.11.26 3.jpg [Правки 2]", "type": "image", "label": "Свежий рендер 05.11 (вид 3)", "size": "3.70 МБ", "role": "render", "rel": "./sources/006.jpg"}, {"name": "Океанская 5.11.26 4.jpg [Правки 2]", "type": "image", "label": "Свежий рендер 05.11 (вид 4)", "size": "3.49 МБ", "role": "render", "rel": "./sources/007.jpg"}, {"name": "Океанская 5.11.26 5.jpg [Правки 2]", "type": "image", "label": "Свежий рендер 05.11 (вид 5)", "size": "3.61 МБ", "role": "render", "rel": "./sources/008.jpg"}, {"name": "Океанская 5.11.26 6.jpg [Правки 2]", "type": "image", "label": "Свежий рендер 05.11 (вид 6)", "size": "3.40 МБ", "role": "render", "rel": "./sources/009.jpg"}]}, "geo": {"lat": 52.983627, "lon": 158.677395, "address_full": "г. Петропавловск-Камчатский, ул. Океанская", "district": "Южный район / Океанская", "dgis_url": "https://2gis.ru/petropavlovskkamchatskiy/search/52.983627%2C158.677395", "dgis_route": "https://2gis.ru/petropavlovskkamchatskiy/routeSearch/to/158.677395,52.983627"}, "budget_basis": "Excel-смета"}, {"id": "yard_4", "number": 4, "name": "Район АЗС (Корабль)", "address": "микрорайон АЗС, г. Петропавловск-Камчатский", "vendor": "ООО «АВЕН СПб»", "status": "approved", "status_label": "Согласовано", "status_color": "green", "theme": "Морской фрегат / «Корабль Первооткрывателей»", "dimensions": "26,0 м × 18,3 м", "area_sqm": 475.8, "budget": null, "is_estimated": true, "description": "Игровое пространство с флагманским фрегатом «Г-88», башней «Г-1031/1», каруселями, воркаут-зоной ВР-38 и уличными тренажерами Т-117/2 и ТК-3. Покрытие имитирует морские волны океанских глубин. Финансовое основание: Предварительная оценка из исходной панели; смета отсутствует.", "items": [{"code": "Г-88", "name": "Игровой комплекс «Большой Корабль-Фрегат»", "qty": 1, "category": "play"}, {"code": "Г-1031/1", "name": "Игровая башня со скатом", "qty": 1, "category": "play"}, {"code": "ВР-38", "name": "Спортивный воркаут-комплекс", "qty": 1, "category": "sport"}, {"code": "ТК-3", "name": "Тренажерный силовой комплекс", "qty": 1, "category": "sport"}, {"code": "Т-117/2", "name": "Уличный тренажер", "qty": 1, "category": "sport"}, {"code": "К-75/2, К-34/1", "name": "Качели маятниковые и круговые", "qty": 2, "category": "swing"}, {"code": "С-196/2, У-6", "name": "Скамьи и урны", "qty": 7, "category": "maf"}], "images": [{"filename": "yard_4_plan.jpg", "rel_orig": "./sources/034.jpg", "rel_web": "./sources/034.jpg", "type": "plan", "title": "Генеральный план площадки АЗС (26,0 × 18,3 м)"}, {"filename": "yard_4_render_1.jpg", "rel_orig": "./sources/033.jpg", "rel_web": "./sources/033.jpg", "type": "render", "title": "Фрегат «Корабль Первооткрывателей» и спортзона"}, {"filename": "yard_4_render_2.jpg", "rel_orig": "./sources/031.jpg", "rel_web": "./sources/031.jpg", "type": "render", "title": "Вид на палубный комплекс с мачтами"}, {"filename": "yard_4_render_3.jpg", "rel_orig": "./sources/032.jpg", "rel_web": "./sources/032.jpg", "type": "render", "title": "Панорама игрового пространства"}], "folder_info": {"folder_name": "4_АЗС (Авен) согл", "files": [{"name": "АЗС Корабль.jpg", "type": "image", "label": "Генеральный план площадки (26,0 × 18,3 м)", "size": "443.1 КБ", "role": "plan", "rel": "./sources/034.jpg", "source_url": "sources/034.jpg"}, {"name": "АЗС Корабль 2.11.26.jpg", "type": "image", "label": "3D-Визуализация (Корабль Первооткрывателей)", "size": "1.35 МБ", "role": "render", "rel": "./sources/033.jpg", "source_url": "sources/033.jpg"}, {"name": "АЗС Корабль 2.11.26(2).jpg", "type": "image", "label": "3D-Визуализация (палубный комплекс)", "size": "1.18 МБ", "role": "render", "rel": "./sources/031.jpg", "source_url": "sources/031.jpg"}, {"name": "АЗС Корабль 2.11.26(3).jpg", "type": "image", "label": "3D-Визуализация (панорама спортзоны)", "size": "1.02 МБ", "role": "render", "rel": "./sources/032.jpg", "source_url": "sources/032.jpg"}]}, "geo": {"lat": 53.058061, "lon": 158.632549, "address_full": "г. Петропавловск-Камчатский, район АЗС (пр-кт 50 лет Октября)", "district": "Деловой центр / р-н АЗС", "dgis_url": "https://2gis.ru/petropavlovskkamchatskiy/search/53.058061%2C158.632549", "dgis_route": "https://2gis.ru/petropavlovskkamchatskiy/routeSearch/to/158.632549,53.058061"}, "budget_basis": "Предварительная оценка из исходной панели; смета отсутствует", "preliminary_budget": 9850000}, {"id": "yard_5", "number": 5, "name": "Солнечная (Воздушный шар)", "address": "ул. Солнечная, г. Петропавловск-Камчатский", "vendor": "ООО «АВЕН СПб»", "status": "pending", "status_label": "Не согласовано", "status_color": "yellow", "theme": "Воздухоплавание / «Воздушный шар и Небо»", "dimensions": "33,5 м × 19,5 м", "area_sqm": 653.25, "budget": null, "is_estimated": true, "description": "Крупномасштабный проект с воздушным шаром Г-1417, длинным мостовым переходом Г-1425, скоростным канатным троллеем Т-215, песочным городком ПЕ-70 и комплексом качелей К-33/2. Требует уточнения колористического паспорта и согласования с жителями. Финансовое основание: Предварительная оценка из исходной панели; смета отсутствует.", "items": [{"code": "Г-1417", "name": "Игровой комплекс «Воздушный шар» с трубой", "qty": 1, "category": "play"}, {"code": "Г-1425", "name": "Мостовой переход с препятствиями", "qty": 1, "category": "play"}, {"code": "Т-215", "name": "Канатный трек / Тарзанка (Троллей)", "qty": 1, "category": "play"}, {"code": "ПЕ-70", "name": "Песочный дворик с навесом", "qty": 1, "category": "sand"}, {"code": "К-33/2", "name": "Тройные качели (гнездо, тип-2, тип-5)", "qty": 1, "category": "swing"}, {"code": "МГМ-1430", "name": "Игровой комплекс для младшей группы", "qty": 1, "category": "play"}, {"code": "С-225, У-206", "name": "Парковые скамьи (6 шт.) и урны (3 шт.)", "qty": 9, "category": "maf"}], "images": [{"filename": "yard_5_plan.jpg", "rel_orig": "./sources/041.jpg", "rel_web": "./sources/041.jpg", "type": "plan", "title": "Генеральный план ул. Солнечная (33,5 × 19,5 м)"}, {"filename": "yard_5_render_1.jpg", "rel_orig": "./sources/036.jpg", "rel_web": "./sources/036.jpg", "type": "render", "title": "Игровой комплекс «Воздушный шар»"}, {"filename": "yard_5_render_2.jpg", "rel_orig": "./sources/037.jpg", "rel_web": "./sources/037.jpg", "type": "render", "title": "Мостовой переход и канатный троллей"}, {"filename": "yard_5_render_3.jpg", "rel_orig": "./sources/038.jpg", "rel_web": "./sources/038.jpg", "type": "render", "title": "Панорамный вид площадки"}, {"filename": "yard_5_render_4.jpg", "rel_orig": "./sources/039.jpg", "rel_web": "./sources/039.jpg", "type": "render", "title": "Зона отдыха и песочный дворик"}, {"filename": "yard_5_render_5.jpg", "rel_orig": "./sources/040.jpg", "rel_web": "./sources/040.jpg", "type": "render", "title": "Вид со стороны жилого квартала"}], "folder_info": {"folder_name": "5_Солнечная (Авен) не согл", "files": [{"name": "5_Солнечная (воздушный шар)_03.11.26 (план).jpg", "type": "image", "label": "Генеральный план (33,5 × 19,5 м)", "size": "593.1 КБ", "role": "plan", "rel": "./sources/041.jpg", "source_url": "sources/041.jpg"}, {"name": "5_Солнечная (воздушный шар)_03.11.26 (виз_1).jpg", "type": "image", "label": "3D-Визуализация («Воздушный шар»)", "size": "1.21 МБ", "role": "render", "rel": "./sources/036.jpg", "source_url": "sources/036.jpg"}, {"name": "5_Солнечная (воздушный шар)_03.11.26 (виз_2).jpg", "type": "image", "label": "3D-Визуализация (мостовой переход и тарзанка)", "size": "1.19 МБ", "role": "render", "rel": "./sources/037.jpg", "source_url": "sources/037.jpg"}, {"name": "5_Солнечная (воздушный шар)_03.11.26 (виз_3).jpg", "type": "image", "label": "3D-Визуализация (панорама площадки)", "size": "1.40 МБ", "role": "render", "rel": "./sources/038.jpg", "source_url": "sources/038.jpg"}, {"name": "5_Солнечная (воздушный шар)_03.11.26 (виз_4).jpg", "type": "image", "label": "3D-Визуализация (зона отдыха со скамьями)", "size": "1.33 МБ", "role": "render", "rel": "./sources/039.jpg", "source_url": "sources/039.jpg"}, {"name": "5_Солнечная (воздушный шар)_03.11.26 (виз_5).jpg", "type": "image", "label": "3D-Визуализация (вид со стороны домов)", "size": "1.26 МБ", "role": "render", "rel": "./sources/040.jpg", "source_url": "sources/040.jpg"}]}, "geo": {"lat": 53.020562, "lon": 158.707826, "address_full": "г. Петропавловск-Камчатский, ул. Солнечная", "district": "Восточный район / ул. Солнечная", "dgis_url": "https://2gis.ru/petropavlovskkamchatskiy/search/53.020562%2C158.707826", "dgis_route": "https://2gis.ru/petropavlovskkamchatskiy/routeSearch/to/158.707826,53.020562"}, "budget_basis": "Предварительная оценка из исходной панели; смета отсутствует", "preliminary_budget": 12800000}, {"id": "yard_6", "number": 6, "name": "Молчанова (Новый город)", "address": "ул. Молчанова, г. Петропавловск-Камчатский", "vendor": "ООО «Новый город»", "status": "dev", "status_label": "В разработке подрядчика", "status_color": "blue", "theme": "Урбан-парк / Концепция «Новый город»", "dimensions": "уточняется", "area_sqm": 450, "budget": null, "is_estimated": true, "description": "Участок закреплен за подрядчиком «Новый город». Ведется подготовка архитектурно-градостроительной концепции и сбор исходно-разрешительной документации. Финансовое основание: Предварительная оценка из исходной панели; смета отсутствует.", "items": [{"code": "НГ-01", "name": "Архитектурная концепция в стадии согласования", "qty": 1, "category": "play"}], "images": [], "folder_info": {"folder_name": "6_Молчанова (Новый город)", "files": []}, "geo": {"lat": 53.065868, "lon": 158.611666, "address_full": "г. Петропавловск-Камчатский, ул. Молчанова", "district": "Северо-западный район / 8-9 км", "dgis_url": "https://2gis.ru/petropavlovskkamchatskiy/search/53.065868%2C158.611666", "dgis_route": "https://2gis.ru/petropavlovskkamchatskiy/routeSearch/to/158.611666,53.065868"}, "budget_basis": "Предварительная оценка из исходной панели; смета отсутствует", "preliminary_budget": 10500000}, {"id": "yard_7", "number": 7, "name": "Байконур (Космодром)", "address": "район ул. Байконурская, г. Петропавловск-Камчатский", "vendor": "ООО «АВЕН СПб»", "status": "pending", "status_label": "Не согласовано / Уточняется", "status_color": "yellow", "theme": "Космос / «Ракета Байконур и Планеты»", "dimensions": "Зонированная территория (23 м × 20 м × 19 м)", "area_sqm": 680, "budget": null, "is_estimated": true, "description": "Космический городок с ракетой Г-816, дизайнерским геометрическим навесом оригами Ш-70/2, комплексом спортивных тренажеров (Т-114, Т-166, Т-167, Т-163, Т-157, ВР-33), детской каруселью К-14/1 и малышковой зоной с песочницей ДЕ-11. Финансовое основание: Предварительная оценка из исходной панели; смета отсутствует.", "items": [{"code": "Г-816", "name": "Игровой комплекс «Космическая ракета Байконур»", "qty": 1, "category": "play"}, {"code": "Ш-70/2", "name": "Архитектурный теневой навес «Оригами»", "qty": 1, "category": "canopy"}, {"code": "Г-406, ВР-33", "name": "Спортивная полоса препятствий и воркаут", "qty": 2, "category": "sport"}, {"code": "Тренажеры Т-серии", "name": "Линейка уличных тренажеров (5 шт.)", "qty": 5, "category": "sport"}, {"code": "К-75/2, К-34/1, К-14/1", "name": "Качели и круговые аттракционы", "qty": 3, "category": "swing"}, {"code": "С-225, У-208", "name": "Комплект скамей и урн", "qty": 8, "category": "maf"}], "images": [{"filename": "yard_7_plan.jpg", "rel_orig": "./sources/048.jpg", "rel_web": "./sources/048.jpg", "type": "plan", "title": "Генеральный план «Космодром Байконур»"}, {"filename": "yard_7_render_1.jpg", "rel_orig": "./sources/047.jpg", "rel_web": "./sources/047.jpg", "type": "render", "title": "Космическая ракета и навес Оригами"}, {"filename": "yard_7_render_2.jpg", "rel_orig": "./sources/044.jpg", "rel_web": "./sources/044.jpg", "type": "render", "title": "Спортивная зона и тренажеры"}, {"filename": "yard_7_render_3.jpg", "rel_orig": "./sources/045.jpg", "rel_web": "./sources/045.jpg", "type": "render", "title": "Малышковая зона и качели"}, {"filename": "yard_7_render_4.jpg", "rel_orig": "./sources/046.jpg", "rel_web": "./sources/046.jpg", "type": "render", "title": "Общий перспективный вид площадки"}], "folder_info": {"folder_name": "7_Байонур (уточняется) не согл", "files": [{"name": "план.jpg", "type": "image", "label": "Генеральный план «Космодром Байконур»", "size": "454.4 КБ", "role": "plan", "rel": "./sources/048.jpg", "source_url": "sources/048.jpg"}, {"name": "6 Байконур.jpg", "type": "image", "label": "3D-Визуализация (Ракета и теневой навес)", "size": "1.03 МБ", "role": "render", "rel": "./sources/047.jpg", "source_url": "sources/047.jpg"}, {"name": "6 Байконур(2).jpg", "type": "image", "label": "3D-Визуализация (спортзона и воркаут)", "size": "1.52 МБ", "role": "render", "rel": "./sources/044.jpg", "source_url": "sources/044.jpg"}, {"name": "6 Байконур(3).jpg", "type": "image", "label": "3D-Визуализация (малышковая зона)", "size": "1.29 МБ", "role": "render", "rel": "./sources/045.jpg", "source_url": "sources/045.jpg"}, {"name": "6 Байконур(4).jpg", "type": "image", "label": "3D-Визуализация (общая перспектива)", "size": "1.15 МБ", "role": "render", "rel": "./sources/046.jpg", "source_url": "sources/046.jpg"}]}, "geo": {"lat": 53.068853, "lon": 158.642522, "address_full": "г. Петропавловск-Камчатский, район Байконур (ул. Вольского / Байконурская)", "district": "Микрорайон Северо-Восток", "dgis_url": "https://2gis.ru/petropavlovskkamchatskiy/search/53.068853%2C158.642522", "dgis_route": "https://2gis.ru/petropavlovskkamchatskiy/routeSearch/to/158.642522,53.068853"}, "budget_basis": "Предварительная оценка из исходной панели; смета отсутствует", "preliminary_budget": 13900000}, {"id": "yard_8", "number": 8, "name": "Таранца (Карандаши)", "address": "ул. Виталия Таранца, г. Петропавловск-Камчатский", "vendor": "ООО «АВЕН СПб»", "status": "pending", "status_label": "Не согласовано / Уточняется", "status_color": "yellow", "theme": "Детское творчество / «Город Карандашей»", "dimensions": "46,0 м × 27,0 м (трапеция)", "area_sqm": 985.5, "budget": null, "is_estimated": true, "description": "Самая масштабная территория по площади. Яркий тематический комплекс башен-карандашей Г-1411 и ГН-4010/1, тоннельные мостики Г-1425, лазалки Т-312, полоса воркаута ВР-14/1 и ВР-23, тренажеры и качели К-33/2. Финансовое основание: Предварительная оценка из исходной панели; смета отсутствует.", "items": [{"code": "Г-1411", "name": "Игровой комплекс «Цветные Карандаши»", "qty": 1, "category": "play"}, {"code": "ГН-4010/1", "name": "Высотный игровой комплекс с горками-трубами", "qty": 1, "category": "play"}, {"code": "Г-1425", "name": "Мостовой канатный переход", "qty": 1, "category": "play"}, {"code": "ВР-14/1, ВР-23", "name": "Воркаут-комплексы и брусья", "qty": 2, "category": "sport"}, {"code": "Т-111, Т-113, Т-114/2", "name": "Комплекс уличных силовых тренажеров", "qty": 3, "category": "sport"}, {"code": "К-33/2", "name": "Качели маятниковые трехсекционные", "qty": 1, "category": "swing"}, {"code": "С-225, У-206", "name": "Скамьи (8 шт.) и урны (6 шт.)", "qty": 14, "category": "maf"}], "images": [{"filename": "yard_8_plan.jpg", "rel_orig": "./sources/054.jpg", "rel_web": "./sources/054.jpg", "type": "plan", "title": "Генеральный план ул. Таранца (46,0 × 27,0 м)"}, {"filename": "yard_8_render_1.jpg", "rel_orig": "./sources/050.jpg", "rel_web": "./sources/050.jpg", "type": "render", "title": "Башни «Карандаши» и высотные трубы-спуски"}, {"filename": "yard_8_render_2.jpg", "rel_orig": "./sources/051.jpg", "rel_web": "./sources/051.jpg", "type": "render", "title": "Воркаут-парк и тренажерный кластер"}, {"filename": "yard_8_render_3.jpg", "rel_orig": "./sources/052.jpg", "rel_web": "./sources/052.jpg", "type": "render", "title": "Зона тихого отдыха со скамьями"}, {"filename": "yard_8_render_4.jpg", "rel_orig": "./sources/053.jpg", "rel_web": "./sources/053.jpg", "type": "render", "title": "Панорамный вид трапециевидной площадки"}], "folder_info": {"folder_name": "8_Таранца (уточняется) не согл", "files": [{"name": "8_Таранца (карандаши)_03.11.26 (план).jpg", "type": "image", "label": "Генеральный план (46,0 × 27,0 м)", "size": "519.2 КБ", "role": "plan", "rel": "./sources/054.jpg", "source_url": "sources/054.jpg"}, {"name": "8_Таранца (карандаши)_03.11.26 (виз_1).jpg", "type": "image", "label": "3D-Визуализация (башни «Карандаши»)", "size": "1.22 МБ", "role": "render", "rel": "./sources/050.jpg", "source_url": "sources/050.jpg"}, {"name": "8_Таранца (карандаши)_03.11.26 (виз_2).jpg", "type": "image", "label": "3D-Визуализация (воркаут и тренажеры)", "size": "915.3 КБ", "role": "render", "rel": "./sources/051.jpg", "source_url": "sources/051.jpg"}, {"name": "8_Таранца (карандаши)_03.11.26 (виз_3).jpg", "type": "image", "label": "3D-Визуализация (зона тихого отдыха)", "size": "909.2 КБ", "role": "render", "rel": "./sources/052.jpg", "source_url": "sources/052.jpg"}, {"name": "8_Таранца (карандаши)_03.11.26 (виз_4).jpg", "type": "image", "label": "3D-Визуализация (панорама площадки)", "size": "1.20 МБ", "role": "render", "rel": "./sources/053.jpg", "source_url": "sources/053.jpg"}]}, "geo": {"lat": 53.0782, "lon": 158.6438, "address_full": "г. Петропавловск-Камчатский, ул. Виталия Таранца", "district": "Микрорайон Северо-Восток (верхняя зона)", "dgis_url": "https://2gis.ru/petropavlovskkamchatskiy/search/53.078200%2C158.643800", "dgis_route": "https://2gis.ru/petropavlovskkamchatskiy/routeSearch/to/158.643800,53.078200"}, "budget_basis": "Предварительная оценка из исходной панели; смета отсутствует", "preliminary_budget": 14200000}, {"id": "yard_9", "number": 9, "name": "Кирдищева (Сквер «Аэропорт»)", "address": "сквер по ул. Кирдищева, г. Петропавловск-Камчатский", "vendor": "NEW AVEN", "status": "pending", "status_label": "Промо-концепция (смета готова)", "status_color": "yellow", "theme": "Авиация и небо / «Аэропорт Камчатки»", "dimensions": "Общественный сквер (3 тематические локации)", "area_sqm": 1200, "budget": 32080000, "vat": 5346666.67, "description": "Флагманский общественный сквер с полной вечерней LED-иллюминацией. Включает колоссальный двухмоторный самолет Industrial ГН-2310/1 (длина 16.4 м, высота 4.7 м), вертолет спасателей Г-2316, павильон «Зал ожидания» Г-2414, романтическую беседку с качелями по кругу К-32/33 и подсветку всей парковой мебели. Финансовое основание: Промо-концепция; не договорная смета.", "items": [{"code": "ГН-2310/1", "name": "Игровой комплекс «Industrial Самолет» (16,4 × 14,8 × 4,7 м)", "qty": 1, "price": 18650000, "total": 18650000, "category": "play"}, {"code": "Г-2316", "name": "Спортивно-игровой комплекс «Вертолет» (6,7 × 6,3 × 2,4 м)", "qty": 1, "price": 4200000, "total": 4200000, "category": "play"}, {"code": "Г-2414", "name": "Игровой комплекс «Зал ожидания» (домик 6,2 × 3,8 × 3,2 м)", "qty": 1, "price": 2500000, "total": 2500000, "category": "play"}, {"code": "К-32/33", "name": "Круговая качельная беседка (диам. 5,0 м)", "qty": 1, "price": 740000, "total": 740000, "category": "swing"}, {"code": "К-32/33", "name": "Качели «Средневековье» (подвесы Гнездо и Тип-2)", "qty": 1, "price": 890000, "total": 890000, "category": "swing"}, {"code": "LED-01", "name": "Интегрированная LED-подсветка комплексов (домик, самолет, качели)", "qty": 1, "price": 2900000, "total": 2900000, "category": "light"}, {"code": "СКАМ-08", "name": "Парковые скамьи (8 шт.) и парковые урны (11 шт.)", "qty": 1, "price": 1400000, "total": 1400000, "category": "maf"}, {"code": "LED-02", "name": "Архитектурная подсветка парковых скамей (8 шт.)", "qty": 8, "price": 800000, "total": 800000, "category": "light"}], "images": [{"filename": "yard_9_page_1.jpg", "rel_orig": "./assets/orig/yard_9_page_1.jpg", "rel_web": "./assets/orig/yard_9_page_1.jpg", "type": "pdf_page", "title": "Титульный лист: Сквер «Аэропорт» на ул. Кирдищева в вечерней подсветке"}, {"filename": "yard_9_page_2.jpg", "rel_orig": "./assets/orig/yard_9_page_2.jpg", "rel_web": "./assets/orig/yard_9_page_2.jpg", "type": "pdf_page", "title": "Схема сценариев использования, целевая аудитория, сроки и общий бюджет 32 млн ₽"}, {"filename": "yard_9_page_3.jpg", "rel_orig": "./assets/orig/yard_9_page_3.jpg", "rel_web": "./assets/orig/yard_9_page_3.jpg", "type": "pdf_page", "title": "Входная группа сквера: мощеные дорожки, парковые фонари и круговая пергола с качелями"}, {"filename": "yard_9_page_4.jpg", "rel_orig": "./assets/orig/yard_9_page_4.jpg", "rel_web": "./assets/orig/yard_9_page_4.jpg", "type": "pdf_page", "title": "Спортивная зона: спортивно-игровой комплекс «Вертолет» и качели «Гнездо»"}, {"filename": "yard_9_page_5.jpg", "rel_orig": "./assets/orig/yard_9_page_5.jpg", "rel_web": "./assets/orig/yard_9_page_5.jpg", "type": "pdf_page", "title": "Игровая зона: детский комплекс «Зал ожидания» с прозрачной кровлей"}, {"filename": "yard_9_page_6.jpg", "rel_orig": "./assets/orig/yard_9_page_6.jpg", "rel_web": "./assets/orig/yard_9_page_6.jpg", "type": "pdf_page", "title": "Центральная детская зона: гигантский двухмоторный лайнер «Industrial Самолет» с горками"}, {"filename": "yard_9_page_7.jpg", "rel_orig": "./assets/orig/yard_9_page_7.jpg", "rel_web": "./assets/orig/yard_9_page_7.jpg", "type": "pdf_page", "title": "Сводная смета промо-очереди сквера «Аэропорт» (32 080 000 ₽) с учетом LED"}, {"filename": "yard_9_page_8.jpg", "rel_orig": "./assets/orig/yard_9_page_8.jpg", "rel_web": "./assets/orig/yard_9_page_8.jpg", "type": "pdf_page", "title": "Технические спецификации и габариты: Вертолет Г-2316 и Самолет ГН-2310/1"}, {"filename": "yard_9_page_9.jpg", "rel_orig": "./assets/orig/yard_9_page_9.jpg", "rel_web": "./assets/orig/yard_9_page_9.jpg", "type": "pdf_page", "title": "Технические спецификации: Зал ожидания Г-2414 и качели К-32/33"}], "folder_info": {"folder_name": "9_Кирдищева (уточняется) не согл", "files": [{"name": "АЭРОПОРТ.pdf", "type": "pdf", "label": "Концептуальный альбом сквера «Аэропорт» (9 страниц со сметой и 3D)", "size": "22.21 МБ", "role": "album", "rel": "./assets/orig/yard_9_page_1.jpg", "source_url": "sources/056.pdf"}]}, "geo": {"lat": 53.052859, "lon": 158.673613, "address_full": "г. Петропавловск-Камчатский, сквер по ул. Кирдищева", "district": "Район Горизонт-Север / ул. Кирдищева", "dgis_url": "https://2gis.ru/petropavlovskkamchatskiy/search/53.052859%2C158.673613", "dgis_route": "https://2gis.ru/petropavlovskkamchatskiy/routeSearch/to/158.673613,53.052859"}, "budget_basis": "Промо-концепция; не договорная смета"}, {"id": "yard_10", "number": 10, "name": "Индустриальная (Городской транспорт)", "address": "ул. Индустриальная, г. Петропавловск-Камчатский", "vendor": "ООО «АВЕН СПб»", "status": "refine", "status_label": "На доработке", "status_color": "purple", "theme": "Городская среда / «Автобус и Высотные башни»", "dimensions": "25,0 м × 20,0 м", "area_sqm": 500, "budget": null, "is_estimated": true, "description": "Проект направлен на доработку планировочных решений. Включает многоуровневый игровой комплекс башен с винтовыми закрытыми трубами-горками Г-2324, тематический комплекс «Красный Городской Автобус» Г-2314, песочный городок ПЕ-100, карусель К-40 и качели. Финансовое основание: Предварительная оценка из исходной панели; смета отсутствует.", "items": [{"code": "Г-2324", "name": "Высотный комплекс «Индустриальные Башни» со спиральными трубами", "qty": 1, "category": "play"}, {"code": "Г-2314", "name": "Игровой комплекс «Городской Автобус»", "qty": 1, "category": "play"}, {"code": "ПЕ-100", "name": "Песочный городок с навесом", "qty": 1, "category": "sand"}, {"code": "К-40", "name": "Карусель дисковая", "qty": 1, "category": "carousel"}, {"code": "К-52/1, К-33", "name": "Качалка и качели", "qty": 2, "category": "swing"}, {"code": "С-225, У-206", "name": "Скамьи (4 шт.) и урны (4 шт.)", "qty": 8, "category": "maf"}], "images": [{"filename": "yard_10_plan.jpg", "rel_orig": "./sources/003.jpg", "rel_web": "./sources/003.jpg", "type": "plan", "title": "Генеральный план ул. Индустриальная (25,0 × 20,0 м)"}, {"filename": "yard_10_render_1.jpg", "rel_orig": "./sources/001.jpg", "rel_web": "./sources/001.jpg", "type": "render", "title": "Игровой комплекс «Городской Автобус» и высотные башни"}, {"filename": "yard_10_render_2.jpg", "rel_orig": "./sources/002.jpg", "rel_web": "./sources/002.jpg", "type": "render", "title": "Общая перспектива площадки"}], "folder_info": {"folder_name": "10_Индустриальная (уточняется) на доработку", "files": [{"name": "Индустриальная_03.11.26 (план).jpg", "type": "image", "label": "Генеральный план (25,0 × 20,0 м)", "size": "433.9 КБ", "role": "plan", "rel": "./sources/003.jpg", "source_url": "sources/003.jpg"}, {"name": "Индустриальная_03.11.26 (виз_1_1).jpg", "type": "image", "label": "3D-Визуализация (Автобус и высотные башни)", "size": "1.49 МБ", "role": "render", "rel": "./sources/001.jpg", "source_url": "sources/001.jpg"}, {"name": "Индустриальная_03.11.26 (виз_1_2).jpg", "type": "image", "label": "3D-Визуализация (общая перспектива)", "size": "1.67 МБ", "role": "render", "rel": "./sources/002.jpg", "source_url": "sources/002.jpg"}]}, "geo": {"lat": 52.964086, "lon": 158.700262, "address_full": "г. Петропавловск-Камчатский, ул. Индустриальная", "district": "Южная промышленно-жилая зона", "dgis_url": "https://2gis.ru/petropavlovskkamchatskiy/search/52.964086%2C158.700262", "dgis_route": "https://2gis.ru/petropavlovskkamchatskiy/routeSearch/to/158.700262,52.964086"}, "budget_basis": "Предварительная оценка из исходной панели; смета отсутствует", "preliminary_budget": 11500000}], "gallery_extra": [{"filename": "kamchatka_volcano.jpg", "rel_orig": "./assets/orig/kamchatka_volcano.jpg", "rel_web": "./assets/orig/kamchatka_volcano.jpg", "type": "art", "title": "Художественный символ программы: Вулкан и природа Камчатки"}, {"filename": "extra_space_park.jpg", "rel_orig": "./sources/057.jpg", "rel_web": "./sources/057.jpg", "type": "render", "title": "Концепт «Космический городок и обсерватория» (АВЕН)"}, {"filename": "extra_science_lab.jpg", "rel_orig": "./sources/058.jpg", "rel_web": "./sources/058.jpg", "type": "render", "title": "Концепт «Наукоград и Химическая лаборатория» (АВЕН)"}, {"filename": "extra_pencils_town.jpg", "rel_orig": "./sources/059.jpg", "rel_web": "./sources/059.jpg", "type": "render", "title": "Концепт «Творческий квартал Карандаши» (крупный план)"}, {"filename": "extra_metro_bus_towers.jpg", "rel_orig": "./sources/060.jpg", "rel_web": "./sources/060.jpg", "type": "render", "title": "Концепт «Городской экспресс и башни-небоскребы»"}], "source_inventory": [{"name": "Индустриальная_03.11.26 (виз_1_1).jpg", "path": "10_Индустриальная (уточняется) на доработку/Индустриальная_03.11.26 (виз_1_1).jpg", "url": "sources/001.jpg", "bytes": 1560232, "sha256": "636cf5ab5e2e0c7ba62aebfdd14380dea42b554c8e3a6d050766f96a7ccd44bc"}, {"name": "Индустриальная_03.11.26 (виз_1_2).jpg", "path": "10_Индустриальная (уточняется) на доработку/Индустриальная_03.11.26 (виз_1_2).jpg", "url": "sources/002.jpg", "bytes": 1752418, "sha256": "cb0a1fd91c90fef7c036c0f40a3b068d009e118878eab3257ed95d0f76a59bab"}, {"name": "Индустриальная_03.11.26 (план).jpg", "path": "10_Индустриальная (уточняется) на доработку/Индустриальная_03.11.26 (план).jpg", "url": "sources/003.jpg", "bytes": 444338, "sha256": "efe91619292d0c899245e3c44cf263d83443af38913723fff7678b651d93ec19"}, {"name": "Океанская 5.11.26 2.jpg", "path": "11_Океанская/Океанская 5.11.26 2.jpg", "url": "sources/005.jpg", "bytes": 3671349, "sha256": "e5bf8d81495dcd301bbd3159c8cf0123e89116ac065efcb777c2f4671fe2d404"}, {"name": "Океанская 5.11.26 3.jpg", "path": "11_Океанская/Океанская 5.11.26 3.jpg", "url": "sources/006.jpg", "bytes": 3880885, "sha256": "4f502470169f052213c8f961248b3a8e0caa6bb25761fcf255d066816fdc6cef"}, {"name": "Океанская 5.11.26 4.jpg", "path": "11_Океанская/Океанская 5.11.26 4.jpg", "url": "sources/007.jpg", "bytes": 3656854, "sha256": "1a70b43e7eff47ad30d32657f5627a70832ff80c4fad3e7e40ea7caf29a99fd8"}, {"name": "Океанская 5.11.26 5.jpg", "path": "11_Океанская/Океанская 5.11.26 5.jpg", "url": "sources/008.jpg", "bytes": 3780451, "sha256": "9eb855fc3ebac0d5bb5f54823508106a42ff56440188ad1deb0c6f845c76c9c8"}, {"name": "Океанская 5.11.26 6.jpg", "path": "11_Океанская/Океанская 5.11.26 6.jpg", "url": "sources/009.jpg", "bytes": 3560273, "sha256": "730134eb12eef92573b2d03bc0b61c8a74d6efb00f354d3e80fc41899a263770"}, {"name": "Океанская 5.11.26 план.jpg", "path": "11_Океанская/Океанская 5.11.26 план.jpg", "url": "sources/010.jpg", "bytes": 1054230, "sha256": "d27fa57ce12ebc8e6969f2f034e2abad08cdb139e2bd3394753da0bfc70e5633"}, {"name": "Океанская 5.11.26.jpg", "path": "11_Океанская/Океанская 5.11.26.jpg", "url": "sources/011.jpg", "bytes": 3345613, "sha256": "9e8fb04f405d69cc5e3df7071ed2055b7f022fb5a457d7074915b66c3f25dc65"}, {"name": "02.11.2026. Камчатка —Ботаническая.xlsx", "path": "1_Ботанический (Авен) согл/02.11.2026. Камчатка —Ботаническая.xlsx", "url": "sources/013.xlsx", "bytes": 57333, "sha256": "6b1167c433f6d1a800164752eb6f5f68c9cebf5ee69cac3efcf93b0bbf1cc427"}, {"name": "Ботанический сад  2.11.26 2.jpg", "path": "1_Ботанический (Авен) согл/Ботанический сад  2.11.26 2.jpg", "url": "sources/014.jpg", "bytes": 4639594, "sha256": "d84b0a16875d61a701c126390627257e284cc1a8499425f39600ec9d7060904b"}, {"name": "Ботанический сад  2.11.26 3.jpg", "path": "1_Ботанический (Авен) согл/Ботанический сад  2.11.26 3.jpg", "url": "sources/015.jpg", "bytes": 4914951, "sha256": "812d19d27cb1dfdcce47b9d60166b16c0314b7024e353ddeb8a6e970abbc27bc"}, {"name": "Ботанический сад  2.11.26 план.jpg", "path": "1_Ботанический (Авен) согл/Ботанический сад  2.11.26 план.jpg", "url": "sources/016.jpg", "bytes": 1123011, "sha256": "4d09754eaa510572e4a52d82dabd41f1cf581afc62c8986ece58419ff5e3c115"}, {"name": "Ботанический сад  2.11.26.jpg", "path": "1_Ботанический (Авен) согл/Ботанический сад  2.11.26.jpg", "url": "sources/017.jpg", "bytes": 5676597, "sha256": "813de0d2bfeead4a873c1abcad6b9554fad77fa8aa30ce22179e4833a360cd3c"}, {"name": "02.11.2026. Горького д 6.xlsx", "path": "2_Горького (Авен) согл/02.11.2026. Горького д 6.xlsx", "url": "sources/019.xlsx", "bytes": 57339, "sha256": "588853f493988f0ccce56baeaee7e657d3ae1e18dadd84c4b282b0971a6df4c4"}, {"name": "11_Белаз.jpg", "path": "2_Горького (Авен) согл/11_Белаз.jpg", "url": "sources/020.jpg", "bytes": 940233, "sha256": "fe16654e8a3e6c61dde8a7005b7cb014dffbac5f162b25432aaacc89df8ddaed"}, {"name": "Белаз 3.jpg", "path": "2_Горького (Авен) согл/Белаз 3.jpg", "url": "sources/021.jpg", "bytes": 1097567, "sha256": "1d077cd46d78d3804afc709d8b886ece4e9f000814e3b5ebee2fbb540ee1432b"}, {"name": "Белаз2.jpg", "path": "2_Горького (Авен) согл/Белаз2.jpg", "url": "sources/022.jpg", "bytes": 1020753, "sha256": "d6e6ad319a34885bb0f651d5c7c617fe353103c3fd5d30b6ee50371a882947af"}, {"name": "план 30.10.26.jpg", "path": "2_Горького (Авен) согл/план 30.10.26.jpg", "url": "sources/023.jpg", "bytes": 785241, "sha256": "853318740522c98a9e2854750105bed885d9be3f4102dc8ad0842d8f0f9e87c2"}, {"name": "02.11.2026. Камчатка.xlsx", "path": "3_Океанская (Авен) согл/02.11.2026. Камчатка.xlsx", "url": "sources/025.xlsx", "bytes": 57510, "sha256": "bb619fc594860d3e8c21ce435559689c364c0490742026da248f87483ae52884"}, {"name": "Океанская 2.11.26 вар 1 план.jpg", "path": "3_Океанская (Авен) согл/Океанская 2.11.26 вар 1 план.jpg", "url": "sources/026.jpg", "bytes": 1257313, "sha256": "6086cfbe123df3904206bdf57fd1c4461cb9a7f6d305555673dd94c3593b242b"}, {"name": "Океанская 2.11.26 вар 1.jpg", "path": "3_Океанская (Авен) согл/Океанская 2.11.26 вар 1.jpg", "url": "sources/027.jpg", "bytes": 4702602, "sha256": "311245cc15e522df50c251dc54247423e40eb7e53e306b2c4d37437eef86ec8e"}, {"name": "Океанская 2.11.26 вар 2 план.jpg", "path": "3_Океанская (Авен) согл/Океанская 2.11.26 вар 2 план.jpg", "url": "sources/028.jpg", "bytes": 1464476, "sha256": "1e3ebfd9cd2f5048b225a7d5ee53a10793d9e7d8aaed58ccc3704c2d1529ea36"}, {"name": "Океанская 2.11.26 вар 2.jpg", "path": "3_Океанская (Авен) согл/Океанская 2.11.26 вар 2.jpg", "url": "sources/029.jpg", "bytes": 4484733, "sha256": "cb5b13ee26088709a3fab53c3bfcbec03f6a000b40d3f70ea61d35a4b840c557"}, {"name": "АЗС Корабль 2.11.26(2).jpg", "path": "4_АЗС (Авен) согл/АЗС Корабль 2.11.26(2).jpg", "url": "sources/031.jpg", "bytes": 1240671, "sha256": "f70195c7a335be3c5c73eb0e6c339620907913004921454f227e062b3947431d"}, {"name": "АЗС Корабль 2.11.26(3).jpg", "path": "4_АЗС (Авен) согл/АЗС Корабль 2.11.26(3).jpg", "url": "sources/032.jpg", "bytes": 1074193, "sha256": "a7defcdd6be0c52f7e300ee179fac770ade9678a66564f55c01efd2c3413512d"}, {"name": "АЗС Корабль 2.11.26.jpg", "path": "4_АЗС (Авен) согл/АЗС Корабль 2.11.26.jpg", "url": "sources/033.jpg", "bytes": 1413933, "sha256": "e93ec39c331b78c03e9c8561348c318abf24c7faabee9895e7f63a285678a803"}, {"name": "АЗС Корабль.jpg", "path": "4_АЗС (Авен) согл/АЗС Корабль.jpg", "url": "sources/034.jpg", "bytes": 453767, "sha256": "488c9f48bb7d8235039d22c2a1881fe056b52832aaf986e7aa15fcc488bc14f8"}, {"name": "5_Солнечная (воздушный шар)_03.11.26 (виз_1).jpg", "path": "5_Солнечная (Авен) не согл/5_Солнечная (воздушный шар)_03.11.26 (виз_1).jpg", "url": "sources/036.jpg", "bytes": 1266573, "sha256": "c2ece4fd6acc1712cf75d1e66143fb4df1a5fbb92efe082db5e968d4160016b4"}, {"name": "5_Солнечная (воздушный шар)_03.11.26 (виз_2).jpg", "path": "5_Солнечная (Авен) не согл/5_Солнечная (воздушный шар)_03.11.26 (виз_2).jpg", "url": "sources/037.jpg", "bytes": 1243440, "sha256": "7006152b351d7f72f2d7fc541d0960816e0777297b0cf5c5680f260e504c4ce6"}, {"name": "5_Солнечная (воздушный шар)_03.11.26 (виз_3).jpg", "path": "5_Солнечная (Авен) не согл/5_Солнечная (воздушный шар)_03.11.26 (виз_3).jpg", "url": "sources/038.jpg", "bytes": 1472305, "sha256": "62b0fcd79e9349d2fcdd45a904578a1ba1af33e1955d542c12f1a5253dbb1458"}, {"name": "5_Солнечная (воздушный шар)_03.11.26 (виз_4).jpg", "path": "5_Солнечная (Авен) не согл/5_Солнечная (воздушный шар)_03.11.26 (виз_4).jpg", "url": "sources/039.jpg", "bytes": 1399233, "sha256": "05c5d6f664be60f11bf21a57e26de2158b57f5e39030a751ce2fd305ef24dbc4"}, {"name": "5_Солнечная (воздушный шар)_03.11.26 (виз_5).jpg", "path": "5_Солнечная (Авен) не согл/5_Солнечная (воздушный шар)_03.11.26 (виз_5).jpg", "url": "sources/040.jpg", "bytes": 1319312, "sha256": "c2ea92626c87001afaafca0a6cf9c5fd7de2fb6573b33eeef832925d7396b603"}, {"name": "5_Солнечная (воздушный шар)_03.11.26 (план).jpg", "path": "5_Солнечная (Авен) не согл/5_Солнечная (воздушный шар)_03.11.26 (план).jpg", "url": "sources/041.jpg", "bytes": 607362, "sha256": "aa15d6db1d3c08ac6c5ecd8c7452ae7344ac50328d175a0833a170a2844fefa3"}, {"name": "6 Байконур(2).jpg", "path": "7_Байонур (уточняется) не согл/6 Байконур(2).jpg", "url": "sources/044.jpg", "bytes": 1592857, "sha256": "91d4a5eeb91c0a5277988cf7075c03969bca8090c6454eadce1e4b405ce17098"}, {"name": "6 Байконур(3).jpg", "path": "7_Байонур (уточняется) не согл/6 Байконур(3).jpg", "url": "sources/045.jpg", "bytes": 1347606, "sha256": "d7cd2257674fb0b17cfd55a655258058ac89e164fe53f2ef410dee2a8b2d93fe"}, {"name": "6 Байконур(4).jpg", "path": "7_Байонур (уточняется) не согл/6 Байконур(4).jpg", "url": "sources/046.jpg", "bytes": 1205695, "sha256": "eda86630135ef13d284ec27a36b259c82b90df31501d02f05070fc5e827ab58b"}, {"name": "6 Байконур.jpg", "path": "7_Байонур (уточняется) не согл/6 Байконур.jpg", "url": "sources/047.jpg", "bytes": 1077313, "sha256": "7bc70dbf3eb1033e7dabaf4fc24a64d4bdb17c36ce62fd6027d2033d3a336ae0"}, {"name": "план.jpg", "path": "7_Байонур (уточняется) не согл/план.jpg", "url": "sources/048.jpg", "bytes": 465289, "sha256": "4c61fdd09473b21ece5d8eb2fd8b857939851e877a1ecc063fe0b24fdafd33d0"}, {"name": "8_Таранца (карандаши)_03.11.26 (виз_1).jpg", "path": "8_Таранца (уточняется) не согл/8_Таранца (карандаши)_03.11.26 (виз_1).jpg", "url": "sources/050.jpg", "bytes": 1274838, "sha256": "31ec000ae9613a259ed531df5ddf28b17d67c5d575dba096d1581e073d4d5d31"}, {"name": "8_Таранца (карандаши)_03.11.26 (виз_2).jpg", "path": "8_Таранца (уточняется) не согл/8_Таранца (карандаши)_03.11.26 (виз_2).jpg", "url": "sources/051.jpg", "bytes": 937314, "sha256": "3c6967d374c88e965cb2577892efcb121239c0d5c001569ed53d7bed54611807"}, {"name": "8_Таранца (карандаши)_03.11.26 (виз_3).jpg", "path": "8_Таранца (уточняется) не согл/8_Таранца (карандаши)_03.11.26 (виз_3).jpg", "url": "sources/052.jpg", "bytes": 931003, "sha256": "3141da96c72bf63a46371b52eaef7ddbfb5c16bf42f4068b65a5279d5f365e9a"}, {"name": "8_Таранца (карандаши)_03.11.26 (виз_4).jpg", "path": "8_Таранца (уточняется) не согл/8_Таранца (карандаши)_03.11.26 (виз_4).jpg", "url": "sources/053.jpg", "bytes": 1255717, "sha256": "3f4f4e57d07062ab498f9d7285d43bb1451048110b5256dea75aeedd98454644"}, {"name": "8_Таранца (карандаши)_03.11.26 (план).jpg", "path": "8_Таранца (уточняется) не согл/8_Таранца (карандаши)_03.11.26 (план).jpg", "url": "sources/054.jpg", "bytes": 531693, "sha256": "4a7404b5bbf751aa83a908addb449368f967ddf2a9518ba7aba6cfd33f5d4850"}, {"name": "АЭРОПОРТ.pdf", "path": "9_Кирдищева (уточняется) не согл/АЭРОПОРТ.pdf", "url": "sources/056.pdf", "bytes": 23293787, "sha256": "61d982fa6e9b71701359033dd26eafd2ed0e4cd50ba0883cf2b71c8651206380"}, {"name": "IMG_20261106_142343.jpg", "path": "IMG_20261106_142343.jpg", "url": "sources/057.jpg", "bytes": 316793, "sha256": "8d985eaffdc943cf6f9aafd55f1aaded5d0e89a201a060dcdbf22feee3258b98"}, {"name": "IMG_20261106_142348.jpg", "path": "IMG_20261106_142348.jpg", "url": "sources/058.jpg", "bytes": 385369, "sha256": "f49db951e807b83ab0b61e077dfa107486853b1962da01e57a21c631894f792e"}, {"name": "IMG_20261106_142351.jpg", "path": "IMG_20261106_142351.jpg", "url": "sources/059.jpg", "bytes": 320065, "sha256": "240e39d4ea3c4009319b28240296269f6f8d504f7188104bb99a683a0e7fd3a0"}, {"name": "IMG_20261106_142355.jpg", "path": "IMG_20261106_142355.jpg", "url": "sources/060.jpg", "bytes": 485179, "sha256": "9e972ec4e443b9bf3d82f7ab0116ab0a85b10eaf4865c723fb9340494d6a8520"}], "audit": {"date": "2026-11-06", "excel_total": 34061807, "promo_total": 32080000, "combined_total": 66141807, "vat_in_excel": 6142293.07, "scenario_vat_20_percent": 11023634.5, "notes": ["66 141 807 ₽ объединяет три Excel-сметы и промо-концепцию Кирдищева.", "НДС в Excel: 6 142 293,07 ₽; не совпадает с моделью 20/120. Ставку необходимо уточнить у поставщика.", "11 488 959 ₽ из исходного описания не является расчётным НДС 20% от 66 141 807 ₽.", "Площади из карточек — площади площадок, не подтверждённые объёмы резинового покрытия.", "Предварительные бюджеты шести объектов исключены из суммирования.", "Статусы перенесены из структуры папок и исходной панели; отдельные документы согласования не обнаружены."]}};
+    let currentYardId = "yard_1";
+    let selectedYardIds = new Set(MANIFEST.yards.map(y => y.id));
+    let allGalleryItems = [];
+    let currentLightboxIndex = 0;
+
+    // Flatten gallery
+    MANIFEST.yards.forEach(y => {
+      y.images.forEach(img => {
+        allGalleryItems.push({ ...img, yardName: y.name, yardId: y.id });
+      });
+    });
+    if (MANIFEST.gallery_extra) {
+      MANIFEST.gallery_extra.forEach(img => {
+        allGalleryItems.push({ ...img, yardName: "Символы и Концепты", yardId: "extra" });
+      });
+    }
+
+    function fmtPrice(num) {
+      if (num === null || num === undefined) return "—";
+      return new Intl.NumberFormat('ru-RU').format(Math.round(num)) + ' ₽';
+    }
+
+    function switchTab(tabId) {
+      document.querySelectorAll('.tab-view').forEach(el => el.classList.add('hidden'));
+      document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
+
+      const targetView = document.getElementById('view-' + tabId);
+      const targetBtn = document.getElementById('tab-btn-' + tabId);
+      if (targetView) targetView.classList.remove('hidden');
+      if (targetBtn) targetBtn.classList.add('active');
+
+      if (tabId === 'detail') renderYardDetail(currentYardId);
+    }
+
+    // Render Summary Table
+    function renderSummaryTable() {
+      const tbody = document.getElementById('summary-table-body');
+      tbody.innerHTML = '';
+
+      MANIFEST.yards.forEach(y => {
+        const tr = document.createElement('tr');
+        tr.className = "hover:bg-slate-50/80 cursor-pointer transition-colors";
+        tr.onclick = () => openYardDetail(y.id);
+
+        let badgeClass = "badge-pending";
+        if (y.status === 'approved') badgeClass = "badge-approved";
+        else if (y.status === 'refine') badgeClass = "badge-refine";
+        else if (y.status === 'dev') badgeClass = "badge-dev";
+
+        const folder = y.folder_info || {};
+        const fileCount = folder.files ? folder.files.length : 0;
+        const hasEstimate = (folder.files && folder.files.some(f => f.role === 'estimate' || f.type === 'excel' || f.role === 'album')) ? '✓ Финансовый источник' : '—';
+
+        tr.innerHTML = `
+          <td class="py-2.5 px-3 font-bold text-slate-400">${y.number}</td>
+          <td class="py-2.5 px-3 font-bold text-slate-900">
+            ${y.name}
+            <div class="text-[11px] font-normal text-slate-500">${y.theme}</div>
+          </td>
+          <td class="py-2.5 px-3 font-mono text-[11px] text-sky-800">
+            📁 ${folder.folder_name || '—'}
+          </td>
+          <td class="py-2.5 px-3 text-slate-700">
+            <span class="font-semibold text-slate-900">${fileCount} файлов</span>
+            <span class="text-[10px] text-emerald-700 block">${hasEstimate}</span>
+          </td>
+          <td class="py-2.5 px-3 font-bold ${y.budget ? 'text-slate-900' : 'text-slate-400'}">
+            ${y.budget ? fmtPrice(y.budget) : 'смета отсутствует'}
+          </td>
+          <td class="py-2.5 px-3">
+            <span class="inline-block px-2 py-0.5 rounded-full text-[11px] font-semibold ${badgeClass}">
+              ${y.status_label}
+            </span>
+          </td>
+        `;
+        tbody.appendChild(tr);
+      });
+    }
+
+    // Populate Select
+    function populateYardSelect() {
+      const sel = document.getElementById('yard-select');
+      sel.innerHTML = '';
+      MANIFEST.yards.forEach(y => {
+        const opt = document.createElement('option');
+        opt.value = y.id;
+        opt.textContent = `${y.number}. ${y.name} — 📁 ${y.folder_info ? y.folder_info.folder_name : ''}`;
+        sel.appendChild(opt);
+      });
+    }
+
+    function openYardDetail(yardId) {
+      currentYardId = yardId;
+      document.getElementById('yard-select').value = yardId;
+      renderYardDetail(yardId);
+      switchTab('detail');
+    }
+
+    function navigateYard(dir) {
+      const idx = MANIFEST.yards.findIndex(y => y.id === currentYardId);
+      if (idx !== -1) {
+        let nxt = idx + dir;
+        if (nxt < 0) nxt = MANIFEST.yards.length - 1;
+        if (nxt >= MANIFEST.yards.length) nxt = 0;
+        openYardDetail(MANIFEST.yards[nxt].id);
+      }
+    }
+
+    // RENDER YARD DETAIL + DEDICATED SIDEBAR
+    function renderYardDetail(yardId) {
+      const y = MANIFEST.yards.find(item => item.id === yardId);
+      if (!y) return;
+
+      const mainEl = document.getElementById('yard-main-content');
+      const sideEl = document.getElementById('yard-sidebar-content');
+
+      let badgeClass = "badge-pending";
+      if (y.status === 'approved') badgeClass = "badge-approved";
+      else if (y.status === 'refine') badgeClass = "badge-refine";
+      else if (y.status === 'dev') badgeClass = "badge-dev";
+
+      // 1. LEFT MAIN PASSPORT
+      let imgGallery = '';
+      if (y.images && y.images.length > 0) {
+        y.images.forEach(img => {
+          imgGallery += `
+            <div class="group relative rounded-xl overflow-hidden bg-slate-100 border border-slate-200 cursor-pointer shadow-2xs" onclick="openLightbox('${img.rel_web}', '${img.title}')">
+              <div class="aspect-4/3 overflow-hidden">
+                <img loading="lazy" src="${img.rel_web}" alt="${img.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+              </div>
+              <div class="p-2 bg-white">
+                <span class="text-[10px] font-bold text-sky-700 uppercase">${img.type === 'plan' ? 'Генплан' : (img.type === 'pdf_page' ? 'Альбом' : 'Рендер')}</span>
+                <p class="text-xs font-medium text-slate-800 line-clamp-1">${img.title}</p>
+              </div>
+            </div>
+          `;
+        });
+      }
+
+      let itemsRows = '';
+      if (y.items && y.items.length > 0) {
+        y.items.forEach(it => {
+          itemsRows += `
+            <tr class="border-b border-slate-100 text-xs">
+              <td class="py-2 px-2.5 font-mono font-bold text-sky-700">${it.code || '—'}</td>
+              <td class="py-2 px-2.5 font-medium text-slate-800">${it.name}</td>
+              <td class="py-2 px-2.5 text-center">${it.qty || 1} шт.</td>
+              <td class="py-2 px-2.5 text-right font-bold text-slate-900">${it.total ? fmtPrice(it.total) : (it.price ? fmtPrice(it.price) : '—')}</td>
+            </tr>
+          `;
+        });
+      } else {
+        itemsRows = '<tr><td colspan="4" class="py-3 text-center text-slate-400 text-xs">Подрядчик готовит документацию</td></tr>';
+      }
+
+      mainEl.innerHTML = `
+      <div data-passport-visual class="bg-white p-4 rounded-2xl border border-slate-200 flex flex-wrap gap-4 text-sm font-semibold">
+          <a class="text-sky-700 underline" href="review.html#yard-${y.number}">${y.status === 'approved' ? 'Визуализация по оборудованию' : 'Выбрать вариант и изменить МАФы'} →</a>
+          ${y.status !== 'approved' ? `<a class="text-sky-700 underline" href="candidates.html?yard=${y.number}">Избранное для этого двора →</a>` : ''}
+        </div>
+        <!-- Main Info Card -->
+        <div class="bg-white p-5 rounded-2xl border border-slate-200/80 shadow-xs">
+          <div class="flex flex-wrap items-start justify-between gap-3">
+            <div>
+              <div class="flex items-center gap-2 mb-1">
+                <span class="px-2 py-0.5 rounded-full text-xs font-bold ${badgeClass}">${y.status_label}</span>
+                <span class="text-xs text-slate-400 font-mono">Объект №${y.number}</span>
+                <span class="text-xs text-slate-500 font-medium">• ${y.vendor}</span>
+              </div>
+              <h2 class="text-xl sm:text-2xl font-extrabold text-slate-900">${y.name}</h2>
+              <p class="text-xs text-slate-500">${y.address}</p>
+              <div class="mt-2 inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded bg-sky-50 text-sky-800 text-xs font-semibold border border-sky-100">
+                Тематика: ${y.theme}
+              </div>
+            </div>
+            <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-200 text-right">
+              <span class="text-[10px] text-slate-500 uppercase font-semibold block">Смета:</span>
+              <span class="text-xl font-black text-slate-900">${y.budget ? fmtPrice(y.budget) : 'смета отсутствует'}</span>
+              <span class="text-[11px] text-slate-500 block">Площадь площадок: <strong>${y.number === 6 ? 'не подтверждена' : y.area_sqm + ' м²'}</strong> (${y.dimensions})</span>
+            </div>
+          </div>
+          <p class="mt-3 text-xs text-slate-600 leading-relaxed border-t border-slate-100 pt-3">${y.description}</p>
+        </div>
+
+        <!-- Visualizations and Plans -->
+        <div class="space-y-2.5">
+          <h3 class="font-bold text-slate-900 text-sm">Чертежи и визуализации (${y.images ? y.images.length : 0})</h3>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+            ${imgGallery}
+          </div>
+        </div>
+
+        <!-- Equipment list -->
+        <div class="bg-white rounded-2xl border border-slate-200/80 shadow-xs overflow-hidden">
+          <div class="p-3.5 border-b border-slate-100 flex items-center justify-between">
+            <h3 class="font-bold text-slate-900 text-xs sm:text-sm">Спецификация оборудования и МАФ</h3>
+            <span class="text-xs text-slate-400">Позиций: ${y.items ? y.items.length : 0}</span>
+          </div>
+          <table class="w-full text-left">
+            <thead class="bg-slate-50 text-[10px] uppercase text-slate-500 font-semibold border-b border-slate-100">
+              <tr>
+                <th class="py-2 px-2.5">Артикул</th>
+                <th class="py-2 px-2.5">Наименование</th>
+                <th class="py-2 px-2.5 text-center">Кол-во</th>
+                <th class="py-2 px-2.5 text-right">Сумма с НДС</th>
+              </tr>
+            </thead>
+            <tbody>${itemsRows}</tbody>
+          </table>
+        </div>
+      `;
+
+      // 2. RIGHT SIDEBAR: WHAT IS IN THE FOLDER (Данные сбоку что есть в папке)
+      const folder = y.folder_info || { folder_name: "Не определена", files: [] };
+      let filesHtml = '';
+
+      if (folder.files && folder.files.length > 0) {
+        folder.files.forEach(f => {
+          let badge = '<span class="px-1.5 py-0.5 rounded text-[10px] font-bold bg-slate-100 text-slate-700">ФАЙЛ</span>';
+          let clickAction = '';
+          if (f.type === 'excel') {
+            badge = '<span class="px-1.5 py-0.5 rounded text-[10px] font-bold bg-emerald-100 text-emerald-800 border border-emerald-200">XLSX СМЕТА</span>';
+          } else if (f.type === 'pdf') {
+            badge = '<span class="px-1.5 py-0.5 rounded text-[10px] font-bold bg-red-100 text-red-800 border border-red-200">PDF АЛЬБОМ</span>';
+            if (f.rel) clickAction = `onclick="openLightbox('${f.rel}', '${f.label}')"`;
+          } else if (f.role === 'plan') {
+            badge = '<span class="px-1.5 py-0.5 rounded text-[10px] font-bold bg-sky-100 text-sky-800 border border-sky-200">ГЕНПЛАН</span>';
+            if (f.rel) clickAction = `onclick="openLightbox('${f.rel}', '${f.label}')"`;
+          } else if (f.role === 'render') {
+            badge = '<span class="px-1.5 py-0.5 rounded text-[10px] font-bold bg-purple-100 text-purple-800 border border-purple-200">3D РЕНДЕР</span>';
+            if (f.rel) clickAction = `onclick="openLightbox('${f.rel}', '${f.label}')"`;
+          }
+
+          if (f.source_url) clickAction = `onclick="window.open('${f.source_url}', '_blank', 'noopener')"`;
+          filesHtml += `
+            <li class="p-2.5 rounded-xl border border-slate-200/70 bg-white hover:border-sky-300 transition-all ${clickAction ? 'cursor-pointer hover:shadow-xs' : ''}" ${clickAction}>
+              <div class="flex items-center justify-between gap-2 mb-1">
+                ${badge}
+                <span class="text-[10px] font-mono text-slate-400">${f.size}</span>
+              </div>
+              <div class="text-xs font-semibold text-slate-900 break-words">${f.name}</div>
+              <div class="text-[11px] text-slate-500 mt-0.5">${f.label}</div>
+            </li>
+          `;
+        });
+      } else {
+        filesHtml = '<li class="p-3 text-center text-xs text-slate-400 bg-slate-50 rounded-xl">Папка на диске пуста или в процессе наполнения</li>';
+      }
+
+      sideEl.innerHTML = `
+        <div class="bg-gradient-to-b from-slate-900 to-slate-800 text-white p-4 rounded-2xl shadow-lg border border-slate-700">
+          <div class="flex items-center gap-2 mb-1.5">
+            <span class="text-lg">📁</span>
+            <div>
+              <h4 class="font-bold text-xs uppercase tracking-wider text-amber-400">Материалы объекта:</h4>
+              <p class="text-xs font-mono font-bold text-white break-words">${folder.folder_name}</p>
+            </div>
+          </div>
+          <div class="mt-2 text-[11px] text-slate-300 border-t border-slate-700/80 pt-2 flex justify-between">
+            <span>Файлов в папке:</span>
+            <strong class="text-white">${folder.files ? folder.files.length : 0} шт.</strong>
+          </div>
+        </div>
+
+        <div class="bg-white p-4 rounded-2xl border border-slate-200/80 shadow-xs space-y-3">
+          <div class="flex items-center justify-between border-b border-slate-100 pb-2">
+            <h4 class="font-bold text-xs text-slate-900 uppercase tracking-wider">Файлы в этой папке:</h4>
+            <span class="text-[10px] text-slate-400">клик для просмотра</span>
+          </div>
+          <ul class="space-y-2">
+            ${filesHtml}
+          </ul>
+        </div>
+      `;
+    }
+
+    // Render All Folders Tab
+    function renderFoldersTab() {
+      const container = document.getElementById('folders-full-list');
+      container.innerHTML = '';
+
+      MANIFEST.yards.forEach(y => {
+        const folder = y.folder_info || { folder_name: "Не определена", files: [] };
+        const card = document.createElement('div');
+        card.className = "p-4 rounded-xl border border-slate-200 bg-slate-50/50 hover:bg-white hover:shadow-xs transition-all";
+
+        let filesPills = '';
+        if (folder.files && folder.files.length > 0) {
+          folder.files.forEach(f => {
+            filesPills += `
+              <div class="text-xs p-2 rounded-lg bg-white border border-slate-200 flex items-center justify-between">
+                <div>
+                  <span class="font-semibold text-slate-800">${f.name}</span>
+                  <span class="text-[10px] text-slate-500 block">${f.label}</span>
+                </div>
+                <span class="font-mono text-[10px] text-slate-400">${f.size}</span>
+              </div>
+            `;
+          });
+        } else {
+          filesPills = '<div class="text-xs text-slate-400 italic">Папка пуста</div>';
+        }
+
+        card.innerHTML = `
+          <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+            <div class="flex items-center gap-2">
+              <span class="text-base">📁</span>
+              <div>
+                <strong class="text-sm text-slate-900">${y.number}. ${y.name}</strong>
+                <span class="text-xs font-mono text-sky-700 block">Папка: ${folder.folder_name}</span>
+              </div>
+            </div>
+            <button onclick="openYardDetail('${y.id}')" class="px-3 py-1 rounded-lg bg-sky-600 text-white text-xs font-semibold hover:bg-sky-500">
+              Открыть паспорт двора →
+            </button>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
+            ${filesPills}
+          </div>
+        `;
+        container.appendChild(card);
+      });
+    }
+
+    // Catalog grid
+    function renderCatalogGrid(filter = 'all', searchQuery = '') {
+      const grid = document.getElementById('yards-grid');
+      grid.innerHTML = '';
+
+      const filtered = MANIFEST.yards.filter(y => {
+        const matchesStatus = (filter === 'all') || (y.status === filter) || (filter === 'pending' && y.status === 'refine');
+        const q = searchQuery.toLowerCase();
+        const matchesSearch = !q || y.name.toLowerCase().includes(q) || y.theme.toLowerCase().includes(q) || y.dimensions.toLowerCase().includes(q) || y.items.some(i => (i.code+' '+i.name).toLowerCase().includes(q));
+        return matchesStatus && matchesSearch;
+      });
+
+      filtered.forEach(y => {
+        const card = document.createElement('div');
+        card.className = "bg-white rounded-2xl border border-slate-200/80 shadow-xs hover:shadow-lg transition-all overflow-hidden flex flex-col";
+        const previewImg = y.number === 3 ? 'sources/008.jpg' : (y.images.find(i => i.type !== 'plan')?.rel_orig || 'assets/orig/kamchatka_volcano.jpg');
+
+        card.innerHTML = `
+          <div class="aspect-video relative overflow-hidden bg-slate-100 cursor-pointer" onclick="openYardDetail('${y.id}')">
+            <img loading="lazy" src="${previewImg}" alt="${y.name}" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+            <div class="absolute bottom-2 right-2 bg-black/60 text-white text-[11px] px-2 py-0.5 rounded">
+              📁 ${y.folder_info ? y.folder_info.files.length : 0} файлов
+            </div>
+          </div>
+          <div class="p-4 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="text-[11px] font-mono text-slate-400">Объект №${y.number}</div>
+              <h4 class="font-bold text-slate-900 text-sm hover:text-sky-600 cursor-pointer" onclick="openYardDetail('${y.id}')">${y.name}</h4>
+              <p class="text-xs text-sky-700 font-medium">${y.theme}</p>
+            </div>
+            <div class="mt-3 pt-3 border-t border-slate-100 flex items-center justify-between">
+              <span class="text-xs font-bold text-slate-900">${y.budget ? fmtPrice(y.budget) : 'смета отсутствует'}</span>
+              <button onclick="openYardDetail('${y.id}')" class="px-2.5 py-1 rounded-lg bg-slate-900 hover:bg-sky-600 text-white text-xs font-semibold">
+                Открыть с файлами →
+              </button>
+            </div>
+            <div data-visual-link class="mt-3 flex gap-3 flex-wrap text-xs font-semibold">
+              <a href="review.html#yard-${y.number}" class="text-sky-700 underline">${y.status === 'approved' ? 'Визуализация по оборудованию' : 'Варианты и редактор МАФов'} →</a>
+              ${y.status !== 'approved' ? `<a href="candidates.html?yard=${y.number}" class="text-sky-700 underline">Подобрать оборудование →</a>` : ''}
+            </div>
+          </div>
+        `;
+        grid.appendChild(card);
+      });
+    }
+
+    let activeCatalogStatus = "all";
+    function filterCatalog(st) {
+      activeCatalogStatus = st;
+      document.querySelectorAll('#status-filters .cat-filter-btn').forEach(btn => {
+        if (btn.getAttribute('data-status') === st) {
+          btn.className = "cat-filter-btn px-3 py-1 rounded-lg text-xs font-semibold bg-slate-900 text-white";
+        } else {
+          btn.className = "cat-filter-btn px-3 py-1 rounded-lg text-xs font-medium text-slate-600 hover:bg-slate-100";
+        }
+      });
+      renderCatalogGrid(st, document.getElementById('catalog-search').value);
+    }
+
+    function searchCatalog(val) {
+      renderCatalogGrid(activeCatalogStatus, val);
+    }
+
+    // Calculator
+    function renderCalcList() {
+      const list = document.getElementById('calc-yards-list');
+      list.innerHTML = '';
+      MANIFEST.yards.forEach(y => {
+        const isChecked = selectedYardIds.has(y.id);
+        const div = document.createElement('div');
+        div.className = `p-2.5 rounded-xl border flex items-center justify-between text-xs ${isChecked ? 'bg-sky-50 border-sky-300' : 'bg-white border-slate-200'}`;
+        div.innerHTML = `
+          <div class="flex items-center gap-2.5">
+            <input type="checkbox" id="chk-${y.id}" ${isChecked ? 'checked' : ''} onchange="toggleCalcYard('${y.id}', this.checked)" class="w-4 h-4 rounded text-sky-600">
+            <label for="chk-${y.id}" class="cursor-pointer">
+              <span class="font-bold text-slate-900">${y.number}. ${y.name}</span>
+              <span class="text-slate-500 block text-[11px]">${y.theme}</span>
+            </label>
+          </div>
+          <strong class="text-slate-900">${y.budget ? fmtPrice(y.budget) : '—'}</strong>
+        `;
+        list.appendChild(div);
+      });
+      updateCalcTotals();
+    }
+
+    function toggleCalcYard(id, checked) {
+      if (checked) selectedYardIds.add(id); else selectedYardIds.delete(id);
+      renderCalcList();
+    }
+
+    function selectAllCalc(all) {
+      if (all) selectedYardIds = new Set(MANIFEST.yards.map(y => y.id));
+      else selectedYardIds.clear();
+      renderCalcList();
+    }
+
+    function updateCalcTotals() {
+      let total = 0, totalArea = 0;
+      MANIFEST.yards.forEach(y => {
+        if (selectedYardIds.has(y.id)) {
+          total += (y.budget || 0);
+          totalArea += (y.number === 6 ? 0 : y.area_sqm || 0);
+        }
+      });
+      document.getElementById('calc-count').textContent = selectedYardIds.size + ' из 10; без сметы: ' + MANIFEST.yards.filter(y=>selectedYardIds.has(y.id)&&y.budget==null).length;
+      document.getElementById('calc-area').textContent = totalArea + ' м²';
+      document.getElementById('calc-total-budget').textContent = fmtPrice(total);
+      document.getElementById('calc-total-vat').textContent = fmtPrice(total * 20 / 120);
+    }
+
+    function exportPlanCSV() {
+      const rows=[['Объект','Основание','Артикул','Наименование','Количество','Цена, руб','Сумма, руб','Бюджет объекта, руб']];
+      MANIFEST.yards.filter(y=>selectedYardIds.has(y.id)).forEach(y=>{
+        rows.push([y.name,y.budget_basis,'','ИТОГО ОБЪЕКТА','','','',y.budget ?? 'Не определён']);
+        y.items.forEach(i=>rows.push([y.name,y.budget_basis,i.code,i.name,i.qty,i.price ?? '',i.total ?? '','']));
+      });
+      const esc=v=> '"'+String(v).replace(/"/g,'""')+'"';
+      const csv=rows.map(r=>r.map(esc).join(';')).join('\r\n');
+      const url=URL.createObjectURL(new Blob(['\uFEFF'+csv],{type:'text/csv;charset=utf-8;'}));
+      const a=document.createElement('a'); a.href=url; a.download='Спецификация_ПКГО.csv'; a.click(); setTimeout(()=>URL.revokeObjectURL(url),1000);
+    }
+
+    // Gallery
+    function renderFullGallery() {
+      const container = document.getElementById('full-gallery-grid');
+      container.innerHTML = '';
+      allGalleryItems.forEach((item, idx) => {
+        const div = document.createElement('div');
+        div.className = "group relative rounded-xl overflow-hidden bg-slate-100 border border-slate-200 cursor-pointer";
+        div.onclick = () => openLightboxByIndex(idx);
+        div.innerHTML = `
+          <div class="aspect-4/3 overflow-hidden">
+            <img loading="lazy" src="${item.rel_web}" alt="${item.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform">
+          </div>
+          <div class="p-2 bg-white text-xs">
+            <div class="text-[10px] font-bold text-sky-700 uppercase">${item.yardName}</div>
+            <div class="font-medium text-slate-800 line-clamp-1">${item.title}</div>
+          </div>
+        `;
+        container.appendChild(div);
+      });
+    }
+
+    // Lightbox
+    function openLightbox(url, title = '') {
+      const idx = allGalleryItems.findIndex(i => i.rel_web === url || i.rel_orig === url);
+      if (idx !== -1) openLightboxByIndex(idx);
+      else {
+        document.getElementById('lightbox-img').src = url;
+        document.getElementById('lightbox-title').textContent = title;
+        document.getElementById('lightbox-orig-link').href = url;
+        document.getElementById('lightbox-modal').classList.remove('hidden');
+      }
+    }
+
+    function openLightboxByIndex(idx) {
+      currentLightboxIndex = idx;
+      const it = allGalleryItems[idx];
+      document.getElementById('lightbox-img').src = it.rel_orig; document.getElementById('lightbox-img').style.transform='scale(1)';
+      document.getElementById('lightbox-title').textContent = it.title;
+      document.getElementById('lightbox-subtitle').textContent = it.yardName + " (" + (idx + 1) + " из " + allGalleryItems.length + ")";
+      document.getElementById('lightbox-orig-link').href = it.rel_orig;
+      document.getElementById('lightbox-modal').classList.remove('hidden');
+    }
+
+    function navigateLightbox(dir) {
+      let nxt = currentLightboxIndex + dir;
+      if (nxt < 0) nxt = allGalleryItems.length - 1;
+      if (nxt >= allGalleryItems.length) nxt = 0;
+      openLightboxByIndex(nxt);
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightbox-modal').classList.add('hidden');
+    }
+
+    document.getElementById('lightbox-img').addEventListener('click', e=>{e.target.style.transform=e.target.style.transform==='scale(2)'?'scale(1)':'scale(2)';e.target.style.cursor='zoom-in';});
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') closeLightbox();
+      if (!document.getElementById('lightbox-modal').classList.contains('hidden')) {
+        if (e.key === 'ArrowLeft') navigateLightbox(-1);
+        if (e.key === 'ArrowRight') navigateLightbox(1);
+      }
+    });
+
+    window.addEventListener('DOMContentLoaded', () => {
+      renderSummaryTable();
+      populateYardSelect();
+      renderYardDetail('yard_1');
+      renderCatalogGrid();
+      renderFoldersTab();
+      renderCalcList();
+      renderFullGallery();
+    });
+  </script>
+</body>
+</html>
