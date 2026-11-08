@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Программа «40 дворов» · Камчатский край</title>
+  <meta name="description" content="Стратегическая программа 40 дворов Камчатки: 5 архетипов, пилотная очередь из 6 дворов (26,04 млн ₽), 40 авторских камчатских тематик со сметами и 3D-рендерами.">
+  <link rel="stylesheet" href="atlas.css?v=6">
+  <link rel="stylesheet" href="addresses.css?v=2">
+  <style>
+    .program-summary-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 16px;
+      margin-bottom: 28px;
+    }
+    .summary-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px;
+      box-shadow: var(--shadow);
+    }
+    .summary-card.highlight {
+      border-left: 5px solid var(--accent);
+      background: #fafcfe;
+    }
+    .summary-card h3 {
+      margin: 0 0 8px;
+      font-size: 16px;
+      color: var(--primary);
+    }
+    .summary-num {
+      font-size: 26px;
+      font-weight: 800;
+      color: var(--accent);
+      margin-bottom: 4px;
+    }
+    .summary-desc {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.45;
+    }
+    .archetypes-bar {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+    .arch-chip-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 12px 14px;
+      font-size: 13px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .arch-chip-card:hover {
+      border-color: var(--accent);
+      background: #f4fbfe;
+    }
+    .arch-chip-card.active {
+      border-color: var(--accent);
+      background: #e6f6f8;
+      box-shadow: 0 0 0 2px var(--accent);
+    }
+    .arch-code {
+      display: inline-block;
+      font-weight: 800;
+      background: var(--primary);
+      color: white;
+      padding: 2px 7px;
+      border-radius: 4px;
+      font-size: 12px;
+      margin-right: 6px;
+    }
+    .pilot-banner {
+      background: linear-gradient(135deg, #112e43 0%, #1e5278 100%);
+      color: white;
+      padding: 24px 28px;
+      border-radius: var(--radius);
+      margin-bottom: 28px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .pilot-banner h2 {
+      margin: 0 0 6px;
+      font-size: 22px;
+    }
+    .pilot-banner p {
+      margin: 0;
+      color: #cde4f7;
+      font-size: 14px;
+      max-width: 680px;
+    }
+  </style>
+</head>
+<body class="addresses-page">
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="index.html">
+      <span class="brand-badge">ПКГО 2026</span>
+      <span class="brand-title"><strong>Благоустройство дворов</strong><small>Петропавловск-Камчатский</small></span>
+    </a>
+    <nav class="main-nav">
+      <a href="index.html">🗺️ Атлас и Карта</a>
+      <a href="dashboard.html">📊 Мониторинг</a>
+      <a href="addresses.html">🏢 Все варианты по адресам</a>
+      <a href="studio.html">🎨 Студия сравнения</a>
+      <a href="program-40.html" class="active">🌳 Программа 40 дворов</a>
+      <a href="sources.html">📄 Документы и сметы</a>
+      <a href="candidates.html">🎠 Оборудование</a>
+      <a href="maf-options.html">✨ Новые МАФы</a>
+    </nav>
+  </div>
+</header>
+
+<main class="content-container">
+  <div class="page-intro">
+    <div class="intro-text">
+      <p class="eyebrow">Стратегический масштаб проекта</p>
+      <h1>Программа «40 дворов · Камчатский край»</h1>
+      <p class="lead">Единая расчётная модель благоустройства 40 дворовых пространств на 133,76 млн ₽. Каталог 40 камчатских тематик детских площадок, 5 архетипов благоустройства и пилотная очередь из 6 дворов (26,04 млн ₽ под ключ).</p>
+    </div>
+    <div class="intro-stats">
+      <div class="stat-card">
+        <span class="stat-val">40</span>
+        <span class="stat-lbl">Дворов программы</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-val">133,8М</span>
+        <span class="stat-lbl">Бюджет под ключ (₽)</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-val">6</span>
+        <span class="stat-lbl">Пилотных дворов</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-val">26,0М</span>
+        <span class="stat-lbl">Бюджет пилота (₽)</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="pilot-banner">
+    <div>
+      <h2>Пилотная очередь запуска — 6 дворов (26,04 млн ₽)</h2>
+      <p>Охватывает все 5 архетипов (2 базовых, 1 семейный, 1 активный, 1 флагман «Вулкан» и 1 инклюзивный). Включает СМР под ключ (22,94 млн ₽), предпроектные изыскания и ПСД (2,53 млн ₽) и авторский технадзор (0,57 млн ₽).</p>
+    </div>
+    <div style="display:flex;gap:12px;flex-wrap:wrap;">
+      <a href="addresses.html" class="btn-action btn-primary" style="background:#00bcd4;border-color:#00bcd4;color:#072433;font-weight:bold;">🏢 Назначить на адреса ПКГО →</a>
+      <a href="sources/Камчатка_40_дворов_стартовая_смета.xlsx" download class="btn-action btn-secondary" style="background:rgba(255,255,255,0.15);color:white;border-color:rgba(255,255,255,0.3);">📥 Скачать Excel-модель</a>
+    </div>
+  </div>
+
+  <div class="program-summary-grid">
+    <div class="summary-card highlight">
+      <h3>Полная программа под ключ</h3>
+      <div class="summary-num">133 760 000 ₽</div>
+      <div class="summary-desc">40 дворов: игровое оборудование, бесшовное EPDM-покрытие, уличные МАФ, ограждение, доставка ж/д+море и монтаж на Камчатке.</div>
+    </div>
+    <div class="summary-card">
+      <h3>Предпроектный этап (до закупки)</h3>
+      <div class="summary-num">2 529 135 ₽</div>
+      <div class="summary-desc">Обследование площадок и сетей (2%), проектно-сметная документация (6%), визуализация и публичные слушания (1%), конкурсное сопровождение 44-ФЗ (1,5%).</div>
+    </div>
+    <div class="summary-card">
+      <h3>Производители оборудования</h3>
+      <div class="summary-num">АВЕН / КГ</div>
+      <div class="summary-desc">Каталоги ООО «Игра Вл» (дистрибьютор «АВЕН СПб» по ДФО) и «Красивый город» (СПб), плюс сертифицированные позиции Shelby и Romana.</div>
+    </div>
+  </div>
+
+  <h2 style="font-size:20px;color:var(--primary);margin:0 0 14px;">5 архетипов благоустройства дворов</h2>
+  <div class="archetypes-bar" id="archetypes-filter">
+    <div class="arch-chip-card active" data-arch="all">
+      <strong>Все 40 тематик</strong>
+      <div style="color:var(--text-muted);font-size:11px;">Полная библиотека вариантов</div>
+    </div>
+    <div class="arch-chip-card" data-arch="A">
+      <span class="arch-code">A</span><strong>Базовый</strong>
+      <div style="color:var(--text-muted);font-size:11px;">14 дворов · 1,61 млн ₽ (200 м²)</div>
+    </div>
+    <div class="arch-chip-card" data-arch="B">
+      <span class="arch-code">B</span><strong>Семейный</strong>
+      <div style="color:var(--text-muted);font-size:11px;">12 дворов · 3,16 млн ₽ (300 м²)</div>
+    </div>
+    <div class="arch-chip-card" data-arch="C">
+      <span class="arch-code">C</span><strong>Активный</strong>
+      <div style="color:var(--text-muted);font-size:11px;">8 дворов · 3,74 млн ₽ (350 м²)</div>
+    </div>
+    <div class="arch-chip-card" data-arch="D">
+      <span class="arch-code">D</span><strong>Флагман</strong>
+      <div style="color:var(--text-muted);font-size:11px;">4 двора · 8,87 млн ₽ (500 м²)</div>
+    </div>
+    <div class="arch-chip-card" data-arch="E">
+      <span class="arch-code">E</span><strong>Инклюзивный</strong>
+      <div style="color:var(--text-muted);font-size:11px;">2 двора · 3,95 млн ₽ (300 м²)</div>
+    </div>
+  </div>
+
+  <div class="controls-panel">
+    <div class="search-box">
+      <input type="text" id="theme-search" placeholder="🔍 Поиск тематики (например: Вулкан, Ракета, Батискаф, Песец)...">
+    </div>
+    <div class="filter-chips">
+      <button class="chip active" data-filter="all">Все (40)</button>
+      <button class="chip" data-filter="pilot">⭐ Пилотная очередь (6 дворов)</button>
+    </div>
+  </div>
+
+  <div id="themes-grid" class="themes40-grid">
+    <!-- Populated by JavaScript -->
+    <div class="loading-state">Загрузка каталога 40 тематик...</div>
+  </div>
+</main>
+
+<div id="image-modal" class="modal" aria-hidden="true">
+  <div class="modal-overlay" tabindex="-1"></div>
+  <div class="modal-dialog">
+    <button class="modal-close" aria-label="Закрыть">&times;</button>
+    <img id="modal-img" src="" alt="Увеличенный эскиз">
+    <div class="modal-caption" id="modal-caption"></div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <p>Программа благоустройства «40 дворов» Петропавловск-Камчатского городского округа · 2026</p>
+  <p>Библиотека 40 тематик интегрирована с адресным порталом 10 пилотных дворов ПКГО.</p>
+</footer>
+
+<script src="themes40_data.js?v=2"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const data = window.PKGO_THEMES40_DATA;
+  if (!data || !data.themes) return;
+
+  const themes = data.themes;
+  const grid = document.getElementById('themes-grid');
+  const searchInput = document.getElementById('theme-search');
+  const filterChips = document.querySelectorAll('.filter-chips .chip');
+  const archCards = document.querySelectorAll('.arch-chip-card');
+
+  let currentArch = 'all';
+  let currentPilotOnly = false;
+  let searchQuery = '';
+
+  function formatMoney(n) {
+    return new Intl.NumberFormat('ru-RU').format(Math.round(n)) + ' ₽';
+  }
+
+  function render(items) {
+    if (!items.length) {
+      grid.innerHTML = '<div class="estimate-notice" style="grid-column:1/-1;">Ничего не найдено по заданным параметрам фильтра.</div>';
+      return;
+    }
+
+    grid.innerHTML = items.map(t => `
+      <div class="theme40-card" id="theme-${t.id}">
+        ${t.image ? `
+          <div class="theme40-img-wrap" data-full="${t.image}" data-title="Тематика №${t.id}: ${t.title} (${t.archetype_name})">
+            <img src="${t.image}" alt="${t.title}" loading="lazy">
+          </div>
+        ` : ''}
+        <div class="theme40-info">
+          <div class="theme40-top-bar">
+            <span class="theme40-badge">Архетип ${t.archetype}: ${t.archetype_name}</span>
+            <span class="theme40-budget">${formatMoney(t.budget)}</span>
+          </div>
+          <h3 class="theme40-title" style="margin:4px 0 6px;">
+            ${t.is_pilot ? '<span style="color:#d35400;margin-right:4px;">⭐ ПИЛОТ:</span>' : ''}№${t.id} · ${t.title}
+          </h3>
+          ${t.items && t.items.length ? `
+            <table class="theme40-items-table">
+              <tbody>
+                ${t.items.map(it => `
+                  <tr>
+                    <td>${it.item}</td>
+                    <td>${formatMoney(it.cost)}</td>
+                  </tr>
+                `).join('')}
+              </tbody>
+            </table>
+          ` : ''}
+          <div style="margin-top:14px;display:flex;justify-content:space-between;align-items:center;">
+            <a href="addresses.html" class="btn-action btn-secondary" style="font-size:12px;padding:6px 12px;">🏢 Смотреть адреса ПКГО →</a>
+            <small style="color:var(--text-muted)">Под ключ</small>
+          </div>
+        </div>
+      </div>
+    `).join('');
+
+    bindModal();
+  }
+
+  function bindModal() {
+    const modal = document.getElementById('image-modal');
+    const modalImg = document.getElementById('modal-img');
+    const modalCaption = document.getElementById('modal-caption');
+
+    document.querySelectorAll('.theme40-img-wrap').forEach(w => {
+      w.addEventListener('click', () => {
+        modalImg.src = w.dataset.full;
+        modalCaption.textContent = w.dataset.title;
+        modal.classList.add('active');
+      });
+    });
+
+    document.querySelector('.modal-close').addEventListener('click', () => modal.classList.remove('active'));
+    document.querySelector('.modal-overlay').addEventListener('click', () => modal.classList.remove('active'));
+  }
+
+  function filter() {
+    const q = searchQuery.toLowerCase().trim();
+    const res = themes.filter(t => {
+      const matchArch = (currentArch === 'all') || (t.archetype === currentArch);
+      const matchPilot = !currentPilotOnly || t.is_pilot;
+      const matchText = !q || t.title.toLowerCase().includes(q) || String(t.id).includes(q) || t.archetype_name.toLowerCase().includes(q);
+      return matchArch && matchPilot && matchText;
+    });
+    render(res);
+  }
+
+  searchInput.addEventListener('input', e => {
+    searchQuery = e.target.value;
+    filter();
+  });
+
+  archCards.forEach(c => {
+    c.addEventListener('click', () => {
+      archCards.forEach(x => x.classList.remove('active'));
+      c.classList.add('active');
+      currentArch = c.dataset.arch;
+      filter();
+    });
+  });
+
+  filterChips.forEach(chip => {
+    chip.addEventListener('click', () => {
+      filterChips.forEach(x => x.classList.remove('active'));
+      chip.classList.add('active');
+      currentPilotOnly = (chip.dataset.filter === 'pilot');
+      filter();
+    });
+  });
+
+  render(themes);
+});
+</script>
+</body>
+</html>

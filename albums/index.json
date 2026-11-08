@@ -5,7 +5,7 @@
     "src": "albums/yard-01.pdf",
     "pages": 14,
     "renders": 10,
-    "bytes": 4591858,
+    "bytes": 4591884,
     "output": "01_Ботанический сад.pdf"
   },
   {
@@ -14,16 +14,16 @@
     "src": "albums/yard-02.pdf",
     "pages": 14,
     "renders": 10,
-    "bytes": 4171593,
+    "bytes": 4171490,
     "output": "02_Горького, 6.pdf"
   },
   {
     "yard": 3,
     "title": "Океанская",
     "src": "albums/yard-03.pdf",
-    "pages": 14,
-    "renders": 10,
-    "bytes": 4364615,
+    "pages": 20,
+    "renders": 16,
+    "bytes": 6690172,
     "output": "03_Океанская.pdf"
   },
   {
@@ -32,16 +32,16 @@
     "src": "albums/yard-04.pdf",
     "pages": 14,
     "renders": 10,
-    "bytes": 4384216,
+    "bytes": 4384043,
     "output": "04_АЗС _ Кораблик.pdf"
   },
   {
     "yard": 5,
     "title": "Солнечная",
     "src": "albums/yard-05.pdf",
-    "pages": 14,
-    "renders": 10,
-    "bytes": 4186406,
+    "pages": 20,
+    "renders": 16,
+    "bytes": 6484199,
     "output": "05_Солнечная.pdf"
   },
   {
@@ -50,7 +50,7 @@
     "src": "albums/yard-06.pdf",
     "pages": 13,
     "renders": 10,
-    "bytes": 4093577,
+    "bytes": 4093551,
     "output": "06_Молчанова.pdf"
   },
   {
@@ -59,16 +59,16 @@
     "src": "albums/yard-07.pdf",
     "pages": 14,
     "renders": 10,
-    "bytes": 4185199,
+    "bytes": 4185082,
     "output": "07_Байконур.pdf"
   },
   {
     "yard": 8,
     "title": "Таранца",
     "src": "albums/yard-08.pdf",
-    "pages": 14,
-    "renders": 10,
-    "bytes": 4378532,
+    "pages": 18,
+    "renders": 14,
+    "bytes": 6001225,
     "output": "08_Таранца.pdf"
   },
   {
@@ -77,7 +77,7 @@
     "src": "albums/yard-09.pdf",
     "pages": 14,
     "renders": 10,
-    "bytes": 4546482,
+    "bytes": 4546462,
     "output": "09_Кирдищева _ Аэропорт.pdf"
   },
   {
@@ -86,7 +86,7 @@
     "src": "albums/yard-10.pdf",
     "pages": 14,
     "renders": 10,
-    "bytes": 4258731,
+    "bytes": 4258585,
     "output": "10_Индустриальная.pdf"
   }
 ]
