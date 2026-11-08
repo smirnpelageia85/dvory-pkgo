@@ -11,7 +11,7 @@
       "vat": 1944855.36,
       "description": "Игровое пространство с акцентом на природную биосферу Камчатки. Центральный элемент — двухсекционный комплекс сот с тоннельной горкой и стилизованный игровой комплекс «Пчела». Пространство включает зоны активных игр, качели с подвесами «Гнездо» и воркаут. Финансовое основание: Excel-смета.",
       "area_sqm": 360,
-      "dimensions": "24,0 м × 15,0 м",
+      "dimensions": "24 × 15 м",
       "geo": {
         "lat": 53.0493121,
         "lon": 158.65474,
@@ -24,7 +24,7 @@
         "geocoder": "OpenStreetMap / Nominatim",
         "confirmedBoundary": false
       },
-      "album_pdf": null,
+      "album_pdf": "albums/yard-01.pdf",
       "concepts_count": 5,
       "concepts": [
         {
@@ -96,13 +96,17 @@
               "src": "assets/concepts/y01-c01-1-9a9d5c8e913c.webp",
               "thumb": "assets/concepts/y01-c01-1-9a9d5c8e913c-thumb.webp",
               "title": "Общий вид",
-              "view": 1
+              "view": 1,
+              "fullUrl": "assets/concepts/y01-c01-1-9a9d5c8e913c.webp",
+              "thumbUrl": "assets/concepts/y01-c01-1-9a9d5c8e913c-thumb.webp"
             },
             {
               "src": "assets/concepts/y01-c01-2-8075744621de.webp",
               "thumb": "assets/concepts/y01-c01-2-8075744621de-thumb.webp",
               "title": "Второй ракурс",
-              "view": 2
+              "view": 2,
+              "fullUrl": "assets/concepts/y01-c01-2-8075744621de.webp",
+              "thumbUrl": "assets/concepts/y01-c01-2-8075744621de-thumb.webp"
             }
           ],
           "disclosure": "Эскизная ИИ-визуализация на основе реальных МАФов. Новый вариант благоустройства; не согласованная посадка, не рабочая документация. Исходная смета не является стоимостью этого варианта."
@@ -176,13 +180,17 @@
               "src": "assets/concepts/y01-c02-1-2cc9793e403a.webp",
               "thumb": "assets/concepts/y01-c02-1-2cc9793e403a-thumb.webp",
               "title": "Общий вид",
-              "view": 1
+              "view": 1,
+              "fullUrl": "assets/concepts/y01-c02-1-2cc9793e403a.webp",
+              "thumbUrl": "assets/concepts/y01-c02-1-2cc9793e403a-thumb.webp"
             },
             {
               "src": "assets/concepts/y01-c02-2-2825a238e2d3.webp",
               "thumb": "assets/concepts/y01-c02-2-2825a238e2d3-thumb.webp",
               "title": "Второй ракурс",
-              "view": 2
+              "view": 2,
+              "fullUrl": "assets/concepts/y01-c02-2-2825a238e2d3.webp",
+              "thumbUrl": "assets/concepts/y01-c02-2-2825a238e2d3-thumb.webp"
             }
           ],
           "disclosure": "Эскизная ИИ-визуализация на основе реальных МАФов. Новый вариант благоустройства; не согласованная посадка, не рабочая документация. Исходная смета не является стоимостью этого варианта."
@@ -256,13 +264,17 @@
               "src": "assets/concepts/y01-c03-1-27d44196d072.webp",
               "thumb": "assets/concepts/y01-c03-1-27d44196d072-thumb.webp",
               "title": "Общий вид",
-              "view": 1
+              "view": 1,
+              "fullUrl": "assets/concepts/y01-c03-1-27d44196d072.webp",
+              "thumbUrl": "assets/concepts/y01-c03-1-27d44196d072-thumb.webp"
             },
             {
               "src": "assets/concepts/y01-c03-2-3c8b42e1f839.webp",
               "thumb": "assets/concepts/y01-c03-2-3c8b42e1f839-thumb.webp",
               "title": "Второй ракурс",
-              "view": 2
+              "view": 2,
+              "fullUrl": "assets/concepts/y01-c03-2-3c8b42e1f839.webp",
+              "thumbUrl": "assets/concepts/y01-c03-2-3c8b42e1f839-thumb.webp"
             }
           ],
           "disclosure": "Эскизная ИИ-визуализация на основе реальных МАФов. Новый вариант благоустройства; не согласованная посадка, не рабочая документация. Исходная смета не является стоимостью этого варианта."
@@ -336,13 +348,17 @@
               "src": "assets/concepts/y01-c04-1-11393dec9e2d.webp",
               "thumb": "assets/concepts/y01-c04-1-11393dec9e2d-thumb.webp",
               "title": "Общий вид",
-              "view": 1
+              "view": 1,
+              "fullUrl": "assets/concepts/y01-c04-1-11393dec9e2d.webp",
+              "thumbUrl": "assets/concepts/y01-c04-1-11393dec9e2d-thumb.webp"
             },
             {
               "src": "assets/concepts/y01-c04-2-5172612cc7c9.webp",
               "thumb": "assets/concepts/y01-c04-2-5172612cc7c9-thumb.webp",
               "title": "Второй ракурс",
-              "view": 2
+              "view": 2,
+              "fullUrl": "assets/concepts/y01-c04-2-5172612cc7c9.webp",
+              "thumbUrl": "assets/concepts/y01-c04-2-5172612cc7c9-thumb.webp"
             }
           ],
           "disclosure": "Эскизная ИИ-визуализация на основе реальных МАФов. Новый вариант благоустройства; не согласованная посадка, не рабочая документация. Исходная смета не является стоимостью этого варианта."
@@ -416,13 +432,17 @@
               "src": "assets/concepts/y01-c05-1-09e7142b3989.webp",
               "thumb": "assets/concepts/y01-c05-1-09e7142b3989-thumb.webp",
               "title": "Общий вид",
-              "view": 1
+              "view": 1,
+              "fullUrl": "assets/concepts/y01-c05-1-09e7142b3989.webp",
+              "thumbUrl": "assets/concepts/y01-c05-1-09e7142b3989-thumb.webp"
             },
             {
               "src": "assets/concepts/y01-c05-2-0d10f77d46bd.webp",
               "thumb": "assets/concepts/y01-c05-2-0d10f77d46bd-thumb.webp",
               "title": "Второй ракурс",
-              "view": 2
+              "view": 2,
+              "fullUrl": "assets/concepts/y01-c05-2-0d10f77d46bd.webp",
+              "thumbUrl": "assets/concepts/y01-c05-2-0d10f77d46bd-thumb.webp"
             }
           ],
           "disclosure": "Эскизная ИИ-визуализация на основе реальных МАФов. Новый вариант благоустройства; не согласованная посадка, не рабочая документация. Исходная смета не является стоимостью этого варианта."
@@ -735,7 +755,12 @@
           "detail": "В имени файла указано 2.11.26, в штампе листа визуально читается 2.10.26. Не исправлять дату автоматически.",
           "source": "sources/016.jpg"
         }
-      ]
+      ],
+      "area_note": "360 м² — прямоугольная площадка 24 × 15 м на исходной схеме; это не площадь всего двора или земельного участка.",
+      "location_status": "Адрес проекта не подтверждён",
+      "location_note": "Исходный план назван «Ботанический сад», исходная смета и панель используют «Ботаническая». Связь с Ботаническим переулком и номером дома не установлена.",
+      "budget_note": "Коммерческое предложение на оборудование, с НДС; не полный бюджет благоустройства",
+      "budget_kind": "estimate"
     },
     {
       "id": 2,
@@ -747,7 +772,7 @@
       "vat": 2166452.36,
       "description": "Тематическая строительно-карьерная площадка. Доминанта площадки — грандиозный комплекс «Белаз» с винтовым спуском и кабина-мостик бульдозера с горкой. Оборудована большая развивающая песочница «Песочный дворик», балансиры и комплексные качели. Финансовое основание: Excel-смета.",
       "area_sqm": 378,
-      "dimensions": "21,0 м × 18,0 м",
+      "dimensions": "21 × 18 м",
       "geo": {
         "lat": 53.0559486,
         "lon": 158.6312255,
@@ -760,7 +785,7 @@
         "geocoder": "OpenStreetMap / Nominatim",
         "confirmedBoundary": false
       },
-      "album_pdf": null,
+      "album_pdf": "albums/yard-02.pdf",
       "concepts_count": 5,
       "concepts": [
         {
@@ -843,13 +868,17 @@
               "src": "assets/concepts/y02-c01-1-634afebd5127.webp",
               "thumb": "assets/concepts/y02-c01-1-634afebd5127-thumb.webp",
               "title": "Общий вид",
-              "view": 1
+              "view": 1,
+              "fullUrl": "assets/concepts/y02-c01-1-634afebd5127.webp",
+              "thumbUrl": "assets/concepts/y02-c01-1-634afebd5127-thumb.webp"
             },
             {
               "src": "assets/concepts/y02-c01-2-b2985ad1e60f.webp",
               "thumb": "assets/concepts/y02-c01-2-b2985ad1e60f-thumb.webp",
               "title": "Второй ракурс",
-              "view": 2
+              "view": 2,
+              "fullUrl": "assets/concepts/y02-c01-2-b2985ad1e60f.webp",
+              "thumbUrl": "assets/concepts/y02-c01-2-b2985ad1e60f-thumb.webp"
             }
           ],
           "disclosure": "Эскизная ИИ-визуализация на основе реальных МАФов. Новый вариант благоустройства; не согласованная посадка, не рабочая документация. Исходная смета не является стоимостью этого варианта."
@@ -934,13 +963,17 @@
               "src": "assets/concepts/y02-c02-1-ffbb47efeed1.webp",
               "thumb": "assets/concepts/y02-c02-1-ffbb47efeed1-thumb.webp",
               "title": "Общий вид",
-              "view": 1
+              "view": 1,
+              "fullUrl": "assets/concepts/y02-c02-1-ffbb47efeed1.webp",
+              "thumbUrl": "assets/concepts/y02-c02-1-ffbb47efeed1-thumb.webp"
             },
             {
               "src": "assets/concepts/y02-c02-2-24fc59220120.webp",
               "thumb": "assets/concepts/y02-c02-2-24fc59220120-thumb.webp",
               "title": "Второй ракурс",
-              "view": 2
+              "view": 2,
+              "fullUrl": "assets/concepts/y02-c02-2-24fc59220120.webp",
+              "thumbUrl": "assets/concepts/y02-c02-2-24fc59220120-thumb.webp"
             }
           ],
           "disclosure": "Эскизная ИИ-визуализация на основе реальных МАФов. Новый вариант благоустройства; не согласованная посадка, не рабочая документация. Исходная смета не является стоимостью этого варианта."
@@ -1025,13 +1058,17 @@
               "src": "assets/concepts/y02-c03-1-62527db90640.webp",
               "thumb": "assets/concepts/y02-c03-1-62527db90640-thumb.webp",
               "title": "Общий вид",
-              "view": 1
+              "view": 1,
+              "fullUrl": "assets/concepts/y02-c03-1-62527db90640.webp",
+              "thumbUrl": "assets/concepts/y02-c03-1-62527db90640-thumb.webp"
             },
             {
               "src": "assets/concepts/y02-c03-2-bf6faab41eab.webp",
               "thumb": "assets/concepts/y02-c03-2-bf6faab41eab-thumb.webp",
               "title": "Второй ракурс",
-              "view": 2
+              "view": 2,
+              "fullUrl": "assets/concepts/y02-c03-2-bf6faab41eab.webp",
+              "thumbUrl": "assets/concepts/y02-c03-2-bf6faab41eab-thumb.webp"
             }
           ],
           "disclosure": "Эскизная ИИ-визуализация на основе реальных МАФов. Новый вариант благоустройства; не согласованная посадка, не рабочая документация. Исходная смета не является стоимостью этого варианта."
@@ -1116,13 +1153,17 @@
               "src": "assets/concepts/y02-c04-1-f592967ddfcb.webp",
               "thumb": "assets/concepts/y02-c04-1-f592967ddfcb-thumb.webp",
               "title": "Общий вид",
-              "view": 1
+              "view": 1,
+              "fullUrl": "assets/concepts/y02-c04-1-f592967ddfcb.webp",
+              "thumbUrl": "assets/concepts/y02-c04-1-f592967ddfcb-thumb.webp"
             },
             {
               "src": "assets/concepts/y02-c04-2-841c9bb4bbe7.webp",
               "thumb": "assets/concepts/y02-c04-2-841c9bb4bbe7-thumb.webp",
               "title": "Второй ракурс",
-              "view": 2
+              "view": 2,
+              "fullUrl": "assets/concepts/y02-c04-2-841c9bb4bbe7.webp",
+              "thumbUrl": "assets/concepts/y02-c04-2-841c9bb4bbe7-thumb.webp"
             }
           ],
           "disclosure": "Эскизная ИИ-визуализация на основе реальных МАФов. Новый вариант благоустройства; не согласованная посадка, не рабочая документация. Исходная смета не является стоимостью этого варианта."
@@ -1207,13 +1248,17 @@
               "src": "assets/concepts/y02-c05-1-c79e2ae05698.webp",
               "thumb": "assets/concepts/y02-c05-1-c79e2ae05698-thumb.webp",
               "title": "Общий вид",
-              "view": 1
+              "view": 1,
+              "fullUrl": "assets/concepts/y02-c05-1-c79e2ae05698.webp",
+              "thumbUrl": "assets/concepts/y02-c05-1-c79e2ae05698-thumb.webp"
             },
             {
               "src": "assets/concepts/y02-c05-2-734d1dd85bf4.webp",
               "thumb": "assets/concepts/y02-c05-2-734d1dd85bf4-thumb.webp",
               "title": "Второй ракурс",
-              "view": 2
+              "view": 2,
+              "fullUrl": "assets/concepts/y02-c05-2-734d1dd85bf4.webp",
+              "thumbUrl": "assets/concepts/y02-c05-2-734d1dd85bf4-thumb.webp"
             }
           ],
           "disclosure": "Эскизная ИИ-визуализация на основе реальных МАФов. Новый вариант благоустройства; не согласованная посадка, не рабочая документация. Исходная смета не является стоимостью этого варианта."
@@ -1547,7 +1592,12 @@
           "detail": "Имеющаяся координата получена для улицы, хотя адрес проекта уточнён до дома. Кадастровый реестр не содержит координат, поэтому смещать маркер по нему нельзя.",
           "source": "https://www.openstreetmap.org/way/102585183"
         }
-      ]
+      ],
+      "area_note": "378 м² — проектный прямоугольник 21 × 18 м. Отдельно в муниципальном реестре: земельный участок 41:01:0010118:182 площадью 901 м²; это другая величина.",
+      "location_status": "Адрес подтверждён исходным файлом и муниципальным реестром",
+      "location_note": "Номер 6 указан в имени сметы. Муниципальный реестр земли на 01.01.2025, PDF стр. 104, содержит участок детских площадок по ул. Горького, 6: 41:01:0010118:182, 901 м².",
+      "budget_note": "Коммерческое предложение на оборудование, с НДС; не полный бюджет благоустройства",
+      "budget_kind": "estimate"
     },
     {
       "id": 3,
@@ -1559,7 +1609,7 @@
       "vat": 2030985.35,
       "description": "Крупный морской комплекс, отражающий тихоокеанский характер Петропавловска-Камчатского. Оборудован игровым городком «Подводная лодка», комплексом «Нерпа», канатной пространственной сеткой «Марс», воркаутом с баскетбольным кольцом и тренажерами. 5 ноября 2026 года представлены расширенные визуализации с доработанной планировкой. Финансовое основание: Excel-смета.",
       "area_sqm": 800,
-      "dimensions": "40,0 м × 20,0 м",
+      "dimensions": "40 × 20 м",
       "geo": {
         "lat": 52.9882959,
         "lon": 158.6719006,
@@ -1572,7 +1622,7 @@
         "geocoder": "OpenStreetMap / Nominatim",
         "confirmedBoundary": false
       },
-      "album_pdf": null,
+      "album_pdf": "albums/yard-03.pdf",
       "concepts_count": 8,
       "concepts": [
         {
@@ -1652,13 +1702,17 @@
               "src": "assets/concepts/y03-c01-1-9e1d8c1453e2.webp",
               "thumb": "assets/concepts/y03-c01-1-9e1d8c1453e2-thumb.webp",
               "title": "Общий вид",
-              "view": 1
+              "view": 1,
+              "fullUrl": "assets/concepts/y03-c01-1-9e1d8c1453e2.webp",
+              "thumbUrl": "assets/concepts/y03-c01-1-9e1d8c1453e2-thumb.webp"
             },
             {
               "src": "assets/concepts/y03-c01-2-10755d82e55f.webp",
               "thumb": "assets/concepts/y03-c01-2-10755d82e55f-thumb.webp",
               "title": "Второй ракурс",
-              "view": 2
+              "view": 2,
+              "fullUrl": "assets/concepts/y03-c01-2-10755d82e55f.webp",
+              "thumbUrl": "assets/concepts/y03-c01-2-10755d82e55f-thumb.webp"
             }
           ],
           "disclosure": "Эскизная ИИ-визуализация на основе реальных МАФов. Новый вариант благоустройства; не согласованная посадка, не рабочая документация. Исходная смета не является стоимостью этого варианта."
@@ -1740,13 +1794,17 @@
               "src": "assets/concepts/y03-c02-1-1d3d164c0172.webp",
               "thumb": "assets/concepts/y03-c02-1-1d3d164c0172-thumb.webp",
               "title": "Общий вид",
-              "view": 1
+              "view": 1,
+              "fullUrl": "assets/concepts/y03-c02-1-1d3d164c0172.webp",
+              "thumbUrl": "assets/concepts/y03-c02-1-1d3d164c0172-thumb.webp"
             },
             {
               "src": "assets/concepts/y03-c02-2-b49ac19ec833.webp",
               "thumb": "assets/concepts/y03-c02-2-b49ac19ec833-thumb.webp",
               "title": "Второй ракурс",
-              "view": 2
+              "view": 2,
+              "fullUrl": "assets/concepts/y03-c02-2-b49ac19ec833.webp",
+              "thumbUrl": "assets/concepts/y03-c02-2-b49ac19ec833-thumb.webp"
             }
           ],
           "disclosure": "Эскизная ИИ-визуализация на основе реальных МАФов. Новый вариант благоустройства; не согласованная посадка, не рабочая документация. Исходная смета не является стоимостью этого варианта."
@@ -1828,13 +1886,17 @@
               "src": "assets/concepts/y03-c03-1-f338da73a321.webp",
               "thumb": "assets/concepts/y03-c03-1-f338da73a321-thumb.webp",
               "title": "Общий вид",
-              "view": 1
+              "view": 1,
+              "fullUrl": "assets/concepts/y03-c03-1-f338da73a321.webp",
+              "thumbUrl": "assets/concepts/y03-c03-1-f338da73a321-thumb.webp"
             },
             {
               "src": "assets/concepts/y03-c03-2-d047d8ea0f19.webp",
               "thumb": "assets/concepts/y03-c03-2-d047d8ea0f19-thumb.webp",
               "title": "Второй ракурс",
-              "view": 2
+              "view": 2,
+              "fullUrl": "assets/concepts/y03-c03-2-d047d8ea0f19.webp",
+              "thumbUrl": "assets/concepts/y03-c03-2-d047d8ea0f19-thumb.webp"
             }
           ],
           "disclosure": "Эскизная ИИ-визуализация на основе реальных МАФов. Новый вариант благоустройства; не согласованная посадка, не рабочая документация. Исходная смета не является стоимостью этого варианта."
@@ -1916,13 +1978,17 @@
               "src": "assets/concepts/y03-c04-1-a62c12076746.webp",
               "thumb": "assets/concepts/y03-c04-1-a62c12076746-thumb.webp",
               "title": "Общий вид",
-              "view": 1
+              "view": 1,
+              "fullUrl": "assets/concepts/y03-c04-1-a62c12076746.webp",
+              "thumbUrl": "assets/concepts/y03-c04-1-a62c12076746-thumb.webp"
             },
             {
               "src": "assets/concepts/y03-c04-2-e6973d2418a3.webp",
               "thumb": "assets/concepts/y03-c04-2-e6973d2418a3-thumb.webp",
               "title": "Второй ракурс",
-              "view": 2
+              "view": 2,
+              "fullUrl": "assets/concepts/y03-c04-2-e6973d2418a3.webp",
+              "thumbUrl": "assets/concepts/y03-c04-2-e6973d2418a3-thumb.webp"
             }
           ],
           "disclosure": "Эскизная ИИ-визуализация на основе реальных МАФов. Новый вариант благоустройства; не согласованная посадка, не рабочая документация. Исходная смета не является стоимостью этого варианта."
@@ -2004,13 +2070,17 @@
               "src": "assets/concepts/y03-c05-1-5cedce888f16.webp",
               "thumb": "assets/concepts/y03-c05-1-5cedce888f16-thumb.webp",
               "title": "Общий вид",
-              "view": 1
+              "view": 1,
+              "fullUrl": "assets/concepts/y03-c05-1-5cedce888f16.webp",
+              "thumbUrl": "assets/concepts/y03-c05-1-5cedce888f16-thumb.webp"
             },
             {
               "src": "assets/concepts/y03-c05-2-b66f688932c0.webp",
               "thumb": "assets/concepts/y03-c05-2-b66f688932c0-thumb.webp",
               "title": "Второй ракурс",
-              "view": 2
+              "view": 2,
+              "fullUrl": "assets/concepts/y03-c05-2-b66f688932c0.webp",
+              "thumbUrl": "assets/concepts/y03-c05-2-b66f688932c0-thumb.webp"
             }
           ],
           "disclosure": "Эскизная ИИ-визуализация на основе реальных МАФов. Новый вариант благоустройства; не согласованная посадка, не рабочая документация. Исходная смета не является стоимостью этого варианта."
@@ -2061,13 +2131,17 @@
               "src": "assets/concepts/y03-c06-1-1657ec097623.webp",
               "thumb": "assets/concepts/y03-c06-1-1657ec097623-thumb.webp",
               "title": "Общий вид",
-              "view": 1
+              "view": 1,
+              "fullUrl": "assets/concepts/y03-c06-1-1657ec097623.webp",
+              "thumbUrl": "assets/concepts/y03-c06-1-1657ec097623-thumb.webp"
             },
             {
               "src": "assets/concepts/y03-c06-2-ae754a0ae248.webp",
               "thumb": "assets/concepts/y03-c06-2-ae754a0ae248-thumb.webp",
               "title": "Второй ракурс",
-              "view": 2
+              "view": 2,
+              "fullUrl": "assets/concepts/y03-c06-2-ae754a0ae248.webp",
+              "thumbUrl": "assets/concepts/y03-c06-2-ae754a0ae248-thumb.webp"
             }
           ],
           "disclosure": "Эскизная ИИ-визуализация по изображениям реальных МАФов. Окружение и размещение иллюстративны; фактические границы, скрытая геометрия и зоны безопасности требуют обмеров и проверки по паспортам. Цена оборудования запрашивается у производителя. Покрытие, озеленение и места отдыха показаны как предложения без расчёта объёмов."
@@ -2100,13 +2174,17 @@
               "src": "assets/concepts/y03-c07-1-601c00a03710.webp",
               "thumb": "assets/concepts/y03-c07-1-601c00a03710-thumb.webp",
               "title": "Общий вид",
-              "view": 1
+              "view": 1,
+              "fullUrl": "assets/concepts/y03-c07-1-601c00a03710.webp",
+              "thumbUrl": "assets/concepts/y03-c07-1-601c00a03710-thumb.webp"
             },
             {
               "src": "assets/concepts/y03-c07-2-c336b194b041.webp",
               "thumb": "assets/concepts/y03-c07-2-c336b194b041-thumb.webp",
               "title": "Второй ракурс",
-              "view": 2
+              "view": 2,
+              "fullUrl": "assets/concepts/y03-c07-2-c336b194b041.webp",
+              "thumbUrl": "assets/concepts/y03-c07-2-c336b194b041-thumb.webp"
             }
           ],
           "disclosure": "Эскизная ИИ-визуализация по изображениям реальных МАФов. Окружение и размещение иллюстративны; фактические границы, скрытая геометрия и зоны безопасности требуют обмеров и проверки по паспортам. Цена оборудования запрашивается у производителя. Покрытие, озеленение и места отдыха показаны как предложения без расчёта объёмов."
@@ -2146,13 +2224,17 @@
               "src": "assets/concepts/y03-c08-1-ac5c755d8724.webp",
               "thumb": "assets/concepts/y03-c08-1-ac5c755d8724-thumb.webp",
               "title": "Общий вид",
-              "view": 1
+              "view": 1,
+              "fullUrl": "assets/concepts/y03-c08-1-ac5c755d8724.webp",
+              "thumbUrl": "assets/concepts/y03-c08-1-ac5c755d8724-thumb.webp"
             },
             {
               "src": "assets/concepts/y03-c08-2-5425318fcbce.webp",
               "thumb": "assets/concepts/y03-c08-2-5425318fcbce-thumb.webp",
               "title": "Второй ракурс",
-              "view": 2
+              "view": 2,
+              "fullUrl": "assets/concepts/y03-c08-2-5425318fcbce.webp",
+              "thumbUrl": "assets/concepts/y03-c08-2-5425318fcbce-thumb.webp"
             }
           ],
           "disclosure": "Эскизная ИИ-визуализация по изображениям реальных МАФов. Окружение и размещение иллюстративны; фактические границы, скрытая геометрия и зоны безопасности требуют обмеров и проверки по паспортам. Цена оборудования запрашивается у производителя. Покрытие, озеленение и места отдыха показаны как предложения без расчёта объёмов."
@@ -2557,7 +2639,12 @@
           "detail": "Публикации о площадках на Океанской не устанавливают связь с данным комплектом 2026 года. Нужна адресная привязка заказчика.",
           "source": "sources/010.jpg"
         }
-      ]
+      ],
+      "area_note": "800 м² — прямоугольник 40 × 20 м на последнем исходном плане «Правки 2» от 05.11.2026; не граница дворовой территории.",
+      "location_status": "Подтверждена только улица",
+      "location_note": "Название Океанская есть на исходных планах. Номер дома в предоставленном комплекте не найден. На улице несколько площадок; выбирать одну по совпадению улицы нельзя.",
+      "budget_note": "Коммерческое предложение на оборудование, с НДС; не полный бюджет благоустройства",
+      "budget_kind": "estimate"
     },
     {
       "id": 4,
@@ -2568,8 +2655,8 @@
       "budget": null,
       "vat": "Не подтверждён",
       "description": "Игровое пространство с флагманским фрегатом «Г-88», башней «Г-1031/1», каруселями, воркаут-зоной ВР-38 и уличными тренажерами Т-117/2 и ТК-3. Покрытие имитирует морские волны океанских глубин. Финансовое основание: Предварительная оценка из исходной панели; смета отсутствует.",
-      "area_sqm": 475.8,
-      "dimensions": "26,0 м × 18,3 м",
+      "area_sqm": null,
+      "dimensions": null,
       "geo": {
         "lat": 53.0629827,
         "lon": 158.6257117,
@@ -2582,7 +2669,7 @@
         "geocoder": "OpenStreetMap / Nominatim",
         "confirmedBoundary": false
       },
-      "album_pdf": null,
+      "album_pdf": "albums/yard-04.pdf",
       "concepts_count": 5,
       "concepts": [
         {
@@ -2654,13 +2741,17 @@
               "src": "assets/concepts/y04-c01-1-24e20aabb6cd.webp",
               "thumb": "assets/concepts/y04-c01-1-24e20aabb6cd-thumb.webp",
               "title": "Общий вид",
-              "view": 1
+              "view": 1,
+              "fullUrl": "assets/concepts/y04-c01-1-24e20aabb6cd.webp",
+              "thumbUrl": "assets/concepts/y04-c01-1-24e20aabb6cd-thumb.webp"
             },
             {
               "src": "assets/concepts/y04-c01-2-086c9cd872ae.webp",
               "thumb": "assets/concepts/y04-c01-2-086c9cd872ae-thumb.webp",
               "title": "Второй ракурс",
-              "view": 2
+              "view": 2,
+              "fullUrl": "assets/concepts/y04-c01-2-086c9cd872ae.webp",
+              "thumbUrl": "assets/concepts/y04-c01-2-086c9cd872ae-thumb.webp"
             }
           ],
           "disclosure": "Эскизная ИИ-визуализация на основе реальных МАФов. Новый вариант благоустройства; не согласованная посадка, не рабочая документация. Исходная смета не является стоимостью этого варианта."
@@ -2734,13 +2825,17 @@
               "src": "assets/concepts/y04-c02-1-15befacee586.webp",
               "thumb": "assets/concepts/y04-c02-1-15befacee586-thumb.webp",
               "title": "Общий вид",
-              "view": 1
+              "view": 1,
+              "fullUrl": "assets/concepts/y04-c02-1-15befacee586.webp",
+              "thumbUrl": "assets/concepts/y04-c02-1-15befacee586-thumb.webp"
             },
             {
               "src": "assets/concepts/y04-c02-2-7d51e7a523e0.webp",
               "thumb": "assets/concepts/y04-c02-2-7d51e7a523e0-thumb.webp",
               "title": "Второй ракурс",
-              "view": 2
+              "view": 2,
+              "fullUrl": "assets/concepts/y04-c02-2-7d51e7a523e0.webp",
+              "thumbUrl": "assets/concepts/y04-c02-2-7d51e7a523e0-thumb.webp"
             }
           ],
           "disclosure": "Эскизная ИИ-визуализация на основе реальных МАФов. Новый вариант благоустройства; не согласованная посадка, не рабочая документация. Исходная смета не является стоимостью этого варианта."
@@ -2814,13 +2909,17 @@
               "src": "assets/concepts/y04-c03-1-63fc67ae9eff.webp",
               "thumb": "assets/concepts/y04-c03-1-63fc67ae9eff-thumb.webp",
               "title": "Общий вид",
-              "view": 1
+              "view": 1,
+              "fullUrl": "assets/concepts/y04-c03-1-63fc67ae9eff.webp",
+              "thumbUrl": "assets/concepts/y04-c03-1-63fc67ae9eff-thumb.webp"
             },
             {
               "src": "assets/concepts/y04-c03-2-c7ec4a0fcb64.webp",
               "thumb": "assets/concepts/y04-c03-2-c7ec4a0fcb64-thumb.webp",
               "title": "Второй ракурс",
-              "view": 2
+              "view": 2,
+              "fullUrl": "assets/concepts/y04-c03-2-c7ec4a0fcb64.webp",
+              "thumbUrl": "assets/concepts/y04-c03-2-c7ec4a0fcb64-thumb.webp"
             }
           ],
           "disclosure": "Эскизная ИИ-визуализация на основе реальных МАФов. Новый вариант благоустройства; не согласованная посадка, не рабочая документация. Исходная смета не является стоимостью этого варианта."
@@ -2894,13 +2993,17 @@
               "src": "assets/concepts/y04-c04-1-02d233c0632c.webp",
               "thumb": "assets/concepts/y04-c04-1-02d233c0632c-thumb.webp",
               "title": "Общий вид",
-              "view": 1
+              "view": 1,
+              "fullUrl": "assets/concepts/y04-c04-1-02d233c0632c.webp",
+              "thumbUrl": "assets/concepts/y04-c04-1-02d233c0632c-thumb.webp"
             },
             {
               "src": "assets/concepts/y04-c04-2-d942a18eb9e8.webp",
               "thumb": "assets/concepts/y04-c04-2-d942a18eb9e8-thumb.webp",
               "title": "Второй ракурс",
-              "view": 2
+              "view": 2,
+              "fullUrl": "assets/concepts/y04-c04-2-d942a18eb9e8.webp",
+              "thumbUrl": "assets/concepts/y04-c04-2-d942a18eb9e8-thumb.webp"
             }
           ],
           "disclosure": "Эскизная ИИ-визуализация на основе реальных МАФов. Новый вариант благоустройства; не согласованная посадка, не рабочая документация. Исходная смета не является стоимостью этого варианта."
@@ -2974,13 +3077,17 @@
               "src": "assets/concepts/y04-c05-1-0629fa38158e.webp",
               "thumb": "assets/concepts/y04-c05-1-0629fa38158e-thumb.webp",
               "title": "Общий вид",
-              "view": 1
+              "view": 1,
+              "fullUrl": "assets/concepts/y04-c05-1-0629fa38158e.webp",
+              "thumbUrl": "assets/concepts/y04-c05-1-0629fa38158e-thumb.webp"
             },
             {
               "src": "assets/concepts/y04-c05-2-bab24c5c445f.webp",
               "thumb": "assets/concepts/y04-c05-2-bab24c5c445f-thumb.webp",
               "title": "Второй ракурс",
-              "view": 2
+              "view": 2,
+              "fullUrl": "assets/concepts/y04-c05-2-bab24c5c445f.webp",
+              "thumbUrl": "assets/concepts/y04-c05-2-bab24c5c445f-thumb.webp"
             }
           ],
           "disclosure": "Эскизная ИИ-визуализация на основе реальных МАФов. Новый вариант благоустройства; не согласованная посадка, не рабочая документация. Исходная смета не является стоимостью этого варианта."
@@ -3152,7 +3259,12 @@
           "detail": "26 × 18,3 описывает прямоугольный габарит фигурной зоны. Для площади нужно оцифровать согласованный контур с масштабом или получить ведомость площадей.",
           "source": "sources/034.jpg"
         }
-      ]
+      ],
+      "area_note": "Общая площадь не подтверждена. Размеры 26 × 18,3 м относятся к габаритам главной фигурной зоны; 475,8 м² — площадь их прямоугольной оболочки, а не площадь зоны или всей площадки.",
+      "location_status": "Установлен адресный ориентир существующей площадки",
+      "location_note": "Адресная строка детской площадки присутствует на стр. 36 проекта муниципальной программы на официальном сайте. Связь именно с новой схемой «АЗС Корабль» ещё требует подтверждения заказчика.",
+      "budget_note": "Подтверждённая смета отсутствует",
+      "budget_kind": "estimate"
     },
     {
       "id": 5,
@@ -3164,7 +3276,7 @@
       "vat": "Не подтверждён",
       "description": "Крупномасштабный проект с воздушным шаром Г-1417, длинным мостовым переходом Г-1425, скоростным канатным троллеем Т-215, песочным городком ПЕ-70 и комплексом качелей К-33/2. Требует уточнения колористического паспорта и согласования с жителями. Финансовое основание: Предварительная оценка из исходной панели; смета отсутствует.",
       "area_sqm": 653.25,
-      "dimensions": "33,5 м × 19,5 м",
+      "dimensions": "33,5 × 19,5 м",
       "geo": {
         "lat": 53.0244429,
         "lon": 158.7014779,
@@ -3177,7 +3289,7 @@
         "geocoder": "OpenStreetMap / Nominatim",
         "confirmedBoundary": false
       },
-      "album_pdf": null,
+      "album_pdf": "albums/yard-05.pdf",
       "concepts_count": 8,
       "concepts": [
         {
@@ -3217,13 +3329,17 @@
               "src": "assets/concepts/y05-c01-1-ade6600afeba.webp",
               "thumb": "assets/concepts/y05-c01-1-ade6600afeba-thumb.webp",
               "title": "Общий вид",
-              "view": 1
+              "view": 1,
+              "fullUrl": "assets/concepts/y05-c01-1-ade6600afeba.webp",
+              "thumbUrl": "assets/concepts/y05-c01-1-ade6600afeba-thumb.webp"
             },
             {
               "src": "assets/concepts/y05-c01-2-541941fa9741.webp",
               "thumb": "assets/concepts/y05-c01-2-541941fa9741-thumb.webp",
               "title": "Второй ракурс",
-              "view": 2
+              "view": 2,
+              "fullUrl": "assets/concepts/y05-c01-2-541941fa9741.webp",
+              "thumbUrl": "assets/concepts/y05-c01-2-541941fa9741-thumb.webp"
             }
           ],
           "disclosure": "Эскизная визуализация на основе реальных моделей МАФов. Расположение, зоны безопасности, границы участка и стоимость требуют проектной проверки."
@@ -3273,13 +3389,17 @@
               "src": "assets/concepts/y05-c02-1-13b8a4f22cca.webp",
               "thumb": "assets/concepts/y05-c02-1-13b8a4f22cca-thumb.webp",
               "title": "Общий вид",
-              "view": 1
+              "view": 1,
+              "fullUrl": "assets/concepts/y05-c02-1-13b8a4f22cca.webp",
+              "thumbUrl": "assets/concepts/y05-c02-1-13b8a4f22cca-thumb.webp"
             },
             {
               "src": "assets/concepts/y05-c02-2-112639fae196.webp",
               "thumb": "assets/concepts/y05-c02-2-112639fae196-thumb.webp",
               "title": "Второй ракурс",
-              "view": 2
+              "view": 2,
+              "fullUrl": "assets/concepts/y05-c02-2-112639fae196.webp",
+              "thumbUrl": "assets/concepts/y05-c02-2-112639fae196-thumb.webp"
             }
           ],
           "disclosure": "Эскизная визуализация на основе реальных моделей МАФов. Расположение, зоны безопасности, границы участка и стоимость требуют проектной проверки."
@@ -3329,13 +3449,17 @@
               "src": "assets/concepts/y05-c03-1-483687017d9d.webp",
               "thumb": "assets/concepts/y05-c03-1-483687017d9d-thumb.webp",
               "title": "Общий вид",
-              "view": 1
+              "view": 1,
+              "fullUrl": "assets/concepts/y05-c03-1-483687017d9d.webp",
+              "thumbUrl": "assets/concepts/y05-c03-1-483687017d9d-thumb.webp"
             },
             {
               "src": "assets/concepts/y05-c03-2-a6b8beb020ca.webp",
               "thumb": "assets/concepts/y05-c03-2-a6b8beb020ca-thumb.webp",
               "title": "Второй ракурс",
-              "view": 2
+              "view": 2,
+              "fullUrl": "assets/concepts/y05-c03-2-a6b8beb020ca.webp",
+              "thumbUrl": "assets/concepts/y05-c03-2-a6b8beb020ca-thumb.webp"
             }
           ],
           "disclosure": "Эскизная визуализация на основе реальных моделей МАФов. Расположение, зоны безопасности, границы участка и стоимость требуют проектной проверки."
@@ -3385,13 +3509,17 @@
               "src": "assets/concepts/y05-c04-1-cc63a04ee668.webp",
               "thumb": "assets/concepts/y05-c04-1-cc63a04ee668-thumb.webp",
               "title": "Общий вид",
-              "view": 1
+              "view": 1,
+              "fullUrl": "assets/concepts/y05-c04-1-cc63a04ee668.webp",
+              "thumbUrl": "assets/concepts/y05-c04-1-cc63a04ee668-thumb.webp"
             },
             {
               "src": "assets/concepts/y05-c04-2-969bb091945a.webp",
               "thumb": "assets/concepts/y05-c04-2-969bb091945a-thumb.webp",
               "title": "Второй ракурс",
-              "view": 2
+              "view": 2,
+              "fullUrl": "assets/concepts/y05-c04-2-969bb091945a.webp",
+              "thumbUrl": "assets/concepts/y05-c04-2-969bb091945a-thumb.webp"
             }
           ],
           "disclosure": "Эскизная визуализация на основе реальных моделей МАФов. Расположение, зоны безопасности, границы участка и стоимость требуют проектной проверки."
@@ -3441,13 +3569,17 @@
               "src": "assets/concepts/y05-c05-1-e67f103a7530.webp",
               "thumb": "assets/concepts/y05-c05-1-e67f103a7530-thumb.webp",
               "title": "Общий вид",
-              "view": 1
+              "view": 1,
+              "fullUrl": "assets/concepts/y05-c05-1-e67f103a7530.webp",
+              "thumbUrl": "assets/concepts/y05-c05-1-e67f103a7530-thumb.webp"
             },
             {
               "src": "assets/concepts/y05-c05-2-e1b2d4a4730a.webp",
               "thumb": "assets/concepts/y05-c05-2-e1b2d4a4730a-thumb.webp",
               "title": "Второй ракурс",
-              "view": 2
+              "view": 2,
+              "fullUrl": "assets/concepts/y05-c05-2-e1b2d4a4730a.webp",
+              "thumbUrl": "assets/concepts/y05-c05-2-e1b2d4a4730a-thumb.webp"
             }
           ],
           "disclosure": "Эскизная визуализация на основе реальных моделей МАФов. Расположение, зоны безопасности, границы участка и стоимость требуют проектной проверки."
@@ -3501,13 +3633,17 @@
               "src": "assets/concepts/y05-c06-1-f33eddfc0051.webp",
               "thumb": "assets/concepts/y05-c06-1-f33eddfc0051-thumb.webp",
               "title": "Общий вид",
-              "view": 1
+              "view": 1,
+              "fullUrl": "assets/concepts/y05-c06-1-f33eddfc0051.webp",
+              "thumbUrl": "assets/concepts/y05-c06-1-f33eddfc0051-thumb.webp"
             },
             {
               "src": "assets/concepts/y05-c06-2-a5c28bade876.webp",
               "thumb": "assets/concepts/y05-c06-2-a5c28bade876-thumb.webp",
               "title": "Второй ракурс",
-              "view": 2
+              "view": 2,
+              "fullUrl": "assets/concepts/y05-c06-2-a5c28bade876.webp",
+              "thumbUrl": "assets/concepts/y05-c06-2-a5c28bade876-thumb.webp"
             }
           ],
           "disclosure": "Эскизная ИИ-визуализация по изображениям реальных МАФов. Окружение и размещение иллюстративны; фактические границы, скрытая геометрия и зоны безопасности требуют обмеров и проверки по паспортам. Цена оборудования запрашивается у производителя. Покрытие, озеленение и места отдыха показаны как предложения без расчёта объёмов."
@@ -3540,13 +3676,17 @@
               "src": "assets/concepts/y05-c07-1-f35c1e05eeec.webp",
               "thumb": "assets/concepts/y05-c07-1-f35c1e05eeec-thumb.webp",
               "title": "Общий вид",
-              "view": 1
+              "view": 1,
+              "fullUrl": "assets/concepts/y05-c07-1-f35c1e05eeec.webp",
+              "thumbUrl": "assets/concepts/y05-c07-1-f35c1e05eeec-thumb.webp"
             },
             {
               "src": "assets/concepts/y05-c07-2-e0ff1b535ba6.webp",
               "thumb": "assets/concepts/y05-c07-2-e0ff1b535ba6-thumb.webp",
               "title": "Второй ракурс",
-              "view": 2
+              "view": 2,
+              "fullUrl": "assets/concepts/y05-c07-2-e0ff1b535ba6.webp",
+              "thumbUrl": "assets/concepts/y05-c07-2-e0ff1b535ba6-thumb.webp"
             }
           ],
           "disclosure": "Эскизная ИИ-визуализация по изображениям реальных МАФов. Окружение и размещение иллюстративны; фактические границы, скрытая геометрия и зоны безопасности требуют обмеров и проверки по паспортам. Цена оборудования запрашивается у производителя. Покрытие, озеленение и места отдыха показаны как предложения без расчёта объёмов."
@@ -3583,13 +3723,17 @@
               "src": "assets/concepts/y05-c08-1-08bf1dcc0ab4.webp",
               "thumb": "assets/concepts/y05-c08-1-08bf1dcc0ab4-thumb.webp",
               "title": "Общий вид",
-              "view": 1
+              "view": 1,
+              "fullUrl": "assets/concepts/y05-c08-1-08bf1dcc0ab4.webp",
+              "thumbUrl": "assets/concepts/y05-c08-1-08bf1dcc0ab4-thumb.webp"
             },
             {
               "src": "assets/concepts/y05-c08-2-41ff2cf59391.webp",
               "thumb": "assets/concepts/y05-c08-2-41ff2cf59391-thumb.webp",
               "title": "Второй ракурс",
-              "view": 2
+              "view": 2,
+              "fullUrl": "assets/concepts/y05-c08-2-41ff2cf59391.webp",
+              "thumbUrl": "assets/concepts/y05-c08-2-41ff2cf59391-thumb.webp"
             }
           ],
           "disclosure": "Эскизная ИИ-визуализация по изображениям реальных МАФов. Окружение и размещение иллюстративны; фактические границы, скрытая геометрия и зоны безопасности требуют обмеров и проверки по паспортам. Цена оборудования запрашивается у производителя. Покрытие, озеленение и места отдыха показаны как предложения без расчёта объёмов. Для «Птиц» подтверждён один исходный вид производителя; оба ракурса показывают ту же лицевую сторону."
@@ -3761,7 +3905,12 @@
           "detail": "Маркер здания пригоден как ориентир, но не устанавливает местоположение прямоугольника на схеме.",
           "source": "sources/041.jpg"
         }
-      ]
+      ],
+      "area_note": "653,25 м² — прямоугольник 33,5 × 19,5 м на исходной схеме от 03.11.2026. Точная посадка во дворе не подтверждена.",
+      "location_status": "Дом используется как предварительный ориентир",
+      "location_note": "Исходный лист подтверждает улицу Солнечную, но не дом 7. Текущая привязка к дому взята из предыдущего поиска публичных сообщений; разные сообщения перечисляют соседние дома по-разному.",
+      "budget_note": "Подтверждённая смета отсутствует",
+      "budget_kind": "estimate"
     },
     {
       "id": 6,
@@ -3772,8 +3921,8 @@
       "budget": null,
       "vat": "Не подтверждён",
       "description": "Участок закреплен за подрядчиком «Новый город». Ведется подготовка архитектурно-градостроительной концепции и сбор исходно-разрешительной документации. Финансовое основание: Предварительная оценка из исходной панели; смета отсутствует.",
-      "area_sqm": 450,
-      "dimensions": "уточняется",
+      "area_sqm": null,
+      "dimensions": null,
       "geo": {
         "lat": 53.067482,
         "lon": 158.6110327,
@@ -3786,7 +3935,7 @@
         "geocoder": "OpenStreetMap / Nominatim",
         "confirmedBoundary": false
       },
-      "album_pdf": null,
+      "album_pdf": "albums/yard-06.pdf",
       "concepts_count": 5,
       "concepts": [
         {
@@ -3834,13 +3983,17 @@
               "src": "assets/concepts/y06-c01-1-a9685e266005.webp",
               "thumb": "assets/concepts/y06-c01-1-a9685e266005-thumb.webp",
               "title": "Общий вид",
-              "view": 1
+              "view": 1,
+              "fullUrl": "assets/concepts/y06-c01-1-a9685e266005.webp",
+              "thumbUrl": "assets/concepts/y06-c01-1-a9685e266005-thumb.webp"
             },
             {
               "src": "assets/concepts/y06-c01-2-612a01b01986.webp",
               "thumb": "assets/concepts/y06-c01-2-612a01b01986-thumb.webp",
               "title": "Второй ракурс",
-              "view": 2
+              "view": 2,
+              "fullUrl": "assets/concepts/y06-c01-2-612a01b01986.webp",
+              "thumbUrl": "assets/concepts/y06-c01-2-612a01b01986-thumb.webp"
             }
           ],
           "disclosure": "Эскизная визуализация на основе реальных моделей МАФов. Расположение, зоны безопасности, границы участка и стоимость требуют проектной проверки."
@@ -3890,13 +4043,17 @@
               "src": "assets/concepts/y06-c02-1-4fd9aacb11a6.webp",
               "thumb": "assets/concepts/y06-c02-1-4fd9aacb11a6-thumb.webp",
               "title": "Общий вид",
-              "view": 1
+              "view": 1,
+              "fullUrl": "assets/concepts/y06-c02-1-4fd9aacb11a6.webp",
+              "thumbUrl": "assets/concepts/y06-c02-1-4fd9aacb11a6-thumb.webp"
             },
             {
               "src": "assets/concepts/y06-c02-2-67aa2d831ad2.webp",
               "thumb": "assets/concepts/y06-c02-2-67aa2d831ad2-thumb.webp",
               "title": "Второй ракурс",
-              "view": 2
+              "view": 2,
+              "fullUrl": "assets/concepts/y06-c02-2-67aa2d831ad2.webp",
+              "thumbUrl": "assets/concepts/y06-c02-2-67aa2d831ad2-thumb.webp"
             }
           ],
           "disclosure": "Эскизная визуализация на основе реальных моделей МАФов. Расположение, зоны безопасности, границы участка и стоимость требуют проектной проверки."
@@ -3946,13 +4103,17 @@
               "src": "assets/concepts/y06-c03-1-819642f99738.webp",
               "thumb": "assets/concepts/y06-c03-1-819642f99738-thumb.webp",
               "title": "Общий вид",
-              "view": 1
+              "view": 1,
+              "fullUrl": "assets/concepts/y06-c03-1-819642f99738.webp",
+              "thumbUrl": "assets/concepts/y06-c03-1-819642f99738-thumb.webp"
             },
             {
               "src": "assets/concepts/y06-c03-2-0549e4102328.webp",
               "thumb": "assets/concepts/y06-c03-2-0549e4102328-thumb.webp",
               "title": "Второй ракурс",
-              "view": 2
+              "view": 2,
+              "fullUrl": "assets/concepts/y06-c03-2-0549e4102328.webp",
+              "thumbUrl": "assets/concepts/y06-c03-2-0549e4102328-thumb.webp"
             }
           ],
           "disclosure": "Эскизная визуализация на основе реальных моделей МАФов. Расположение, зоны безопасности, границы участка и стоимость требуют проектной проверки."
@@ -4002,13 +4163,17 @@
               "src": "assets/concepts/y06-c04-1-4e3a9e3e0461.webp",
               "thumb": "assets/concepts/y06-c04-1-4e3a9e3e0461-thumb.webp",
               "title": "Общий вид",
-              "view": 1
+              "view": 1,
+              "fullUrl": "assets/concepts/y06-c04-1-4e3a9e3e0461.webp",
+              "thumbUrl": "assets/concepts/y06-c04-1-4e3a9e3e0461-thumb.webp"
             },
             {
               "src": "assets/concepts/y06-c04-2-c4b765790597.webp",
               "thumb": "assets/concepts/y06-c04-2-c4b765790597-thumb.webp",
               "title": "Второй ракурс",
-              "view": 2
+              "view": 2,
+              "fullUrl": "assets/concepts/y06-c04-2-c4b765790597.webp",
+              "thumbUrl": "assets/concepts/y06-c04-2-c4b765790597-thumb.webp"
             }
           ],
           "disclosure": "Эскизная визуализация на основе реальных моделей МАФов. Расположение, зоны безопасности, границы участка и стоимость требуют проектной проверки."
@@ -4058,13 +4223,17 @@
               "src": "assets/concepts/y06-c05-1-43cbe0111c6f.webp",
               "thumb": "assets/concepts/y06-c05-1-43cbe0111c6f-thumb.webp",
               "title": "Общий вид",
-              "view": 1
+              "view": 1,
+              "fullUrl": "assets/concepts/y06-c05-1-43cbe0111c6f.webp",
+              "thumbUrl": "assets/concepts/y06-c05-1-43cbe0111c6f-thumb.webp"
             },
             {
               "src": "assets/concepts/y06-c05-2-47629c29e8cd.webp",
               "thumb": "assets/concepts/y06-c05-2-47629c29e8cd-thumb.webp",
               "title": "Второй ракурс",
-              "view": 2
+              "view": 2,
+              "fullUrl": "assets/concepts/y06-c05-2-47629c29e8cd.webp",
+              "thumbUrl": "assets/concepts/y06-c05-2-47629c29e8cd-thumb.webp"
             }
           ],
           "disclosure": "Эскизная визуализация на основе реальных моделей МАФов. Расположение, зоны безопасности, границы участка и стоимость требуют проектной проверки."
@@ -4236,7 +4405,12 @@
           "detail": "В предоставленном комплекте и карточке отсутствуют размерная схема и отдельный исходный альбом для Молчанова. Неподписанные общие изображения не устанавливают адрес или размеры.",
           "source": "atlas-data.json"
         }
-      ]
+      ],
+      "area_note": "Площадь не подтверждена: исходного плана нет. Прежние 450 м² из панели не являются обмером.",
+      "location_status": "Исторический адресный ориентир; связь с новым проектом не подтверждена",
+      "location_note": "В прежней проверке адрес был связан с публикацией 2013 года о площадке. Предоставленных исходных планов или адресного задания нового проекта не найдено; современную концепцию к исторической площадке автоматически не привязывать.",
+      "budget_note": "Подтверждённая смета отсутствует",
+      "budget_kind": "estimate"
     },
     {
       "id": 7,
@@ -4247,8 +4421,8 @@
       "budget": null,
       "vat": "Не подтверждён",
       "description": "Космический городок с ракетой Г-816, дизайнерским геометрическим навесом оригами Ш-70/2, комплексом спортивных тренажеров (Т-114, Т-166, Т-167, Т-163, Т-157, ВР-33), детской каруселью К-14/1 и малышковой зоной с песочницей ДЕ-11. Финансовое основание: Предварительная оценка из исходной панели; смета отсутствует.",
-      "area_sqm": 680,
-      "dimensions": "Зонированная территория (23 м × 20 м × 19 м)",
+      "area_sqm": null,
+      "dimensions": null,
       "geo": {
         "lat": 53.0615176,
         "lon": 158.6539405,
@@ -4261,7 +4435,7 @@
         "geocoder": "OpenStreetMap / Nominatim",
         "confirmedBoundary": false
       },
-      "album_pdf": null,
+      "album_pdf": "albums/yard-07.pdf",
       "concepts_count": 5,
       "concepts": [
         {
@@ -4309,13 +4483,17 @@
               "src": "assets/concepts/y07-c01-1-0894b6c43081.webp",
               "thumb": "assets/concepts/y07-c01-1-0894b6c43081-thumb.webp",
               "title": "Общий вид",
-              "view": 1
+              "view": 1,
+              "fullUrl": "assets/concepts/y07-c01-1-0894b6c43081.webp",
+              "thumbUrl": "assets/concepts/y07-c01-1-0894b6c43081-thumb.webp"
             },
             {
               "src": "assets/concepts/y07-c01-2-cf65f459e44e.webp",
               "thumb": "assets/concepts/y07-c01-2-cf65f459e44e-thumb.webp",
               "title": "Второй ракурс",
-              "view": 2
+              "view": 2,
+              "fullUrl": "assets/concepts/y07-c01-2-cf65f459e44e.webp",
+              "thumbUrl": "assets/concepts/y07-c01-2-cf65f459e44e-thumb.webp"
             }
           ],
           "disclosure": "Эскизная визуализация на основе реальных моделей МАФов. Расположение, зоны безопасности, границы участка и стоимость требуют проектной проверки."
@@ -4365,13 +4543,17 @@
               "src": "assets/concepts/y07-c02-1-b671a26b5377.webp",
               "thumb": "assets/concepts/y07-c02-1-b671a26b5377-thumb.webp",
               "title": "Общий вид",
-              "view": 1
+              "view": 1,
+              "fullUrl": "assets/concepts/y07-c02-1-b671a26b5377.webp",
+              "thumbUrl": "assets/concepts/y07-c02-1-b671a26b5377-thumb.webp"
             },
             {
               "src": "assets/concepts/y07-c02-2-95b61a1f4b0a.webp",
               "thumb": "assets/concepts/y07-c02-2-95b61a1f4b0a-thumb.webp",
               "title": "Второй ракурс",
-              "view": 2
+              "view": 2,
+              "fullUrl": "assets/concepts/y07-c02-2-95b61a1f4b0a.webp",
+              "thumbUrl": "assets/concepts/y07-c02-2-95b61a1f4b0a-thumb.webp"
             }
           ],
           "disclosure": "Эскизная визуализация на основе реальных моделей МАФов. Расположение, зоны безопасности, границы участка и стоимость требуют проектной проверки."
@@ -4413,13 +4595,17 @@
               "src": "assets/concepts/y07-c03-1-91f9eded62e1.webp",
               "thumb": "assets/concepts/y07-c03-1-91f9eded62e1-thumb.webp",
               "title": "Общий вид",
-              "view": 1
+              "view": 1,
+              "fullUrl": "assets/concepts/y07-c03-1-91f9eded62e1.webp",
+              "thumbUrl": "assets/concepts/y07-c03-1-91f9eded62e1-thumb.webp"
             },
             {
               "src": "assets/concepts/y07-c03-2-46154ded2a25.webp",
               "thumb": "assets/concepts/y07-c03-2-46154ded2a25-thumb.webp",
               "title": "Второй ракурс",
-              "view": 2
+              "view": 2,
+              "fullUrl": "assets/concepts/y07-c03-2-46154ded2a25.webp",
+              "thumbUrl": "assets/concepts/y07-c03-2-46154ded2a25-thumb.webp"
             }
           ],
           "disclosure": "Эскизная визуализация на основе реальных моделей МАФов. Расположение, зоны безопасности, границы участка и стоимость требуют проектной проверки."
@@ -4469,13 +4655,17 @@
               "src": "assets/concepts/y07-c04-1-5087ea70f49c.webp",
               "thumb": "assets/concepts/y07-c04-1-5087ea70f49c-thumb.webp",
               "title": "Общий вид",
-              "view": 1
+              "view": 1,
+              "fullUrl": "assets/concepts/y07-c04-1-5087ea70f49c.webp",
+              "thumbUrl": "assets/concepts/y07-c04-1-5087ea70f49c-thumb.webp"
             },
             {
               "src": "assets/concepts/y07-c04-2-2765d19854b6.webp",
               "thumb": "assets/concepts/y07-c04-2-2765d19854b6-thumb.webp",
               "title": "Второй ракурс",
-              "view": 2
+              "view": 2,
+              "fullUrl": "assets/concepts/y07-c04-2-2765d19854b6.webp",
+              "thumbUrl": "assets/concepts/y07-c04-2-2765d19854b6-thumb.webp"
             }
           ],
           "disclosure": "Эскизная визуализация на основе реальных моделей МАФов. Расположение, зоны безопасности, границы участка и стоимость требуют проектной проверки."
@@ -4525,13 +4715,17 @@
               "src": "assets/concepts/y07-c05-1-a84714337ef2.webp",
               "thumb": "assets/concepts/y07-c05-1-a84714337ef2-thumb.webp",
               "title": "Общий вид",
-              "view": 1
+              "view": 1,
+              "fullUrl": "assets/concepts/y07-c05-1-a84714337ef2.webp",
+              "thumbUrl": "assets/concepts/y07-c05-1-a84714337ef2-thumb.webp"
             },
             {
               "src": "assets/concepts/y07-c05-2-640197726c16.webp",
               "thumb": "assets/concepts/y07-c05-2-640197726c16-thumb.webp",
               "title": "Второй ракурс",
-              "view": 2
+              "view": 2,
+              "fullUrl": "assets/concepts/y07-c05-2-640197726c16.webp",
+              "thumbUrl": "assets/concepts/y07-c05-2-640197726c16-thumb.webp"
             }
           ],
           "disclosure": "Эскизная визуализация на основе реальных моделей МАФов. Расположение, зоны безопасности, границы участка и стоимость требуют проектной проверки."
@@ -4703,7 +4897,12 @@
           "detail": "Частичные линейные размеры не позволяют однозначно получить суммарную площадь составного контура.",
           "source": "sources/048.jpg"
         }
-      ]
+      ],
+      "area_note": "Общая площадь не подтверждена. На исходной схеме составной контур с отдельными размерами 22,97; 20,30; 19,02 и 15,14 м. Прежние 680 м² из панели не подтверждены расчётом по контуру.",
+      "location_status": "Адрес существующей площадки подтверждён официальной исторической публикацией",
+      "location_note": "Газета ПКГО № 18 (591) от 05.05.2017, стр. 45: отчёт об установке оборудования на площадке «Байконур» у домов Академика Королёва, 49 и Академика Курчатова, 35, 39. Это подтверждает адрес существующего объекта, но не посадку новой схемы 2026 года.",
+      "budget_note": "Подтверждённая смета отсутствует",
+      "budget_kind": "estimate"
     },
     {
       "id": 8,
@@ -4715,7 +4914,7 @@
       "vat": "Не подтверждён",
       "description": "Самая масштабная территория по площади. Яркий тематический комплекс башен-карандашей Г-1411 и ГН-4010/1, тоннельные мостики Г-1425, лазалки Т-312, полоса воркаута ВР-14/1 и ВР-23, тренажеры и качели К-33/2. Финансовое основание: Предварительная оценка из исходной панели; смета отсутствует.",
       "area_sqm": 985.5,
-      "dimensions": "46,0 м × 27,0 м (трапеция)",
+      "dimensions": "Трапеция: основания 27 и 46 м, высота 27 м",
       "geo": {
         "lat": 53.0745158,
         "lon": 158.6466626,
@@ -4728,7 +4927,7 @@
         "geocoder": "OpenStreetMap / Nominatim",
         "confirmedBoundary": false
       },
-      "album_pdf": null,
+      "album_pdf": "albums/yard-08.pdf",
       "concepts_count": 7,
       "concepts": [
         {
@@ -4768,13 +4967,17 @@
               "src": "assets/concepts/y08-c01-1-1292d3e120fe.webp",
               "thumb": "assets/concepts/y08-c01-1-1292d3e120fe-thumb.webp",
               "title": "Общий вид",
-              "view": 1
+              "view": 1,
+              "fullUrl": "assets/concepts/y08-c01-1-1292d3e120fe.webp",
+              "thumbUrl": "assets/concepts/y08-c01-1-1292d3e120fe-thumb.webp"
             },
             {
               "src": "assets/concepts/y08-c01-2-7118a407e1b3.webp",
               "thumb": "assets/concepts/y08-c01-2-7118a407e1b3-thumb.webp",
               "title": "Второй ракурс",
-              "view": 2
+              "view": 2,
+              "fullUrl": "assets/concepts/y08-c01-2-7118a407e1b3.webp",
+              "thumbUrl": "assets/concepts/y08-c01-2-7118a407e1b3-thumb.webp"
             }
           ],
           "disclosure": "Эскизная ИИ-визуализация на основе реальных МАФов. Окружение и посадка иллюстративны; геометрия, комплектация и зоны безопасности проверяются по паспортам и проекту. Это не утверждённая строительная документация."
@@ -4816,13 +5019,17 @@
               "src": "assets/concepts/y08-c02-1-5b76b5a5ef06.webp",
               "thumb": "assets/concepts/y08-c02-1-5b76b5a5ef06-thumb.webp",
               "title": "Общий вид",
-              "view": 1
+              "view": 1,
+              "fullUrl": "assets/concepts/y08-c02-1-5b76b5a5ef06.webp",
+              "thumbUrl": "assets/concepts/y08-c02-1-5b76b5a5ef06-thumb.webp"
             },
             {
               "src": "assets/concepts/y08-c02-2-87814b286013.webp",
               "thumb": "assets/concepts/y08-c02-2-87814b286013-thumb.webp",
               "title": "Второй ракурс",
-              "view": 2
+              "view": 2,
+              "fullUrl": "assets/concepts/y08-c02-2-87814b286013.webp",
+              "thumbUrl": "assets/concepts/y08-c02-2-87814b286013-thumb.webp"
             }
           ],
           "disclosure": "Эскизная ИИ-визуализация на основе реальных МАФов. Окружение и посадка иллюстративны; геометрия, комплектация и зоны безопасности проверяются по паспортам и проекту. Это не утверждённая строительная документация."
@@ -4864,13 +5071,17 @@
               "src": "assets/concepts/y08-c03-1-abd15f7d1023.webp",
               "thumb": "assets/concepts/y08-c03-1-abd15f7d1023-thumb.webp",
               "title": "Общий вид",
-              "view": 1
+              "view": 1,
+              "fullUrl": "assets/concepts/y08-c03-1-abd15f7d1023.webp",
+              "thumbUrl": "assets/concepts/y08-c03-1-abd15f7d1023-thumb.webp"
             },
             {
               "src": "assets/concepts/y08-c03-2-100582016a85.webp",
               "thumb": "assets/concepts/y08-c03-2-100582016a85-thumb.webp",
               "title": "Второй ракурс",
-              "view": 2
+              "view": 2,
+              "fullUrl": "assets/concepts/y08-c03-2-100582016a85.webp",
+              "thumbUrl": "assets/concepts/y08-c03-2-100582016a85-thumb.webp"
             }
           ],
           "disclosure": "Эскизная ИИ-визуализация на основе реальных МАФов. Окружение и посадка иллюстративны; геометрия, комплектация и зоны безопасности проверяются по паспортам и проекту. Это не утверждённая строительная документация."
@@ -4927,13 +5138,17 @@
               "src": "assets/concepts/y08-c04-1-bff8c976534d.webp",
               "thumb": "assets/concepts/y08-c04-1-bff8c976534d-thumb.webp",
               "title": "Общий вид",
-              "view": 1
+              "view": 1,
+              "fullUrl": "assets/concepts/y08-c04-1-bff8c976534d.webp",
+              "thumbUrl": "assets/concepts/y08-c04-1-bff8c976534d-thumb.webp"
             },
             {
               "src": "assets/concepts/y08-c04-2-0ea99aeadfef.webp",
               "thumb": "assets/concepts/y08-c04-2-0ea99aeadfef-thumb.webp",
               "title": "Второй ракурс",
-              "view": 2
+              "view": 2,
+              "fullUrl": "assets/concepts/y08-c04-2-0ea99aeadfef.webp",
+              "thumbUrl": "assets/concepts/y08-c04-2-0ea99aeadfef-thumb.webp"
             }
           ],
           "disclosure": "Эскизная ИИ-визуализация на основе реальных МАФов. Окружение и посадка иллюстративны; геометрия, комплектация и зоны безопасности проверяются по паспортам и проекту. Это не утверждённая строительная документация."
@@ -4974,13 +5189,17 @@
               "src": "assets/concepts/y08-c05-1-22c34a76c558.webp",
               "thumb": "assets/concepts/y08-c05-1-22c34a76c558-thumb.webp",
               "title": "Общий вид",
-              "view": 1
+              "view": 1,
+              "fullUrl": "assets/concepts/y08-c05-1-22c34a76c558.webp",
+              "thumbUrl": "assets/concepts/y08-c05-1-22c34a76c558-thumb.webp"
             },
             {
               "src": "assets/concepts/y08-c05-2-078c17ebd159.webp",
               "thumb": "assets/concepts/y08-c05-2-078c17ebd159-thumb.webp",
               "title": "Второй ракурс",
-              "view": 2
+              "view": 2,
+              "fullUrl": "assets/concepts/y08-c05-2-078c17ebd159.webp",
+              "thumbUrl": "assets/concepts/y08-c05-2-078c17ebd159-thumb.webp"
             }
           ],
           "disclosure": "Эскизная ИИ-визуализация на основе реальных МАФов. Окружение и посадка иллюстративны; геометрия, комплектация и зоны безопасности проверяются по паспортам и проекту. Это не утверждённая строительная документация."
@@ -5017,13 +5236,17 @@
               "src": "assets/concepts/y08-c06-1-dcbfd9271c92.webp",
               "thumb": "assets/concepts/y08-c06-1-dcbfd9271c92-thumb.webp",
               "title": "Общий вид",
-              "view": 1
+              "view": 1,
+              "fullUrl": "assets/concepts/y08-c06-1-dcbfd9271c92.webp",
+              "thumbUrl": "assets/concepts/y08-c06-1-dcbfd9271c92-thumb.webp"
             },
             {
               "src": "assets/concepts/y08-c06-2-18bac8113273.webp",
               "thumb": "assets/concepts/y08-c06-2-18bac8113273-thumb.webp",
               "title": "Второй ракурс",
-              "view": 2
+              "view": 2,
+              "fullUrl": "assets/concepts/y08-c06-2-18bac8113273.webp",
+              "thumbUrl": "assets/concepts/y08-c06-2-18bac8113273-thumb.webp"
             }
           ],
           "disclosure": "Эскизная ИИ-визуализация по изображениям реальных МАФов. Окружение и размещение иллюстративны; фактические границы, скрытая геометрия и зоны безопасности требуют обмеров и проверки по паспортам. Цена оборудования запрашивается у производителя. Покрытие, озеленение и места отдыха показаны как предложения без расчёта объёмов."
@@ -5074,13 +5297,17 @@
               "src": "assets/concepts/y08-c07-1-b4874671e01e.webp",
               "thumb": "assets/concepts/y08-c07-1-b4874671e01e-thumb.webp",
               "title": "Общий вид",
-              "view": 1
+              "view": 1,
+              "fullUrl": "assets/concepts/y08-c07-1-b4874671e01e.webp",
+              "thumbUrl": "assets/concepts/y08-c07-1-b4874671e01e-thumb.webp"
             },
             {
               "src": "assets/concepts/y08-c07-2-9248679c14d0.webp",
               "thumb": "assets/concepts/y08-c07-2-9248679c14d0-thumb.webp",
               "title": "Второй ракурс",
-              "view": 2
+              "view": 2,
+              "fullUrl": "assets/concepts/y08-c07-2-9248679c14d0.webp",
+              "thumbUrl": "assets/concepts/y08-c07-2-9248679c14d0-thumb.webp"
             }
           ],
           "disclosure": "Эскизная ИИ-визуализация по изображениям реальных МАФов. Окружение и размещение иллюстративны; фактические границы, скрытая геометрия и зоны безопасности требуют обмеров и проверки по паспортам. Цена оборудования запрашивается у производителя. Покрытие, озеленение и места отдыха показаны как предложения без расчёта объёмов."
@@ -5252,7 +5479,12 @@
           "detail": "Заголовок «46 × 27 м» может ошибочно читаться как прямоугольник. Нужно показать оба основания трапеции и высоту.",
           "source": "sources/054.jpg"
         }
-      ]
+      ],
+      "area_note": "985,5 м² — расчёт по трапециевидному контуру исходной схемы: основания 27 и 46 м, высота 27 м; (27 + 46) × 27 ÷ 2. Это не произведение 46 × 27.",
+      "location_status": "Адрес существующей спортивной площадки найден; связь с новой схемой уточняется",
+      "location_note": "На стр. 36 проекта муниципальной программы указана «Спортивная площадка по пр. Таранца, 9». Исходная схема «Карандаши» содержит название Таранца без номера дома.",
+      "budget_note": "Подтверждённая смета отсутствует",
+      "budget_kind": "estimate"
     },
     {
       "id": 9,
@@ -5263,8 +5495,8 @@
       "budget": 32080000,
       "vat": 5346666.67,
       "description": "Флагманский общественный сквер с полной вечерней LED-иллюминацией. Включает колоссальный двухмоторный самолет Industrial ГН-2310/1 (длина 16.4 м, высота 4.7 м), вертолет спасателей Г-2316, павильон «Зал ожидания» Г-2414, романтическую беседку с качелями по кругу К-32/33 и подсветку всей парковой мебели. Финансовое основание: Промо-концепция; не договорная смета.",
-      "area_sqm": 1200,
-      "dimensions": "Общественный сквер (3 тематические локации)",
+      "area_sqm": null,
+      "dimensions": null,
       "geo": {
         "lat": 53.0557454,
         "lon": 158.6734943,
@@ -5277,7 +5509,7 @@
         "geocoder": "OpenStreetMap / Nominatim",
         "confirmedBoundary": false
       },
-      "album_pdf": null,
+      "album_pdf": "albums/yard-09.pdf",
       "concepts_count": 5,
       "concepts": [
         {
@@ -5317,13 +5549,17 @@
               "src": "assets/concepts/y09-c01-1-f58f8eac31f0.webp",
               "thumb": "assets/concepts/y09-c01-1-f58f8eac31f0-thumb.webp",
               "title": "Общий вид",
-              "view": 1
+              "view": 1,
+              "fullUrl": "assets/concepts/y09-c01-1-f58f8eac31f0.webp",
+              "thumbUrl": "assets/concepts/y09-c01-1-f58f8eac31f0-thumb.webp"
             },
             {
               "src": "assets/concepts/y09-c01-2-582f679dbebb.webp",
               "thumb": "assets/concepts/y09-c01-2-582f679dbebb-thumb.webp",
               "title": "Второй ракурс",
-              "view": 2
+              "view": 2,
+              "fullUrl": "assets/concepts/y09-c01-2-582f679dbebb.webp",
+              "thumbUrl": "assets/concepts/y09-c01-2-582f679dbebb-thumb.webp"
             }
           ],
           "disclosure": "Эскизная ИИ-визуализация на основе реальных МАФов. Окружение и посадка иллюстративны; геометрия, комплектация и зоны безопасности проверяются по паспортам и проекту. Это не утверждённая строительная документация."
@@ -5357,13 +5593,17 @@
               "src": "assets/concepts/y09-c02-1-832d8e83187e.webp",
               "thumb": "assets/concepts/y09-c02-1-832d8e83187e-thumb.webp",
               "title": "Общий вид",
-              "view": 1
+              "view": 1,
+              "fullUrl": "assets/concepts/y09-c02-1-832d8e83187e.webp",
+              "thumbUrl": "assets/concepts/y09-c02-1-832d8e83187e-thumb.webp"
             },
             {
               "src": "assets/concepts/y09-c02-2-24929acbb77d.webp",
               "thumb": "assets/concepts/y09-c02-2-24929acbb77d-thumb.webp",
               "title": "Второй ракурс",
-              "view": 2
+              "view": 2,
+              "fullUrl": "assets/concepts/y09-c02-2-24929acbb77d.webp",
+              "thumbUrl": "assets/concepts/y09-c02-2-24929acbb77d-thumb.webp"
             }
           ],
           "disclosure": "Эскизная ИИ-визуализация на основе реальных МАФов. Окружение и посадка иллюстративны; геометрия, комплектация и зоны безопасности проверяются по паспортам и проекту. Это не утверждённая строительная документация."
@@ -5413,13 +5653,17 @@
               "src": "assets/concepts/y09-c03-1-01008b5f0802.webp",
               "thumb": "assets/concepts/y09-c03-1-01008b5f0802-thumb.webp",
               "title": "Общий вид",
-              "view": 1
+              "view": 1,
+              "fullUrl": "assets/concepts/y09-c03-1-01008b5f0802.webp",
+              "thumbUrl": "assets/concepts/y09-c03-1-01008b5f0802-thumb.webp"
             },
             {
               "src": "assets/concepts/y09-c03-2-62a1fbdf3a58.webp",
               "thumb": "assets/concepts/y09-c03-2-62a1fbdf3a58-thumb.webp",
               "title": "Второй ракурс",
-              "view": 2
+              "view": 2,
+              "fullUrl": "assets/concepts/y09-c03-2-62a1fbdf3a58.webp",
+              "thumbUrl": "assets/concepts/y09-c03-2-62a1fbdf3a58-thumb.webp"
             }
           ],
           "disclosure": "Эскизная ИИ-визуализация на основе реальных МАФов. Окружение и посадка иллюстративны; геометрия, комплектация и зоны безопасности проверяются по паспортам и проекту. Это не утверждённая строительная документация."
@@ -5461,13 +5705,17 @@
               "src": "assets/concepts/y09-c04-1-41894cb1d30d.webp",
               "thumb": "assets/concepts/y09-c04-1-41894cb1d30d-thumb.webp",
               "title": "Общий вид",
-              "view": 1
+              "view": 1,
+              "fullUrl": "assets/concepts/y09-c04-1-41894cb1d30d.webp",
+              "thumbUrl": "assets/concepts/y09-c04-1-41894cb1d30d-thumb.webp"
             },
             {
               "src": "assets/concepts/y09-c04-2-923ac6196f73.webp",
               "thumb": "assets/concepts/y09-c04-2-923ac6196f73-thumb.webp",
               "title": "Второй ракурс",
-              "view": 2
+              "view": 2,
+              "fullUrl": "assets/concepts/y09-c04-2-923ac6196f73.webp",
+              "thumbUrl": "assets/concepts/y09-c04-2-923ac6196f73-thumb.webp"
             }
           ],
           "disclosure": "Эскизная ИИ-визуализация на основе реальных МАФов. Окружение и посадка иллюстративны; геометрия, комплектация и зоны безопасности проверяются по паспортам и проекту. Это не утверждённая строительная документация."
@@ -5509,13 +5757,17 @@
               "src": "assets/concepts/y09-c05-1-0130db5ec1b2.webp",
               "thumb": "assets/concepts/y09-c05-1-0130db5ec1b2-thumb.webp",
               "title": "Общий вид",
-              "view": 1
+              "view": 1,
+              "fullUrl": "assets/concepts/y09-c05-1-0130db5ec1b2.webp",
+              "thumbUrl": "assets/concepts/y09-c05-1-0130db5ec1b2-thumb.webp"
             },
             {
               "src": "assets/concepts/y09-c05-2-3077b77a0b14.webp",
               "thumb": "assets/concepts/y09-c05-2-3077b77a0b14-thumb.webp",
               "title": "Второй ракурс",
-              "view": 2
+              "view": 2,
+              "fullUrl": "assets/concepts/y09-c05-2-3077b77a0b14.webp",
+              "thumbUrl": "assets/concepts/y09-c05-2-3077b77a0b14-thumb.webp"
             }
           ],
           "disclosure": "Эскизная ИИ-визуализация на основе реальных МАФов. Окружение и посадка иллюстративны; геометрия, комплектация и зоны безопасности проверяются по паспортам и проекту. Это не утверждённая строительная документация."
@@ -5824,7 +6076,12 @@
           "detail": "Можно добавить существующее превью страницы 2 в планы как «Схема сценарных зон», сохранив отличие от размерного плана или геопривязанной границы.",
           "source": "sources/056.pdf#page=2"
         }
-      ]
+      ],
+      "area_note": "Площадь не подтверждена. В альбоме есть схема трёх сценарных зон, но нет размерного контура или подтверждения 1200 м² из прежней панели.",
+      "location_status": "Сквер подтверждён альбомом; дом 4 — адресный ориентир",
+      "location_note": "Исходный альбом называет сквер по ул. Кирдищева. На стр. 2 показаны три сценарные зоны на обзорной подоснове. Номер дома 4 и связь со школой № 28 взяты из прежнего публичного сообщения, а не из размерного плана.",
+      "budget_note": "Промо-концепция; не договорная смета",
+      "budget_kind": "promo"
     },
     {
       "id": 10,
@@ -5836,7 +6093,7 @@
       "vat": "Не подтверждён",
       "description": "Проект направлен на доработку планировочных решений. Включает многоуровневый игровой комплекс башен с винтовыми закрытыми трубами-горками Г-2324, тематический комплекс «Красный Городской Автобус» Г-2314, песочный городок ПЕ-100, карусель К-40 и качели. Финансовое основание: Предварительная оценка из исходной панели; смета отсутствует.",
       "area_sqm": 500,
-      "dimensions": "25,0 м × 20,0 м",
+      "dimensions": "25 × 20 м",
       "geo": {
         "lat": 52.9720835,
         "lon": 158.6952687,
@@ -5849,7 +6106,7 @@
         "geocoder": "OpenStreetMap / Nominatim",
         "confirmedBoundary": false
       },
-      "album_pdf": null,
+      "album_pdf": "albums/yard-10.pdf",
       "concepts_count": 5,
       "concepts": [
         {
@@ -5881,13 +6138,17 @@
               "src": "assets/concepts/y10-c01-1-144ddf43b31d.webp",
               "thumb": "assets/concepts/y10-c01-1-144ddf43b31d-thumb.webp",
               "title": "Общий вид",
-              "view": 1
+              "view": 1,
+              "fullUrl": "assets/concepts/y10-c01-1-144ddf43b31d.webp",
+              "thumbUrl": "assets/concepts/y10-c01-1-144ddf43b31d-thumb.webp"
             },
             {
               "src": "assets/concepts/y10-c01-2-08e445e3bf16.webp",
               "thumb": "assets/concepts/y10-c01-2-08e445e3bf16-thumb.webp",
               "title": "Второй ракурс",
-              "view": 2
+              "view": 2,
+              "fullUrl": "assets/concepts/y10-c01-2-08e445e3bf16.webp",
+              "thumbUrl": "assets/concepts/y10-c01-2-08e445e3bf16-thumb.webp"
             }
           ],
           "disclosure": "Эскизная ИИ-визуализация на основе реальных МАФов. Окружение и посадка иллюстративны; геометрия, комплектация и зоны безопасности проверяются по паспортам и проекту. Это не утверждённая строительная документация."
@@ -5937,13 +6198,17 @@
               "src": "assets/concepts/y10-c02-1-39f60540af7d.webp",
               "thumb": "assets/concepts/y10-c02-1-39f60540af7d-thumb.webp",
               "title": "Общий вид",
-              "view": 1
+              "view": 1,
+              "fullUrl": "assets/concepts/y10-c02-1-39f60540af7d.webp",
+              "thumbUrl": "assets/concepts/y10-c02-1-39f60540af7d-thumb.webp"
             },
             {
               "src": "assets/concepts/y10-c02-2-62d70a2a55be.webp",
               "thumb": "assets/concepts/y10-c02-2-62d70a2a55be-thumb.webp",
               "title": "Второй ракурс",
-              "view": 2
+              "view": 2,
+              "fullUrl": "assets/concepts/y10-c02-2-62d70a2a55be.webp",
+              "thumbUrl": "assets/concepts/y10-c02-2-62d70a2a55be-thumb.webp"
             }
           ],
           "disclosure": "Эскизная ИИ-визуализация на основе реальных МАФов. Окружение и посадка иллюстративны; геометрия, комплектация и зоны безопасности проверяются по паспортам и проекту. Это не утверждённая строительная документация."
@@ -5985,13 +6250,17 @@
               "src": "assets/concepts/y10-c03-1-990137930072.webp",
               "thumb": "assets/concepts/y10-c03-1-990137930072-thumb.webp",
               "title": "Общий вид",
-              "view": 1
+              "view": 1,
+              "fullUrl": "assets/concepts/y10-c03-1-990137930072.webp",
+              "thumbUrl": "assets/concepts/y10-c03-1-990137930072-thumb.webp"
             },
             {
               "src": "assets/concepts/y10-c03-2-f7559e378ec4.webp",
               "thumb": "assets/concepts/y10-c03-2-f7559e378ec4-thumb.webp",
               "title": "Второй ракурс",
-              "view": 2
+              "view": 2,
+              "fullUrl": "assets/concepts/y10-c03-2-f7559e378ec4.webp",
+              "thumbUrl": "assets/concepts/y10-c03-2-f7559e378ec4-thumb.webp"
             }
           ],
           "disclosure": "Эскизная ИИ-визуализация на основе реальных МАФов. Окружение и посадка иллюстративны; геометрия, комплектация и зоны безопасности проверяются по паспортам и проекту. Это не утверждённая строительная документация."
@@ -6048,13 +6317,17 @@
               "src": "assets/concepts/y10-c04-1-a7be5d541311.webp",
               "thumb": "assets/concepts/y10-c04-1-a7be5d541311-thumb.webp",
               "title": "Общий вид",
-              "view": 1
+              "view": 1,
+              "fullUrl": "assets/concepts/y10-c04-1-a7be5d541311.webp",
+              "thumbUrl": "assets/concepts/y10-c04-1-a7be5d541311-thumb.webp"
             },
             {
               "src": "assets/concepts/y10-c04-2-17ebf48681a2.webp",
               "thumb": "assets/concepts/y10-c04-2-17ebf48681a2-thumb.webp",
               "title": "Второй ракурс",
-              "view": 2
+              "view": 2,
+              "fullUrl": "assets/concepts/y10-c04-2-17ebf48681a2.webp",
+              "thumbUrl": "assets/concepts/y10-c04-2-17ebf48681a2-thumb.webp"
             }
           ],
           "disclosure": "Эскизная ИИ-визуализация на основе реальных МАФов. Окружение и посадка иллюстративны; геометрия, комплектация и зоны безопасности проверяются по паспортам и проекту. Это не утверждённая строительная документация."
@@ -6087,13 +6360,17 @@
               "src": "assets/concepts/y10-c05-1-0318f117bb5e.webp",
               "thumb": "assets/concepts/y10-c05-1-0318f117bb5e-thumb.webp",
               "title": "Общий вид",
-              "view": 1
+              "view": 1,
+              "fullUrl": "assets/concepts/y10-c05-1-0318f117bb5e.webp",
+              "thumbUrl": "assets/concepts/y10-c05-1-0318f117bb5e-thumb.webp"
             },
             {
               "src": "assets/concepts/y10-c05-2-e54e74b949d5.webp",
               "thumb": "assets/concepts/y10-c05-2-e54e74b949d5-thumb.webp",
               "title": "Второй ракурс",
-              "view": 2
+              "view": 2,
+              "fullUrl": "assets/concepts/y10-c05-2-e54e74b949d5.webp",
+              "thumbUrl": "assets/concepts/y10-c05-2-e54e74b949d5-thumb.webp"
             }
           ],
           "disclosure": "Эскизная ИИ-визуализация на основе реальных МАФов. Окружение и посадка иллюстративны; геометрия, комплектация и зоны безопасности проверяются по паспортам и проекту. Это не утверждённая строительная документация."
@@ -6317,7 +6594,13 @@
           "detail": "Текущая подпись «Парк отдыха улица Индустриальная» выглядит определённее источников. Рекомендуется нейтральный адрес улицы с отметкой об уточнении площадки.",
           "source": "https://www.pkgo.ru/upload/iblock/a46/wxsms99j9hmp8vxs2fgpjix7ieb1f5dc.pdf#page=36"
         }
-      ]
+      ],
+      "area_note": "500 м² — прямоугольник 25 × 20 м на исходной схеме от 03.11.2026. Не подтверждены положение на местности и связь с парком отдыха на Индустриальной.",
+      "location_status": "Подтверждена улица; конкретная площадка уточняется",
+      "location_note": "Исходный план содержит Индустриальную. Муниципальный проект программы перечисляет парк отдыха по этой улице, но связь этого парка с конкретной схемой «Городской транспорт» не установлена.",
+      "budget_note": "Подтверждённая смета отсутствует",
+      "budget_kind": "estimate"
     }
-  ]
+  ],
+  "data_note": "Геометрия и статусы сверены с atlas-data.json. Тематические бюджеты — концептуальные ориентиры; новая стоимость дворов не утверждена."
 }

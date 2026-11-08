@@ -25,10 +25,18 @@ document.addEventListener('DOMContentLoaded', async () => {
   }
 
   const yards = portalData.yards;
+  const esc = value => String(value ?? '').replace(/[&<>"']/g,character=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[character]));
+  const localAsset = value => typeof value==='string' && /^(assets|sources|albums|downloads)\/[a-zA-Z0-9_./-]+$/.test(value) && !value.split('/').includes('..') ? value : '';
+  let modalBindingsReady=false,lastModalTrigger=null;
+  function statusGroup(yard) {
+    const label=String(yard.status_label || '').toLowerCase();
+    if (/^согласовано/.test(label)) return 'agreed';
+    return /уточн|подрядчик/.test(label) ? 'clarify' : 'progress';
+  }
 
   // Format money helper
   function formatMoney(num) {
-    if (!num) return 'Смета на согласовании';
+    if (!Number.isFinite(num)) return 'Не определено';
     return new Intl.NumberFormat('ru-RU').format(Math.round(num)) + ' ₽';
   }
 
@@ -40,10 +48,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     container.innerHTML = items.map(yard => {
-      const agreed = yard.status_label.includes('Согласовано');
-      const clarify = yard.status_label.includes('уточн') || yard.status_label.includes('подрядчик');
-      const statusClass = agreed ? 'status-agreed' : (clarify ? 'status-clarify' : 'status-progress');
-      const budgetText = yard.budget ? formatMoney(yard.budget) + ' (с НДС)' : 'Подтверждённая смета отсутствует';
+      const statusClass = 'status-'+statusGroup(yard);
+      const budgetText = Number.isFinite(yard.budget) ? `${yard.budget_kind==='promo' ? 'Исходное промопредложение' : 'Сумма исходного КП'}: ${formatMoney(yard.budget)}` : 'Исходная смета отсутствует';
 
       // Concepts Tab HTML
       const conceptsHtml = `
@@ -51,25 +57,25 @@ document.addEventListener('DOMContentLoaded', async () => {
           ${yard.concepts.map(concept => {
             const r1 = concept.renders && concept.renders[0] ? concept.renders[0] : null;
             const r2 = concept.renders && concept.renders[1] ? concept.renders[1] : null;
-            const initialImg = r1 ? (r1.thumbUrl || r1.fullUrl) : '';
-            const fullImg = r1 ? r1.fullUrl : '';
+            const initialImg = r1 ? localAsset(r1.thumb || r1.thumbUrl || r1.src || r1.fullUrl) : '';
+            const fullImg = r1 ? localAsset(r1.src || r1.fullUrl) : '';
 
             return `
               <div class="concept-card" id="card-${concept.id}">
-                <div class="concept-preview-wrap" data-full="${fullImg}" data-title="${yard.address}: ${concept.title}">
-                  <img src="${initialImg}" alt="${concept.title}" loading="lazy" class="preview-img">
-                  <span class="view-indicator">Вид сверху</span>
+                <div class="concept-preview-wrap" role="button" tabindex="0" aria-label="Увеличить ${esc(concept.title)}" data-full="${fullImg}" data-title="${esc(yard.address)}: ${esc(concept.title)}">
+                  <img src="${initialImg}" alt="${esc(concept.title)}" loading="lazy" class="preview-img">
+                  <span class="view-indicator">Общий вид</span>
                 </div>
                 <div class="concept-info">
                   <div class="concept-header-row">
-                    <h3 class="concept-title">${concept.title}</h3>
+                    <h3 class="concept-title">${esc(concept.title)}</h3>
                     <span class="concept-id-chip">${concept.id}</span>
                   </div>
-                  <p class="concept-desc">${concept.description || 'Проектное 3D-решение благоустройства площадки.'}</p>
+                  <a class="btn-action btn-secondary" href="maf-editor.html?yard=${yard.id}&concept=${concept.id}&view=0">Редактировать МАФы →</a><p class="concept-desc">${esc(concept.description || 'Эскизное предложение по благоустройству площадки.')}</p>
                   ${r2 ? `
                     <div class="concept-view-toggles">
-                      <button class="btn-view-switch active" data-src="${r1.thumbUrl || r1.fullUrl}" data-full="${r1.fullUrl}" data-label="Вид сверху">Общий вид</button>
-                      <button class="btn-view-switch" data-src="${r2.thumbUrl || r2.fullUrl}" data-full="${r2.fullUrl}" data-label="С уровня глаз">С уровня человека</button>
+                      <button class="btn-view-switch active" aria-pressed="true" data-src="${localAsset(r1.thumb || r1.thumbUrl || r1.src || r1.fullUrl)}" data-full="${localAsset(r1.src || r1.fullUrl)}" data-label="Общий вид">Общий вид</button>
+                      <button class="btn-view-switch" aria-pressed="false" data-src="${localAsset(r2.thumb || r2.thumbUrl || r2.src || r2.fullUrl)}" data-full="${localAsset(r2.src || r2.fullUrl)}" data-label="Второй ракурс">Второй ракурс</button>
                     </div>
                   ` : ''}
                 </div>
@@ -81,26 +87,26 @@ document.addEventListener('DOMContentLoaded', async () => {
 
       // Themes 40 Tab HTML
       const themesHtml = yard.themes_40 && yard.themes_40.length ? `
-        <div class="themes40-grid">
+        <p class="estimate-notice">Идеи из библиотеки тем. Суммы ниже — концептуальные ориентиры исходной программы без индексации, не сметы этого двора. Подбор темы не означает согласования оборудования.</p><div class="themes40-grid">
           ${yard.themes_40.map(theme => `
             <div class="theme40-card">
               ${theme.image ? `
-                <div class="theme40-img-wrap" data-full="${theme.image}" data-title="Тематика №${theme.id}: ${theme.title} (${theme.archetype_name})">
-                  <img src="${theme.image}" alt="${theme.title}" loading="lazy">
+                <div class="theme40-img-wrap" role="button" tabindex="0" aria-label="Увеличить тему ${esc(theme.title)}" data-full="${localAsset(theme.image)}" data-title="Тематика №${theme.id}: ${esc(theme.title)} (${esc(theme.archetype_name)})">
+                  <img src="${localAsset(theme.image)}" alt="${esc(theme.title)}" loading="lazy">
                 </div>
               ` : ''}
               <div class="theme40-info">
                 <div class="theme40-top-bar">
-                  <span class="theme40-badge">Архетип ${theme.archetype}: ${theme.archetype_name}</span>
+                  <span class="theme40-badge">Архетип ${esc(theme.archetype)}: ${esc(theme.archetype_name)}</span>
                   <span class="theme40-budget">${formatMoney(theme.budget)}</span>
                 </div>
-                <h4 class="theme40-title">Тематика №${theme.id}: ${theme.title}</h4>
+                <h4 class="theme40-title">Тематика №${theme.id}: ${esc(theme.title)}</h4>
                 ${theme.items && theme.items.length ? `
                   <table class="theme40-items-table">
                     <tbody>
                       ${theme.items.map(it => `
                         <tr>
-                          <td>${it.item}</td>
+                          <td>${esc(it.item)}</td>
                           <td>${formatMoney(it.cost)}</td>
                         </tr>
                       `).join('')}
@@ -115,7 +121,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
       // Estimate Tab HTML
       const estimateHtml = yard.verified_items && yard.verified_items.length ? `
-        <div class="estimate-table-wrap">
+        <p class="estimate-notice">${esc(yard.budget_note)}. Таблица относится к исходному документу и не определяет цену выбранной новой концепции. <a href="studio.html?yard=${yard.id}&mode=estimate">Сверка документов и новой комплектации →</a></p><div class="estimate-table-wrap">
           <table class="estimate-table">
             <thead>
               <tr>
@@ -123,15 +129,15 @@ document.addEventListener('DOMContentLoaded', async () => {
                 <th>Наименование оборудования</th>
                 <th>Кол-во</th>
                 <th>Цена за ед.</th>
-                <th>Сумма (с НДС)</th>
+                <th>Сумма в источнике</th>
               </tr>
             </thead>
             <tbody>
               ${yard.verified_items.map(item => `
                 <tr>
-                  <td><code>${item.code || '—'}</code></td>
-                  <td><strong>${item.name}</strong></td>
-                  <td>${item.qty} ${item.unit || 'шт.'}</td>
+                  <td><code>${esc(item.code || '—')}</code></td>
+                  <td><strong>${esc(item.name)}</strong>${item.conflict ? `<p class="estimate-notice">Расхождение: ${esc(item.conflictDetail)} Цена для новой концепции не подтверждена.</p>` : ''}</td>
+                  <td>${esc(item.qty)} ${esc(item.unit || 'шт.')}</td>
                   <td>${formatMoney(item.unitPrice)}</td>
                   <td>${formatMoney(item.lineTotal)}</td>
                 </tr>
@@ -139,7 +145,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             </tbody>
             <tfoot>
               <tr style="background:#f1f5f9;font-weight:bold;">
-                <td colspan="4">Итого по подтверждённой спецификации КП:</td>
+                <td colspan="4">Итог, указанный в исходном документе:</td>
                 <td>${formatMoney(yard.budget)}</td>
               </tr>
             </tfoot>
@@ -148,7 +154,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       ` : `
         <div class="estimate-notice">
           <strong>Статус сметы:</strong> Подтверждённое коммерческое предложение поставщика в исходном комплекте отсутствует.
-          <br>Параметры стоимости определяются на стадии рабочего проектирования либо по базовому архетипу программы «40 дворов».
+          <br>Стоимость выбранного варианта рассчитывается после уточнения состава и объёмов работ. Типовой бюджет из библиотеки «40 тем» не заменяет этот расчёт.
         </div>
       `;
 
@@ -158,16 +164,18 @@ document.addEventListener('DOMContentLoaded', async () => {
       const locationHtml = `
         <div class="location-panel">
           <div class="location-info-box">
-            <p><strong>Адрес площадки:</strong> ${yard.address}</p>
-            <p><strong>Географические координаты:</strong> <code>${geoText}</code></p>
-            <p><strong>Габариты и площадь:</strong> ${yard.dimensions || 'По фактическому контуру двора'} ${yard.area_sqm ? `(≈ ${yard.area_sqm} м²)` : ''}</p>
-            <p><strong>Кадастровый статус:</strong> Точный контур подлежит межеванию и согласованию с инженерными сетями.</p>
+            <p><strong>Адресный ориентир:</strong> ${esc(yard.address)}</p>
+            <p><strong>Координаты ориентира:</strong> <code>${geoText}</code> · ${esc(yard.geo?.label || '')}</p>
+            <p>${esc(yard.geo?.note || '')}</p>
+            <p><strong>Габариты проектной площадки:</strong> ${esc(yard.dimensions || 'Не подтверждены')}</p>
+            <p>${esc(yard.area_note)}</p>
+            <p><strong>${esc(yard.location_status)}</strong> ${esc(yard.location_note)}</p>
             <div style="margin-top:14px;">
               <a href="https://yandex.ru/maps/?text=${yandexQuery}" target="_blank" rel="noopener" class="btn-action btn-secondary">Открыть в Яндекс Картах ↗</a>
             </div>
           </div>
           <div class="location-map-box">
-            <iframe title="Карта ${yard.address}" src="https://yandex.ru/map-widget/v1/?text=${yandexQuery}" allowfullscreen loading="lazy"></iframe>
+            <div class="estimate-notice"><p>Автономная схема показывает адресные ориентиры десяти дворов. Границы и точная посадка оборудования уточняются по исходным планам.</p><a href="index.html?yard=${yard.id}&offline=1" class="btn-action btn-primary">Открыть автономную схему →</a></div>
           </div>
         </div>
       `;
@@ -178,19 +186,19 @@ document.addEventListener('DOMContentLoaded', async () => {
             <div class="yard-title-col">
               <span class="yard-badge-num">#${yard.id}</span>
               <div>
-                <h2 class="yard-name-h2">${yard.title}</h2>
-                <div class="yard-address-line">📍 ${yard.address}</div>
+                <h2 class="yard-name-h2">${esc(yard.title)}</h2>
+                <div class="yard-address-line">📍 ${esc(yard.address)}</div>
               </div>
             </div>
             <div class="yard-meta-col">
-              <span class="status-badge ${statusClass}">${yard.status_label}</span>
+              <span class="status-badge ${statusClass}">${esc(yard.status_label)}</span>
               <span class="budget-chip">${budgetText}</span>
               ${yard.area_sqm ? `<span class="area-chip">📐 ${yard.area_sqm} м²</span>` : ''}
-              <button class="btn-card-toggle" aria-label="Свернуть / Развернуть карточку">▼</button>
+              <button class="btn-card-toggle" aria-expanded="true" aria-controls="body-${yard.id}" aria-label="Свернуть / Развернуть карточку">▼</button>
             </div>
           </header>
 
-          <div class="yard-card-body">
+          <div class="yard-card-body" id="body-${yard.id}">
             <nav class="yard-tab-nav">
               <button class="tab-btn active" data-tab="concepts">🎨 3D-Концепции (${yard.concepts_count} вар.)</button>
               <button class="tab-btn" data-tab="themes40">🌳 Альтернативы «40 дворов» (${yard.themes_40_count})</button>
@@ -214,12 +222,13 @@ document.addEventListener('DOMContentLoaded', async () => {
             <footer class="yard-actions-footer">
               <div style="display:flex;gap:10px;flex-wrap:wrap;">
                 ${yard.album_pdf ? `
-                  <a href="${yard.album_pdf}" target="_blank" class="btn-action btn-primary">📥 Скачать PDF-альбом двора</a>
+                  <a href="${localAsset(yard.album_pdf)}" target="_blank" rel="noopener" class="btn-action btn-primary">📥 Скачать PDF-альбом двора</a>
                 ` : ''}
                 <a href="studio.html?yard=${yard.id}" class="btn-action btn-secondary">⚖️ Сравнить в Студии</a>
+                <a href="concept.html?yard=${yard.id}#yard-content" class="btn-action btn-secondary">Общая концепция и мои замечания →</a>
                 <a href="index.html?yard=${yard.id}" class="btn-action btn-secondary">🗺️ Показать в Атласе</a>
               </div>
-              <small style="color:var(--text-muted)">Варианты согласованы на уровне концептуального ТЗ</small>
+              <small style="color:var(--text-muted)">Новые варианты — предложения для обсуждения. Статус согласования относится к исходному проекту.</small>
             </footer>
           </div>
         </article>
@@ -237,6 +246,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         if (e.target.closest('.btn-action')) return;
         const card = header.closest('.yard-card');
         card.classList.toggle('collapsed');
+        card.querySelector('.btn-card-toggle').setAttribute('aria-expanded',String(!card.classList.contains('collapsed')));
       });
     });
 
@@ -263,6 +273,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         const indicator = imgWrap.querySelector('.view-indicator');
         
         card.querySelectorAll('.btn-view-switch').forEach(b => b.classList.remove('active'));
+        card.querySelectorAll('.btn-view-switch').forEach(b => b.setAttribute('aria-pressed',String(b===btn)));
         btn.classList.add('active');
         
         img.src = btn.dataset.src;
@@ -277,10 +288,15 @@ document.addEventListener('DOMContentLoaded', async () => {
     const modalCaption = document.getElementById('modal-caption');
 
     function openModal(fullSrc, caption) {
-      modalImg.src = fullSrc;
+      lastModalTrigger=document.activeElement;
+      modalImg.src = localAsset(fullSrc);
+      modalImg.alt=caption;
       modalCaption.textContent = caption;
       modal.classList.add('active');
       modal.setAttribute('aria-hidden', 'false');
+      modal.setAttribute('role','dialog');
+      modal.setAttribute('aria-modal','true');
+      document.querySelector('.modal-close').focus();
     }
 
     document.querySelectorAll('.concept-preview-wrap, .theme40-img-wrap').forEach(wrap => {
@@ -289,28 +305,37 @@ document.addEventListener('DOMContentLoaded', async () => {
         const title = wrap.dataset.title || '';
         if (full) openModal(full, title);
       });
+      wrap.addEventListener('keydown',event=>{if(event.key==='Enter'||event.key===' '){event.preventDefault();wrap.click();}});
     });
-
-    document.querySelector('.modal-close').addEventListener('click', () => {
+    if(modalBindingsReady)return;
+    modalBindingsReady=true;
+    function closeModal() {
       modal.classList.remove('active');
       modal.setAttribute('aria-hidden', 'true');
-    });
-
-    document.querySelector('.modal-overlay').addEventListener('click', () => {
-      modal.classList.remove('active');
-      modal.setAttribute('aria-hidden', 'true');
-    });
+      if(lastModalTrigger?.isConnected)lastModalTrigger.focus();
+    }
+    document.querySelector('.modal-close').addEventListener('click',closeModal);
+    document.querySelector('.modal-overlay').addEventListener('click',closeModal);
 
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape' && modal.classList.contains('active')) {
-        modal.classList.remove('active');
+        closeModal();
       }
+      if(e.key==='Tab'&&modal.classList.contains('active')){e.preventDefault();document.querySelector('.modal-close').focus();}
     });
   }
 
   // Search and Filter functionality
   const searchInput = document.getElementById('address-search');
   const chips = document.querySelectorAll('.filter-chips .chip');
+  const labels={all:'Все адреса',agreed:'Согласованные исходные проекты',progress:'В разработке / промо',clarify:'Требует уточнения'};
+  chips.forEach(chip=>{
+    const group=chip.dataset.filter;
+    const count=group==='all'?yards.length:yards.filter(y=>statusGroup(y)===group).length;
+    chip.textContent=`${labels[group]} (${count})`;
+    chip.setAttribute('aria-pressed',String(group==='all'));
+  });
+  document.getElementById('theme-count').textContent=new Set(yards.flatMap(y=>y.themes_40.map(t=>t.id))).size;
 
   let currentFilter = 'all';
   let searchQuery = '';
@@ -319,13 +344,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const q = searchQuery.toLowerCase().trim();
     const filtered = yards.filter(y => {
       // Status filter
-      const agreed = y.status_label.includes('Согласовано');
-      const clarify = y.status_label.includes('уточн') || y.status_label.includes('подрядчик');
-      
-      let matchesStatus = true;
-      if (currentFilter === 'agreed') matchesStatus = agreed;
-      else if (currentFilter === 'progress') matchesStatus = (!agreed && !clarify);
-      else if (currentFilter === 'clarify') matchesStatus = clarify;
+      const matchesStatus = currentFilter==='all' || statusGroup(y)===currentFilter;
 
       // Text search
       const textMatch = !q || 
@@ -350,6 +369,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   chips.forEach(chip => {
     chip.addEventListener('click', () => {
       chips.forEach(c => c.classList.remove('active'));
+      chips.forEach(c=>c.setAttribute('aria-pressed',String(c===chip)));
       chip.classList.add('active');
       currentFilter = chip.dataset.filter;
       applyFilters();
@@ -358,11 +378,11 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   // Expand / Collapse All
   document.getElementById('btn-expand-all').addEventListener('click', () => {
-    document.querySelectorAll('.yard-card').forEach(c => c.classList.remove('collapsed'));
+    document.querySelectorAll('.yard-card').forEach(c => {c.classList.remove('collapsed');c.querySelector('.btn-card-toggle').setAttribute('aria-expanded','true');});
   });
 
   document.getElementById('btn-collapse-all').addEventListener('click', () => {
-    document.querySelectorAll('.yard-card').forEach(c => c.classList.add('collapsed'));
+    document.querySelectorAll('.yard-card').forEach(c => {c.classList.add('collapsed');c.querySelector('.btn-card-toggle').setAttribute('aria-expanded','false');});
   });
 
   // Initial render
