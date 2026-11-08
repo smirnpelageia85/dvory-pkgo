@@ -11,16 +11,12 @@
   }
   const {esc, money, number, summarize} = window.PKGO_DOMAIN;
   const normalized = value => String(value).toLocaleLowerCase('ru-RU').replaceAll('ё', 'е');
-  const safeURL = value => {
-    try {
-      const url = new URL(value, location.href);
-      return ['https:', 'http:'].includes(url.protocol) ? url.href : '#';
-    } catch { return '#'; }
-  };
+  const safeURL = value => window.PKGO_DOMAIN.safeURL(value, location.href);
   const external = (url, title, cls = '') => `<a class="${cls}" href="${esc(safeURL(url))}" target="_blank" rel="noopener noreferrer">${esc(title)}</a>`;
   const sections = ['overview', 'concepts', 'plans', 'estimate'];
   const motion = !matchMedia('(prefers-reduced-motion: reduce)').matches;
   let selected = null, concept = null, section = 'overview', view = 0, map, markerLayer, tiles, lightMap = false;
+  let offlineMap = location.protocol === 'file:' || !navigator.onLine || new URLSearchParams(location.search).get('offline') === '1';
   let lastTrigger = null;
   const markers = new Map();
   const viewerItems = new Map();
@@ -70,6 +66,7 @@
       $('map-error').textContent = 'Карта сейчас недоступна. Все паспорта и концепции можно открыть из списка слева.';
       $('show-all').disabled = true;
       $('toggle-map').disabled = true;
+      $('offline-map').disabled = true;
       return;
     }
     map = L.map('city-map', {zoomControl: false, scrollWheelZoom: true}).setView([53.025, 158.655], 12);
@@ -79,16 +76,30 @@
     fitAll();
   }
   function setTiles() {
-    if (tiles) map.removeLayer(tiles);
+    if (tiles) { tiles.off(); map.removeLayer(tiles); tiles = null; }
+    $('city-map').classList.toggle('offline-map', offlineMap);
+    $('offline-map').setAttribute('aria-pressed', String(offlineMap));
+    $('offline-map').textContent = offlineMap ? 'Подключить карту улиц' : 'Автономная схема';
+    $('toggle-map').disabled = offlineMap;
+    $('map-error').hidden = !offlineMap;
+    if (offlineMap) {
+      $('map-error').textContent = 'Схема адресных ориентиров: все 10 точек доступны. Для подложки улиц нужно подключение к интернету.';
+      return;
+    }
     const url = lightMap ? 'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png' : 'https://tile.openstreetmap.org/{z}/{x}/{y}.png';
-    tiles = L.tileLayer(url, {maxZoom: 19, subdomains: 'abcd', attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>' + (lightMap ? ' © <a href="https://carto.com/attributions">CARTO</a>' : '')}).addTo(map);
+    tiles = L.tileLayer(url, {maxZoom: 19, subdomains: 'abcd', attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>' + (lightMap ? ' © <a href="https://carto.com/attributions">CARTO</a>' : '')});
     let errors = 0;
+    const activeTiles = tiles;
     tiles.on('tileerror', () => {
-      if (++errors < 3) return;
-      $('map-error').hidden = false;
-      $('map-error').textContent = 'Фон карты загружается с перебоями. Точки и карточки доступны; можно переключить подложку.';
+      if (++errors !== 3) return;
+      setTimeout(() => {
+        if (tiles !== activeTiles || offlineMap) return;
+        offlineMap = true;
+        setTiles();
+      }, 0);
     });
     tiles.on('tileload', () => { $('map-error').hidden = true; });
+    tiles.addTo(map);
   }
   function fitAll() {
     if (!map) return;
@@ -185,7 +196,7 @@
   function equipmentFacts(item) {
     const facts = [];
     if (item.manufacturer) facts.push(item.manufacturer);
-    if (Object.hasOwn(item, 'dimensionsMm')) facts.push(Array.isArray(item.dimensionsMm) && item.dimensionsMm.length === 3 && item.dimensionsMm.every(Number.isFinite) ? 'Габариты: ' + item.dimensionsMm.map(value => number(value)).join(' × ') + ' мм' : 'Габариты не опубликованы');
+    if (Object.hasOwn(item, 'dimensionsMm')) facts.push(Array.isArray(item.dimensionsMm) && item.dimensionsMm.length === 3 && item.dimensionsMm.every(Number.isFinite) ? 'Габариты: ' + item.dimensionsMm.map(value => number(value)).join(' × ') + ' мм' : item.dimensionsNote || 'Габариты не опубликованы');
     if (item.ageLabel) facts.push('Возраст: ' + item.ageLabel);
     if (Object.hasOwn(item, 'landingZoneMm')) facts.push(Array.isArray(item.landingZoneMm) && item.landingZoneMm.length === 2 && item.landingZoneMm.every(Number.isFinite) ? 'Зона приземления: ' + item.landingZoneMm.map(value => number(value)).join(' × ') + ' мм' : 'Зона приземления не опубликована');
     return facts.length ? '<small>' + facts.map(esc).join(' · ') + '</small>' : '';
@@ -302,6 +313,8 @@
     $('toggle-map').textContent = lightMap ? 'Обычная карта' : 'Светлая карта';
     setTiles();
   };
+  $('offline-map').onclick = () => { offlineMap = !offlineMap; setTiles(); };
+  window.addEventListener('offline', () => { if (map) { offlineMap = true; setTiles(); } });
   $('close-panel').onclick = () => closePanel();
   document.querySelector('.detail-tabs').addEventListener('click', event => {
     const tab = event.target.closest('[data-section]');

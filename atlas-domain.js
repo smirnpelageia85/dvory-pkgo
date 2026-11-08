@@ -14,7 +14,17 @@
     return {knownSubtotal, unknownCount, conflictCount, complete: items.length > 0 && unknownCount === 0, total: items.length > 0 && unknownCount === 0 ? knownSubtotal : null};
   }
   function safeURL(value, base) {
-    try { const url = new URL(value, base); return ['https:', 'http:'].includes(url.protocol) ? url.href : '#'; }
+    try {
+      const url = new URL(value, base);
+      if (['https:', 'http:'].includes(url.protocol)) return url.href;
+      const directory = new URL('.', base);
+      if (directory.protocol === 'file:' && url.protocol === 'file:' && url.hostname === directory.hostname) {
+        const targetPath = decodeURIComponent(url.pathname);
+        const directoryPath = decodeURIComponent(directory.pathname);
+        if (targetPath.startsWith(directoryPath) && !/[\\\\]/.test(targetPath) && !targetPath.split('/').includes('..')) return url.href;
+      }
+      return '#';
+    }
     catch { return '#'; }
   }
   function csv(rows) {

@@ -1,0 +1,2183 @@
+{
+  "date": "2026-11-08",
+  "items": [
+    {
+      "article": "SHAP-03.04",
+      "slug": "03-04",
+      "target": true,
+      "dimensionsMm": [
+        11986,
+        5740,
+        5720
+      ],
+      "ageMin": 4,
+      "ageMax": 14,
+      "ageLabel": "4–14 лет",
+      "manufacturerScale": "Большой",
+      "landingZoneMm": null,
+      "maxFallHeightMm": null,
+      "design": "Система кубических модулей и высокая башня-колба с канатным лазанием, прозрачными вставками, металлическим тоннелем и винтовым спуском. Деревянные рамы сочетаются с HPL и оцинкованной сталью.",
+      "designBasis": "Парафраз описания производителя и идентификация элементов на основной иллюстрации, отмеченной родительским агентом.",
+      "sourceURL": "https://shelby.ru/catalog/apex/detskiy-igrovoy-kompleks-art-shap-03-04",
+      "seriesURL": "https://shelby.ru/catalog/apex",
+      "checkedAt": "2026-11-08",
+      "dimensionsOrder": "длина×ширина×высота, мм",
+      "price": null,
+      "priceCurrency": "RUB",
+      "priceStatus": "Публичная цена в видимой карточке не опубликована; требуется КП",
+      "safetyZoneStatus": "Размер зоны приземления/безопасности в тексте карточки не опубликован",
+      "landingZoneSourceLabel": null,
+      "safetyContourVerified": false,
+      "installationAtYardConfirmed": false,
+      "images": [
+        {
+          "url": "https://shelby.ru/upload/pics/cf5240fa715b4bcd45d972633e7f458d/SHAP_03.04-_1_.webp",
+          "sourceKind": "fullsize_lightbox_link",
+          "width": 1354,
+          "height": 1080,
+          "contentType": "image/webp",
+          "bytes": 156685,
+          "verifiedHttpStatus": 200
+        },
+        {
+          "url": "https://shelby.ru/upload/pics/16c9c00c44ace4c09039b8fb1b86284f/SHAP_03.04-_2_.webp",
+          "sourceKind": "fullsize_lightbox_link",
+          "width": 1354,
+          "height": 1080,
+          "contentType": "image/webp",
+          "bytes": 135585,
+          "verifiedHttpStatus": 200
+        }
+      ],
+      "drawings": [],
+      "sourceProperties": {
+        "Габаритные размеры": "11986x5740x5720 мм",
+        "Возрастная группа": "от 4 до 14 лет",
+        "Размер": "Большой"
+      },
+      "sourcePriceMetadataIgnored": true,
+      "boundingRectangleM2": 68.8,
+      "boundingRectangleNote": "Произведение габаритов изделия, не площадь требуемой площадки и не зона безопасности.",
+      "id": "shelby-shap-03-04",
+      "manufacturer": "Shelby",
+      "name": "Игровой комплекс «Апекс» SHAP-03.04",
+      "theme": "architecture",
+      "themeLabel": "Башни и переходы",
+      "candidateYardIds": [
+        3,
+        5,
+        8
+      ],
+      "candidateStatus": "Тематический кандидат; размещение во дворе не подтверждено",
+      "localImage": "assets/candidates/shelby-shap-03-04.jpg",
+      "localImageSourceURL": "https://shelby.ru/upload/iblock/1b3/8bu7faqhyiw023kopk72kytvdfx12nug/la_03.04-_1_.jpg",
+      "localImageWidth": 590,
+      "localImageHeight": 550,
+      "localImageSha256": "cc4e707d9ba602a276dbb7798ebdd854a650a1820d836415e5c8e094460f30d8",
+      "localImageSourceKind": "verified_full_product_reference"
+    },
+    {
+      "article": "SHAP-03.01",
+      "slug": "03-01",
+      "target": false,
+      "dimensionsMm": [
+        4486,
+        3425,
+        3505
+      ],
+      "ageMin": 5,
+      "ageMax": 14,
+      "ageLabel": "5–14 лет по карточке",
+      "manufacturerScale": "Малый",
+      "landingZoneMm": [
+        8264,
+        6944
+      ],
+      "maxFallHeightMm": 1850,
+      "design": "Компактный деревянный модуль с канатными элементами, прозрачной панелью для лазания, крышей и горкой из нержавеющей стали. Подходит для рассмотрения как более низкая альтернатива большой композиции.",
+      "designBasis": "Парафраз описания производителя; пригодность конкретному двору не подтверждена.",
+      "issues": [
+        "В списке серии указан возраст 4–14 лет, в карточке товара —5–14 лет. Для рабочего подбора использовать более ограничивающее 5–14 до уточнения паспорта."
+      ],
+      "sourceURL": "https://shelby.ru/catalog/apex/detskiy-igrovoy-kompleks-art-shap-03-01",
+      "seriesURL": "https://shelby.ru/catalog/apex",
+      "checkedAt": "2026-11-08",
+      "dimensionsOrder": "длина×ширина×высота, мм",
+      "price": null,
+      "priceCurrency": "RUB",
+      "priceStatus": "Публичная цена в видимой карточке не опубликована; требуется КП",
+      "safetyZoneStatus": "В карточке опубликован размер зоны приземления; нужен паспорт и схема контура",
+      "landingZoneSourceLabel": "Размер зоны приземления",
+      "safetyContourVerified": false,
+      "installationAtYardConfirmed": false,
+      "images": [
+        {
+          "url": "https://shelby.ru/upload/pics/ebbf251742bf44e7b440f7844f913b2f/kn_6454_la_03.01_1.webp",
+          "sourceKind": "fullsize_lightbox_link",
+          "width": 1354,
+          "height": 1080,
+          "contentType": "image/webp",
+          "bytes": 134068,
+          "verifiedHttpStatus": 200
+        },
+        {
+          "url": "https://shelby.ru/upload/pics/689e050e7d14194366ba5f3771034482/kn_6454_la_03.01_2.webp",
+          "sourceKind": "fullsize_lightbox_link",
+          "width": 1354,
+          "height": 1080,
+          "contentType": "image/webp",
+          "bytes": 167141,
+          "verifiedHttpStatus": 200
+        }
+      ],
+      "drawings": [
+        {
+          "url": "https://shelby.ru/upload/iblock/6de/hb1ksr8bg7hfok7znv6pvsnulz9jmh24/SHAP_03.01.dwg",
+          "type": "DWG",
+          "inspected": false
+        }
+      ],
+      "sourceProperties": {
+        "Габаритные размеры": "4486x3425x3505 мм",
+        "Размер зоны приземления": "8264 х 6944 мм",
+        "Высота максимального падения": "1850 мм",
+        "Возрастная группа": "от 5 до 14 лет",
+        "Размер": "Малый"
+      },
+      "sourcePriceMetadataIgnored": true,
+      "boundingRectangleM2": 15.36,
+      "boundingRectangleNote": "Произведение габаритов изделия, не площадь требуемой площадки и не зона безопасности.",
+      "id": "shelby-shap-03-01",
+      "manufacturer": "Shelby",
+      "name": "Игровой комплекс «Апекс» SHAP-03.01",
+      "theme": "architecture",
+      "themeLabel": "Башни и переходы",
+      "candidateYardIds": [
+        3,
+        5,
+        8
+      ],
+      "candidateStatus": "Тематический кандидат; размещение во дворе не подтверждено",
+      "localImage": "assets/candidates/shelby-shap-03-01.webp",
+      "localImageSourceURL": "https://shelby.ru/upload/pics/ebbf251742bf44e7b440f7844f913b2f/kn_6454_la_03.01_1.webp",
+      "localImageWidth": 1354,
+      "localImageHeight": 1080,
+      "localImageSha256": "371608947ab9d624baef926cda97691c587bdfd583bfc07980035aade8a09858",
+      "localImageSourceKind": "fullsize_lightbox_link"
+    },
+    {
+      "article": "SHAP-03.02",
+      "slug": "03-02",
+      "target": false,
+      "dimensionsMm": [
+        5905,
+        4183,
+        3505
+      ],
+      "ageMin": 5,
+      "ageMax": 14,
+      "ageLabel": "5–14 лет",
+      "manufacturerScale": "Средний",
+      "landingZoneMm": null,
+      "maxFallHeightMm": null,
+      "design": "Деревянный комплекс с лазанием по канатам и зацепам, прозрачными вставками, HPL-панелями и стальным скатом. При той же высоте, что 03.01, занимает больше места в плане.",
+      "designBasis": "Парафраз описания производителя; сравнение высоты и габаритов рассчитано из карточек.",
+      "sourceURL": "https://shelby.ru/catalog/apex/detskiy-igrovoy-kompleks-art-shap-03-02",
+      "seriesURL": "https://shelby.ru/catalog/apex",
+      "checkedAt": "2026-11-08",
+      "dimensionsOrder": "длина×ширина×высота, мм",
+      "price": null,
+      "priceCurrency": "RUB",
+      "priceStatus": "Публичная цена в видимой карточке не опубликована; требуется КП",
+      "safetyZoneStatus": "Размер зоны приземления/безопасности в тексте карточки не опубликован",
+      "landingZoneSourceLabel": null,
+      "safetyContourVerified": false,
+      "installationAtYardConfirmed": false,
+      "images": [
+        {
+          "url": "https://shelby.ru/upload/pics/4f7925119fc6f0f6aa57c35711606d45/SHAP0007_.webp",
+          "sourceKind": "fullsize_lightbox_link",
+          "width": 1354,
+          "height": 1080,
+          "contentType": "image/webp",
+          "bytes": 202673,
+          "verifiedHttpStatus": 200
+        },
+        {
+          "url": "https://shelby.ru/upload/pics/ce3db9b91d8b980276f436f0fa6a7fee/SHAP0007_1.webp",
+          "sourceKind": "fullsize_lightbox_link",
+          "width": 1354,
+          "height": 1080,
+          "contentType": "image/webp",
+          "bytes": 197625,
+          "verifiedHttpStatus": 200
+        }
+      ],
+      "drawings": [
+        {
+          "url": "https://shelby.ru/upload/iblock/376/ffly3vwkeksg6tx24pb7yn51fn2nw49j/SHAP_03.02.dwg",
+          "type": "DWG",
+          "inspected": false
+        }
+      ],
+      "sourceProperties": {
+        "Габаритные размеры": "5905x4183x3505 мм",
+        "Возрастная группа": "от 5 до 14 лет",
+        "Размер": "Средний"
+      },
+      "sourcePriceMetadataIgnored": true,
+      "boundingRectangleM2": 24.7,
+      "boundingRectangleNote": "Произведение габаритов изделия, не площадь требуемой площадки и не зона безопасности.",
+      "id": "shelby-shap-03-02",
+      "manufacturer": "Shelby",
+      "name": "Игровой комплекс «Апекс» SHAP-03.02",
+      "theme": "architecture",
+      "themeLabel": "Башни и переходы",
+      "candidateYardIds": [
+        3,
+        5,
+        8
+      ],
+      "candidateStatus": "Тематический кандидат; размещение во дворе не подтверждено",
+      "localImage": "assets/candidates/shelby-shap-03-02.webp",
+      "localImageSourceURL": "https://shelby.ru/upload/pics/4f7925119fc6f0f6aa57c35711606d45/SHAP0007_.webp",
+      "localImageWidth": 1354,
+      "localImageHeight": 1080,
+      "localImageSha256": "a1216a84f66465de5f50eb5868f4a75a0e45e2531e2793a324cfedf35f71606c",
+      "localImageSourceKind": "fullsize_lightbox_link"
+    },
+    {
+      "article": "SHAP-02.03",
+      "slug": "02-03",
+      "target": false,
+      "dimensionsMm": [
+        4640,
+        6520,
+        4490
+      ],
+      "ageMin": 5,
+      "ageMax": 14,
+      "ageLabel": "5–14 лет",
+      "manufacturerScale": "Средний",
+      "landingZoneMm": null,
+      "maxFallHeightMm": null,
+      "design": "Комплекс на деревянной раме с канатными игровыми элементами, HPL и прозрачным поликарбонатом; отличительный элемент — тоннельный скат из нержавеющей стали.",
+      "designBasis": "Парафраз описания производителя.",
+      "sourceURL": "https://shelby.ru/catalog/apex/detskiy-igrovoy-kompleks-art-shap-02-03",
+      "seriesURL": "https://shelby.ru/catalog/apex",
+      "checkedAt": "2026-11-08",
+      "dimensionsOrder": "длина×ширина×высота, мм",
+      "price": null,
+      "priceCurrency": "RUB",
+      "priceStatus": "Публичная цена в видимой карточке не опубликована; требуется КП",
+      "safetyZoneStatus": "Размер зоны приземления/безопасности в тексте карточки не опубликован",
+      "landingZoneSourceLabel": null,
+      "safetyContourVerified": false,
+      "installationAtYardConfirmed": false,
+      "images": [
+        {
+          "url": "https://shelby.ru/upload/pics/3fd4e81de1098d396ee0bf37fd52ba7e/SHAP_02.03-_1_.webp",
+          "sourceKind": "fullsize_lightbox_link",
+          "width": 1354,
+          "height": 1080,
+          "contentType": "image/webp",
+          "bytes": 111060,
+          "verifiedHttpStatus": 200
+        },
+        {
+          "url": "https://shelby.ru/upload/pics/08d74b41d3e557c87f9296b2c3a87fb7/SHAP_02.03-_2_.webp",
+          "sourceKind": "fullsize_lightbox_link",
+          "width": 1354,
+          "height": 1080,
+          "contentType": "image/webp",
+          "bytes": 113181,
+          "verifiedHttpStatus": 200
+        }
+      ],
+      "drawings": [
+        {
+          "url": "https://shelby.ru/upload/iblock/270/2mc8kwa5j5gky7mn1jknqnesghylq96h/SHAP_02.03.dwg",
+          "type": "DWG",
+          "inspected": false
+        }
+      ],
+      "sourceProperties": {
+        "Габаритные размеры": "4640 х 6520 х 4490 мм",
+        "Возрастная группа": "от 5 до 14 лет",
+        "Размер": "Средний"
+      },
+      "sourcePriceMetadataIgnored": true,
+      "boundingRectangleM2": 30.25,
+      "boundingRectangleNote": "Произведение габаритов изделия, не площадь требуемой площадки и не зона безопасности.",
+      "id": "shelby-shap-02-03",
+      "manufacturer": "Shelby",
+      "name": "Игровой комплекс «Апекс» SHAP-02.03",
+      "theme": "architecture",
+      "themeLabel": "Башни и переходы",
+      "candidateYardIds": [
+        3,
+        5,
+        8
+      ],
+      "candidateStatus": "Тематический кандидат; размещение во дворе не подтверждено",
+      "localImage": "assets/candidates/shelby-shap-02-03.webp",
+      "localImageSourceURL": "https://shelby.ru/upload/pics/3fd4e81de1098d396ee0bf37fd52ba7e/SHAP_02.03-_1_.webp",
+      "localImageWidth": 1354,
+      "localImageHeight": 1080,
+      "localImageSha256": "bb83ca67f9b11c152fef6ba0c8aaecdaacd0d8c4a81984b9a6e01dfb76a4f307",
+      "localImageSourceKind": "fullsize_lightbox_link"
+    },
+    {
+      "article": "SHAP-02.10",
+      "slug": "02-10",
+      "target": false,
+      "dimensionsMm": [
+        5727,
+        3663,
+        5315
+      ],
+      "ageMin": 6,
+      "ageMax": null,
+      "ageLabel": "с 6 лет; верхняя граница не указана",
+      "manufacturerScale": null,
+      "landingZoneMm": [
+        6864,
+        5595
+      ],
+      "maxFallHeightMm": 915,
+      "design": "Вертикальная башня с лазанием по канатным сеткам и перекладинам, выходом в закрытый металлический спуск. По сравнению с SHAP-03.04 конструкция уже, но её высота достигает 5,3 м.",
+      "designBasis": "Парафраз описания производителя и арифметическое сравнение габаритов; пригодность участку не подтверждена.",
+      "sourceURL": "https://shelby.ru/catalog/apex/detskiy-igrovoy-kompleks-art-shap-02-10",
+      "seriesURL": "https://shelby.ru/catalog/apex",
+      "checkedAt": "2026-11-08",
+      "dimensionsOrder": "длина×ширина×высота, мм",
+      "price": null,
+      "priceCurrency": "RUB",
+      "priceStatus": "Публичная цена в видимой карточке не опубликована; требуется КП",
+      "safetyZoneStatus": "В карточке опубликован размер зоны приземления; нужен паспорт и схема контура",
+      "landingZoneSourceLabel": "Размер зоны приземления",
+      "safetyContourVerified": false,
+      "installationAtYardConfirmed": false,
+      "images": [
+        {
+          "url": "https://shelby.ru/upload/pics/9de86c662364cce8f337c6fd1b51e62a/SHAP_02.10-_1_.webp",
+          "sourceKind": "fullsize_lightbox_link",
+          "width": 1354,
+          "height": 1080,
+          "contentType": "image/webp",
+          "bytes": 158230,
+          "verifiedHttpStatus": 200
+        },
+        {
+          "url": "https://shelby.ru/upload/pics/52395cf7b88b2e214947282fd8712d1a/SHAP_02.10-_2_.webp",
+          "sourceKind": "fullsize_lightbox_link",
+          "width": 1354,
+          "height": 1080,
+          "contentType": "image/webp",
+          "bytes": 147015,
+          "verifiedHttpStatus": 200
+        }
+      ],
+      "drawings": [
+        {
+          "url": "https://shelby.ru/upload/iblock/7f4/oe1wtid91qu7hvomm7boydktox14chkt/SHAP_02.10.dwg",
+          "type": "DWG",
+          "inspected": false
+        }
+      ],
+      "sourceProperties": {
+        "Габариты изделия": "5727 х 3663 х 5315 мм",
+        "Возрастная группа": "с 6 лет",
+        "Размер зоны приземления": "6864 х 5595 мм",
+        "Высота максимального падения": "915 мм"
+      },
+      "sourcePriceMetadataIgnored": true,
+      "boundingRectangleM2": 20.98,
+      "boundingRectangleNote": "Произведение габаритов изделия, не площадь требуемой площадки и не зона безопасности.",
+      "id": "shelby-shap-02-10",
+      "manufacturer": "Shelby",
+      "name": "Игровой комплекс «Апекс» SHAP-02.10",
+      "theme": "architecture",
+      "themeLabel": "Башни и переходы",
+      "candidateYardIds": [
+        3,
+        5,
+        8
+      ],
+      "candidateStatus": "Тематический кандидат; размещение во дворе не подтверждено",
+      "localImage": "assets/candidates/shelby-shap-02-10.webp",
+      "localImageSourceURL": "https://shelby.ru/upload/pics/9de86c662364cce8f337c6fd1b51e62a/SHAP_02.10-_1_.webp",
+      "localImageWidth": 1354,
+      "localImageHeight": 1080,
+      "localImageSha256": "80a2ca0feb090eed6bb910fd396bf93c43b5d45f10c6e260a3e5b997930c7277",
+      "localImageSourceKind": "fullsize_lightbox_link"
+    },
+    {
+      "article": "SHKD-07.07",
+      "target": true,
+      "category": "Тарзанки и монорельсы",
+      "sourceURL": "https://shelby.ru/catalog/tarzanki-i-monorelsy/monorels-shelbi-pley-art-shkd-07-07",
+      "seriesURL": "https://shelby.ru/catalog/tarzanki-i-monorelsy",
+      "ageMin": 5,
+      "ageMax": 14,
+      "ageLabel": "5–14 лет",
+      "design": "Пространственная каркасная конструкция с направляющей для каретки, канатными участками и панелями HDPE. В описании указаны нержавеющая сталь AISI 304, нескользящие площадки и прозрачный иллюминатор.",
+      "designBasis": "Парафраз описания официальной карточки, прочитанной по HTTP; web.open не смог открыть эту страницу.",
+      "images": [
+        {
+          "url": "https://shelby.ru/upload/pics/f6365b6cd585815409659e202a21cd2d/SHKD_07.07-_1_.webp",
+          "sourceKind": "fullsize_lightbox_link",
+          "width": 1354,
+          "height": 1080,
+          "bytes": 140510,
+          "contentType": "image/webp",
+          "verifiedHttpStatus": 200
+        },
+        {
+          "url": "https://shelby.ru/upload/pics/9de836d71b1200ebaf68de5a37f08ef0/SHKD_07.07-_2_.webp",
+          "sourceKind": "fullsize_lightbox_link",
+          "width": 1354,
+          "height": 1080,
+          "bytes": 135572,
+          "contentType": "image/webp",
+          "verifiedHttpStatus": 200
+        }
+      ],
+      "drawings": [
+        {
+          "url": "https://shelby.ru/upload/iblock/9a7/be9ctu9zolmwx35564fhsjtjy9yg9ipx/SHKD_07.07.dwg",
+          "type": "DWG",
+          "inspected": false
+        }
+      ],
+      "checkedAt": "2026-11-08",
+      "dimensionsMm": null,
+      "dimensionsOrder": "длина×ширина×высота, мм",
+      "dimensionsStatus": "Не опубликованы в карточке и в найденной строке каталога",
+      "manufacturerScale": null,
+      "landingZoneMm": null,
+      "maxFallHeightMm": null,
+      "price": null,
+      "priceCurrency": "RUB",
+      "priceStatus": "Публичная цена в видимой карточке не опубликована; требуется КП",
+      "safetyZoneStatus": "Зона приземления/безопасности в тексте карточки не указана; DWG найден, но его содержимое не исследовано",
+      "landingZoneSourceLabel": null,
+      "safetyContourVerified": false,
+      "installationAtYardConfirmed": false,
+      "sourcePriceMetadataIgnored": true,
+      "sourceProperties": {
+        "Возрастная группа": "5–14 лет"
+      },
+      "boundingRectangleM2": null,
+      "boundingRectangleNote": "Без габаритов изделия площадь не вычислялась.",
+      "issues": [
+        "Для подтверждения размещения нужны габариты, полный контур зоны безопасности и паспорт выбранного исполнения."
+      ],
+      "id": "shelby-shkd-07-07",
+      "manufacturer": "Shelby",
+      "name": "Монорельс «Шелби Плей» SHKD-07.07",
+      "theme": "activity",
+      "themeLabel": "Движение и баланс",
+      "candidateYardIds": [
+        3,
+        5,
+        8
+      ],
+      "candidateStatus": "Тематический кандидат; размещение во дворе не подтверждено",
+      "localImage": "assets/candidates/shelby-shkd-07-07.webp",
+      "localImageSourceURL": "https://shelby.ru/upload/pics/f6365b6cd585815409659e202a21cd2d/SHKD_07.07-_1_.webp",
+      "localImageWidth": 1354,
+      "localImageHeight": 1080,
+      "localImageSha256": "ecd5d2c037d944be6e78e0c79aa61be28b3a0202030ec90568adb1ddffe568cd",
+      "localImageSourceKind": "fullsize_lightbox_link"
+    },
+    {
+      "article": "SHKL-05.06",
+      "target": true,
+      "category": "Качели-гнездо",
+      "sourceURL": "https://shelby.ru/catalog/kacheli-gnezdo/kacheli-dlya-detskikh-ploshchadok-art-shkl-05-06",
+      "seriesURL": "https://shelby.ru/catalog/kacheli-gnezdo",
+      "ageMin": 3,
+      "ageMax": 14,
+      "ageLabel": "3–14 лет",
+      "design": "Модель из раздела качелей-гнёзд. Галерея содержит несколько вариантов исполнения; текстовое описание комплектации на карточке фактически пустое. Число и типы подвесов нужно уточнить по выбранному исполнению и паспорту.",
+      "designBasis": "Название, категория и состояние описания в официальной карточке; конструктивные параметры по картинкам не вычислялись.",
+      "images": [
+        {
+          "url": "https://shelby.ru/upload/pics/64e1fcb7dd83cbab75d908091e619a18/SHKL_05.06_01_01_01.webp",
+          "sourceKind": "fullsize_lightbox_link",
+          "width": 1354,
+          "height": 1080,
+          "bytes": 49840,
+          "contentType": "image/webp",
+          "verifiedHttpStatus": 200
+        },
+        {
+          "url": "https://shelby.ru/upload/pics/1d493666c1dadf5f99691413d8863baa/SHKL_05.06_01_01_02.webp",
+          "sourceKind": "fullsize_lightbox_link",
+          "width": 1354,
+          "height": 1080,
+          "bytes": 46825,
+          "contentType": "image/webp",
+          "verifiedHttpStatus": 200
+        }
+      ],
+      "drawings": [
+        {
+          "url": "https://shelby.ru/upload/iblock/a3c/ee52ti58tjrvy3qvx3ox5z3izwpntbed/SHKL_05.06_01.dwg",
+          "type": "DWG",
+          "inspected": false
+        }
+      ],
+      "checkedAt": "2026-11-08",
+      "dimensionsMm": null,
+      "dimensionsOrder": "длина×ширина×высота, мм",
+      "dimensionsStatus": "Не опубликованы в карточке и в найденной строке каталога",
+      "manufacturerScale": null,
+      "landingZoneMm": null,
+      "maxFallHeightMm": null,
+      "price": null,
+      "priceCurrency": "RUB",
+      "priceStatus": "Публичная цена в видимой карточке не опубликована; требуется КП",
+      "safetyZoneStatus": "Зона приземления/безопасности в тексте карточки не указана; DWG найден, но его содержимое не исследовано",
+      "landingZoneSourceLabel": null,
+      "safetyContourVerified": false,
+      "installationAtYardConfirmed": false,
+      "sourcePriceMetadataIgnored": true,
+      "sourceProperties": {
+        "Возрастная группа": "3–14 лет"
+      },
+      "boundingRectangleM2": null,
+      "boundingRectangleNote": "Без габаритов изделия площадь не вычислялась.",
+      "issues": [
+        "Для подтверждения размещения нужны габариты, полный контур зоны безопасности и паспорт выбранного исполнения."
+      ],
+      "id": "shelby-shkl-05-06",
+      "manufacturer": "Shelby",
+      "name": "Качели SHKL-05.06",
+      "theme": "activity",
+      "themeLabel": "Движение и баланс",
+      "candidateYardIds": [
+        3,
+        5,
+        8
+      ],
+      "candidateStatus": "Тематический кандидат; размещение во дворе не подтверждено",
+      "localImage": "assets/candidates/shelby-shkl-05-06.webp",
+      "localImageSourceURL": "https://shelby.ru/upload/pics/64e1fcb7dd83cbab75d908091e619a18/SHKL_05.06_01_01_01.webp",
+      "localImageWidth": 1354,
+      "localImageHeight": 1080,
+      "localImageSha256": "eb325c11faabd074d07106b55cd6bceecd0fb0efee7f695d771d95c054e072b8",
+      "localImageSourceKind": "fullsize_lightbox_link"
+    },
+    {
+      "article": "SHG-02.03",
+      "name": "Игровой канатный комплекс арт. SHG-02.03",
+      "target": true,
+      "category": "Глобус",
+      "sourceURL": "https://shelby.ru/catalog/globus/igrovoy-kanatnyy-kompleks-art-shg-02-03",
+      "seriesURL": "https://shelby.ru/catalog/globus",
+      "checkedAt": "2026-11-08",
+      "dimensionsMm": [
+        30156,
+        5089,
+        2544
+      ],
+      "dimensionsOrder": "длина×ширина×высота, мм",
+      "dimensionsSourceText": "30156х5089х2544 мм",
+      "ageMin": 5,
+      "ageMax": 14,
+      "ageLabel": "5–14 лет",
+      "landingZoneMm": [
+        34139,
+        16632
+      ],
+      "landingZoneSourceLabel": "Размер зоны приземления",
+      "maxFallHeightMm": 1585,
+      "massKg": 1990,
+      "price": null,
+      "priceCurrency": "RUB",
+      "priceStatus": "Публичная цена в видимой карточке не опубликована; требуется КП",
+      "sourcePriceMetadataIgnored": true,
+      "safetyZoneStatus": "Карточка публикует размер зоны приземления 34139×16632 мм и высоту падения 1585 мм. Полный контур зоны по DWG/паспорту не проверен.",
+      "safetyContourVerified": false,
+      "installationAtYardConfirmed": false,
+      "design": "Протяжённый канатный игровой комплекс в образе кита: арочный стальной каркас, канатные сетки, внутренние лазательные элементы и подвесы, три стальных спуска. В галерее хвостовой модуль показан отдельно от основной части; точную расстановку следует брать из DWG.",
+      "designBasis": "Описание производителя и визуальное чтение двух fullsize-изображений.",
+      "images": [
+        {
+          "url": "https://shelby.ru/upload/pics/4ff619a5c3cc4b4b2b2aec6eec9dfb68/SHG_02.03-_1_.webp",
+          "sourceKind": "fullsize_lightbox_link",
+          "width": 1354,
+          "height": 1080,
+          "contentType": "image/webp",
+          "bytes": 158418,
+          "verifiedHttpStatus": 200
+        },
+        {
+          "url": "https://shelby.ru/upload/pics/7ef4c3f88eb0dbc133499a2c7a91c0f7/SHG_02.03-_2_.webp",
+          "sourceKind": "fullsize_lightbox_link",
+          "width": 1354,
+          "height": 1080,
+          "contentType": "image/webp",
+          "bytes": 149003,
+          "verifiedHttpStatus": 200
+        }
+      ],
+      "drawings": [
+        {
+          "url": "https://shelby.ru/upload/iblock/f60/cjizslunqpx5fkw9j8bidtxbwok5nwpm/SHG_02.03.dwg",
+          "type": "DWG",
+          "inspected": false
+        }
+      ],
+      "sourceProperties": {
+        "Габаритные размеры": "30156х5089х2544 мм",
+        "Масса изделия": "1990 кг",
+        "Размер зоны приземления": "34139х16632 мм",
+        "Высота максимального падения": "1585 мм",
+        "Возрастная группа": "от 5 до 14 лет"
+      },
+      "boundingRectangleM2": 153.464,
+      "landingZoneBoundingRectangleM2": 567.8,
+      "boundingRectangleNote": "Произведение габаритов прямоугольника, не площадь фактического контура, не готовая площадь покрытия.",
+      "issues": [
+        "Длина изделия более 30 м; размещение с другой крупной моделью во дворе не подтверждено.",
+        "Размер зоны приземления превышает габариты изделия; её нельзя заменять пятном самого МАФа.",
+        "Служебное schema.org/Offer значение 1000 не принято за публичную цену."
+      ],
+      "id": "shelby-shg-02-03",
+      "manufacturer": "Shelby",
+      "theme": "marine",
+      "themeLabel": "Море",
+      "candidateYardIds": [
+        3
+      ],
+      "candidateStatus": "Тематический кандидат; размещение во дворе не подтверждено",
+      "localImage": "assets/candidates/shelby-shg-02-03.webp",
+      "localImageSourceURL": "https://shelby.ru/upload/pics/4ff619a5c3cc4b4b2b2aec6eec9dfb68/SHG_02.03-_1_.webp",
+      "localImageWidth": 1354,
+      "localImageHeight": 1080,
+      "localImageSha256": "89250dbca8cae1c0748d293b9b513b090197b50f28c7c0ca0f07b663f72f9c9c",
+      "localImageSourceKind": "fullsize_lightbox_link"
+    },
+    {
+      "article": "SHID-01.07",
+      "name": "Игровой комплекс арт. SHID-01.07 поворотная",
+      "sourceURL": "https://shelby.ru/catalog/indy/igrovoy-kompleks-art-shid-01-07-povorotnaya",
+      "checkedAt": "2026-11-08",
+      "sourceStatus": "verified_official_product_card",
+      "verifiedHttpStatus": 200,
+      "dimensionsMm": null,
+      "dimensionsOrder": "длина×ширина×высота, мм",
+      "dimensionsSourceText": null,
+      "dimensionsStatus": "Габариты изделия в тексте карточки не опубликованы",
+      "ageLabel": "5–14 лет",
+      "ageMin": 5,
+      "ageMax": 14,
+      "ageSourceText": "от 5 до 14 лет",
+      "landingZoneMm": [
+        11735,
+        14432
+      ],
+      "landingZoneSourceLabel": "Размер зоны приземления",
+      "maxFallHeightMm": 1064,
+      "fallHeightSourceLabel": "Высота максимального падения",
+      "massKg": 2006,
+      "manufacturerScale": "Средний",
+      "price": null,
+      "priceCurrency": "RUB",
+      "priceStatus": "Публичный числовой ценник в видимой карточке не опубликован; требуется КП",
+      "sourcePriceMetadataIgnored": true,
+      "safetyZoneStatus": "Опубликован габарит зоны приземления; полный контур и паспорт не проверены",
+      "safetyContourVerified": false,
+      "installationAtYardConfirmed": false,
+      "images": [
+        {
+          "url": "https://shelby.ru/upload/pics/0d81f8311d8e8ee8e52f58f8ae2b533d/wh_01.07_kn_8463_01.webp",
+          "sourceKind": "fullsize_lightbox_link",
+          "width": 1354,
+          "height": 1080,
+          "bytes": 101944,
+          "contentType": "image/webp",
+          "verifiedHttpStatus": 200
+        }
+      ],
+      "drawings": [
+        {
+          "url": "https://shelby.ru/upload/iblock/232/l2n5qsm6dif52g8ukk30sujztd4h0hhy/SHID_01.07-povorotnaya.dwg",
+          "type": "DWG",
+          "inspected": false,
+          "sourceKind": "active_download_link"
+        }
+      ],
+      "sourceProperties": {
+        "Масса изделия": "2006 кг",
+        "Размер зоны приземления": "11735x14432 мм",
+        "Высота максимального падения": "1064 мм",
+        "Возрастная группа": "от 5 до 14 лет",
+        "Размер": "Средний"
+      },
+      "issues": [
+        "Габариты изделия неизвестны; габарит зоны приземления не подставлялся вместо них."
+      ],
+      "variant": "поворотная",
+      "articleLabel": "SHID-01.07 поворотная",
+      "duplicateHandling": "Повтор ссылки учтён один раз.",
+      "id": "shelby-shid-01-07",
+      "manufacturer": "Shelby",
+      "theme": "activity",
+      "themeLabel": "Движение и баланс",
+      "candidateYardIds": [
+        3,
+        5,
+        8
+      ],
+      "candidateStatus": "Тематический кандидат; размещение во дворе не подтверждено",
+      "localImage": "assets/candidates/shelby-shid-01-07.webp",
+      "localImageSourceURL": "https://shelby.ru/upload/pics/0d81f8311d8e8ee8e52f58f8ae2b533d/wh_01.07_kn_8463_01.webp",
+      "localImageWidth": 1354,
+      "localImageHeight": 1080,
+      "localImageSha256": "ffc33cbb24e4ecac4e40b13154a70221cfb83b0f13d51f26dfa411c0d637f445",
+      "localImageSourceKind": "fullsize_lightbox_link"
+    },
+    {
+      "article": "SHU-01.01",
+      "name": "Игровой канатный комплекс арт. SHU-01.01",
+      "sourceURL": "https://shelby.ru/catalog/ufo/igrovoy-kanatnyy-kompleks-art-shu-01-01",
+      "checkedAt": "2026-11-08",
+      "sourceStatus": "verified_official_product_card",
+      "verifiedHttpStatus": 200,
+      "dimensionsMm": [
+        12548,
+        12100,
+        2786
+      ],
+      "dimensionsOrder": "длина×ширина×высота, мм",
+      "dimensionsSourceText": "12548х12100х2786 мм",
+      "dimensionsStatus": "Опубликованы в карточке",
+      "ageLabel": "5–14 лет",
+      "ageMin": 5,
+      "ageMax": 14,
+      "ageSourceText": "от 5 до 14 лет",
+      "landingZoneMm": [
+        16049,
+        16179
+      ],
+      "landingZoneSourceLabel": "Размер зоны приземления",
+      "maxFallHeightMm": 2785,
+      "fallHeightSourceLabel": "Высота свободного падения",
+      "massKg": 3303.1,
+      "manufacturerScale": null,
+      "price": null,
+      "priceCurrency": "RUB",
+      "priceStatus": "Публичный числовой ценник в видимой карточке не опубликован; требуется КП",
+      "sourcePriceMetadataIgnored": true,
+      "safetyZoneStatus": "Опубликован габарит зоны приземления; полный контур и паспорт не проверены",
+      "safetyContourVerified": false,
+      "installationAtYardConfirmed": false,
+      "images": [
+        {
+          "url": "https://shelby.ru/upload/pics/2775d3720746642aba3750e1514e2db3/SHU_01.01_01.webp",
+          "sourceKind": "fullsize_lightbox_link",
+          "width": 1354,
+          "height": 1080,
+          "bytes": 196092,
+          "contentType": "image/webp",
+          "verifiedHttpStatus": 200
+        }
+      ],
+      "drawings": [
+        {
+          "url": "https://shelby.ru/upload/iblock/d9f/y3d46l0cj2167csblvwnxw7ifci3wo0n/SHU_01.01.dwg",
+          "type": "DWG",
+          "inspected": false,
+          "sourceKind": "active_download_link"
+        }
+      ],
+      "sourceProperties": {
+        "Габаритные размеры": "12548х12100х2786 мм",
+        "Возрастная группа": "от 5 до 14 лет",
+        "Масса изделия": "3303,1 кг",
+        "Размер зоны приземления": "16049х16179 мм",
+        "Высота свободного падения": "2785 мм"
+      },
+      "issues": [],
+      "userSubmittedURL": "https://shelby.ru/upload/pics/0922217031f86df347fbd9020a71b15a/SHU_01.01_01-prev.webp",
+      "inputType": "image_resolved_to_official_product",
+      "sourceDiscovery": "Официальная карточка найдена web-поиском точного артикула SHU-01.01; URL не сконструирован.",
+      "userImageMatch": {
+        "status": "visual_match",
+        "submittedImage": {
+          "url": "https://shelby.ru/upload/pics/0922217031f86df347fbd9020a71b15a/SHU_01.01_01-prev.webp",
+          "sourceKind": "user_submitted_preview",
+          "width": 590,
+          "height": 550,
+          "bytes": 44034,
+          "contentType": "image/webp",
+          "verifiedHttpStatus": 200
+        },
+        "fullsizeImageURL": "https://shelby.ru/upload/pics/2775d3720746642aba3750e1514e2db3/SHU_01.01_01.webp",
+        "basis": "Визуально сопоставлены одна и та же зелёная волнообразная рама, канатные сети, тоннель и подвесы; совпадают артикул и базовое имя официальных файлов. Превью 590×550 заменено fullsize из карточки; URL карточки найден поиском, не угадан.",
+        "exactPixelEqualityClaimed": false
+      },
+      "id": "shelby-shu-01-01",
+      "manufacturer": "Shelby",
+      "theme": "space",
+      "themeLabel": "Космос",
+      "candidateYardIds": [
+        7
+      ],
+      "candidateStatus": "Тематический кандидат; размещение во дворе не подтверждено",
+      "localImage": "assets/candidates/shelby-shu-01-01.webp",
+      "localImageSourceURL": "https://shelby.ru/upload/pics/2775d3720746642aba3750e1514e2db3/SHU_01.01_01.webp",
+      "localImageWidth": 1354,
+      "localImageHeight": 1080,
+      "localImageSha256": "6cc4e5cafea9e1e66ffaf23382cfcd81fdefce0da6f94ef2434d863bb98de73c",
+      "localImageSourceKind": "fullsize_lightbox_link"
+    },
+    {
+      "article": "SHD-02.02",
+      "name": "Спортивный комплекс арт. SHD-02.02",
+      "sourceURL": "https://shelby.ru/catalog/dynamix/sportivniy-kompleks-art-shd-02-02",
+      "checkedAt": "2026-11-08",
+      "sourceStatus": "verified_official_product_card",
+      "verifiedHttpStatus": 200,
+      "dimensionsMm": [
+        2719,
+        2360,
+        420
+      ],
+      "dimensionsOrder": "длина×ширина×высота, мм",
+      "dimensionsSourceText": "2719х2360х420 мм",
+      "dimensionsStatus": "Опубликованы в карточке",
+      "ageLabel": "5–14 лет",
+      "ageMin": 5,
+      "ageMax": 14,
+      "ageSourceText": "от 5 до 14 лет",
+      "landingZoneMm": [
+        5719,
+        5360
+      ],
+      "landingZoneSourceLabel": "Размер зоны приземления",
+      "maxFallHeightMm": 462,
+      "fallHeightSourceLabel": "Высота максимального падения",
+      "massKg": 140,
+      "manufacturerScale": "Малый",
+      "price": null,
+      "priceCurrency": "RUB",
+      "priceStatus": "Публичный числовой ценник в видимой карточке не опубликован; требуется КП",
+      "sourcePriceMetadataIgnored": true,
+      "safetyZoneStatus": "Опубликован габарит зоны приземления; полный контур и паспорт не проверены",
+      "safetyContourVerified": false,
+      "installationAtYardConfirmed": false,
+      "images": [
+        {
+          "url": "https://shelby.ru/upload/pics/4e7641d140dddfdf82f07036bc53dfa1/SHD_02.02_04-_1_.webp",
+          "sourceKind": "fullsize_lightbox_link",
+          "width": 1354,
+          "height": 1080,
+          "bytes": 145901,
+          "contentType": "image/webp",
+          "verifiedHttpStatus": 200
+        }
+      ],
+      "drawings": [
+        {
+          "url": "https://shelby.ru/upload/iblock/330/icmy9xmb0fzwllp1r9x19yu7268r7z93/SHD_02.02.dwg",
+          "type": "DWG",
+          "inspected": false,
+          "sourceKind": "active_download_link"
+        }
+      ],
+      "sourceProperties": {
+        "Габаритные размеры": "2719х2360х420 мм",
+        "Масса изделия": "140 кг",
+        "Размер зоны приземления": "5719х5360 мм",
+        "Высота максимального падения": "462 мм",
+        "Возрастная группа": "от 5 до 14 лет",
+        "Размер": "Малый"
+      },
+      "issues": [
+        "Карточка отдельно указывает высоту изделия 420 мм и максимального падения 462 мм; значения сохранены без корректировки."
+      ],
+      "id": "shelby-shd-02-02",
+      "manufacturer": "Shelby",
+      "theme": "activity",
+      "themeLabel": "Движение и баланс",
+      "candidateYardIds": [
+        3,
+        5,
+        8
+      ],
+      "candidateStatus": "Тематический кандидат; размещение во дворе не подтверждено",
+      "localImage": "assets/candidates/shelby-shd-02-02.webp",
+      "localImageSourceURL": "https://shelby.ru/upload/pics/4e7641d140dddfdf82f07036bc53dfa1/SHD_02.02_04-_1_.webp",
+      "localImageWidth": 1354,
+      "localImageHeight": 1080,
+      "localImageSha256": "c668fe6eb1aacf9d7b5c5a061c0c2bb3e7d4fbe75407db6a2f64c0b709d5403f",
+      "localImageSourceKind": "fullsize_lightbox_link"
+    },
+    {
+      "article": "SHTE-01.10.02",
+      "name": "Игровой комплекс арт. SHTE-01.10.02",
+      "sourceURL": "https://shelby.ru/catalog/terra/igrovoy-kompleks-art-shte-01-10-02",
+      "checkedAt": "2026-11-08",
+      "sourceStatus": "verified_official_product_card",
+      "verifiedHttpStatus": 200,
+      "dimensionsMm": [
+        12797,
+        9781,
+        6805
+      ],
+      "dimensionsOrder": "длина×ширина×высота, мм",
+      "dimensionsSourceText": "12797x9781x6805 мм",
+      "dimensionsStatus": "Опубликованы в карточке",
+      "ageLabel": "7–14 лет",
+      "ageMin": 7,
+      "ageMax": 14,
+      "ageSourceText": "от 7 до 14 лет",
+      "landingZoneMm": [
+        16260,
+        12873
+      ],
+      "landingZoneSourceLabel": "Размер зоны приземления",
+      "maxFallHeightMm": 1750,
+      "fallHeightSourceLabel": "Высота максимального падения",
+      "massKg": 3458,
+      "manufacturerScale": "Большой",
+      "price": null,
+      "priceCurrency": "RUB",
+      "priceStatus": "Публичный числовой ценник в видимой карточке не опубликован; требуется КП",
+      "sourcePriceMetadataIgnored": true,
+      "safetyZoneStatus": "Опубликован габарит зоны приземления; полный контур и паспорт не проверены",
+      "safetyContourVerified": false,
+      "installationAtYardConfirmed": false,
+      "images": [
+        {
+          "url": "https://shelby.ru/upload/pics/6114a271220541e16bb65f3879cd53c4/wh_01.10_kn_6949_01.webp",
+          "sourceKind": "fullsize_lightbox_link",
+          "width": 1354,
+          "height": 1080,
+          "bytes": 103472,
+          "contentType": "image/webp",
+          "verifiedHttpStatus": 200
+        }
+      ],
+      "drawings": [
+        {
+          "url": "https://shelby.ru/upload/iblock/a11/ylxbvxz2lngo40udbds6ra0brtoejb6s/SHTE_01.10.02.dwg",
+          "type": "DWG",
+          "inspected": false,
+          "sourceKind": "active_download_link"
+        }
+      ],
+      "sourceProperties": {
+        "Габаритные размеры": "12797x9781x6805 мм",
+        "Масса изделия": "3458 кг",
+        "Размер зоны приземления": "16260х12873 мм",
+        "Высота максимального падения": "1750 мм",
+        "Возрастная группа": "от 7 до 14 лет",
+        "Размер": "Большой"
+      },
+      "issues": [],
+      "id": "shelby-shte-01-10-02",
+      "manufacturer": "Shelby",
+      "theme": "architecture",
+      "themeLabel": "Башни и переходы",
+      "candidateYardIds": [
+        3,
+        5,
+        8
+      ],
+      "candidateStatus": "Тематический кандидат; размещение во дворе не подтверждено",
+      "localImage": "assets/candidates/shelby-shte-01-10-02.webp",
+      "localImageSourceURL": "https://shelby.ru/upload/pics/6114a271220541e16bb65f3879cd53c4/wh_01.10_kn_6949_01.webp",
+      "localImageWidth": 1354,
+      "localImageHeight": 1080,
+      "localImageSha256": "bad6e83fcb465e0ee6dd357e0038ba327aaa455976198ebfcca2419ba47238af",
+      "localImageSourceKind": "fullsize_lightbox_link"
+    },
+    {
+      "article": "SHTE-01.08.02",
+      "name": "Игровой комплекс арт. SHTE-01.08.02",
+      "sourceURL": "https://shelby.ru/catalog/terra/igrovoy-kompleks-art-shte-01-08-02",
+      "checkedAt": "2026-11-08",
+      "sourceStatus": "verified_official_product_card",
+      "verifiedHttpStatus": 200,
+      "dimensionsMm": [
+        14565,
+        8660,
+        7405
+      ],
+      "dimensionsOrder": "длина×ширина×высота, мм",
+      "dimensionsSourceText": "14565x8660x7405 мм",
+      "dimensionsStatus": "Опубликованы в карточке",
+      "ageLabel": "7–14 лет",
+      "ageMin": 7,
+      "ageMax": 14,
+      "ageSourceText": "от 7 до 14 лет",
+      "landingZoneMm": [
+        18565,
+        12160
+      ],
+      "landingZoneSourceLabel": "Размер зоны приземления",
+      "maxFallHeightMm": 2350,
+      "fallHeightSourceLabel": "Высота максимального падения",
+      "massKg": 3770,
+      "manufacturerScale": "Большой",
+      "price": null,
+      "priceCurrency": "RUB",
+      "priceStatus": "Публичный числовой ценник в видимой карточке не опубликован; требуется КП",
+      "sourcePriceMetadataIgnored": true,
+      "safetyZoneStatus": "Опубликован габарит зоны приземления; полный контур и паспорт не проверены",
+      "safetyContourVerified": false,
+      "installationAtYardConfirmed": false,
+      "images": [
+        {
+          "url": "https://shelby.ru/upload/pics/0fae351f6e2838195d8cdaef77d4ff51/wh_01.08_kn_6926_01.webp",
+          "sourceKind": "fullsize_lightbox_link",
+          "width": 1354,
+          "height": 1080,
+          "bytes": 109464,
+          "contentType": "image/webp",
+          "verifiedHttpStatus": 200
+        }
+      ],
+      "drawings": [
+        {
+          "url": "https://shelby.ru/upload/iblock/bb7/73seu2h5co3dbewdl0c250hpk1f32jwv/SHTE_01.08.02.dwg",
+          "type": "DWG",
+          "inspected": false,
+          "sourceKind": "active_download_link"
+        }
+      ],
+      "sourceProperties": {
+        "Габаритные размеры": "14565x8660x7405 мм",
+        "Масса изделия": "3770 кг",
+        "Размер зоны приземления": "18565x12160 мм",
+        "Высота максимального падения": "2350 мм",
+        "Возрастная группа": "от 7 до 14 лет",
+        "Размер": "Большой"
+      },
+      "issues": [],
+      "id": "shelby-shte-01-08-02",
+      "manufacturer": "Shelby",
+      "theme": "architecture",
+      "themeLabel": "Башни и переходы",
+      "candidateYardIds": [
+        3,
+        5,
+        8
+      ],
+      "candidateStatus": "Тематический кандидат; размещение во дворе не подтверждено",
+      "localImage": "assets/candidates/shelby-shte-01-08-02.webp",
+      "localImageSourceURL": "https://shelby.ru/upload/pics/0fae351f6e2838195d8cdaef77d4ff51/wh_01.08_kn_6926_01.webp",
+      "localImageWidth": 1354,
+      "localImageHeight": 1080,
+      "localImageSha256": "e5e3a370473b98796f72dbde1dfae931d6f0eea67c084baf3f6f320af434049d",
+      "localImageSourceKind": "fullsize_lightbox_link"
+    },
+    {
+      "article": "SHTE-01.04",
+      "name": "Игровой комплекс арт. SHTE-01.04",
+      "sourceURL": "https://shelby.ru/catalog/terra/igrovoy-kompleks-art-shte-01-04",
+      "checkedAt": "2026-11-08",
+      "sourceStatus": "verified_official_product_card",
+      "verifiedHttpStatus": 200,
+      "dimensionsMm": [
+        17920,
+        10680,
+        6860
+      ],
+      "dimensionsOrder": "длина×ширина×высота, мм",
+      "dimensionsSourceText": "17920x10680x6860 мм",
+      "dimensionsStatus": "Опубликованы в карточке",
+      "ageLabel": "5–14 лет",
+      "ageMin": 5,
+      "ageMax": 14,
+      "ageSourceText": "от 5 до 14 лет",
+      "landingZoneMm": null,
+      "landingZoneSourceLabel": null,
+      "maxFallHeightMm": null,
+      "fallHeightSourceLabel": null,
+      "massKg": null,
+      "manufacturerScale": null,
+      "price": null,
+      "priceCurrency": "RUB",
+      "priceStatus": "Публичный числовой ценник в видимой карточке не опубликован; требуется КП",
+      "sourcePriceMetadataIgnored": true,
+      "safetyZoneStatus": "Размер/контур зоны безопасности в тексте карточки не опубликован",
+      "safetyContourVerified": false,
+      "installationAtYardConfirmed": false,
+      "images": [
+        {
+          "url": "https://shelby.ru/upload/pics/10b6c7c2c826bdace72ce10ecd0e17d2/la_01.04_1-_2_.webp",
+          "sourceKind": "fullsize_lightbox_link",
+          "width": 1354,
+          "height": 1080,
+          "bytes": 145839,
+          "contentType": "image/webp",
+          "verifiedHttpStatus": 200
+        }
+      ],
+      "drawings": [],
+      "sourceProperties": {
+        "Габаритные размеры": "17920x10680x6860 мм",
+        "Возрастная группа": "от 5 до 14 лет"
+      },
+      "issues": [
+        "Активной ссылки на DWG/PDF в карточке не найдено."
+      ],
+      "id": "shelby-shte-01-04",
+      "manufacturer": "Shelby",
+      "theme": "architecture",
+      "themeLabel": "Башни и переходы",
+      "candidateYardIds": [
+        3,
+        5,
+        8
+      ],
+      "candidateStatus": "Тематический кандидат; размещение во дворе не подтверждено",
+      "localImage": "assets/candidates/shelby-shte-01-04.webp",
+      "localImageSourceURL": "https://shelby.ru/upload/pics/10b6c7c2c826bdace72ce10ecd0e17d2/la_01.04_1-_2_.webp",
+      "localImageWidth": 1354,
+      "localImageHeight": 1080,
+      "localImageSha256": "f934304339ed0be84648d7c1a7518994c78311bc0d9558b83a669d638bd45899",
+      "localImageSourceKind": "fullsize_lightbox_link"
+    },
+    {
+      "article": "SHTE-01.02",
+      "name": "Игровой комплекс арт. SHTE-01.02",
+      "sourceURL": "https://shelby.ru/catalog/terra/igrovoy-kompleks-art-shte-01-02",
+      "checkedAt": "2026-11-08",
+      "sourceStatus": "verified_official_product_card",
+      "verifiedHttpStatus": 200,
+      "dimensionsMm": [
+        19942,
+        10083,
+        8650
+      ],
+      "dimensionsOrder": "длина×ширина×высота, мм",
+      "dimensionsSourceText": "19942x10083x8650 мм",
+      "dimensionsStatus": "Опубликованы в карточке",
+      "ageLabel": "5–14 лет",
+      "ageMin": 5,
+      "ageMax": 14,
+      "ageSourceText": "от 5 до 14 лет",
+      "landingZoneMm": null,
+      "landingZoneSourceLabel": null,
+      "maxFallHeightMm": null,
+      "fallHeightSourceLabel": null,
+      "massKg": null,
+      "manufacturerScale": "Большой",
+      "price": null,
+      "priceCurrency": "RUB",
+      "priceStatus": "Публичный числовой ценник в видимой карточке не опубликован; требуется КП",
+      "sourcePriceMetadataIgnored": true,
+      "safetyZoneStatus": "Размер/контур зоны безопасности в тексте карточки не опубликован",
+      "safetyContourVerified": false,
+      "installationAtYardConfirmed": false,
+      "images": [
+        {
+          "url": "https://shelby.ru/upload/pics/414670eba7d84a52eb5e49dd28347706/SHTE_01.02-1-png.webp",
+          "sourceKind": "fullsize_lightbox_link",
+          "width": 1354,
+          "height": 1080,
+          "bytes": 139800,
+          "contentType": "image/webp",
+          "verifiedHttpStatus": 200
+        }
+      ],
+      "drawings": [
+        {
+          "url": "https://shelby.ru/upload/iblock/115/7mzur2rp0s8zb26sogz08eoqui0frkl9/SHTE_01.02_.dwg",
+          "type": "DWG",
+          "inspected": false,
+          "sourceKind": "active_download_link"
+        }
+      ],
+      "sourceProperties": {
+        "Габаритные размеры": "19942x10083x8650 мм",
+        "Возрастная группа": "от 5 до 14 лет",
+        "Размер": "Большой"
+      },
+      "issues": [],
+      "id": "shelby-shte-01-02",
+      "manufacturer": "Shelby",
+      "theme": "architecture",
+      "themeLabel": "Башни и переходы",
+      "candidateYardIds": [
+        3,
+        5,
+        8
+      ],
+      "candidateStatus": "Тематический кандидат; размещение во дворе не подтверждено",
+      "localImage": "assets/candidates/shelby-shte-01-02.webp",
+      "localImageSourceURL": "https://shelby.ru/upload/pics/414670eba7d84a52eb5e49dd28347706/SHTE_01.02-1-png.webp",
+      "localImageWidth": 1354,
+      "localImageHeight": 1080,
+      "localImageSha256": "71a541039658fa4cb0f15df7b7b427491df95422c61fa98fa638253883880274",
+      "localImageSourceKind": "fullsize_lightbox_link"
+    },
+    {
+      "article": "SHLG-03.09",
+      "name": "Качалка на пружине из робинии арт. SHLG-03.09",
+      "sourceURL": "https://shelby.ru/catalog/legno/kachalka-na-pryzhine-iz-robinii-art-shlg-03-09",
+      "checkedAt": "2026-11-08",
+      "sourceStatus": "verified_official_product_card",
+      "verifiedHttpStatus": 200,
+      "dimensionsMm": [
+        709,
+        693,
+        731
+      ],
+      "dimensionsOrder": "длина×ширина×высота, мм",
+      "dimensionsSourceText": "709х693х731 мм",
+      "dimensionsStatus": "Опубликованы в карточке",
+      "ageLabel": "3–7 лет",
+      "ageMin": 3,
+      "ageMax": 7,
+      "ageSourceText": "от 3 до 7 лет",
+      "landingZoneMm": [
+        2709,
+        2692
+      ],
+      "landingZoneSourceLabel": "Размер зоны приземления",
+      "maxFallHeightMm": 557,
+      "fallHeightSourceLabel": "Высота максимального падения",
+      "massKg": 40,
+      "manufacturerScale": "Малый",
+      "price": null,
+      "priceCurrency": "RUB",
+      "priceStatus": "Публичный числовой ценник в видимой карточке не опубликован; требуется КП",
+      "sourcePriceMetadataIgnored": true,
+      "safetyZoneStatus": "Опубликован габарит зоны приземления; полный контур и паспорт не проверены",
+      "safetyContourVerified": false,
+      "installationAtYardConfirmed": false,
+      "images": [
+        {
+          "url": "https://shelby.ru/upload/pics/33adf442c80267d7c8fefba0cec66590/SHLG0084_1.webp",
+          "sourceKind": "fullsize_lightbox_link",
+          "width": 1354,
+          "height": 1080,
+          "bytes": 87082,
+          "contentType": "image/webp",
+          "verifiedHttpStatus": 200
+        }
+      ],
+      "drawings": [
+        {
+          "url": "https://shelby.ru/upload/iblock/138/d171f9bim50dz1c6fya7plixxp13rjgk/SHLG_03.09.dwg",
+          "type": "DWG",
+          "inspected": false,
+          "sourceKind": "active_download_link"
+        }
+      ],
+      "sourceProperties": {
+        "Габаритные размеры": "709х693х731 мм",
+        "Масса изделия": "40 кг",
+        "Размер зоны приземления": "2709x2692 мм",
+        "Высота максимального падения": "557 мм",
+        "Возрастная группа": "от 3 до 7 лет",
+        "Размер": "Малый"
+      },
+      "issues": [],
+      "id": "shelby-shlg-03-09",
+      "manufacturer": "Shelby",
+      "theme": "nature",
+      "themeLabel": "Природные дворы",
+      "candidateYardIds": [
+        5,
+        6,
+        8
+      ],
+      "candidateStatus": "Тематический кандидат; размещение во дворе не подтверждено",
+      "localImage": "assets/candidates/shelby-shlg-03-09.webp",
+      "localImageSourceURL": "https://shelby.ru/upload/pics/33adf442c80267d7c8fefba0cec66590/SHLG0084_1.webp",
+      "localImageWidth": 1354,
+      "localImageHeight": 1080,
+      "localImageSha256": "eef0c497a96ba9097f256a1f2e609746b44a045051c80828c5e46592e855fdf0",
+      "localImageSourceKind": "fullsize_lightbox_link"
+    },
+    {
+      "article": "SHLG-09.43",
+      "name": "Игровое оборудование SHLG-09.43",
+      "sourceURL": "https://shelby.ru/catalog/legno/shlg-09-43",
+      "checkedAt": "2026-11-08",
+      "sourceStatus": "verified_official_product_card",
+      "verifiedHttpStatus": 200,
+      "dimensionsMm": [
+        3190,
+        7841,
+        380
+      ],
+      "dimensionsOrder": "длина×ширина×высота, мм",
+      "dimensionsSourceText": "3 190x7 841x380 мм",
+      "dimensionsStatus": "Опубликованы в карточке",
+      "ageLabel": "2–7 лет",
+      "ageMin": 2,
+      "ageMax": 7,
+      "ageSourceText": "от 2 до 7 лет",
+      "landingZoneMm": null,
+      "landingZoneSourceLabel": null,
+      "maxFallHeightMm": null,
+      "fallHeightSourceLabel": null,
+      "massKg": null,
+      "manufacturerScale": null,
+      "price": null,
+      "priceCurrency": "RUB",
+      "priceStatus": "Публичный числовой ценник в видимой карточке не опубликован; требуется КП",
+      "sourcePriceMetadataIgnored": true,
+      "safetyZoneStatus": "Размер/контур зоны безопасности в тексте карточки не опубликован",
+      "safetyContourVerified": false,
+      "installationAtYardConfirmed": false,
+      "images": [
+        {
+          "url": "https://shelby.ru/upload/pics/cfdae2bb14c1abb7d5695d221c29f364/ba_09.43_02_2.webp",
+          "sourceKind": "fullsize_lightbox_link",
+          "width": 1080,
+          "height": 1080,
+          "bytes": 59409,
+          "contentType": "image/webp",
+          "verifiedHttpStatus": 200
+        }
+      ],
+      "drawings": [],
+      "sourceProperties": {
+        "Габаритные размеры": "3 190x7 841x380 мм",
+        "Возрастная группа": "от 2 до 7 лет"
+      },
+      "issues": [
+        "Активной ссылки на DWG/PDF в карточке не найдено."
+      ],
+      "id": "shelby-shlg-09-43",
+      "manufacturer": "Shelby",
+      "theme": "nature",
+      "themeLabel": "Природные дворы",
+      "candidateYardIds": [
+        5,
+        6,
+        8
+      ],
+      "candidateStatus": "Тематический кандидат; размещение во дворе не подтверждено",
+      "localImage": "assets/candidates/shelby-shlg-09-43.webp",
+      "localImageSourceURL": "https://shelby.ru/upload/pics/cfdae2bb14c1abb7d5695d221c29f364/ba_09.43_02_2.webp",
+      "localImageWidth": 1080,
+      "localImageHeight": 1080,
+      "localImageSha256": "472edd06e9bff8283aea7433fd271aa9e2e0fbd28a2b93cacfc82866e0ac07c5",
+      "localImageSourceKind": "fullsize_lightbox_link"
+    },
+    {
+      "article": "SHLG-03.13",
+      "name": "Детское игровое оборудование SHLG-03.13",
+      "sourceURL": "https://shelby.ru/catalog/legno/shlg-03-13",
+      "checkedAt": "2026-11-08",
+      "sourceStatus": "verified_official_product_card",
+      "verifiedHttpStatus": 200,
+      "dimensionsMm": null,
+      "dimensionsOrder": "длина×ширина×высота, мм",
+      "dimensionsSourceText": null,
+      "dimensionsStatus": "Габариты изделия в тексте карточки не опубликованы",
+      "ageLabel": "от 5 лет",
+      "ageMin": 5,
+      "ageMax": null,
+      "ageSourceText": "от 5 лет",
+      "landingZoneMm": null,
+      "landingZoneSourceLabel": null,
+      "maxFallHeightMm": 1245,
+      "fallHeightSourceLabel": "Высота максимального падения",
+      "massKg": null,
+      "manufacturerScale": null,
+      "price": null,
+      "priceCurrency": "RUB",
+      "priceStatus": "Публичный числовой ценник в видимой карточке не опубликован; требуется КП",
+      "sourcePriceMetadataIgnored": true,
+      "safetyZoneStatus": "Размер/контур зоны безопасности в тексте карточки не опубликован",
+      "safetyContourVerified": false,
+      "installationAtYardConfirmed": false,
+      "images": [
+        {
+          "url": "https://shelby.ru/upload/pics/7746db7f5dbaca948c5d55ce390644a3/bb_03.13_kn_9194_02.webp",
+          "sourceKind": "fullsize_lightbox_link",
+          "width": 1080,
+          "height": 1080,
+          "bytes": 99152,
+          "contentType": "image/webp",
+          "verifiedHttpStatus": 200
+        }
+      ],
+      "drawings": [],
+      "sourceProperties": {
+        "Возрастная группа": "от 5 лет",
+        "Высота максимального падения": "1 245 мм"
+      },
+      "issues": [
+        "Габариты изделия неизвестны; габарит зоны приземления не подставлялся вместо них.",
+        "Указан только нижний возраст; верхняя граница не установлена.",
+        "Активной ссылки на DWG/PDF в карточке не найдено."
+      ],
+      "id": "shelby-shlg-03-13",
+      "manufacturer": "Shelby",
+      "theme": "nature",
+      "themeLabel": "Природные дворы",
+      "candidateYardIds": [
+        5,
+        6,
+        8
+      ],
+      "candidateStatus": "Тематический кандидат; размещение во дворе не подтверждено",
+      "localImage": "assets/candidates/shelby-shlg-03-13.webp",
+      "localImageSourceURL": "https://shelby.ru/upload/pics/7746db7f5dbaca948c5d55ce390644a3/bb_03.13_kn_9194_02.webp",
+      "localImageWidth": 1080,
+      "localImageHeight": 1080,
+      "localImageSha256": "81591c095436d35d33bca8ae07248e8a5ca94af2b86c35b44b08318289b9f9c4",
+      "localImageSourceKind": "fullsize_lightbox_link"
+    },
+    {
+      "article": "SHLL-00.23",
+      "name": "Игровой комплекс для лазания арт. SHLL-00.23",
+      "sourceURL": "https://shelby.ru/catalog/lago/igrovoy-kompleks-dlya-lazaniya-art-shlg-00-23",
+      "checkedAt": "2026-11-08",
+      "sourceStatus": "verified_official_product_card",
+      "verifiedHttpStatus": 200,
+      "dimensionsMm": [
+        4810,
+        4810,
+        2700
+      ],
+      "dimensionsOrder": "длина×ширина×высота, мм",
+      "dimensionsSourceText": "4810х4810х2700 мм",
+      "dimensionsStatus": "Опубликованы в карточке",
+      "ageLabel": "3–14 лет",
+      "ageMin": 3,
+      "ageMax": 14,
+      "ageSourceText": "от 3 до 14 лет",
+      "landingZoneMm": [
+        9410,
+        9410
+      ],
+      "landingZoneSourceLabel": "Размер зоны приземления",
+      "maxFallHeightMm": 2700,
+      "fallHeightSourceLabel": "Высота максимального падения",
+      "massKg": 1121,
+      "manufacturerScale": "Малый",
+      "price": null,
+      "priceCurrency": "RUB",
+      "priceStatus": "Публичный числовой ценник в видимой карточке не опубликован; требуется КП",
+      "sourcePriceMetadataIgnored": true,
+      "safetyZoneStatus": "Опубликован габарит зоны приземления; полный контур и паспорт не проверены",
+      "safetyContourVerified": false,
+      "installationAtYardConfirmed": false,
+      "images": [
+        {
+          "url": "https://shelby.ru/upload/pics/b9f5c4823dbac072457a979f60596342/SHLL0022-_1_.webp",
+          "sourceKind": "fullsize_lightbox_link",
+          "width": 1354,
+          "height": 1080,
+          "bytes": 182804,
+          "contentType": "image/webp",
+          "verifiedHttpStatus": 200
+        }
+      ],
+      "drawings": [
+        {
+          "url": "https://shelby.ru/upload/iblock/afc/zsgrm4ty69vlkvu5ltabge1fxq4slj75/SHLL_00.23.dwg",
+          "type": "DWG",
+          "inspected": false,
+          "sourceKind": "active_download_link"
+        }
+      ],
+      "sourceProperties": {
+        "Габаритные размеры": "4810х4810х2700 мм",
+        "Масса изделия": "1121 кг",
+        "Размер зоны приземления": "9410х9410 мм",
+        "Высота максимального падения": "2700 мм",
+        "Возрастная группа": "от 3 до 14 лет",
+        "Размер": "Малый"
+      },
+      "issues": [
+        "В URL стоит shlg-00-23, но заголовок, поле артикула и DWG называют изделие SHLL-00.23. В данных сохранён артикул карточки; «космос» — пользовательская метка."
+      ],
+      "userLabel": "космос",
+      "articleInSubmittedURL": "SHLG-00.23",
+      "id": "shelby-shll-00-23",
+      "manufacturer": "Shelby",
+      "theme": "space",
+      "themeLabel": "Космос",
+      "candidateYardIds": [
+        7
+      ],
+      "candidateStatus": "Тематический кандидат; размещение во дворе не подтверждено",
+      "localImage": "assets/candidates/shelby-shll-00-23.webp",
+      "localImageSourceURL": "https://shelby.ru/upload/pics/b9f5c4823dbac072457a979f60596342/SHLL0022-_1_.webp",
+      "localImageWidth": 1354,
+      "localImageHeight": 1080,
+      "localImageSha256": "be5acd5193be526a6a84df29098d7f2170a2847fa41e3eb3ccd6c515ffccb4d1",
+      "localImageSourceKind": "fullsize_lightbox_link"
+    },
+    {
+      "article": "SHLG-06.31",
+      "name": "Детское игровое оборудование SHLG-06.31",
+      "sourceURL": "https://shelby.ru/catalog/legno/shlg-06-31",
+      "checkedAt": "2026-11-08",
+      "sourceStatus": "verified_official_product_card",
+      "verifiedHttpStatus": 200,
+      "dimensionsMm": null,
+      "dimensionsOrder": "длина×ширина×высота, мм",
+      "dimensionsSourceText": null,
+      "dimensionsStatus": "Габариты изделия в тексте карточки не опубликованы",
+      "ageLabel": null,
+      "ageMin": null,
+      "ageMax": null,
+      "ageSourceText": null,
+      "landingZoneMm": null,
+      "landingZoneSourceLabel": null,
+      "maxFallHeightMm": null,
+      "fallHeightSourceLabel": null,
+      "massKg": null,
+      "manufacturerScale": null,
+      "price": null,
+      "priceCurrency": "RUB",
+      "priceStatus": "Публичный числовой ценник в видимой карточке не опубликован; требуется КП",
+      "sourcePriceMetadataIgnored": true,
+      "safetyZoneStatus": "Размер/контур зоны безопасности в тексте карточки не опубликован",
+      "safetyContourVerified": false,
+      "installationAtYardConfirmed": false,
+      "images": [
+        {
+          "url": "https://shelby.ru/upload/pics/3f3dfa477d0c2eff40f48c670b461647/le_06.31_3.webp",
+          "sourceKind": "fullsize_lightbox_link",
+          "width": 1080,
+          "height": 1080,
+          "bytes": 169083,
+          "contentType": "image/webp",
+          "verifiedHttpStatus": 200
+        }
+      ],
+      "drawings": [],
+      "sourceProperties": {},
+      "issues": [
+        "Габариты изделия неизвестны; габарит зоны приземления не подставлялся вместо них.",
+        "Возрастная группа в карточке не указана.",
+        "Активной ссылки на DWG/PDF в карточке не найдено."
+      ],
+      "id": "shelby-shlg-06-31",
+      "manufacturer": "Shelby",
+      "theme": "nature",
+      "themeLabel": "Природные дворы",
+      "candidateYardIds": [
+        5,
+        6,
+        8
+      ],
+      "candidateStatus": "Тематический кандидат; размещение во дворе не подтверждено",
+      "localImage": "assets/candidates/shelby-shlg-06-31.webp",
+      "localImageSourceURL": "https://shelby.ru/upload/pics/3f3dfa477d0c2eff40f48c670b461647/le_06.31_3.webp",
+      "localImageWidth": 1080,
+      "localImageHeight": 1080,
+      "localImageSha256": "6a7b6f73a3253acf127b3e662cd15e0a19a652896ac2ffd58fb1415dd8c9b2b8",
+      "localImageSourceKind": "fullsize_lightbox_link"
+    },
+    {
+      "article": "SHLG-01.24",
+      "name": "Игровой комплекс из робинии арт. SHLG-01.24",
+      "sourceURL": "https://shelby.ru/catalog/legno/igrovoy-kompleks-iz-robinii-art-shlg-01-24",
+      "checkedAt": "2026-11-08",
+      "sourceStatus": "verified_official_product_card",
+      "verifiedHttpStatus": 200,
+      "dimensionsMm": null,
+      "dimensionsOrder": "длина×ширина×высота, мм",
+      "dimensionsSourceText": null,
+      "dimensionsStatus": "Габариты изделия в тексте карточки не опубликованы",
+      "ageLabel": "6–14 лет",
+      "ageMin": 6,
+      "ageMax": 14,
+      "ageSourceText": "от 6 до 14 лет",
+      "landingZoneMm": null,
+      "landingZoneSourceLabel": null,
+      "maxFallHeightMm": null,
+      "fallHeightSourceLabel": null,
+      "massKg": null,
+      "manufacturerScale": "Средний",
+      "price": null,
+      "priceCurrency": "RUB",
+      "priceStatus": "Публичный числовой ценник в видимой карточке не опубликован; требуется КП",
+      "sourcePriceMetadataIgnored": true,
+      "safetyZoneStatus": "Размер/контур зоны безопасности в тексте карточки не опубликован",
+      "safetyContourVerified": false,
+      "installationAtYardConfirmed": false,
+      "images": [
+        {
+          "url": "https://shelby.ru/upload/pics/c1dd41ede099e71450c54f4f43ed4799/SHLG_01.24-_1_.webp",
+          "sourceKind": "fullsize_lightbox_link",
+          "width": 1354,
+          "height": 1080,
+          "bytes": 137181,
+          "contentType": "image/webp",
+          "verifiedHttpStatus": 200
+        }
+      ],
+      "drawings": [],
+      "sourceProperties": {
+        "Возрастная группа": "от 6 до 14 лет",
+        "Размер": "Средний"
+      },
+      "issues": [
+        "Габариты изделия неизвестны; габарит зоны приземления не подставлялся вместо них.",
+        "Активной ссылки на DWG/PDF в карточке не найдено."
+      ],
+      "id": "shelby-shlg-01-24",
+      "manufacturer": "Shelby",
+      "theme": "nature",
+      "themeLabel": "Природные дворы",
+      "candidateYardIds": [
+        5,
+        6,
+        8
+      ],
+      "candidateStatus": "Тематический кандидат; размещение во дворе не подтверждено",
+      "localImage": "assets/candidates/shelby-shlg-01-24.webp",
+      "localImageSourceURL": "https://shelby.ru/upload/pics/c1dd41ede099e71450c54f4f43ed4799/SHLG_01.24-_1_.webp",
+      "localImageWidth": 1354,
+      "localImageHeight": 1080,
+      "localImageSha256": "cc7846ee28a6b025d94f08edb6d146a9738fdd73ec4b509e16c8733e4094ce4e",
+      "localImageSourceKind": "fullsize_lightbox_link"
+    },
+    {
+      "article": "057.109.00",
+      "name": "Игровой комплекс 057.109.00",
+      "sourceURL": "https://romana.pro/catalog/product/68bfd058-0a96-11ee-8f0f-f40343c85688/",
+      "checkedAt": "2026-11-08",
+      "verifiedHttpStatus": 200,
+      "series": "Сфера",
+      "dimensionsMm": [
+        15150,
+        12061,
+        4858
+      ],
+      "dimensionsSourceText": "15150х12061х4858",
+      "dimensionsOrder": "длина×ширина×высота",
+      "dimensionsUnitStatus": "not_explicit_on_card_normalized_to_mm",
+      "dimensionsUnitNote": "В поле «Габариты» карточки нет подписи единицы; значения сохранены без изменения и условно нормализованы в мм. Единицу и порядок следует подтвердить по DWG/паспорту до проектной посадки.",
+      "ageMin": 7,
+      "ageMax": 14,
+      "ageLabel": "7–14 лет",
+      "price": null,
+      "priceCurrency": "RUB",
+      "priceVisibleText": "по запросу",
+      "priceStatus": "Публичного числового ценника нет; карточка прямо указывает цену по запросу.",
+      "landingZoneMm": null,
+      "maxFallHeightMm": null,
+      "safetyZoneStatus": "Размер/контур зоны безопасности и высота падения в текстовой карточке не опубликованы; DWG найден, но не разобран.",
+      "safetyContourVerified": false,
+      "installationAtYardConfirmed": false,
+      "images": [
+        {
+          "url": "https://romana.pro/upload/iblock/84c/95w1fet0qymaua99akgwk7cu0iu7qu91.webp",
+          "sourceKind": "fullsize_gallery_attribute",
+          "width": 1100,
+          "height": 1100,
+          "contentType": "image/webp",
+          "bytes": 45768,
+          "verifiedHttpStatus": 200
+        },
+        {
+          "url": "https://romana.pro/upload/iblock/aa8/gupos41ezr6yo3vkbh2vwli6y3xizsak.webp",
+          "sourceKind": "fullsize_gallery_attribute",
+          "width": 1100,
+          "height": 1100,
+          "contentType": "image/webp",
+          "bytes": 45584,
+          "verifiedHttpStatus": 200
+        },
+        {
+          "url": "https://romana.pro/upload/iblock/c5c/9fygcycbj08912o8i0f93cg36d51tcdh.webp",
+          "sourceKind": "fullsize_gallery_attribute",
+          "width": 1100,
+          "height": 1100,
+          "contentType": "image/webp",
+          "bytes": 39908,
+          "verifiedHttpStatus": 200
+        }
+      ],
+      "drawings": [
+        {
+          "url": "https://romana.pro/upload/iblock/c47/myum0lvjes3gkox2eesnxq8f5mr6ijn3.dwg",
+          "type": "DWG",
+          "label": "057.109.00 — Чертёж DWG.dwg",
+          "inspected": false
+        }
+      ],
+      "pdf": [],
+      "technicalDocuments": [],
+      "models": [
+        {
+          "url": "https://romana.pro/upload/iblock/329/z1by1ghk7i36pbopp2vjh62ucaxh11z1.zip",
+          "type": "MAX",
+          "label": "057.109.00 — 3D-модель 3ds Max.zip",
+          "inspected": false
+        },
+        {
+          "url": "https://romana.pro/upload/iblock/3b0/2yd12f40jpfwdf7tsnmpnjbxay3cs7kr.zip",
+          "type": "3DS",
+          "label": "057.109.00 — 3D-модель 3DS.zip",
+          "inspected": false
+        },
+        {
+          "url": "https://romana.pro/upload/iblock/5b2/38zuvz5hn3n4lo14w6mpinoied56moqb.zip",
+          "type": "OBJ",
+          "label": "057.109.00 — 3D-модель OBJ.zip",
+          "inspected": false
+        },
+        {
+          "url": "https://romana.pro/upload/iblock/162/xu8q11o5hvwhzz7x1ujr4vexjgtu7oh0.zip",
+          "type": "FBX",
+          "label": "057.109.00 — 3D-модель FBX.zip",
+          "inspected": false
+        }
+      ],
+      "design": "Три округлые многогранные башни соединены сетчатыми переходами; на основном изображении видны три трубчатых спуска. Светлая облицовка с яркими зелёными, красными и голубыми вставками.",
+      "designBasis": "Визуальное чтение официального основного изображения; для 115.96.00 также второго изображения. Не является измерением конструкции.",
+      "sourceProperties": {
+        "Габариты": "15150х12061х4858",
+        "Возрастная группа": "7-14",
+        "Цена": "по запросу"
+      },
+      "issues": [],
+      "id": "romana-057-109-00",
+      "manufacturer": "Romana",
+      "theme": "architecture",
+      "themeLabel": "Башни и переходы",
+      "candidateYardIds": [
+        3,
+        5,
+        8
+      ],
+      "candidateStatus": "Тематический кандидат; размещение во дворе не подтверждено",
+      "localImage": "assets/candidates/romana-057-109-00.webp",
+      "localImageSourceURL": "https://romana.pro/upload/iblock/84c/95w1fet0qymaua99akgwk7cu0iu7qu91.webp",
+      "localImageWidth": 1100,
+      "localImageHeight": 1100,
+      "localImageSha256": "ba31f88659bb0e180e32c1d9572227a8432b9c768005087509caca85c26bbdaa",
+      "localImageSourceKind": "fullsize_gallery_attribute"
+    },
+    {
+      "article": "115.96.00",
+      "name": "Игровое оборудование 115.96.00",
+      "sourceURL": "https://romana.pro/catalog/product/b4691bee-98f1-11ee-8f13-f40343c85688/",
+      "checkedAt": "2026-11-08",
+      "verifiedHttpStatus": 200,
+      "series": "Грани",
+      "dimensionsMm": [
+        15031,
+        13308,
+        3081
+      ],
+      "dimensionsSourceText": "15031х13308х3081",
+      "dimensionsOrder": "длина×ширина×высота",
+      "dimensionsUnitStatus": "not_explicit_on_card_normalized_to_mm",
+      "dimensionsUnitNote": "В поле «Габариты» карточки нет подписи единицы; значения сохранены без изменения и условно нормализованы в мм. Единицу и порядок следует подтвердить по DWG/паспорту до проектной посадки.",
+      "ageMin": 7,
+      "ageMax": 14,
+      "ageLabel": "7–14 лет",
+      "price": null,
+      "priceCurrency": "RUB",
+      "priceVisibleText": "по запросу",
+      "priceStatus": "Публичного числового ценника нет; карточка прямо указывает цену по запросу.",
+      "landingZoneMm": null,
+      "maxFallHeightMm": null,
+      "safetyZoneStatus": "Размер/контур зоны безопасности и высота падения в текстовой карточке не опубликованы; DWG найден, но не разобран.",
+      "safetyContourVerified": false,
+      "installationAtYardConfirmed": false,
+      "images": [
+        {
+          "url": "https://romana.pro/upload/iblock/f0d/pmithjwyi45081nle2o68oipkhwc45ft.webp",
+          "sourceKind": "fullsize_gallery_attribute",
+          "width": 1100,
+          "height": 1100,
+          "contentType": "image/webp",
+          "bytes": 39886,
+          "verifiedHttpStatus": 200
+        },
+        {
+          "url": "https://romana.pro/upload/iblock/f6a/jpcjm4y8hm65qldondo2czq97ejqiw47.webp",
+          "sourceKind": "fullsize_gallery_attribute",
+          "width": 1100,
+          "height": 1100,
+          "contentType": "image/webp",
+          "bytes": 37212,
+          "verifiedHttpStatus": 200
+        }
+      ],
+      "drawings": [
+        {
+          "url": "https://romana.pro/upload/iblock/d8d/4fxi9qnyrrhmpxx3msswvhcuz1qoxuyt.dwg",
+          "type": "DWG",
+          "label": "115.96.00 — Чертёж DWG.dwg",
+          "inspected": false
+        }
+      ],
+      "pdf": [],
+      "technicalDocuments": [],
+      "models": [
+        {
+          "url": "https://romana.pro/upload/iblock/f3b/e20ql3uik50a1p0mg4eyvi4xy2ifdlcs.zip",
+          "type": "MAX",
+          "label": "115.96.00 — 3D-модель 3ds Max.zip",
+          "inspected": false
+        },
+        {
+          "url": "https://romana.pro/upload/iblock/325/ejz1f6uha1woo0s0ztkmdcdco0jhfgl7.zip",
+          "type": "3DS",
+          "label": "115.96.00 — 3D-модель 3DS.zip",
+          "inspected": false
+        },
+        {
+          "url": "https://romana.pro/upload/iblock/669/emgjvj30rb68hae0ohsnwuwlasm9g9cw.zip",
+          "type": "OBJ",
+          "label": "115.96.00 — 3D-модель OBJ.zip",
+          "inspected": false
+        },
+        {
+          "url": "https://romana.pro/upload/iblock/bda/nltl05ape74rlnfk1n97t3q0hmog662b.zip",
+          "type": "FBX",
+          "label": "115.96.00 — 3D-модель FBX.zip",
+          "inspected": false
+        }
+      ],
+      "design": "Шестигранные игровые кабины соединены канатными тоннелями; два трубчатых спуска и открытая горка через подвесной мост. Вторая фотография показывает бежево-серую палитру, полностью совпадающую с изображением пользователя.",
+      "designBasis": "Визуальное чтение официального основного изображения; для 115.96.00 также второго изображения. Не является измерением конструкции.",
+      "sourceProperties": {
+        "Габариты": "15031х13308х3081",
+        "Возрастная группа": "7-14",
+        "Цена": "по запросу"
+      },
+      "issues": [],
+      "userImageMatch": {
+        "status": "exact_decoded_rgb_match",
+        "imageIndex": 1,
+        "imageURL": "https://romana.pro/upload/iblock/f6a/jpcjm4y8hm65qldondo2czq97ejqiw47.webp",
+        "width": 1100,
+        "height": 1100,
+        "method": "PIL RGB: размеры одинаковы; ImageChops.difference(...).getbbox() вернул None.",
+        "result": "Изображения имеют одинаковые декодированные RGB-пиксели."
+      },
+      "id": "romana-115-96-00",
+      "manufacturer": "Romana",
+      "theme": "architecture",
+      "themeLabel": "Башни и переходы",
+      "candidateYardIds": [
+        3,
+        5,
+        8
+      ],
+      "candidateStatus": "Тематический кандидат; размещение во дворе не подтверждено",
+      "localImage": "assets/candidates/romana-115-96-00.webp",
+      "localImageSourceURL": "https://romana.pro/upload/iblock/f6a/jpcjm4y8hm65qldondo2czq97ejqiw47.webp",
+      "localImageWidth": 1100,
+      "localImageHeight": 1100,
+      "localImageSha256": "f7bf6de9798bb66da1cbadc57b7f4c807020cd8e2add659b4cd324d63b405511",
+      "localImageSourceKind": "fullsize_gallery_attribute"
+    },
+    {
+      "article": "117.04.00",
+      "name": "Игровой комплекс 117.04.00",
+      "sourceURL": "https://romana.pro/catalog/product/5436a608-d91d-11ed-8f0e-f40343c85688/",
+      "checkedAt": "2026-11-08",
+      "verifiedHttpStatus": 200,
+      "series": null,
+      "dimensionsMm": [
+        12572,
+        10193,
+        6500
+      ],
+      "dimensionsSourceText": "12572x10193x6500",
+      "dimensionsOrder": "длина×ширина×высота",
+      "dimensionsUnitStatus": "not_explicit_on_card_normalized_to_mm",
+      "dimensionsUnitNote": "В поле «Габариты» карточки нет подписи единицы; значения сохранены без изменения и условно нормализованы в мм. Единицу и порядок следует подтвердить по DWG/паспорту до проектной посадки.",
+      "ageMin": 7,
+      "ageMax": 14,
+      "ageLabel": "7–14 лет",
+      "price": null,
+      "priceCurrency": "RUB",
+      "priceVisibleText": "по запросу",
+      "priceStatus": "Публичного числового ценника нет; карточка прямо указывает цену по запросу.",
+      "landingZoneMm": null,
+      "maxFallHeightMm": null,
+      "safetyZoneStatus": "Размер/контур зоны безопасности и высота падения в текстовой карточке не опубликованы; DWG найден, но не разобран.",
+      "safetyContourVerified": false,
+      "installationAtYardConfirmed": false,
+      "images": [
+        {
+          "url": "https://romana.pro/upload/iblock/e0b/3avz3lfciaorag91c7pj0o4hhcf2i0xg.webp",
+          "sourceKind": "fullsize_gallery_attribute",
+          "width": 1100,
+          "height": 1100,
+          "contentType": "image/webp",
+          "bytes": 30042,
+          "verifiedHttpStatus": 200
+        },
+        {
+          "url": "https://romana.pro/upload/iblock/e9b/u9jxdeaicae5ykzp7k3fv8m1afhhtkpq.webp",
+          "sourceKind": "fullsize_gallery_attribute",
+          "width": 1100,
+          "height": 1100,
+          "contentType": "image/webp",
+          "bytes": 27860,
+          "verifiedHttpStatus": 200
+        }
+      ],
+      "drawings": [
+        {
+          "url": "https://romana.pro/upload/iblock/60f/b4gbf4g4ucck2xwce0bq1nhw6ni4j0bq.dwg",
+          "type": "DWG",
+          "label": "117.04.00 — Чертёж DWG.dwg",
+          "inspected": false
+        }
+      ],
+      "pdf": [],
+      "technicalDocuments": [],
+      "models": [
+        {
+          "url": "https://romana.pro/upload/iblock/2c2/0wor35m8rq864ajxjz24vduddtet6slz.zip",
+          "type": "MAX",
+          "label": "117.04.00 — 3D-модель 3ds Max.zip",
+          "inspected": false
+        },
+        {
+          "url": "https://romana.pro/upload/iblock/e56/ktgre7mh1whwqampezcdyqn0a4m1hi8c.zip",
+          "type": "3DS",
+          "label": "117.04.00 — 3D-модель 3DS.zip",
+          "inspected": false
+        },
+        {
+          "url": "https://romana.pro/upload/iblock/4da/38e7q2b0sffp8hkb4obv1ziddu9p3v4d.zip",
+          "type": "OBJ",
+          "label": "117.04.00 — 3D-модель OBJ.zip",
+          "inspected": false
+        },
+        {
+          "url": "https://romana.pro/upload/iblock/2e0/l99j0to7n0ozk1ikncclbik0jn038tv3.zip",
+          "type": "FBX",
+          "label": "117.04.00 — 3D-модель FBX.zip",
+          "inspected": false
+        }
+      ],
+      "design": "Высокая композиция из наклонных гранёных башен с окнами, двумя крупными трубчатыми спусками и подвесными сиденьями. Основное изображение имеет бежевые, зелёные, красные и голубые панели.",
+      "designBasis": "Визуальное чтение официального основного изображения; для 115.96.00 также второго изображения. Не является измерением конструкции.",
+      "sourceProperties": {
+        "Габариты": "12572x10193x6500",
+        "Возрастная группа": "7-14",
+        "Цена": "по запросу"
+      },
+      "issues": [],
+      "id": "romana-117-04-00",
+      "manufacturer": "Romana",
+      "theme": "architecture",
+      "themeLabel": "Башни и переходы",
+      "candidateYardIds": [
+        3,
+        5,
+        8
+      ],
+      "candidateStatus": "Тематический кандидат; размещение во дворе не подтверждено",
+      "localImage": "assets/candidates/romana-117-04-00.webp",
+      "localImageSourceURL": "https://romana.pro/upload/iblock/e0b/3avz3lfciaorag91c7pj0o4hhcf2i0xg.webp",
+      "localImageWidth": 1100,
+      "localImageHeight": 1100,
+      "localImageSha256": "b094437e6be249a6bc542348848b1cc98e381fcf51a5cfc6937d8c23682b515b",
+      "localImageSourceKind": "fullsize_gallery_attribute"
+    },
+    {
+      "article": "Romana 101.99.00",
+      "name": "Игровой комплекс \"Крепость-мини\" Romana 101.99.00",
+      "sourceURL": "https://romana.pro/catalog/product/2f10ca6a-1f04-11e9-94fa-002481a84503/",
+      "checkedAt": "2026-11-08",
+      "verifiedHttpStatus": 200,
+      "series": "101",
+      "dimensionsMm": [
+        8903,
+        6727,
+        3780
+      ],
+      "dimensionsSourceText": "8903х6727х3780",
+      "dimensionsOrder": "длина×ширина×высота",
+      "dimensionsUnitStatus": "explicit_technical_docx",
+      "dimensionsUnitNote": "Техническое описание прямо подтверждает длину 8903, ширину 6727, высоту 3780 мм, допуск ±50 мм.",
+      "ageMin": 7,
+      "ageMax": 12,
+      "ageLabel": "7–12 лет",
+      "price": null,
+      "priceCurrency": "RUB",
+      "priceVisibleText": "по запросу",
+      "priceStatus": "Публичного числового ценника нет; карточка прямо указывает цену по запросу.",
+      "landingZoneMm": null,
+      "maxFallHeightMm": null,
+      "safetyZoneStatus": "Размер/контур зоны безопасности и высота падения в текстовой карточке не опубликованы; DWG найден, но не разобран. В связанном DOCX также не найден размер зоны безопасности.",
+      "safetyContourVerified": false,
+      "installationAtYardConfirmed": false,
+      "images": [
+        {
+          "url": "https://romana.pro/upload/iblock/7f4/8jall8pcrjkom5qkcfcdgvgruke9bpyp.webp",
+          "sourceKind": "fullsize_gallery_attribute",
+          "width": 1100,
+          "height": 1100,
+          "contentType": "image/webp",
+          "bytes": 42618,
+          "verifiedHttpStatus": 200
+        }
+      ],
+      "drawings": [
+        {
+          "url": "https://romana.pro/upload/iblock/20a/p0mh05b9raufxolnyqzzmu8aw9x1lbfq.dwg",
+          "type": "DWG",
+          "label": "Romana 101.99.00 — Чертёж DWG.dwg",
+          "inspected": false
+        }
+      ],
+      "pdf": [],
+      "technicalDocuments": [
+        {
+          "url": "https://romana.pro/upload/iblock/498/4c4y01mt1j92ppveqe05yi1o7wborz8t.docx",
+          "type": "DOC",
+          "label": "Romana 101.99.00 — Техническое описание.docx",
+          "inspected": true,
+          "dimensionsConfirmed": true,
+          "safetyZonePublished": false,
+          "metadataModifiedAt": "2025-08-13T07:47:00Z",
+          "dateBasis": "Дата изменения в метаданных DOCX, не дата публикации или утверждения."
+        }
+      ],
+      "models": [
+        {
+          "url": "https://romana.pro/upload/iblock/0be/vm2jd0tpovcp96dzpwd0z6c8cu2ut93q.zip",
+          "type": "MAX",
+          "label": "Romana 101.99.00 — 3D-модель 3ds Max.zip",
+          "inspected": false
+        },
+        {
+          "url": "https://romana.pro/upload/iblock/b99/oeg0575vbjmw7t2k8833pxorqx8oxw9m.zip",
+          "type": "3DS",
+          "label": "Romana 101.99.00 — 3D-модель 3DS.zip",
+          "inspected": false
+        },
+        {
+          "url": "https://romana.pro/upload/iblock/c94/3wb1kloq1un37gn3ur7lj8j8xhwm6deo.zip",
+          "type": "OBJ",
+          "label": "Romana 101.99.00 — 3D-модель OBJ.zip",
+          "inspected": false
+        },
+        {
+          "url": "https://romana.pro/upload/iblock/f36/i93ft8913vfy1h2p4gjyzz0corxo8is7.zip",
+          "type": "FBX",
+          "label": "Romana 101.99.00 — 3D-модель FBX.zip",
+          "inspected": false
+        }
+      ],
+      "design": "Комплекс в образе крепости: центральная башня, зубчатые ограждения, прямая и спиральная горки, лестницы и лазательные элементы. Светлая облицовка, тёмные акценты и красные спуски.",
+      "designBasis": "Визуальное чтение официального основного изображения; для 115.96.00 также второго изображения. Не является измерением конструкции.",
+      "sourceProperties": {
+        "Габариты": "8903х6727х3780",
+        "Возрастная группа": "7-12",
+        "Цена": "по запросу"
+      },
+      "issues": [
+        "В официальной карточке только одно fullsize-изображение; второе не выдумывалось и не заменялось миниатюрой."
+      ],
+      "dimensionsToleranceMm": 50,
+      "id": "romana-101-99-00",
+      "manufacturer": "Romana",
+      "theme": "architecture",
+      "themeLabel": "Башни и переходы",
+      "candidateYardIds": [
+        3,
+        5,
+        8
+      ],
+      "candidateStatus": "Тематический кандидат; размещение во дворе не подтверждено",
+      "localImage": "assets/candidates/romana-101-99-00.webp",
+      "localImageSourceURL": "https://romana.pro/upload/iblock/7f4/8jall8pcrjkom5qkcfcdgvgruke9bpyp.webp",
+      "localImageWidth": 1100,
+      "localImageHeight": 1100,
+      "localImageSha256": "5e9290a38e06d2d0ff89c2249f99db5e2c4fb84fb3129c96664cd592e4755478",
+      "localImageSourceKind": "fullsize_gallery_attribute"
+    },
+    {
+      "id": "adanat-19939",
+      "article": "19939",
+      "name": "Игровой комплекс «Птицы» Тип 3",
+      "sourceURL": "https://adanatgroup.ru/katalog/detskoe-igrovoe-oborudovanie/detskie-tematicheskie-kompleksy-metall-plastik/igrovoy-kompleks-pticzy-tip-3/",
+      "checkedAt": "2026-11-08",
+      "verifiedHttpStatus": 200,
+      "sourceProductId": "205250",
+      "dimensionsMm": [
+        11285,
+        9615,
+        6265
+      ],
+      "dimensionsOrder": "Д × Ш × В",
+      "dimensionsSourceText": "Длина 11285 mm; Ширина 9615 mm; Высота 6265 mm",
+      "ageMin": 6,
+      "ageMax": null,
+      "ageLabel": "6+",
+      "maxFallHeightMm": 1600,
+      "mounting": "бетонирование",
+      "materials": [
+        "Нержавеющая сталь",
+        "Древесина — лиственница",
+        "Резинотканевая мембрана",
+        "Канат шестипрядный армированный 16 мм",
+        "Поликарбонат"
+      ],
+      "landingZoneMm": null,
+      "safetyZoneStatus": "Не опубликована в проверенной карточке",
+      "safetyContourVerified": false,
+      "installationAtYardConfirmed": false,
+      "price": null,
+      "priceStatus": "Публичная цена не опубликована",
+      "images": [
+        {
+          "url": "https://shop.adanatgroup.ru/upload/multiimage_55/images/2/0/5/image_205250_55.jpg",
+          "sourceKind": "fullsize_lightbox_link",
+          "verifiedHttpStatus": 200,
+          "contentType": "image/jpeg",
+          "bytes": 117822,
+          "width": 1000,
+          "height": 750,
+          "sha256": "b36d0ceafbc4c948dc96ea1da2b33e555133507b17bafc6fc53fcb6131658c12",
+          "imageType": "Оригинальный предметный рендер производителя",
+          "identityBasis": "Изображение связано с product id 205250 через lightbox и og:image в официальной карточке, в которой указаны «Птицы» Тип 3 и артикул 19939.",
+          "visualInspection": "Две высокие башни в форме птиц со светлой деревянной облицовкой, бордовыми акцентами слева и тёмно-синими справа; перед башнями — канатные переходы, площадка и элементы лазания. Видны металлический спуск между башнями и наклонный лазательный элемент справа.",
+          "altered": false,
+          "watermarkRetained": true
+        }
+      ],
+      "drawings": [],
+      "distinctViewsFound": 1,
+      "issues": [
+        "В HTML карточки найден один самостоятельный исходный вид; остальные семь URL image_205250 — адаптивные версии того же изображения, не дополнительные ракурсы.",
+        "Активные ссылки на DWG, DXF, PDF или 3D-модель в карточке не найдены.",
+        "Один перспективный вид не подтверждает скрытую геометрию, обратную сторону, точный план и полный контур безопасности. Не достраивать невидимые узлы как установленный факт.",
+        "Парсер веб-страницы показывал устаревшую заглушку nophoto.svg; актуальный прямой HTML и lightbox дают доступный оригинал, подтверждённый HTTP 200 и визуальным осмотром."
+      ],
+      "design": "Две башни в форме птиц с облицовкой из лиственницы, канатными переходами и элементами лазания. На оригинале производителя видны бордовые и тёмно-синие акценты и металлический спуск между башнями.",
+      "sourceNote": "Оригинальное изображение производителя найдено и проверено 08.11.2026. Доступен один вид; скрытая геометрия и зона безопасности не подтверждены.",
+      "manufacturer": "Аданат",
+      "theme": "nature",
+      "themeLabel": "Природные дворы",
+      "candidateYardIds": [
+        5,
+        6,
+        8
+      ],
+      "candidateStatus": "Тематический кандидат; размещение во дворе не подтверждено",
+      "localImage": "assets/candidates/adanat-19939.jpg",
+      "localImageSourceURL": "https://shop.adanatgroup.ru/upload/multiimage_55/images/2/0/5/image_205250_55.jpg",
+      "localImageWidth": 1000,
+      "localImageHeight": 750,
+      "localImageSha256": "b36d0ceafbc4c948dc96ea1da2b33e555133507b17bafc6fc53fcb6131658c12",
+      "localImageSourceKind": "fullsize_lightbox_link"
+    }
+  ]
+}
